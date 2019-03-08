@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=F:\Workspace\Influencerapp\app\libs\apache-httpcomponents-httpcore.jar
+FILE_HASH=33fc26c02f8043ab0ede19eadc8c9885386b255c
+DX_VERSION=1.13
+JUMBO_MODE=true
+OPTIMIZE=true

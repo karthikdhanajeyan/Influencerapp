@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=F:\Workspace\Influencerapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar
+FILE_HASH=95f482ecf87b0d3432d08df82a7212fd97236004
+DX_VERSION=1.12
+JUMBO_MODE=true
+OPTIMIZE=true

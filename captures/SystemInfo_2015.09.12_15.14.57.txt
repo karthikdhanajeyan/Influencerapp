@@ -1,0 +1,64 @@
+Applications Memory Usage (kB):
+Uptime: 14764066 Realtime: 14764066
+
+Total PSS by process:
+    22584 kB: com.android.systemui (pid 20617)
+    14370 kB: system (pid 20545)
+     9833 kB: com.android.launcher (pid 20694)
+     9014 kB: android.process.acore (pid 20757)
+     7097 kB: com.android.phone (pid 20677)
+     6020 kB: com.android.inputmethod.latin (pid 20665)
+     5420 kB: com.android.email (pid 20976)
+     5267 kB: android.process.media (pid 20958)
+     4331 kB: com.android.mms (pid 21008)
+     4162 kB: com.android.contacts (pid 20885)
+     3950 kB: com.android.calendar (pid 21059)
+     3890 kB: com.android.providers.calendar (pid 20917)
+     3887 kB: com.android.settings (pid 20722)
+     3618 kB: com.android.exchange (pid 20992)
+     3551 kB: com.android.deskclock (pid 20851)
+     2621 kB: com.android.voicedialer (pid 21046)
+     2555 kB: com.android.smspush (pid 20746)
+
+Total PSS by OOM adjustment:
+    14370 kB: System
+               14370 kB: system (pid 20545)
+    29681 kB: Persistent
+               22584 kB: com.android.systemui (pid 20617)
+                7097 kB: com.android.phone (pid 20677)
+     9833 kB: Foreground
+                9833 kB: com.android.launcher (pid 20694)
+     2555 kB: Visible
+                2555 kB: com.android.smspush (pid 20746)
+     6020 kB: Perceptible
+                6020 kB: com.android.inputmethod.latin (pid 20665)
+    49711 kB: Background
+                9014 kB: android.process.acore (pid 20757)
+                5420 kB: com.android.email (pid 20976)
+                5267 kB: android.process.media (pid 20958)
+                4331 kB: com.android.mms (pid 21008)
+                4162 kB: com.android.contacts (pid 20885)
+                3950 kB: com.android.calendar (pid 21059)
+                3890 kB: com.android.providers.calendar (pid 20917)
+                3887 kB: com.android.settings (pid 20722)
+                3618 kB: com.android.exchange (pid 20992)
+                3551 kB: com.android.deskclock (pid 20851)
+                2621 kB: com.android.voicedialer (pid 21046)
+
+Total PSS by category:
+    53611 kB: Dalvik
+    16922 kB: Native
+    15630 kB: .dex mmap
+    11454 kB: .so mmap
+     6144 kB: .apk mmap
+     3006 kB: Ashmem
+     2357 kB: Other mmap
+     2296 kB: Unknown
+      666 kB: .ttf mmap
+       68 kB: Other dev
+       12 kB: Cursor
+        4 kB: .jar mmap
+
+Total PSS: 112170 kB
+      KSM: 0 kB saved from shared 0 kB
+           0 kB unshared; 0 kB volatile

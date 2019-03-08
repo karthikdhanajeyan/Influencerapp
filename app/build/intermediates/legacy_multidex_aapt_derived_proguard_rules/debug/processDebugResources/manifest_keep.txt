@@ -1,0 +1,2 @@
+# Referenced at F:\Influencerapp\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:32
+-keep class com.socialbeat.influencer.MyApplication { <init>(); }

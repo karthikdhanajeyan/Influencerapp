@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\customtabs-23.4.0.aar\9de6bb4dcbbbf9feca8dbb55dc47e86d\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\a2cf707ac59756b954db6055de4d6b96\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\675682aec68de128d8e6acc497786776\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\6d7c05dc9c8384fa0cb94b95c72bd2ac\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\play-services-location-10.2.4.aar\1f3f14eb61a203c3c6b259ee21ac8535\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e0f082141b7aa90aab5d3a47ab09b0edc958f6b">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\d8eddae2d3048b6fce6f4a57e6f1fd5f\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\play-services-iid-10.2.4.aar\ec6a3dfbc7f3a3794238b9f6df479896\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="29d9916bd9ad8406a53edbafbbce5e18943aa882">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\20438241d5cdf8535b0c910f38f3000c\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-10.2.4.aar\70882687d4e2fcc421d34512ae7c70ae\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c76804333008c855433cad5cfd1256e86045e97b">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\20.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\play-services-gcm-10.2.4.aar\42507780c3f3a3bc5763047c8c9a7979\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cba8868595f6aaff54cf7d1798591108cf5611c">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\4f07692e1fb15b38d22178bfa8f0a431\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Influencerapp\app\libs\Parse-1.11.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="54a0d027ea5d5b0dae92833991bb68f9b3da6ca6">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Influencerapp\app\libs\apache-httpcomponents-httpclient.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="13d1b1d8f318f5b0f95bc2901f378ef68982584f">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.0-alpha5.aar\1a8bccd5ccac2878ddce6b355bc5e6c3\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e9c2f03f5e8a91877d3b6e3d72881680ac0fbc24">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\cbd2ce9365935768986b4c7053ab5192\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\d18e29794983e6d99a46bb507a5bda77\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\29.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-10.2.4.aar\8e6f9d892d0a2d76d3615f5e8d0c7b6a\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2ed7ba48801a0a361727833ade3b6cf096968cc0">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\5c4ff47f6b820c755157d2773b63664d\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\3ab34ff50550d23c6dbf3d63ecef1b91\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\971d3dd1d3514a06eea2e28207dd6e5b\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Android\android-sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha5\constraint-layout-solver-1.0.0-alpha5.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="73c7b3e257448abfb473f8833b05e7e055cb3fd9">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\37.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Influencerapp\app\libs\apache-httpcomponents-httpmime.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f6b9ce4485869cc314171c554a436e6121783fbe">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Influencerapp\app\libs\apache-httpcomponents-httpclient-cache.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="33c3e58f125530e83dfba53acb43643469d76a72">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\d2ffc41b9a6215eb0af5a82552da1aa2\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Influencerapp\app\libs\apache-httpcomponents-httpcore.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="33fc26c02f8043ab0ede19eadc8c9885386b255c">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.4.aar\6b9a7ca420b963c218c87487ca442260\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9ed08fab37c3a572da1d9ed2bf2e36c8d3e2bc48">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Influencerapp\app\libs\volley.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.4.aar\1d10b8b13cd45fb2ad2f47e3822a14ab\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd1d0d84da2cff18f741c63a9c3af7d9aa89fdd6">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.4.aar\79a0843ee789702f9fd351ec5b01e938\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5803db663655ef5cb38c6bcb17ba326fdb9edfbd">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\1b3b9929adfa7244b2f9b3cf194d39cf\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\32.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Influencerapp\app\libs\twitter4j-core-4.0.1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="34138fe734b03ae6e9ef978b41359b5fb6467047">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\play-services-analytics-10.2.4.aar\97c3e3be081b3ca6d0b14cc7bb9b06ac\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="183e4fb7cf95f4fa54963cfcdaf0f4d7e2397bad">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.15.0.aar\d6a9b3cd3f11590c3e8b688a3041b77b\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="820605b42a2d3d9cb9e6c4cc7453fb4f802aedff">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\karth\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\f248a3ed8ef753650f342494c5e91891\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="E:\Influencerapp\app\build\intermediates\transforms\preDex\release\34.jar" />
+    </item>
+
+</items>

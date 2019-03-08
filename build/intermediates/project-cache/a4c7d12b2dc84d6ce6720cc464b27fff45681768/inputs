@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=F:\Workspace\Influencerapp\app\libs\apache-httpcomponents-httpmime.jar
+FILE_HASH=f6b9ce4485869cc314171c554a436e6121783fbe
+DX_VERSION=1.13
+JUMBO_MODE=false
+OPTIMIZE=true
