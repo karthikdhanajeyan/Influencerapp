@@ -1475,7 +1475,6 @@ id ifRoom
 id image
 id imageView
 id imageView3
-id influencertext
 id info
 id infoicon
 id infotext
@@ -2094,6 +2093,8 @@ mipmap sharebutton
 mipmap splash_screen_bg
 mipmap splash_screen_logo
 mipmap splash_screen_name
+mipmap splashscreen_influencer
+mipmap splashscreen_mobile
 mipmap star
 mipmap target_icon
 mipmap technology_icon
@@ -2204,6 +2205,7 @@ string common_signin_button_text
 string common_signin_button_text_long
 string compose_shortcut_short_label
 string compose_shortcut_short_label1
+string copywrite
 string device_details_url
 string draft_string
 string drawer_close
@@ -2228,6 +2230,7 @@ string live_campaign_url
 string login_instructions
 string login_terms
 string login_url
+string logo
 string messenger_send_button_text
 string msg_enter_mobile
 string msg_enter_msg
@@ -2259,6 +2262,7 @@ string s4
 string s5
 string s6
 string s7
+string sbproduct
 string search_menu_title
 string sender_id
 string sent_mail_string

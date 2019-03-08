@@ -3,7 +3,6 @@ package com.socialbeat.influencer;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -11,6 +10,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -29,8 +29,6 @@ public class SplashScreenActivity extends AppCompatActivity {
     String newVersion;
 
     public static final int REQUEST_ID_MULTIPLE_PERMISSIONS = 1;
-    private static int SPLASH_TIME_OUT = 3000;
-    private String TAG = "tag";
     String currentVersionName = null;
     int currentapiVersion;
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -49,6 +47,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         }
        Log.v("current Version :",currentVersionName);
 
+        int SPLASH_TIME_OUT = 3000;
         if (Objects.equals(newVersion, currentVersionName)) {
             Log.v("Option  :","true");
             Log.v("Message :","Current Version App is Equal to Google play Current version ");
@@ -102,48 +101,50 @@ public class SplashScreenActivity extends AppCompatActivity {
             listPermissionsNeeded.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         }
         if (!listPermissionsNeeded.isEmpty()) {
-            ActivityCompat.requestPermissions(this, listPermissionsNeeded.toArray(new String[listPermissionsNeeded.size()]), REQUEST_ID_MULTIPLE_PERMISSIONS);
+            ActivityCompat.requestPermissions(this, listPermissionsNeeded.toArray(new String[0]), REQUEST_ID_MULTIPLE_PERMISSIONS);
             return false;
         }
         return true;
     }
 
-    public void updateapp(){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("you are using an old version of this app. Would you like to update it?");
-        alertDialogBuilder.setCancelable(false);
-                alertDialogBuilder.setPositiveButton("Update",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface arg0, int arg1) {
-                                //Toast.makeText(SplashScreenActivity.this,"You clicked yes button",Toast.LENGTH_LONG).show();
-                                Uri uri = Uri.parse("market://details?id=com.socialbeat.influencer");
-                                Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-                                // To count with Play market backstack, After pressing back button,
-                                // to taken back to our application, we need to add following flags to intent.
-                                goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-                                try {
-                                    startActivity(goToMarket);
-                                } catch (ActivityNotFoundException e) {
-                                    startActivity(new Intent(Intent.ACTION_VIEW,
-                                            Uri.parse("http://play.google.com/store/apps/details?id=com.socialbeat.influencer")));
-                                }
-                            }
-                        });
-
-        alertDialogBuilder.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                finish();
-            }
-        });
-
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-    }
+//    public void updateapp(){
+//        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+//        alertDialogBuilder.setMessage("you are using an old version of this app. Would you like to update it?");
+//        alertDialogBuilder.setCancelable(false);
+//                alertDialogBuilder.setPositiveButton("Update",
+//                        new DialogInterface.OnClickListener() {
+//                            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+//                            @Override
+//                            public void onClick(DialogInterface arg0, int arg1) {
+//                                //Toast.makeText(SplashScreenActivity.this,"You clicked yes button",Toast.LENGTH_LONG).show();
+//                                Uri uri = Uri.parse("market://details?id=com.socialbeat.influencer");
+//                                Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+//                                // To count with Play market backstack, After pressing back button,
+//                                // to taken back to our application, we need to add following flags to intent.
+//                                goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+//                                try {
+//                                    startActivity(goToMarket);
+//                                } catch (ActivityNotFoundException e) {
+//                                    startActivity(new Intent(Intent.ACTION_VIEW,
+//                                            Uri.parse("http://play.google.com/store/apps/details?id=com.socialbeat.influencer")));
+//                                }
+//                            }
+//                        });
+//
+//        alertDialogBuilder.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int which) {
+//                finish();
+//            }
+//        });
+//
+//        AlertDialog alertDialog = alertDialogBuilder.create();
+//        alertDialog.show();
+//    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+                                           @NonNull String permissions[], @NonNull int[] grantResults) {
+        String TAG = "tag";
         Log.d(TAG, "Permission callback called-------");
         switch (requestCode) {
             case REQUEST_ID_MULTIPLE_PERMISSIONS: {
@@ -178,8 +179,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                        // if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_SMS) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.GET_ACCOUNTS) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_PHONE_STATE) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_COARSE_LOCATION) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
                             if ( ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-                                showDialogOK("Service Permissions are required for this app",
-                                    new DialogInterface.OnClickListener() {
+                                showDialogOK(
+                                        new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             switch (which) {
@@ -197,7 +198,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                         //permission is denied (and never ask again is  checked)
                         //shouldShowRequestPermissionRationale will return false
                         else {
-                            explain("You need to give some mandatory permissions to continue. Do you want to go to app settings?");
+                            explain();
                             //                            //proceed with logic by disabling the related features or quit the app.
                         }
                     }
@@ -207,17 +208,17 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     }
 
-    private void showDialogOK(String message, DialogInterface.OnClickListener okListener) {
+    private void showDialogOK(DialogInterface.OnClickListener okListener) {
         new AlertDialog.Builder(this)
-                .setMessage(message)
+                .setMessage("Service Permissions are required for this app")
                 .setPositiveButton("OK", okListener)
                 .setNegativeButton("Cancel", okListener)
                 .create()
                 .show();
     }
-    private void explain(String msg){
+    private void explain(){
         final android.support.v7.app.AlertDialog.Builder dialog = new android.support.v7.app.AlertDialog.Builder(this);
-        dialog.setMessage(msg)
+        dialog.setMessage("You need to give some mandatory permissions to continue. Do you want to go to app settings?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface paramDialogInterface, int paramInt) {
@@ -249,7 +250,6 @@ public class SplashScreenActivity extends AppCompatActivity {
                                 .select("div[itemprop=softwareVersion]")
                                 .first()
                                 .ownText();
-
             } catch (Exception e) {
                 return "";
             }

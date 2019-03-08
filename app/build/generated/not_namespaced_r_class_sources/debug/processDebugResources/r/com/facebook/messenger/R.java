@@ -25,7 +25,7 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int messenger_send_button = 0x7f09016e;
+        public static final int messenger_send_button = 0x7f09016d;
     }
     public static final class layout {
         private layout() {}
@@ -40,7 +40,7 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int messenger_send_button_text = 0x7f0e0072;
+        public static final int messenger_send_button_text = 0x7f0e0074;
     }
     public static final class style {
         private style() {}

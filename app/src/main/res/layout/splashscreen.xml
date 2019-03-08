@@ -3,37 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@mipmap/splash_screen_bg"
+    android:background="@mipmap/splashscreen_mobile"
     tools:context=".SplashScreenActivity">
 
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="125sp"
-        android:layout_height="125sp"
-        android:background="@mipmap/splash_screen_logo"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageView
-        android:layout_width="160dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/splash_screen_name"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
-        android:id="@+id/influencertext" />
-
+        android:layout_marginTop="30sp"
+        android:background="@mipmap/influencerheader400"
+        android:contentDescription="@string/logo" />
 
     <TextView
         android:id="@+id/copyright"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
+        android:textSize="12sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginBottom="5sp"
-        android:text="\u00a9 2018 SOCIAL BEAT DIGITAL MARKETING LLP"
+        android:text="@string/copywrite"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
@@ -44,10 +35,10 @@
         android:layout_above="@+id/copyright"
         android:layout_centerHorizontal="true"
         android:textSize="15sp"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/white"
         android:layout_marginBottom="7sp"
         android:fontFamily="sans-serif-condensed"
-        android:text="A Product of Social Beat" />
+        android:text="@string/sbproduct" />
 
 
 

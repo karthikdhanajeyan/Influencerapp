@@ -56,8 +56,11 @@
     <string name="skip"><u>SKIP</u></string>
     <string name="cancel"><u>CANCEL</u></string>
     <string name="settings">Settings</string>
+    <string name="logo">Influencer Logo</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="copywrite">\u00a9 2019 SOCIAL BEAT DIGITAL MARKETING LLP</string>
+    <string name="sbproduct">A Product of Social Beat</string>
 
     <string name="chennai_address">No:338 6th Floor,\n Fountain Plaza, Pantheon Rd,\n Egmore, Chennai,\n  Tamil Nadu 600008,India</string>
     <string name="bangalore_address">No:22, 15th Cross Rd,\n Sector 4, HSR layout,\n Bengaluru,\n Karnataka 560102, India</string>
