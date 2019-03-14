@@ -58,7 +58,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Intent i = new Intent(SplashScreenActivity.this, FirstActivity.class);
+                           Intent i = new Intent(SplashScreenActivity.this, FirstActivity.class);
+                            //Intent i = new Intent(SplashScreenActivity.this, TextEditor.class);
                             startActivity(i);
                             finish();
                         }
@@ -75,6 +76,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Intent i = new Intent(SplashScreenActivity.this, FirstActivity.class);
+                        //Intent i = new Intent(SplashScreenActivity.this, TextEditor.class);
                         startActivity(i);
                         finish();
                     }
@@ -168,6 +170,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                             Log.v(TAG, "services permission granted");
                         // process the normal flow
                         Intent i = new Intent(SplashScreenActivity.this, FirstActivity.class);
+                         //   Intent i = new Intent(SplashScreenActivity.this, TextEditor.class);
                         startActivity(i);
                         finish();
                         //else any one or both the permissions are not granted

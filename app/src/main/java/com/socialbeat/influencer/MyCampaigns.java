@@ -35,8 +35,6 @@ public class MyCampaigns extends AppCompatActivity {
 
         getSupportActionBar().setTitle("My Campaigns");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -46,9 +44,9 @@ public class MyCampaigns extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new AppliedCampaignFragment(), "Applied");
         adapter.addFragment(new ApprovedCampaignFragment(), "Approved");
-        adapter.addFragment(new PendingCampaignFragment(), "Pending");
-        adapter.addFragment(new RejectedCampaignFragment(), "Rejected");
+        adapter.addFragment(new CompletedCampaignFragment(), "Completed");
 // set the default tab to the second tab
         viewPager.setAdapter(adapter);
     }

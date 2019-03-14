@@ -1,0 +1,50 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lite_ashe">
+
+        <TextView
+            android:id="@+id/welcome_text_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:text="Text Editor"
+            android:gravity="center"
+            android:textColor="@color/orange"
+            android:textSize="30sp"
+            />
+
+        <in.nashapp.androidsummernote.Summernote
+            android:id="@+id/summernote"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_width="400dp"
+            android:layout_height="400dp"/>
+
+
+        <Button
+            android:id="@+id/show_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/summernote"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_corner_button"
+            android:text="Show Text "
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

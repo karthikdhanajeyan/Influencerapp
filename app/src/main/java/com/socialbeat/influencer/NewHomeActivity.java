@@ -22,6 +22,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
@@ -71,13 +72,10 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
     String username1, emailid1, playstoreversion, mobileno, city, blog, blogtraffic, twitterhandle, message, profileprogress, mozrank,twitter_followers, instagram, instagram_followers, overallreach, foi, userimage, overallscore, response;
     Boolean isInternetPresent = false;
     SharedPreferences.Editor editor,editor1,editor2,editor3,editor4;
-    private CoordinatorLayout coordinatorLayout;
     ConnectionDetector cd;
     ProgressDialog pdialog;
     public static final String LOGIN_NAME = "LoginFile";
     private static final String PREFS_NAME = "NewHomeActivity";
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
     protected DrawerLayout drawerLayout;
     Context context=NewHomeActivity.this;
 
@@ -98,11 +96,11 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        viewPager = findViewById(R.id.viewpager);
+        ViewPager viewPager = findViewById(R.id.viewpager);
         setupViewPager(viewPager);
-        tabLayout = findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-        coordinatorLayout = findViewById(R.id.coordinatorLayout);
+        CoordinatorLayout coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N_MR1) {
 
@@ -115,6 +113,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
                     .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.influencer.in/blog/")))
                     .build();
 
+            assert shortcutManager != null;
             shortcutManager.setDynamicShortcuts(Collections.singletonList(webShortcut));
 
             ShortcutInfo dynamicShortcut1 = new ShortcutInfo.Builder(this, "shortcut_dynamic")
@@ -148,73 +147,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         ccity = prfs.getString("city1", "");
         cuserimage = prfs.getString("userimage1", "");
         playstoreversion = prfs.getString("playstoreversion1", "");
-//        playstoreversion = prfs.getString("playstoreversion1", "");
-//
-//        Log.v("Result : ",cid+" "+cname+" "+email+" "+cmobileno+" "+cuserimage+" "+ playstoreversion);
-//        PackageInfo pInfo = null;
-//        try {
-//            pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-//        } catch (PackageManager.NameNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        final String appversion = pInfo.versionName;
-//        Log.v("Value for App version",playstoreversion +" --- "+appversion);
-//        if (playstoreversion.equalsIgnoreCase(appversion)){
-//            Log.v("Version Result","GPV is Equal AV");
-//            AlertDialog.Builder alertDialog = new AlertDialog.Builder(NewHomeActivity.this);
-//            // Setting Dialog Title
-//            alertDialog.setTitle("Check Update");
-//            // Setting Dialog Message
-//            alertDialog.setMessage("Are you want update your App?");
-//            // Setting Icon to Dialog
-//            //alertDialog.setIcon(R.drawable.delete);
-//            // Setting Positive "Yes" Button
-//            alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                public void onClick(DialogInterface dialog,int which) {
-//                    // Write your code here to invoke YES event
-//                    //Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-//                    dialog.cancel();
-//                }
-//            });
-//        }else{
-//            Log.v("Version Result","GPV is Greater than AV");
-//            AlertDialog.Builder alertDialog = new AlertDialog.Builder(NewHomeActivity.this);
-//            // Setting Dialog Title
-//            alertDialog.setTitle("Check Update");
-//            // Setting Dialog Message
-//            alertDialog.setMessage("Are you want update your App?");
-//            // Setting Icon to Dialog
-//            //alertDialog.setIcon(R.drawable.delete);
-//            // Setting Positive "Yes" Button
-//            alertDialog.setPositiveButton("UPDATE", new DialogInterface.OnClickListener() {
-//                public void onClick(DialogInterface dialog,int which) {
-//                    // Write your code here to invoke YES event
-//                   // Toast.makeText(getApplicationContext(), "You clicked on YES", Toast.LENGTH_SHORT).show();
-//                    Uri uri = Uri.parse("market://details?id=com.socialbeat.influencer");
-//                    Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-//                    // To count with Play market backstack, After pressing back button,
-//                    // to taken back to our application, we need to add following flags to intent.
-//                    goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-//                    try {
-//                        startActivity(goToMarket);
-//                    } catch (ActivityNotFoundException e) {
-//                        startActivity(new Intent(Intent.ACTION_VIEW,
-//                                Uri.parse("http://play.google.com/store/apps/details?id=com.socialbeat.influencer")));
-//                    }
-//                }
-//            });
-//            // Setting Negative "NO" Button
-//            alertDialog.setNegativeButton("NOT NOW", new DialogInterface.OnClickListener() {
-//                public void onClick(DialogInterface dialog, int which) {
-//                    // Write your code here to invoke NO event
-//                   // Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-//                    dialog.cancel();
-//                }
-//            });
-//
-//            // Showing Alert Message
-//            alertDialog.show();
-//        }
+
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         boolean firstStart = settings.getBoolean("firstStart", true);
         //profileFunction();
@@ -224,7 +157,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
             DeviceDetails();
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean("firstStart", false);
-            editor.commit();
+            editor.apply();
         }
 
         if (cid.length() != 0) {
@@ -254,7 +187,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
             Intent intent = new Intent(NewHomeActivity.this, LoginActivity.class);
             startActivity(intent);
         }
-        android.support.design.widget.NavigationView navigationView1 = findViewById(R.id.nav_view);
+        @SuppressLint("CutPasteId") android.support.design.widget.NavigationView navigationView1 = findViewById(R.id.nav_view);
         View header = navigationView1.getHeaderView(0);
         user_name = header.findViewById(R.id.header_user_name);
         user_email = header.findViewById(R.id.header_user_email);
@@ -284,6 +217,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+        assert pInfonew != null;
         appversionnew = pInfonew.versionName;
         deviceGCMServerkeynew =  PreferenceManager.getPushCatID(NewHomeActivity.this);
 
@@ -451,7 +385,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -460,79 +394,8 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
             startActivity(intent);
         } else if (id == R.id.nav_mycampaigns) {
             //Toast.makeText(NewHomeActivity.this, "MY CAMPAIGNS", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(NewHomeActivity.this, MyCampaignsFragment.class);
+            Intent intent = new Intent(NewHomeActivity.this, MyCampaigns.class);
             startActivity(intent);
-//        } else if (id == R.id.nav_myearnings) {
-////            Intent intent = new Intent(NewHomeActivity.this, MyWallet.class);
-////            startActivity(intent);
-//        } else if (id == R.id.nav_update) {
-//            Log.v("Result : ",cid+" "+cname+" "+email+" "+cmobileno+" "+cuserimage+" "+ playstoreversion);
-//            PackageInfo pInfo = null;
-//            try {
-//                pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-//            } catch (PackageManager.NameNotFoundException e) {
-//                e.printStackTrace();
-//            }
-//            final String appversion = pInfo.versionName;
-//            Log.v("Value for App version",playstoreversion +" --- "+appversion);
-//            if (playstoreversion.equals(appversion)){
-//                Log.v("Version Result","GPV is Equal AV");
-//                AlertDialog alertDialog = new AlertDialog.Builder(
-//                        NewHomeActivity.this).create();
-//                // Setting Dialog Title
-//                alertDialog.setTitle("Check Update");
-//                // Setting Dialog Message
-//                alertDialog.setMessage("Your are on the latest version.");
-//                // Setting OK Button
-//                alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        // Write your code here to execute after dialog closed
-//                        dialog.cancel();
-//                    }
-//                });
-//
-//                // Showing Alert Message
-//                alertDialog.show();
-//            }else{
-//                Log.v("Version Result","GPV is Greater than AV");
-//                AlertDialog.Builder alertDialog = new AlertDialog.Builder(NewHomeActivity.this);
-//                // Setting Dialog Title
-//                alertDialog.setTitle("Check Update");
-//                // Setting Dialog Message
-//                alertDialog.setMessage("You are using the old version of this App. Please update your App to the latest version.");
-//                // Setting Icon to Dialog
-//                //alertDialog.setIcon(R.drawable.delete);
-//                // Setting Positive "Yes" Button
-//                alertDialog.setPositiveButton("UPDATE", new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog,int which) {
-//                        // Write your code here to invoke YES event
-//                        // Toast.makeText(getApplicationContext(), "You clicked on YES", Toast.LENGTH_SHORT).show();
-//                        Uri uri = Uri.parse("market://details?id=com.socialbeat.influencer");
-//                        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-//                        // To count with Play market backstack, After pressing back button,
-//                        // to taken back to our application, we need to add following flags to intent.
-//                        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-//                        try {
-//                            startActivity(goToMarket);
-//                        } catch (ActivityNotFoundException e) {
-//                            startActivity(new Intent(Intent.ACTION_VIEW,
-//                                    Uri.parse("http://play.google.com/store/apps/details?id=com.socialbeat.influencer")));
-//                        }
-//                    }
-//
-//                });
-//                // Setting Negative "NO" Button
-//                alertDialog.setNegativeButton("NOT NOW", new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        // Write your code here to invoke NO event
-//                        // Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-//                        dialog.cancel();
-//                    }
-//                });
-//
-//                // Showing Alert Message
-//                alertDialog.show();
-//            }
         }  else if (id == R.id.nav_ourblog) {
             Intent intent = new Intent(NewHomeActivity.this, OurBlogPage.class);
             startActivity(intent);
@@ -546,23 +409,23 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
             SharedPreferences prefernce = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
             editor = prefernce.edit();
             editor.clear();
-            editor.commit();
+            editor.apply();
             SharedPreferences prefernce1 = getSharedPreferences(LOGIN_NAME, MODE_PRIVATE);
             editor1 = prefernce1.edit();
             editor1.clear();
-            editor1.commit();
+            editor1.apply();
             SharedPreferences prefernce2 = getSharedPreferences("USER_DEVICE_VALUE", Context.MODE_PRIVATE);
             editor2 = prefernce2.edit();
             editor2.clear();
-            editor2.commit();
+            editor2.apply();
             SharedPreferences prefernce3 = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
             editor3 = prefernce3.edit();
             editor3.clear();
-            editor3.commit();
+            editor3.apply();
             SharedPreferences prefernce4 = getSharedPreferences("USER_ADD_VALUE", MODE_PRIVATE);
             editor4 = prefernce4.edit();
             editor4.clear();
-            editor4.commit();
+            editor4.apply();
 
             Intent intent = new Intent(NewHomeActivity.this, FirstActivity.class);
             startActivity(intent);
@@ -576,7 +439,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
-        public ViewPagerAdapter(FragmentManager manager) {
+        ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
         @Override
@@ -588,7 +451,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
             return mFragmentList.size();
         }
 
-        public void addFragment(Fragment fragment, String title) {
+        void addFragment(Fragment fragment, String title) {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }

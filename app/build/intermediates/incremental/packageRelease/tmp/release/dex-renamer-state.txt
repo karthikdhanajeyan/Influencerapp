@@ -1,7 +1,0 @@
-#Mon Mar 04 16:02:04 IST 2019
-base.0=F\:\\Influencerapp\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
-path.1=classes2.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=F\:\\Influencerapp\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
