@@ -50,24 +50,24 @@ public class CustomListAdapter extends BaseAdapter {
 		}
 
 		if (imageLoader == null)
-			imageLoader = MyApplication.getInstance().getImageLoader();
-		NetworkImageView campImg = (NetworkImageView) convertView.findViewById(R.id.campImg);
-		TextView campName = (TextView) convertView.findViewById(R.id.campName);
-		TextView campShortNote = (TextView) convertView.findViewById(R.id.campShortNote);
-		TextView campCat = (TextView) convertView.findViewById(R.id.campCat);
-		TextView campLongNote = (TextView) convertView.findViewById(R.id.campLongNote);
-		TextView campGoal = (TextView) convertView.findViewById(R.id.campGoal);
-		TextView campDos = (TextView) convertView.findViewById(R.id.campDos);
-		TextView campDont = (TextView) convertView.findViewById(R.id.campDont);
-		TextView campBacklink = (TextView) convertView.findViewById(R.id.campBacklink);
-		TextView campTag = (TextView) convertView.findViewById(R.id.campTag);
-		TextView campid = (TextView) convertView.findViewById(R.id.campid);
-		TextView campApplyTill = (TextView) convertView.findViewById(R.id.campApplyTill);
-		TextView campRewards = (TextView) convertView.findViewById(R.id.campRewards);
-		TextView campRewardType = (TextView) convertView.findViewById(R.id.campRewardType);
-		TextView fixedamount = (TextView) convertView.findViewById(R.id.fixedamount);
-		TextView campEligibility = (TextView) convertView.findViewById(R.id.campEligibility);
-		TextView campDeliverables = (TextView) convertView.findViewById(R.id.campDeliverables);
+		imageLoader = MyApplication.getInstance().getImageLoader();
+		NetworkImageView campImg = convertView.findViewById(R.id.campImg);
+		TextView campName = convertView.findViewById(R.id.campName);
+		TextView campShortNote = convertView.findViewById(R.id.campShortNote);
+		TextView campCat = convertView.findViewById(R.id.campCat);
+		TextView campLongNote = convertView.findViewById(R.id.campLongNote);
+		TextView campGoal = convertView.findViewById(R.id.campGoal);
+		TextView campDos = convertView.findViewById(R.id.campDos);
+		TextView campDont = convertView.findViewById(R.id.campDont);
+		TextView campBacklink = convertView.findViewById(R.id.campBacklink);
+		TextView campTag = convertView.findViewById(R.id.campTag);
+		TextView campid = convertView.findViewById(R.id.campid);
+		TextView campApplyTill = convertView.findViewById(R.id.campApplyTill);
+		TextView campRewards = convertView.findViewById(R.id.campRewards);
+		TextView campRewardType = convertView.findViewById(R.id.campRewardType);
+		TextView fixedamount = convertView.findViewById(R.id.fixedamount);
+		TextView campEligibility = convertView.findViewById(R.id.campEligibility);
+		TextView campDeliverables = convertView.findViewById(R.id.campDeliverables);
 
 		// getting campaign data for the row
 		CampValues cv = campValuesItem.get(position);

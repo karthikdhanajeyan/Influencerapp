@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
 
 
-    <solid android:color="@color/coloraccent" />
+    <solid android:color="@color/com_facebook_blue" />
 
     <padding
         android:left="10dp"

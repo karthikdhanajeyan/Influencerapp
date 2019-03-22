@@ -14,6 +14,8 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -39,8 +41,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class AppliedCampaignFragment extends Fragment {
-
+public class AppliedCampaignFragment extends Fragment  implements SwipeRefreshLayout.OnRefreshListener{
     private CoordinatorLayout coordinatorLayout;
     Context context;
     private ProgressDialog pDialog;
@@ -64,6 +65,7 @@ public class AppliedCampaignFragment extends Fragment {
     private static final String TAG_CAMPQUOTE = "campaignquote";
     private static final String TAG_CAMPBLOGLINK = "bloglink";
     private static final String TAG_CAMPTWEETLINK = "tweetlink";
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     // contacts JSONArray
     JSONArray contacts = null;
@@ -76,13 +78,17 @@ public class AppliedCampaignFragment extends Fragment {
         final View v = inflater.inflate(R.layout.appliedcampaign, container, false);
         context = v.getContext();
 
+//        SwipeRefreshLayout srl = v.findViewById(R.id.swiperview);
+//        srl.setOnRefreshListener(this);
+
 
         SharedPreferences prfs = Objects.requireNonNull(this.getActivity()).getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
         Log.v("Cid Value : ",cid);
 
+
         cd = new ConnectionDetector(getActivity());
-        CoordinatorLayout coordinatorLayout = (CoordinatorLayout) v.findViewById(R.id.coordinatorLayout);
+        CoordinatorLayout coordinatorLayout = v.findViewById(R.id.coordinatorLayout);
         isInternetPresent = cd.isConnectingToInternet();
         contactList = new ArrayList<HashMap<String, String>>();
 
@@ -91,8 +97,8 @@ public class AppliedCampaignFragment extends Fragment {
                 cid = prfs.getString("valueofcid", "");
                 url = "https://influencer.in/API/v4/appliedList.php?cid=" + cid + "";
                 System.out.println(url);
-
                 // Calling async task to get json
+                lv = v.findViewById(R.id.appliedcampvalues);
                 new GetCampaign().execute();
             } else {
                 Snackbar snackbar = Snackbar
@@ -107,7 +113,7 @@ public class AppliedCampaignFragment extends Fragment {
                 snackbar.setActionTextColor(Color.RED);
                 // Changing action button text color
                 View sbView = snackbar.getView();
-                TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
                 textView.setTextColor(Color.YELLOW);
                 snackbar.show();
             }
@@ -143,6 +149,7 @@ public class AppliedCampaignFragment extends Fragment {
                 return super.onOptionsItemSelected(item);
         }
     }
+
     /**
      * Async task class to get json by making HTTP call
      * */
@@ -252,6 +259,29 @@ public class AppliedCampaignFragment extends Fragment {
             lv.setAdapter(adapter);
         }
 
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Applied Campaign Screen");
+    }
+    public static AllCampaignFragmentLive newInstance() {
+        return (new AllCampaignFragmentLive());
+    }
+
+    @Override
+    public void onRefresh() {
+        if (swipeRefreshLayout != null) {
+            swipeRefreshLayout.setRefreshing(false);
+        }else {
+            swipeRefreshLayout.setRefreshing(true);
+            AppliedCampaignFragment fragment = new AppliedCampaignFragment();
+            FragmentTransaction fragmentTransaction = Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame, fragment);
+            fragmentTransaction.commit();
+            swipeRefreshLayout.setRefreshing(false);
+        }
     }
 
 }

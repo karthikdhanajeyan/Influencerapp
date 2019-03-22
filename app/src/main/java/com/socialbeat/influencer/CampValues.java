@@ -2,8 +2,6 @@ package com.socialbeat.influencer;
 
 public class CampValues {
 
-//	private String success;
-//	private String message;
 	private String campImg;
 	private String campName;
 	private String campShortNote;

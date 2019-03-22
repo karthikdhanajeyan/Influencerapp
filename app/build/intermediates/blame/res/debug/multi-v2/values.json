@@ -23,6 +23,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-17.2.0.aar\\7e87d016a69cf94d63e40d06db81c72c\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "170,208,281,315,350,399,463",
+                        "endColumns": "37,72,33,34,48,63,34",
+                        "endOffsets": "207,280,314,349,398,462,497"
+                    },
+                    "to": {
+                        "startLines": "855,856,857,858,859,860,861",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "53307,53349,53426,53464,53503,53556,53624",
+                        "endColumns": "41,76,37,38,52,67,38",
+                        "endOffsets": "53344,53421,53459,53498,53551,53619,53658"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.28.0.aar\\ac8551ed924cd3a740ff56c355b15685\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,11",
@@ -39,42 +56,6 @@
                         "endLines": "296,297,302,3390,3394",
                         "endColumns": "102,83,61,12,12",
                         "endOffsets": "14671,14755,15100,218418,218669"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-17.1.3.aar\\a218805987982ebd1522103bbc137954\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10",
-                        "startColumns": "0,0,0,0,0,0,0",
-                        "startOffsets": "168,206,279,313,348,397,461",
-                        "endColumns": "37,72,33,34,48,63,34",
-                        "endOffsets": "205,278,312,347,396,460,495"
-                    },
-                    "to": {
-                        "startLines": "855,856,857,858,859,860,861",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "53307,53349,53426,53464,53503,53556,53624",
-                        "endColumns": "41,76,37,38,52,67,38",
-                        "endOffsets": "53344,53421,53459,53498,53551,53619,53658"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-lite-17.1.3.aar\\f480df2e9563816a2ad6b4fd2f108fe0\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "4,14",
-                        "startColumns": "0,0",
-                        "startOffsets": "165,657",
-                        "endLines": "11,20",
-                        "endColumns": "8,20",
-                        "endOffsets": "558,832"
-                    },
-                    "to": {
-                        "startLines": "2877,3537",
-                        "startColumns": "4,4",
-                        "startOffsets": "184573,226954",
-                        "endLines": "2884,3543",
-                        "endColumns": "8,20",
-                        "endOffsets": "184966,227129"
                     }
                 },
                 {
@@ -435,6 +416,25 @@
                         "startOffsets": "11859,11909,11963,12018,12057,12416,12456,13136,13427,13473,13523,13572,13619,13670,15831,15881,15934,15978,16021,16064,17608,17658,17716,17763,17810,19078,19352,19393,20025,20178,20801,20973,21021,21062,21104,21144,21195",
                         "endColumns": "49,53,54,38,39,39,38,41,45,49,48,46,50,45,49,52,43,42,42,42,49,57,46,46,43,52,40,43,37,40,50,47,40,41,39,50,40",
                         "endOffsets": "11904,11958,12013,12052,12092,12451,12490,13173,13468,13518,13567,13614,13665,13711,15876,15929,15973,16016,16059,16102,17653,17711,17758,17805,17849,19126,19388,19432,20058,20214,20847,21016,21057,21099,21139,21190,21231"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-lite-17.2.0.aar\\f64b9297f02e62131ce8ece960134079\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "4,14",
+                        "startColumns": "0,0",
+                        "startOffsets": "167,661",
+                        "endLines": "11,20",
+                        "endColumns": "8,20",
+                        "endOffsets": "560,836"
+                    },
+                    "to": {
+                        "startLines": "2877,3537",
+                        "startColumns": "4,4",
+                        "startOffsets": "184573,226954",
+                        "endLines": "2884,3543",
+                        "endColumns": "8,20",
+                        "endOffsets": "184966,227129"
                     }
                 },
                 {

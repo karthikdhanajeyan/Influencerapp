@@ -153,13 +153,6 @@ public class AllCampDetailsLive extends AppCompatActivity {
         campBacklink.setText(spd);
         campBacklink.setMovementMethod(LinkMovementMethod.getInstance());
 
-       //// String tlink ="<a href="+"https://twitter.com/search?q="+cdcampTag+"&src=typd"+">"+ cdcampTag +" </a>" ;
-//        String tlink ="<a href="+"https://twitter.com/hashtag/"+cdcampTag+"?src=tren&lang=en"+">"+ cdcampTag +" </a>" ;
-//        System.out.println("Link : "+tlink);
-//        Spanned spt = Html.fromHtml( tlink );
-//        campTag.setText(spt);
-//        campTag.setMovementMethod(LinkMovementMethod.getInstance());
-
         Spanned sp4 = Html.fromHtml( cdcampTag );
         campTag.setText(sp4);
         campTag.setMovementMethod(LinkMovementMethod.getInstance());

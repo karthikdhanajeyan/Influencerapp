@@ -1,22 +1,21 @@
 -- Merging decision tree log ---
 provider#android.support.v4.content.FileProvider
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:299:9-307:20
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:301:9-309:20
 	android:grantUriPermissions
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:303:13-47
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:305:13-47
 	android:authorities
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:301:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:303:13-60
 	android:exported
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:302:13-37
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:304:13-37
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:300:13-67
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:302:13-67
 manifest
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-309:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-309:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-309:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-309:12
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\2095cb6d9e4f120328b7865560b1f601\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-ads:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-17.1.3.aar\a218805987982ebd1522103bbc137954\AndroidManifest.xml:17:1-25:12
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-313:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-313:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-313:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-313:12
+MERGED from [com.google.android.gms:play-services-ads:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-17.2.0.aar\7e87d016a69cf94d63e40d06db81c72c\AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\5ef3ce62b5a2a7a14fdacd817bf2bf25\AndroidManifest.xml:17:1-39:12
 MERGED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\16ee2ccb8448debfe94f440f334e8f38\AndroidManifest.xml:17:1-37:12
 MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.28.0.aar\c25186d40e2d28cdb3fffc41e7a27907\AndroidManifest.xml:21:1-31:12
@@ -31,15 +30,15 @@ MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Social Beat\.gradl
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\7c747f77ee7edb7a9f9fc6ff2260ef87\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:palette-v7:28.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\palette-v7-28.0.0.aar\ee118a66cefe838ae45038f67f189d53\AndroidManifest.xml:17:1-22:12
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\5319e916f5da4f97702e486fb26dc7aa\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:17:1-47:12
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:17:1-47:12
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\3debab31ef1e8a3d9de0bcf35e428f53\AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-location-16.0.0.aar\d9469a95bce5036e69e42f3cde972b6f\AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:customtabs:26.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\customtabs-26.1.0.aar\9b3f2ea01daa0de0868a0f3e958e0c39\AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:17:1-42:12
-MERGED from [com.google.android.gms:play-services-gass:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gass-17.1.3.aar\7d2df21a985f449b6084fb7f55048687\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-ads-base:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.1.3.aar\16c15297c2d1e268d7ff6e576735ce3f\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.7.aar\d188ab535ddd34f8a77ddcbdbe5201f4\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.android.gms:play-services-gass:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gass-17.2.0.aar\18a04415a9c5e828b40fafc325e7b313\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-ads-base:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.2.0.aar\08c8938cdf6e3b2b067515085564ea6d\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.8.aar\5b256f6ae45ed5d0b28702dbfa9fda3f\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\f87bcad1e51cfbb0829ba4404615ac3e\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\4c3828b8879ae88caa81bf1dd8d03773\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\57a690fa745b8be55e4f8cb4960abb74\AndroidManifest.xml:2:1-7:12
@@ -50,10 +49,10 @@ MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Social B
 MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d0ff07347319b7e59447163b2d575623\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\8761f1031f86f7e493c0a2b6057a8654\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\abc544d47c896f96a45a1685e2c4b472\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:17:1-30:12
-MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.3.0.aar\41fd8af54c60d7efe9d410b136747003\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\49c93c657b24f9f17a3945f8cd2790c5\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\e6e32231ebc2d4bdef3f49e58759a74c\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:17:1-30:12
+MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.3.0.aar\41fd8af54c60d7efe9d410b136747003\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\2a66ec20cfd8853717ba681ce05b26e3\AndroidManifest.xml:17:1-28:12
 MERGED from [com.facebook.android:facebook-places:4.28.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\facebook-places-4.28.0.aar\ac440afadc3bd6133cee0a2fe1534f8a\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-applinks:4.28.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\facebook-applinks-4.28.0.aar\4a89a1547508c95c0e4aa908f53d66ad\AndroidManifest.xml:21:1-31:12
@@ -87,22 +86,22 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Social Beat\.gradl
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\cc82a6ba056d3089a4c91e9a0dbbb77c\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\548850f1c0b2bad12e88f719db2a009c\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\e89ec4c4c537eb1cd84cd818df94bed9\AndroidManifest.xml:17:1-22:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-309:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-309:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-309:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-313:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-313:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-313:12
 	package
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:4:5-40
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-309:12
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-313:12
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-309:12
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-313:12
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:11-69
@@ -112,12 +111,12 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:8:5-76
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:8:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:9:5-79
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\ec384d8850b829860b1306fa53f2d7f2\AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\ec384d8850b829860b1306fa53f2d7f2\AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:24:5-79
@@ -126,14 +125,14 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:9:22-76
 uses-permission#android.permission.INTERNET
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:10:5-67
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\3debab31ef1e8a3d9de0bcf35e428f53\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\3debab31ef1e8a3d9de0bcf35e428f53\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\d3363810e3a95ff2bdc71bf2421131d3\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\d3363810e3a95ff2bdc71bf2421131d3\AndroidManifest.xml:24:5-67
 MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\ec384d8850b829860b1306fa53f2d7f2\AndroidManifest.xml:23:5-67
@@ -155,13 +154,13 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:13:5-81
 	android:name
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:13:22-78
 permission#com.socialbeat.influencer.gcm.permission.C2D_MESSAGE
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:15:5-17:47
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:16:5-18:47
 	android:protectionLevel
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:17:9-44
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:18:9-44
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:16:9-76
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:17:9-76
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:19:5-82
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:20:5-82
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\3debab31ef1e8a3d9de0bcf35e428f53\AndroidManifest.xml:23:5-82
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\3debab31ef1e8a3d9de0bcf35e428f53\AndroidManifest.xml:23:5-82
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\d3363810e3a95ff2bdc71bf2421131d3\AndroidManifest.xml:23:5-82
@@ -169,15 +168,15 @@ MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\Social Be
 MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\ec384d8850b829860b1306fa53f2d7f2\AndroidManifest.xml:26:5-82
 MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\ec384d8850b829860b1306fa53f2d7f2\AndroidManifest.xml:26:5-82
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:19:22-79
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:20:22-79
 uses-feature#android.hardware.camera
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:21:5-85
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:22:5-85
 	android:required
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:21:58-82
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:22:58-82
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:21:19-57
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:22:19-57
 application
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:23:5-308:19
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:25:5-311:19
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\5ef3ce62b5a2a7a14fdacd817bf2bf25\AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\5ef3ce62b5a2a7a14fdacd817bf2bf25\AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\16ee2ccb8448debfe94f440f334e8f38\AndroidManifest.xml:22:5-35:19
@@ -198,24 +197,24 @@ MERGED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Social Beat\.
 MERGED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\facebook-common-4.28.0.aar\f1dc15711cd2063e3212a7456b854b86\AndroidManifest.xml:28:5-34:19
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\5319e916f5da4f97702e486fb26dc7aa\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\5319e916f5da4f97702e486fb26dc7aa\AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:29:5-45:19
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:29:5-45:19
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:29:5-45:19
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:29:5-45:19
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\3debab31ef1e8a3d9de0bcf35e428f53\AndroidManifest.xml:26:5-20
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\3debab31ef1e8a3d9de0bcf35e428f53\AndroidManifest.xml:26:5-20
 MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-location-16.0.0.aar\d9469a95bce5036e69e42f3cde972b6f\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-location-16.0.0.aar\d9469a95bce5036e69e42f3cde972b6f\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:customtabs:26.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\customtabs-26.1.0.aar\9b3f2ea01daa0de0868a0f3e958e0c39\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:customtabs:26.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\customtabs-26.1.0.aar\9b3f2ea01daa0de0868a0f3e958e0c39\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:26:5-40:19
-MERGED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:26:5-40:19
-MERGED from [com.google.android.gms:play-services-gass:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gass-17.1.3.aar\7d2df21a985f449b6084fb7f55048687\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-gass:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gass-17.1.3.aar\7d2df21a985f449b6084fb7f55048687\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-ads-base:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.1.3.aar\16c15297c2d1e268d7ff6e576735ce3f\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-ads-base:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.1.3.aar\16c15297c2d1e268d7ff6e576735ce3f\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.7.aar\d188ab535ddd34f8a77ddcbdbe5201f4\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.7.aar\d188ab535ddd34f8a77ddcbdbe5201f4\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:29:5-20
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:29:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:26:5-40:19
+MERGED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:26:5-40:19
+MERGED from [com.google.android.gms:play-services-gass:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gass-17.2.0.aar\18a04415a9c5e828b40fafc325e7b313\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-gass:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gass-17.2.0.aar\18a04415a9c5e828b40fafc325e7b313\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-base:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.2.0.aar\08c8938cdf6e3b2b067515085564ea6d\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-base:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.2.0.aar\08c8938cdf6e3b2b067515085564ea6d\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.8.aar\5b256f6ae45ed5d0b28702dbfa9fda3f\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.8.aar\5b256f6ae45ed5d0b28702dbfa9fda3f\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:29:5-20
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:29:5-20
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\f87bcad1e51cfbb0829ba4404615ac3e\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\f87bcad1e51cfbb0829ba4404615ac3e\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\d3363810e3a95ff2bdc71bf2421131d3\AndroidManifest.xml:26:5-20
@@ -232,14 +231,14 @@ MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Social 
 MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\8761f1031f86f7e493c0a2b6057a8654\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\abc544d47c896f96a45a1685e2c4b472\AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\abc544d47c896f96a45a1685e2c4b472\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:27:5-28:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:27:5-28:19
-MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.3.0.aar\41fd8af54c60d7efe9d410b136747003\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.3.0.aar\41fd8af54c60d7efe9d410b136747003\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\49c93c657b24f9f17a3945f8cd2790c5\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\49c93c657b24f9f17a3945f8cd2790c5\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\e6e32231ebc2d4bdef3f49e58759a74c\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\e6e32231ebc2d4bdef3f49e58759a74c\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:27:5-28:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:27:5-28:19
+MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.3.0.aar\41fd8af54c60d7efe9d410b136747003\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.3.0.aar\41fd8af54c60d7efe9d410b136747003\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\2a66ec20cfd8853717ba681ce05b26e3\AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\2a66ec20cfd8853717ba681ce05b26e3\AndroidManifest.xml:22:5-26:19
 MERGED from [com.facebook.android:facebook-places:4.28.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\facebook-places-4.28.0.aar\ac440afadc3bd6133cee0a2fe1534f8a\AndroidManifest.xml:28:5-29:19
@@ -259,431 +258,435 @@ MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Social Beat\.gr
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\1346c7d83149f41cf1883d7fcbcb4e01\AndroidManifest.xml:22:5-23:19
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\1346c7d83149f41cf1883d7fcbcb4e01\AndroidManifest.xml:22:5-23:19
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:29:9-45
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:31:9-45
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\7b93cd94f1369cb5e70953bb0a76c77f\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:28:9-35
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:30:9-35
 	android:label
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:27:9-41
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:29:9-41
 	android:icon
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:26:9-43
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:28:9-43
 	android:allowBackup
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:25:9-35
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:27:9-35
 	android:theme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:30:9-40
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:32:9-40
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:24:9-38
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:26:9-38
 activity#com.socialbeat.influencer.SplashScreenActivity
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:31:9-43:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:33:9-45:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:33:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:35:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:34:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:36:13-60
 	android:theme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:35:13-80
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:37:13-80
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:32:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:34:13-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:37:13-40:29
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:39:13-42:29
 action#android.intent.action.MAIN
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:38:17-69
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:38:25-66
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:39:17-77
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:39:27-74
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:41:27-74
 meta-data#android.app.shortcuts
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:41:13-42:53
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:43:13-44:53
 	android:resource
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:42:17-50
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:44:17-50
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:41:24-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:43:24-60
 activity#com.socialbeat.influencer.FirstActivity
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:45:9-49:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:47:9-51:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:47:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:49:13-49
 	android:theme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:48:13-80
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:50:13-80
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:46:13-42
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:48:13-42
 activity#com.socialbeat.influencer.LoginActivity
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:50:9-55:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:52:9-57:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:52:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:54:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:53:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:55:13-60
 	android:theme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:54:13-80
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:56:13-80
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:51:13-42
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:53:13-42
 activity#com.socialbeat.influencer.RegistrationActivityOne
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:56:9-61:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:58:9-63:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:58:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:60:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:59:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:61:13-60
 	android:theme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:60:13-80
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:62:13-80
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:57:13-52
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:59:13-52
 activity#com.socialbeat.influencer.NewHomeActivity
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:63:9-68:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:65:9-70:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:65:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:67:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:67:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:69:13-60
 	android:theme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:66:13-56
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:68:13-56
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:64:13-44
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:66:13-44
 activity#com.socialbeat.influencer.MyProfileDummy
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:70:9-74:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:72:9-76:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:72:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:74:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:73:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:75:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:71:13-43
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:73:13-43
 activity#com.socialbeat.influencer.SocialMedia
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:76:9-80:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:78:9-82:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:78:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:80:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:79:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:81:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:77:13-40
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:79:13-40
 activity#com.socialbeat.influencer.SocialMediaAuth
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:82:9-86:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:84:9-88:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:84:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:86:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:85:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:87:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:83:13-44
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:85:13-44
 activity#com.socialbeat.influencer.MyProfileNew
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:88:13-92:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:90:13-94:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:90:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:92:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:91:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:93:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:89:13-41
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:91:13-41
 activity#com.socialbeat.influencer.MoreSettings
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:94:9-98:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:96:9-100:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:96:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:98:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:97:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:99:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:95:13-41
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:97:13-41
 activity#com.socialbeat.influencer.UserSettings
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:100:9-104:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:102:9-106:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:102:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:104:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:103:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:105:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:101:13-41
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:103:13-41
 activity#com.socialbeat.influencer.MyCampDetails
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:106:9-111:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:108:9-113:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:108:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:110:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:109:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:111:13-60
 	android:theme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:110:13-45
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:112:13-45
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:107:13-42
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:109:13-42
 activity#com.socialbeat.influencer.MyCampaignsFragment
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:113:9-117:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:115:9-119:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:115:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:117:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:116:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:118:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:114:13-48
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:116:13-48
 activity#com.socialbeat.influencer.WalletOld
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:119:9-123:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:121:9-125:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:121:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:123:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:122:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:124:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:120:13-38
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:122:13-38
 activity#com.socialbeat.influencer.OurBlogPage
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:125:9-129:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:127:9-131:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:127:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:129:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:128:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:130:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:126:13-40
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:128:13-40
 activity#com.socialbeat.influencer.TermsCondition
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:131:9-135:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:133:9-137:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:133:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:135:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:134:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:136:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:132:13-43
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:134:13-43
 activity#com.socialbeat.influencer.TwitterPage
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:137:9-141:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:139:9-143:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:139:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:141:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:140:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:142:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:138:13-40
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:140:13-40
 activity#com.socialbeat.influencer.InstagramPage
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:143:9-147:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:145:9-149:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:145:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:147:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:146:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:148:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:144:13-42
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:146:13-42
 activity#com.socialbeat.influencer.BloggerPage
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:149:9-153:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:151:9-155:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:151:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:153:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:152:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:154:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:150:13-40
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:152:13-40
 activity#com.socialbeat.influencer.FacebookPage
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:155:9-159:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:157:9-161:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:157:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:159:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:158:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:160:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:156:13-41
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:158:13-41
 activity#com.socialbeat.influencer.YoutubePage
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:162:9-166:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:164:9-168:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:164:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:166:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:165:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:167:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:163:13-40
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:165:13-40
 activity#com.socialbeat.influencer.NotificationManager
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:168:9-172:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:170:9-174:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:170:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:172:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:171:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:173:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:169:13-48
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:171:13-48
 activity#com.socialbeat.influencer.PrivatePolicy
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:174:9-178:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:176:9-180:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:176:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:178:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:177:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:179:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:175:13-42
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:177:13-42
 activity#com.socialbeat.influencer.AllCampDetailsLive
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:181:9-185:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:183:9-187:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:183:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:185:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:184:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:186:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:182:13-47
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:184:13-47
 activity#com.socialbeat.influencer.AllCampDetailsPast
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:187:9-191:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:189:9-193:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:189:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:191:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:190:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:192:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:188:13-47
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:190:13-47
 activity#com.socialbeat.influencer.MyCampaigns
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:193:9-198:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:195:9-200:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:195:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:197:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:196:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:198:13-60
 	android:theme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:197:13-56
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:199:13-56
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:194:13-40
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:196:13-40
 activity#com.socialbeat.influencer.TransactionHistory
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:200:9-204:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:202:9-206:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:202:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:204:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:203:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:205:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:201:13-47
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:203:13-47
 activity#com.socialbeat.influencer.MyWallet
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:206:9-210:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:208:9-212:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:208:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:210:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:209:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:211:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:207:13-37
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:209:13-37
 activity#com.socialbeat.influencer.LoginSmsActivity
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:212:9-217:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:214:9-219:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:214:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:216:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:215:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:217:13-60
 	android:theme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:216:13-56
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:218:13-56
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:213:13-45
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:215:13-45
 activity#com.socialbeat.influencer.ContactUs
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:219:9-223:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:221:9-225:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:221:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:223:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:222:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:224:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:220:13-38
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:222:13-38
 activity#com.socialbeat.influencer.TextEditor
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:225:9-229:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:227:9-231:20
 	android:screenOrientation
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:227:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:229:13-49
 	android:windowSoftInputMode
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:228:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:230:13-60
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:226:13-39
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:228:13-39
 meta-data#com.google.android.gms.version
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:234:9-236:65
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:236:9-238:65
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\2a66ec20cfd8853717ba681ce05b26e3\AndroidManifest.xml:23:9-25:69
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\2a66ec20cfd8853717ba681ce05b26e3\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:236:9-62
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:238:9-62
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:235:9-54
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:237:9-54
 meta-data#com.google.android.gms.ads.AD_MANAGER_APP
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:237:9-239:36
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:239:9-241:36
 	android:value
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:239:13-33
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:241:13-33
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:238:13-69
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:240:13-69
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:241:9-242:45
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:243:9-244:45
 	android:value
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:242:13-43
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:244:13-43
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:241:20-65
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:243:20-65
 activity#com.facebook.FacebookActivity
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:244:9-247:48
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:246:9-249:48
 MERGED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\facebook-common-4.28.0.aar\f1dc15711cd2063e3212a7456b854b86\AndroidManifest.xml:29:9-32:66
 MERGED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\facebook-common-4.28.0.aar\f1dc15711cd2063e3212a7456b854b86\AndroidManifest.xml:29:9-32:66
 	android:label
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:247:13-45
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:249:13-45
 	android:configChanges
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:245:13-114
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:247:13-114
 	android:theme
 		ADDED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\facebook-common-4.28.0.aar\f1dc15711cd2063e3212a7456b854b86\AndroidManifest.xml:32:13-63
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:244:19-63
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:246:19-63
 activity#com.facebook.CustomTabActivity
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:248:9-257:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:250:9-259:20
 	android:exported
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:250:13-36
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:252:13-36
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:249:13-58
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:251:13-58
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/fb_login_protocol_scheme
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:251:13-256:29
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:253:13-258:29
 action#android.intent.action.VIEW
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:252:17-69
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:254:17-69
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:252:25-66
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:254:25-66
 category#android.intent.category.DEFAULT
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:253:17-76
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:255:17-76
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:253:27-73
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:255:27-73
 category#android.intent.category.BROWSABLE
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:254:17-78
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:256:17-78
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:254:27-75
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:256:27-75
 data
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:255:17-75
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:257:17-75
 	android:scheme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:255:23-72
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:257:23-72
 receiver#com.google.android.gms.analytics.AnalyticsReceiver
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:260:9-266:20
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:30:9-34:20
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:30:9-34:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:262:9-268:20
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:30:9-34:20
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:30:9-34:20
 	android:enabled
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:262:13-35
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:264:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:33:13-37
+		ADDED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:33:13-37
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:261:13-78
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:263:13-78
 intent-filter#action:name:com.google.android.gms.analytics.ANALYTICS_DISPATCH
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:263:13-265:29
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:265:13-267:29
 action#com.google.android.gms.analytics.ANALYTICS_DISPATCH
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:264:17-94
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:266:17-94
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:264:25-91
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:266:25-91
 service#com.google.android.gms.analytics.AnalyticsService
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:268:9-271:40
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:36:9-39:40
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:36:9-39:40
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:270:9-273:40
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:36:9-39:40
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:36:9-39:40
 	android:enabled
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:270:13-35
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:272:13-35
 	android:exported
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:271:13-37
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:273:13-37
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:269:13-77
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:271:13-77
 receiver#com.google.android.gms.analytics.CampaignTrackingReceiver
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:273:9-279:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:275:9-281:20
 	android:exported
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:275:13-36
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:277:13-36
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:274:13-85
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:276:13-85
 intent-filter#action:name:com.android.vending.INSTALL_REFERRER
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:276:13-278:29
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:278:13-280:29
 action#com.android.vending.INSTALL_REFERRER
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:277:17-79
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:279:17-79
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:277:25-76
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:279:25-76
 service#com.google.android.gms.analytics.CampaignTrackingService
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:281:9-92
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:283:9-92
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:281:18-89
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:283:18-89
 receiver#com.socialbeat.influencer.GcmBroadcastReceiver
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:283:9-292:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:285:9-294:20
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:284:13-49
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:286:13-49
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+action:name:com.google.android.c2dm.intent.REGISTRATION+action:name:com.google.android.c2dm.intent.SEND+category:name:com.socialbeat.influencer
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:285:13-291:29
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:287:13-293:29
 action#com.google.android.c2dm.intent.SEND
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:286:17-78
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:288:17-78
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:286:25-75
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:288:25-75
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:287:17-81
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:289:17-81
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:287:25-78
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:289:25-78
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:288:17-86
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:290:17-86
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:288:25-83
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:290:25-83
 category#com.socialbeat.influencer
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:290:17-70
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:292:17-70
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:290:27-67
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:292:27-67
 service#com.socialbeat.influencer.GCMIntentService
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:294:9-53
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:296:9-53
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:294:18-50
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:296:18-50
+uses-library#org.apache.http.legacy
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:310:9-89
+	android:required
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:310:62-87
+	android:name
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:310:23-61
 uses-sdk
 INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\2095cb6d9e4f120328b7865560b1f601\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\2095cb6d9e4f120328b7865560b1f601\AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-ads:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-17.1.3.aar\a218805987982ebd1522103bbc137954\AndroidManifest.xml:21:5-23:62
-MERGED from [com.google.android.gms:play-services-ads:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-17.1.3.aar\a218805987982ebd1522103bbc137954\AndroidManifest.xml:21:5-23:62
+MERGED from [com.google.android.gms:play-services-ads:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-17.2.0.aar\7e87d016a69cf94d63e40d06db81c72c\AndroidManifest.xml:21:5-23:62
+MERGED from [com.google.android.gms:play-services-ads:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-17.2.0.aar\7e87d016a69cf94d63e40d06db81c72c\AndroidManifest.xml:21:5-23:62
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\5ef3ce62b5a2a7a14fdacd817bf2bf25\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\5ef3ce62b5a2a7a14fdacd817bf2bf25\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\16ee2ccb8448debfe94f440f334e8f38\AndroidManifest.xml:20:5-44
@@ -712,24 +715,24 @@ MERGED from [com.android.support:palette-v7:28.0.0] C:\Users\Social Beat\.gradle
 MERGED from [com.android.support:palette-v7:28.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\palette-v7-28.0.0.aar\ee118a66cefe838ae45038f67f189d53\AndroidManifest.xml:20:5-44
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\5319e916f5da4f97702e486fb26dc7aa\AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\5319e916f5da4f97702e486fb26dc7aa\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\3debab31ef1e8a3d9de0bcf35e428f53\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\3debab31ef1e8a3d9de0bcf35e428f53\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-location-16.0.0.aar\d9469a95bce5036e69e42f3cde972b6f\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-location-16.0.0.aar\d9469a95bce5036e69e42f3cde972b6f\AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:customtabs:26.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\customtabs-26.1.0.aar\9b3f2ea01daa0de0868a0f3e958e0c39\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:customtabs:26.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\customtabs-26.1.0.aar\9b3f2ea01daa0de0868a0f3e958e0c39\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-gass:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gass-17.1.3.aar\7d2df21a985f449b6084fb7f55048687\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-gass:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gass-17.1.3.aar\7d2df21a985f449b6084fb7f55048687\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-ads-base:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.1.3.aar\16c15297c2d1e268d7ff6e576735ce3f\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-ads-base:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.1.3.aar\16c15297c2d1e268d7ff6e576735ce3f\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.7.aar\d188ab535ddd34f8a77ddcbdbe5201f4\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.7.aar\d188ab535ddd34f8a77ddcbdbe5201f4\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gass:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gass-17.2.0.aar\18a04415a9c5e828b40fafc325e7b313\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-gass:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-gass-17.2.0.aar\18a04415a9c5e828b40fafc325e7b313\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-base:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.2.0.aar\08c8938cdf6e3b2b067515085564ea6d\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-base:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.2.0.aar\08c8938cdf6e3b2b067515085564ea6d\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.8.aar\5b256f6ae45ed5d0b28702dbfa9fda3f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.8.aar\5b256f6ae45ed5d0b28702dbfa9fda3f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\f87bcad1e51cfbb0829ba4404615ac3e\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\f87bcad1e51cfbb0829ba4404615ac3e\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\4c3828b8879ae88caa81bf1dd8d03773\AndroidManifest.xml:5:5-44
@@ -750,14 +753,14 @@ MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Social 
 MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\8761f1031f86f7e493c0a2b6057a8654\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\abc544d47c896f96a45a1685e2c4b472\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\abc544d47c896f96a45a1685e2c4b472\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.3.0.aar\41fd8af54c60d7efe9d410b136747003\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.3.0.aar\41fd8af54c60d7efe9d410b136747003\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\49c93c657b24f9f17a3945f8cd2790c5\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\49c93c657b24f9f17a3945f8cd2790c5\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\e6e32231ebc2d4bdef3f49e58759a74c\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\e6e32231ebc2d4bdef3f49e58759a74c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.3.0.aar\41fd8af54c60d7efe9d410b136747003\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.3.0.aar\41fd8af54c60d7efe9d410b136747003\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\2a66ec20cfd8853717ba681ce05b26e3\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\2a66ec20cfd8853717ba681ce05b26e3\AndroidManifest.xml:20:5-44
 MERGED from [com.facebook.android:facebook-places:4.28.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\facebook-places-4.28.0.aar\ac440afadc3bd6133cee0a2fe1534f8a\AndroidManifest.xml:24:5-26:41
@@ -827,7 +830,7 @@ MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Social Beat\.gradle\cache
 INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.google.android.gms:play-services-ads:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-17.1.3.aar\a218805987982ebd1522103bbc137954\AndroidManifest.xml:23:9-59
+		ADDED from [com.google.android.gms:play-services-ads:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-17.2.0.aar\7e87d016a69cf94d63e40d06db81c72c\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml
@@ -837,11 +840,11 @@ INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:304:13-306:57
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:306:13-308:57
 	android:resource
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:306:17-55
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:308:17-55
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:305:17-67
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:307:17-67
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\5ef3ce62b5a2a7a14fdacd817bf2bf25\AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
@@ -879,25 +882,25 @@ ADDED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Social Beat\.g
 	android:name
 		ADDED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\facebook-common-4.28.0.aar\f1dc15711cd2063e3212a7456b854b86\AndroidManifest.xml:33:19-68
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:27:5-68
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:27:5-68
-MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.7.aar\c00b039adda22e34ea86b682f7ea954a\AndroidManifest.xml:27:5-68
+ADDED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:27:5-68
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:27:5-68
+MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\3051b61c438af2ee40db247c802c6cfc\AndroidManifest.xml:27:5-68
 MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\ec384d8850b829860b1306fa53f2d7f2\AndroidManifest.xml:24:5-68
 MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\ec384d8850b829860b1306fa53f2d7f2\AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:25:5-68
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.3.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.3.0.aar\d03b0d7d326eab0a67c15c996201e0f3\AndroidManifest.xml:25:5-68
 	android:name
-		ADDED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:27:22-65
+		ADDED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:27:22-65
 service#com.google.android.gms.analytics.AnalyticsJobService
-ADDED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:40:9-44:72
+ADDED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:40:9-44:72
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:42:13-35
+		ADDED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:42:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:43:13-37
+		ADDED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:43:13-37
 	android:permission
-		ADDED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:44:13-69
+		ADDED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:44:13-69
 	android:name
-		ADDED from [com.google.android.gms:play-services-analytics:16.0.7] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.7.aar\3fab34c082cced184793001259eb025e\AndroidManifest.xml:41:13-80
+		ADDED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\c76596b8c9619132de4c53dda37e0327\AndroidManifest.xml:41:13-80
 meta-data#android.support.VERSION
 ADDED from [com.android.support:customtabs:26.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\customtabs-26.1.0.aar\9b3f2ea01daa0de0868a0f3e958e0c39\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\4b9e953c70341fc42818e57beca82ce7\AndroidManifest.xml:26:9-28:38
@@ -909,25 +912,25 @@ MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Social Be
 	android:name
 		ADDED from [com.android.support:customtabs:26.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\customtabs-26.1.0.aar\9b3f2ea01daa0de0868a0f3e958e0c39\AndroidManifest.xml:24:13-51
 activity#com.google.android.gms.ads.AdActivity
-ADDED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:29:9-33:64
+ADDED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:29:9-33:64
 	android:exported
-		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:32:13-37
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:32:13-37
 	android:configChanges
-		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:31:13-122
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:31:13-122
 	android:theme
-		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:33:13-61
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:33:13-61
 	android:name
-		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:30:13-65
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:30:13-65
 provider#com.google.android.gms.ads.MobileAdsInitProvider
-ADDED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:35:9-39:39
+ADDED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:35:9-39:39
 	android:authorities
-		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:37:13-73
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:37:13-73
 	android:exported
-		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:38:13-37
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:38:13-37
 	android:initOrder
-		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:39:13-36
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:39:13-36
 	android:name
-		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.3] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.1.3.aar\f480df2e9563816a2ad6b4fd2f108fe0\AndroidManifest.xml:36:13-76
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-17.2.0.aar\f64b9297f02e62131ce8ece960134079\AndroidManifest.xml:36:13-76
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\Social Beat\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\ec384d8850b829860b1306fa53f2d7f2\AndroidManifest.xml:29:9-35:19
 	android:exported

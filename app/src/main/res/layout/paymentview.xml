@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/whiteimg">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30sp"
+            android:scaleType="fitXY"
+            tools:context=".RegistrationScreen1">
+
+            <TextView
+                android:id="@+id/payment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Payment Status Details"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/orange"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/payment_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY">
+
+                <TextView
+                    android:id="@+id/paymentstatustext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:text="Payment Status : "
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/orange"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/paymentstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/paymentstatustext"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:text="Payment Status : "
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/actionbarcolour"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/transactionstatustext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/paymentstatus"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:text="Transaction Status : "
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/orange"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/transactionstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transactionstatustext"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:text="Transaction Status "
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/actionbarcolour"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/transactionidtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transactionstatus"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:text="Transaction Id : "
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/orange"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/transactionid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transactionidtext"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:text="Transaction Id"
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/actionbarcolour"
+                    android:textSize="25dp" />
+
+
+                <TextView
+                    android:id="@+id/transactionamounttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transactionid"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:text="Transaction Amount : "
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/orange"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/transactionamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transactionamounttext"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:text="Transaction Amount"
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/actionbarcolour"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/transactiondatetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transactionamount"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:text="Transaction Date : "
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/orange"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/transactiondate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transactiondatetext"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Transaction Date"
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/actionbarcolour"
+                    android:textSize="25dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/close_img"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" android:src="@mipmap/closebutton" />
+
+</FrameLayout>

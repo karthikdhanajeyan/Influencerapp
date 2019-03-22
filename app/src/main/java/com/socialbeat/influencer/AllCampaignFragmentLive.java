@@ -38,7 +38,7 @@ public class AllCampaignFragmentLive extends Fragment implements SwipeRefreshLay
     ConnectionDetector cd;
     Context context;
     private ProgressDialog pDialog;
-    private List<CampValues> campValuesList = new ArrayList<CampValues>();
+    private List<CampValues> campValuesList = new ArrayList<>();
     private ListView listView;
     private CustomListAdapter adapter;
     String cid,url,valueofcid;
@@ -150,7 +150,6 @@ public class AllCampaignFragmentLive extends Fragment implements SwipeRefreshLay
             public void onResponse(JSONArray response) {
                 Log.d(TAG, response.toString());
                 hidePDialog();
-
                 // Parsing json
                 for (int i = 0; i < response.length(); i++) {
                     try {

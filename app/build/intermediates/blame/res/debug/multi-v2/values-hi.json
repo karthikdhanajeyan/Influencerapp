@@ -4,6 +4,23 @@
             "outputFile": "F:\\Influencerapp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-17.2.0.aar\\7e87d016a69cf94d63e40d06db81c72c\\res\\values-hi\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "199,269,395,464,532,609,703",
+                        "endColumns": "69,125,68,67,76,93,70",
+                        "endOffsets": "268,394,463,531,608,702,773"
+                    },
+                    "to": {
+                        "startLines": "72,73,74,75,76,77,78",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "8317,8391,8521,8594,8666,8747,8845",
+                        "endColumns": "73,129,72,71,80,97,74",
+                        "endOffsets": "8386,8516,8589,8661,8742,8840,8915"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\7b93cd94f1369cb5e70953bb0a76c77f\\res\\values-hi\\values-hi.xml",
                     "from": {
                         "startLines": "2",
@@ -120,23 +137,6 @@
                         "startOffsets": "2812,2972,3104,3243,3354,3440,3530,3613,3705,3794,3911,4022,4118,4214,4323,4454,4535,4621,4804,4898,5001,5122,5232",
                         "endColumns": "159,131,138,110,85,89,82,91,88,116,110,95,95,108,130,80,85,182,93,102,120,109,161",
                         "endOffsets": "2967,3099,3238,3349,3435,3525,3608,3700,3789,3906,4017,4113,4209,4318,4449,4530,4616,4799,4893,4996,5117,5227,5389"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-17.1.3.aar\\a218805987982ebd1522103bbc137954\\res\\values-hi\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10",
-                        "startColumns": "0,0,0,0,0,0,0",
-                        "startOffsets": "197,267,393,462,530,607,701",
-                        "endColumns": "69,125,68,67,76,93,70",
-                        "endOffsets": "266,392,461,529,606,700,771"
-                    },
-                    "to": {
-                        "startLines": "72,73,74,75,76,77,78",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "8317,8391,8521,8594,8666,8747,8845",
-                        "endColumns": "73,129,72,71,80,97,74",
-                        "endOffsets": "8386,8516,8589,8661,8742,8840,8915"
                     }
                 }
             ]

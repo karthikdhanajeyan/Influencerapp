@@ -1394,6 +1394,7 @@ drawable rounded_corner_button_first
 drawable rounded_corner_button_mnus
 drawable rounded_corner_button_new
 drawable rounded_corner_button_new1
+drawable rounded_corner_button_newone
 drawable rounded_corner_button_orange
 drawable rounded_corner_new
 drawable side_nav_bar
@@ -1401,6 +1402,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
 id CTRL
+id Completed_status
 id FUNCTION
 id META
 id NO_DEBUG
@@ -1442,6 +1444,8 @@ id alertTitle
 id all
 id alreadyapplied
 id always
+id amount
+id analtyics_value
 id anticipate
 id appbar
 id appdatetext
@@ -1456,6 +1460,12 @@ id applystatus
 id applystatustext
 id applytill
 id applytilltext
+id approved_status
+id approvedcampvalues
+id approveddate
+id approveddate_status
+id approveddatetext
+id approveddatetext1
 id asConfigured
 id async
 id auto
@@ -1484,8 +1494,10 @@ id bmap
 id bottom
 id bottomlayout
 id bottomline
+id bottomline1
 id bounce
 id box_count
+id brief_title
 id btn_edit_mobile
 id btn_request_sms
 id btn_verify_otp
@@ -1509,6 +1521,9 @@ id campRewardType
 id campRewards
 id campShortNote
 id campTag
+id camp_brief
+id camp_brieftext
+id camp_brieftext1
 id campaignclosed
 id campaignquote
 id campaignquotext
@@ -1516,7 +1531,13 @@ id campapplieddate
 id campappliedstatus
 id campappliedtext
 id campappliedtext1
+id campapprovedtext
+id campapprovedtext1
 id campbacklinktext
+id campbrief
+id campbrief_value
+id campcompletedtext
+id campcompletedtext1
 id campdeliverystatus
 id campdeliverytext
 id campdeliverytext1
@@ -1530,6 +1551,7 @@ id camppaymenttext
 id camppaymenttext1
 id camprewardstext
 id campshbrieftext
+id campstatus
 id cancel_action
 id cancel_button
 id cardvienine
@@ -1574,6 +1596,7 @@ id city_spinner
 id clip_horizontal
 id clip_vertical
 id close
+id close_img
 id cmail
 id cmap
 id collapseActionView
@@ -1587,6 +1610,12 @@ id com_facebook_smart_instructions_or
 id com_facebook_tooltip_bubble_view_bottom_pointer
 id com_facebook_tooltip_bubble_view_text_body
 id com_facebook_tooltip_bubble_view_top_pointer
+id commentstext
+id completedcampvalues
+id completeddate
+id completeddate_status
+id completeddatetext
+id completeddatetext1
 id conditiontext
 id confirmation_code
 id connectfacebook
@@ -1596,6 +1625,11 @@ id connectyoutube
 id container
 id content
 id contentPanel
+id content_value
+id contentshared
+id contentsharedtext
+id contentstatus
+id contentstatustext
 id coordinator
 id coordinatorLayout
 id copyright
@@ -1604,6 +1638,7 @@ id currentamttext
 id custom
 id customPanel
 id dark
+id date
 id datetime
 id decelerate
 id decor_content_parent
@@ -1710,6 +1745,7 @@ id instagramtext
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id ivImage
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -1846,6 +1882,7 @@ id pass_visible
 id password
 id path
 id pathRelative
+id payment_fulldetails
 id payment_history_icon
 id payment_history_select
 id payment_history_text
@@ -1853,6 +1890,8 @@ id payment_method_icon
 id payment_method_select
 id payment_method_text
 id payment_status
+id payment_statustext
+id payment_title
 id paymentstatus
 id paymentstatustext
 id paymenttext
@@ -1950,6 +1989,7 @@ id showCustom
 id showHome
 id showTitle
 id show_button
+id show_file
 id signin
 id signup
 id sin
@@ -2016,6 +2056,14 @@ id topPanel
 id topone
 id touch_outside
 id tran_img
+id transactionamount
+id transactionamounttext
+id transactiondate
+id transactiondatetext
+id transactionid
+id transactionidtext
+id transactionstatus
+id transactionstatustext
 id transitionToEnd
 id transitionToStart
 id transition_current_scene
@@ -2050,6 +2098,7 @@ id userimg_text
 id vertical
 id viewContainer
 id viewPagerVertical
+id view_conversation
 id view_offset_helper
 id viewpager
 id visible
@@ -2128,13 +2177,16 @@ layout alllivecamplist
 layout app_bar_new_home
 layout appliedcampaign
 layout approvedcampaign
+layout approvedcamplist
 layout auth_dialog
+layout briefview
 layout com_facebook_activity_layout
 layout com_facebook_device_auth_dialog_fragment
 layout com_facebook_login_fragment
 layout com_facebook_smart_device_dialog_fragment
 layout com_facebook_tooltip_bubble
 layout completedcampaign
+layout completedcamplist
 layout contactus
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2190,6 +2242,7 @@ layout notification_template_part_time
 layout notificationlist
 layout notificationwindowmsg
 layout notificationwindownomsg
+layout paymentview
 layout profile_dummy
 layout quoteamount
 layout quoteamounts
