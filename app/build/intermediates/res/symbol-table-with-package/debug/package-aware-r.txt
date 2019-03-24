@@ -861,6 +861,7 @@ color counter_text_color
 color dark_ashe
 color darkashe
 color darkblue
+color darkg_ashe
 color darkpink
 color design_bottom_navigation_shadow_color
 color design_default_color_primary
@@ -1446,6 +1447,7 @@ id alreadyapplied
 id always
 id amount
 id analtyics_value
+id analyticsvalues
 id anticipate
 id appbar
 id appdatetext
@@ -1779,6 +1781,7 @@ id linear222
 id linearLayout
 id linearfour
 id linearone
+id linearonee
 id linee
 id linee01
 id linefour
@@ -2072,7 +2075,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tweetlink
 id twitter
 id twitter_clr
 id twitter_handle
@@ -2174,8 +2176,11 @@ layout activity_webview
 layout allcampdetails
 layout alllivecamp
 layout alllivecamplist
+layout analyticsreport
+layout analyticsreportlist
 layout app_bar_new_home
 layout appliedcampaign
+layout appliedcamplist
 layout approvedcampaign
 layout approvedcamplist
 layout auth_dialog
@@ -2188,6 +2193,7 @@ layout com_facebook_tooltip_bubble
 layout completedcampaign
 layout completedcamplist
 layout contactus
+layout conversations
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2220,7 +2226,6 @@ layout mtrl_layout_snackbar_include
 layout mycamp
 layout mycampaigns
 layout mycampdetails
-layout mycamplist
 layout myprofilenew
 layout mywallet
 layout nav_header_new_home
@@ -2247,6 +2252,7 @@ layout profile_dummy
 layout quoteamount
 layout quoteamounts
 layout registration_screen1_new
+layout registration_screen1_new1
 layout registration_screen2_new
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -2257,7 +2263,6 @@ layout spinner_item
 layout spinner_item1
 layout splashscreen
 layout support_simple_spinner_dropdown_item
-layout texteditor
 layout tool_bar
 layout transactionlist
 layout transactionlist1
@@ -3246,5 +3251,6 @@ styleable com_facebook_like_view com_facebook_auxiliary_view_position com_facebo
 styleable com_facebook_login_view com_facebook_confirm_logout com_facebook_login_text com_facebook_logout_text com_facebook_tooltip_mode
 styleable com_facebook_profile_picture_view com_facebook_is_cropped com_facebook_preset_size
 xml app_tracker
+xml network_security_config
 xml provider_paths
 xml shortcuts

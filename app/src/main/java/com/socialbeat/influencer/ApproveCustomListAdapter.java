@@ -1,9 +1,13 @@
 package com.socialbeat.influencer;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -19,7 +23,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
 
+import java.io.InputStream;
 import java.util.List;
 
 public class ApproveCustomListAdapter extends BaseAdapter {
@@ -61,11 +67,11 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 
 			convertView = inflater.inflate(R.layout.approvedcamplist, null);
 		}
-//
-//		//if (imageLoader == null)
-//		//imageLoader = MyApplication.getInstance().getImageLoader();
-//		//NetworkImageView campImg = convertView.findViewById(R.id.campImg);
-//
+
+		if (imageLoader == null)
+		imageLoader = MyApplication.getInstance().getImageLoader();
+		NetworkImageView campImg = convertView.findViewById(R.id.campImg);
+
 		TextView campid = convertView.findViewById(R.id.campid);
 		TextView campname = convertView.findViewById(R.id.campname);
 		TextView status = convertView.findViewById(R.id.campstatus);
@@ -74,9 +80,12 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 		LinearLayout camp_brief = convertView.findViewById(R.id.camp_brief);
 		Button content_value = convertView.findViewById(R.id.content_value);
 		Button analtyics_value = convertView.findViewById(R.id.analtyics_value);
+
 //		// getting campaign data for the row
 		ApprovedCamp cc = approvedCampItem.get(position);
 //		// thumbnail image
+		// getting campaign data for the row
+		campImg.setImageUrl(cc.getCampImg(), imageLoader);
 //		//campImg.setImageUrl(cc.getCampImg(), imageLoader);
 //		//normal values
 		campid.setText(cc.getCampid());
@@ -116,8 +125,15 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 			@Override
 			public void onClick(View v) {
 				//Toast.makeText(activity,"Content clicked", Toast.LENGTH_LONG).show();
-				Intent intent = new Intent(activity, TextEditor.class);
+
+				Intent intent = new Intent(activity, Conversations.class);
 				activity.startActivity(intent);
+
+//				AppliedCampaignFragment fragment = new AppliedCampaignFragment();
+//				FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+//				fragmentTransaction.replace(R.id.frame, fragment);
+//				fragmentTransaction.addToBackStack(null);
+//				fragmentTransaction.commit();
 			}
 		});
 		analtyics_value.setOnClickListener(new View.OnClickListener() {

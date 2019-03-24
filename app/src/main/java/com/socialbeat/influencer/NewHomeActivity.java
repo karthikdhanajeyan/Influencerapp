@@ -102,32 +102,32 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         tabLayout.setupWithViewPager(viewPager);
         CoordinatorLayout coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N_MR1) {
-
-            ShortcutManager shortcutManager = getSystemService(ShortcutManager.class);
-
-            ShortcutInfo webShortcut = new ShortcutInfo.Builder(this, "shortcut_web")
-                    .setShortLabel("Influencer Blog")
-                    .setLongLabel("Open Influencer Blog")
-                    .setIcon(Icon.createWithResource(this, R.mipmap.blogger))
-                    .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.influencer.in/blog/")))
-                    .build();
-
-            assert shortcutManager != null;
-            shortcutManager.setDynamicShortcuts(Collections.singletonList(webShortcut));
-
-            ShortcutInfo dynamicShortcut1 = new ShortcutInfo.Builder(this, "shortcut_dynamic")
-                    .setShortLabel("My Campaigns")
-                    .setLongLabel("My Campaigns")
-                    .setIcon(Icon.createWithResource(this, R.mipmap.bulb))
-                    .setIntents(
-                            new Intent[]{
-                                    new Intent(Intent.ACTION_MAIN, Uri.EMPTY, this, MyCampaignsFragment.class),
-                                    //new Intent(String.valueOf(MyProfileDummy.class))
-                            })
-                    .build();
-            shortcutManager.setDynamicShortcuts(Arrays.asList(webShortcut, dynamicShortcut1));
-        }
+//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N_MR1) {
+//
+//            ShortcutManager shortcutManager = getSystemService(ShortcutManager.class);
+//
+//            ShortcutInfo webShortcut = new ShortcutInfo.Builder(this, "shortcut_web")
+//                    .setShortLabel("Influencer Blog")
+//                    .setLongLabel("Open Influencer Blog")
+//                    .setIcon(Icon.createWithResource(this, R.mipmap.blogger))
+//                    .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.influencer.in/blog/")))
+//                    .build();
+//
+//            assert shortcutManager != null;
+//            shortcutManager.setDynamicShortcuts(Collections.singletonList(webShortcut));
+//
+//            ShortcutInfo dynamicShortcut1 = new ShortcutInfo.Builder(this, "shortcut_dynamic")
+//                    .setShortLabel("My Campaigns")
+//                    .setLongLabel("My Campaigns")
+//                    .setIcon(Icon.createWithResource(this, R.mipmap.bulb))
+//                    .setIntents(
+//                            new Intent[]{
+//                                    new Intent(Intent.ACTION_MAIN, Uri.EMPTY, this, MyCampaignsFragment.class),
+//                                    //new Intent(String.valueOf(MyProfileDummy.class))
+//                            })
+//                    .build();
+//            shortcutManager.setDynamicShortcuts(Arrays.asList(webShortcut, dynamicShortcut1));
+//        }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);

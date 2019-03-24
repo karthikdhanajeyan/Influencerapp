@@ -66,10 +66,10 @@ public class CompCustomListAdapter extends BaseAdapter {
 			convertView = inflater.inflate(R.layout.completedcamplist, null);
 		}
 //
-//		//if (imageLoader == null)
-//		//imageLoader = MyApplication.getInstance().getImageLoader();
-//		//NetworkImageView campImg = convertView.findViewById(R.id.campImg);
-//
+		if (imageLoader == null)
+		imageLoader = MyApplication.getInstance().getImageLoader();
+		NetworkImageView campImg = convertView.findViewById(R.id.campImg);
+
 		TextView campid = convertView.findViewById(R.id.campid);
 		TextView campname = convertView.findViewById(R.id.campname);
 		TextView status = convertView.findViewById(R.id.campstatus);
@@ -85,7 +85,7 @@ public class CompCustomListAdapter extends BaseAdapter {
 //		// getting campaign data for the row
 		CompletedCamp cc = completedCampItem.get(position);
 //		// thumbnail image
-//		//campImg.setImageUrl(cc.getCampImg(), imageLoader);
+		campImg.setImageUrl(cc.getCampImg(), imageLoader);
 //		//normal values
 		campid.setText(cc.getCampid());
 		campname.setText(cc.getCampname());

@@ -1,63 +1,36 @@
 package com.socialbeat.influencer;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.Paint;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.StrictMode;
 import android.provider.MediaStore;
-import android.provider.Settings;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 import in.nashapp.androidsummernote.Summernote;
 
-public class TextEditor extends AppCompatActivity {
+public class Conversations extends AppCompatActivity {
 
     private CoordinatorLayout coordinatorLayout;
     final Context context = this;
@@ -74,13 +47,13 @@ public class TextEditor extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.texteditor);
+        setContentView(R.layout.conversations);
 
         ActionBar bar = getSupportActionBar();
         assert bar != null;
         bar.setDisplayHomeAsUpEnabled(true);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Content View");
+        getSupportActionBar().setTitle("Conversations");
         contentstatus = findViewById(R.id.contentstatus);
         contentshared = findViewById(R.id.contentshared);
         view_conversation = findViewById(R.id.view_conversation);
@@ -113,23 +86,21 @@ public class TextEditor extends AppCompatActivity {
         show_file.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Add File Clicked", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"Add File Clicked", Toast.LENGTH_SHORT).show();
                 selectImage();
             }
         });
-
-
     }
 
     private void selectImage() {
         final CharSequence[] items = { "Take Photo", "Choose from Library",
                 "Cancel" };
-        AlertDialog.Builder builder = new AlertDialog.Builder(TextEditor.this);
-        builder.setTitle("Add Photo!");
+        AlertDialog.Builder builder = new AlertDialog.Builder(Conversations.this);
+        builder.setTitle("ADD IMAGE");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
-                boolean result=Utility.checkPermission(TextEditor.this);
+                boolean result=Utility.checkPermission(Conversations.this);
                 if (items[item].equals("Take Photo")) {
                     userChoosenTask="Take Photo";
                     if(result)

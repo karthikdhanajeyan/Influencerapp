@@ -97,7 +97,7 @@ public class CompletedCampaignFragment extends Fragment {
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        String Completed_URL = "https://www.influencer.in/demo/demoAPI.php";
+        String Completed_URL = "https://www.influencer.in/API/v6/getCompletedCampaigns.php?cid=" + cid + "";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Completed_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -116,7 +116,7 @@ public class CompletedCampaignFragment extends Fragment {
 
                             CompletedCamp completedcamp = new CompletedCamp();
                             completedcamp.setCampid(obj.getString("campid"));
-                            //completedcamp.setCampImg(obj.getString("campImg"));
+                            completedcamp.setCampImg(obj.getString("campImg"));
                             completedcamp.setCampname(obj.getString("campname"));
                             completedcamp.setStatus(obj.getString("status"));
                             completedcamp.setcompleteddate(obj.getString("completeddate"));

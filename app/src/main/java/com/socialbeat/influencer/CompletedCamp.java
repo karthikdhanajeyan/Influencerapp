@@ -4,7 +4,7 @@ package com.socialbeat.influencer;
 public class CompletedCamp {
 
     private String campid;
-    //String campImg;
+    private String campImg;
     private String campname;
     private String status;
     private String completeddate;
@@ -19,7 +19,7 @@ public class CompletedCamp {
     public CompletedCamp() {
 
         this.campid=campid;
-       // this.campImg=campImg;
+        this.campImg=campImg;
         this.campname=campname;
         this.status=status;
         this.completeddate=completeddate;
@@ -39,9 +39,9 @@ public class CompletedCamp {
         this.campid = campid;
     }
 
-    //public String getCampImg() { return campImg; }
+    public String getCampImg() { return campImg; }
 
-    //public void setCampImg(String campImg) {this.campImg = campImg;}
+    public void setCampImg(String campImg) {this.campImg = campImg;}
 
     public String getCampname() {
         return campname;

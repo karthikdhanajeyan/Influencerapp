@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -41,6 +42,7 @@ public class ApprovedCampaignFragment extends Fragment {
     private ListView listView;
     private ApproveCustomListAdapter adapter;
     String cid,url,valueofcid;
+    ImageView campImg;
     private SwipeRefreshLayout swipeRefreshLayout;
     JSONObject object;
     @Override
@@ -117,7 +119,7 @@ public class ApprovedCampaignFragment extends Fragment {
 
                                 ApprovedCamp approvedcamp = new ApprovedCamp();
                                 approvedcamp.setCampid(obj.getString("campid"));
-                                //approvedcamp.setCampImg(obj.getString("campImg"));
+                                approvedcamp.setCampImg(obj.getString("campImg"));
                                 approvedcamp.setCampname(obj.getString("campname"));
                                 approvedcamp.setStatus(obj.getString("status"));
                                 approvedcamp.setApproveddate(obj.getString("approveddate"));

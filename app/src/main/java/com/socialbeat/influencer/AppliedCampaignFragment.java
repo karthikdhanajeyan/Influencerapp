@@ -1,287 +1,199 @@
 package com.socialbeat.influencer;
-import android.annotation.SuppressLint;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.Typeface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Objects;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.util.ArrayList;
+import java.util.List;
 
-public class AppliedCampaignFragment extends Fragment  implements SwipeRefreshLayout.OnRefreshListener{
+public class AppliedCampaignFragment extends Fragment {
+
+    private static final String TAG = AppliedCampaignFragment.class.getSimpleName();
     private CoordinatorLayout coordinatorLayout;
-    Context context;
-    private ProgressDialog pDialog;
-    ListView lv;
-    String cid,campid,campname,campapplieddate,campappliedstatus,camppaymentstatus,campdeliverystatus,bloglink,tweetlink,campaignquote;
     Boolean isInternetPresent = false;
     // Connection detector class
     ConnectionDetector cd;
-    // URL to get contacts JSON
-    private static String url ;
-
-    // JSON node keys
-    private static final String TAG_CAMPDATA = "appliedlist";
-    private static final String TAG_CID = "cid";
-    private static final String TAG_CAMPID = "campid";
-    private static final String TAG_CAMPNAME = "campname";
-    private static final String TAG_CAMPAPPLIEDSTATUS = "campappliedstatus";
-    private static final String TAG_CAMPAPPLIEDDATE = "campapplieddate";
-    private static final String TAG_CAMPDELIVERYSTATUS = "campdeliverystatus";
-    private static final String TAG_CAMPPAYMENTSTATUS = "camppaymentstatus";
-    private static final String TAG_CAMPQUOTE = "campaignquote";
-    private static final String TAG_CAMPBLOGLINK = "bloglink";
-    private static final String TAG_CAMPTWEETLINK = "tweetlink";
+    Context context;
+    private ProgressDialog pDialog;
+    private List<AppliedCamp> appliedList = new ArrayList<>();
+    private ListView listView;
+    private AppliedCustomListAdapter adapter;
+    String cid,url,valueofcid;
+    ImageView campImg;
     private SwipeRefreshLayout swipeRefreshLayout;
-
-    // contacts JSONArray
-    JSONArray contacts = null;
-
-    // Hashmap for ListView
-    ArrayList<HashMap<String, String>> contactList;
+    JSONObject object;
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View v = inflater.inflate(R.layout.appliedcampaign, container, false);
         context = v.getContext();
-
-//        SwipeRefreshLayout srl = v.findViewById(R.id.swiperview);
-//        srl.setOnRefreshListener(this);
-
-
-        SharedPreferences prfs = Objects.requireNonNull(this.getActivity()).getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
+        cd = new ConnectionDetector(getActivity());
+        coordinatorLayout = v.findViewById(R.id.coordinatorLayout);
+        isInternetPresent = cd.isConnectingToInternet();
+        SharedPreferences prfs = this.getActivity().getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
         Log.v("Cid Value : ",cid);
+//        swipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swiperefresh);
+//        swipeRefreshLayout.setOnRefreshListener(this);
 
+        if (isInternetPresent) {
 
-        cd = new ConnectionDetector(getActivity());
-        CoordinatorLayout coordinatorLayout = v.findViewById(R.id.coordinatorLayout);
-        isInternetPresent = cd.isConnectingToInternet();
-        contactList = new ArrayList<HashMap<String, String>>();
+            listView = v.findViewById(R.id.appliedcampvalues);
+            AppliedCampaignsFunction();
 
-        if (cid.length() != 0) {
-            if (isInternetPresent) {
-                cid = prfs.getString("valueofcid", "");
-                url = "https://influencer.in/API/v4/appliedList.php?cid=" + cid + "";
-                System.out.println(url);
-                // Calling async task to get json
-                lv = v.findViewById(R.id.appliedcampvalues);
-                new GetCampaign().execute();
-            } else {
-                Snackbar snackbar = Snackbar
-                        .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
-                        .setAction("SETTINGS", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                startActivity(new Intent(Settings.ACTION_SETTINGS));
-                            }
-                        });
-                // Changing message text color
-                snackbar.setActionTextColor(Color.RED);
-                // Changing action button text color
-                View sbView = snackbar.getView();
-                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
-                textView.setTextColor(Color.YELLOW);
-                snackbar.show();
-            }
-            // return v;
-        } else {
-            Toast.makeText(getActivity(), "User Could not login properly,Please Login", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getActivity(), LoginActivity.class);
-            startActivity(intent);
+        }else {
+            Snackbar snackbar = Snackbar
+                    .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
+                    .setAction("SETTINGS", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            startActivity(new Intent(Settings.ACTION_SETTINGS));
+                        }
+                    });
+            // Changing message text color
+            snackbar.setActionTextColor(Color.RED);
+            // Changing action button text color
+            View sbView = snackbar.getView();
+            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+            textView.setTextColor(Color.YELLOW);
+            snackbar.show();
         }
         return v;
     }
-    public void onBackPressed() {
-        // code here to show dialog
-        // super.onBackPressed();  // optional depending on your needs
-        Intent intent  = new Intent(getActivity(), NewHomeActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                // app icon in action bar clicked; goto parent activity.
-                // this.finish();
-                Intent intent  = new Intent(getActivity(), NewHomeActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+    private void AppliedCampaignsFunction() {
 
-    /**
-     * Async task class to get json by making HTTP call
-     * */
-    @SuppressLint("StaticFieldLeak")
-    private class GetCampaign extends AsyncTask<Void, Void, Void> {
+        pDialog = new ProgressDialog(getActivity());
+        // Showing progress dialog before making http request
+        pDialog.setMessage("Loading...");
+        pDialog.setCancelable(false);
+        pDialog.show();
+        String Applied_URL = "https://influencer.in/API/v6/appliedList.php?cid=" + cid + "";
+        System.out.println(url);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, Applied_URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                // Do something with response string
+                Log.d(TAG, response.toString());
+                hidePDialog();
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            // Showing progress dialog
-            pDialog = new ProgressDialog(getActivity());
-            pDialog.setMessage("Loading, please wait...");
-            pDialog.setCancelable(false);
-            pDialog.show();
-        }
-
-        @Override
-        protected Void doInBackground(Void... arg0) {
-            // Creating service handler class instance
-            ServiceHandler sh = new ServiceHandler();
-            // Making a request to url and getting response
-            String jsonStr = sh.makeServiceCall(url, ServiceHandler.GET);
-            Log.d("Response: ", "> " + jsonStr);
-
-            if (jsonStr != null) {
                 try {
+                    object = new JSONObject(response);
+                    if (response != null) {
 
-                    String result ="{\"success\":false,\"message\":\"No campaign applied yet\"}";
-                    if(jsonStr.equals(result)) {
-                        Snackbar snackbar = Snackbar
-                                .make(coordinatorLayout, "You have currently not applied to any campaigns. Please check out the Live campaigns.", Snackbar.LENGTH_INDEFINITE)
-                                .setAction("Live Campaigns", new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        Intent intent= new Intent(getActivity(), NewHomeActivity.class);
-                                        startActivity(intent);
-                                    }
-                                });
-                        // Changing message text color
-                        snackbar.setActionTextColor(Color.YELLOW);
-                        // Changing action button text color
-                        View sbView = snackbar.getView();
-//                        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-//                        textView.setTextColor(Color.YELLOW);
-                        snackbar.show();
+                        String responstatus = object.getString("success").toString();
+                        Log.d("response status : ",responstatus);
+                        String responsemessage = object.getString("message").toString();
+
+
+                        if (responstatus == "true") {
+
+                            object.getJSONArray("appliedlist");
+                            JSONArray obj1 = object.getJSONArray("appliedlist");
+
+                            for (int i = 0; i < obj1.length(); i++) {
+                                try {
+                                    JSONObject obj = obj1.getJSONObject(i);
+
+                                    AppliedCamp appliedcamp = new AppliedCamp();
+                                    appliedcamp.setCid(obj.getString("cid"));
+                                    appliedcamp.setCampid(obj.getString("campid"));
+                                    appliedcamp.setCampImg(obj.getString("campImg"));
+                                    appliedcamp.setCampname(obj.getString("campname"));
+                                    appliedcamp.setCampappliedstatus(obj.getString("campappliedstatus"));
+                                    appliedcamp.setCampaignquote(obj.getString("campaignquote"));
+                                    appliedcamp.setCampapplieddate(obj.getString("campapplieddate"));
+                                    appliedcamp.setCampdeliverystatus(obj.getString("campdeliverystatus"));
+                                    appliedcamp.setCamppaymentstatus(obj.getString("camppaymentstatus"));
+
+                                    // adding contentofCampaigns to movies array
+                                    appliedList.add(appliedcamp);
+
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                    MyApplication.getInstance().trackException(e);
+                                    Log.e(TAG, "Exception: " + e.getMessage());
+                                }
+                            }
+                        } else {
+                            Log.d("success : ", "False");
+                        }
+                        adapter = new AppliedCustomListAdapter(getActivity(), appliedList);
+                        listView.setAdapter(adapter);
+                    } else {
+                        Log.e("ServiceHandler", "Couldn't get any data from the url");
                     }
 
-                    JSONObject jsonObj = new JSONObject(jsonStr);
-
-                    // Getting JSON Array node
-                    contacts = jsonObj.getJSONArray(TAG_CAMPDATA);
-
-                    // looping through All Contacts
-                    for (int i = 0; i < contacts.length(); i++) {
-                        JSONObject c = contacts.getJSONObject(i);
-                        cid= c.getString(TAG_CID);
-                        campid = c.getString(TAG_CAMPID);
-                        campname = c.getString(TAG_CAMPNAME);
-                        campapplieddate = c.getString(TAG_CAMPAPPLIEDDATE);
-                        campappliedstatus = c.getString(TAG_CAMPAPPLIEDSTATUS);
-                        camppaymentstatus = c.getString(TAG_CAMPPAYMENTSTATUS);
-                        campdeliverystatus = c.getString(TAG_CAMPDELIVERYSTATUS);
-                        campaignquote = c.getString(TAG_CAMPQUOTE);
-                        bloglink = c.getString(TAG_CAMPBLOGLINK);
-                        tweetlink = c.getString(TAG_CAMPTWEETLINK);
-
-                        // tmp hashmap for single contact
-                        HashMap<String, String> contact = new HashMap<String, String>();
-
-                        // adding each child node to HashMap key => value
-                        contact.put(TAG_CID,cid);
-                        contact.put(TAG_CAMPID,campid);
-                        contact.put(TAG_CAMPNAME, campname);
-                        contact.put(TAG_CAMPAPPLIEDDATE, campapplieddate);
-                        contact.put(TAG_CAMPAPPLIEDSTATUS, campappliedstatus);
-                        contact.put(TAG_CAMPPAYMENTSTATUS, camppaymentstatus);
-                        contact.put(TAG_CAMPQUOTE, campaignquote);
-                        contact.put(TAG_CAMPDELIVERYSTATUS, campdeliverystatus);
-                        contact.put(TAG_CAMPBLOGLINK, bloglink);
-                        contact.put(TAG_CAMPTWEETLINK, tweetlink);
-
-                        // adding contact to contact list
-                        contactList.add(contact);
-                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-            } else {
-                Log.e("ServiceHandler", "Couldn't get any data from the url");
+
             }
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-            super.onPostExecute(result);
-            // Dismiss the progress dialog
-            if (pDialog.isShowing())
-                pDialog.dismiss();
-            /**
-             * Updating parsed JSON data into ListView
-             * */
-            ListAdapter adapter = new SimpleAdapter(getActivity(), contactList,
-                    R.layout.mycamplist, new String[]{TAG_CAMPNAME, TAG_CAMPAPPLIEDSTATUS,TAG_CAMPAPPLIEDDATE, TAG_CAMPDELIVERYSTATUS, TAG_CAMPPAYMENTSTATUS,TAG_CID,TAG_CAMPID,TAG_CAMPBLOGLINK,TAG_CAMPTWEETLINK,TAG_CAMPQUOTE},
-                    new int[]{R.id.campname,R.id.campappliedstatus,R.id.campapplieddate,R.id.campdeliverystatus,R.id.camppaymentstatus,R.id.cid,R.id.campid,R.id.bloglink,R.id.tweetlink,R.id.campaignquote});
-            lv.setAdapter(adapter);
-        }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // Do something when get error
+                    }
+                }
+        );
+        MyApplication.getInstance().addToRequestQueue(stringRequest);
 
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        hidePDialog();
+    }
+
+    private void hidePDialog() {
+        if (pDialog != null) {
+            pDialog.dismiss();
+            pDialog = null;
+        }
+    }
+
     @Override
     public void onResume() {
         super.onResume();
         // Tracking the screen view
-        MyApplication.getInstance().trackScreenView("Applied Campaign Screen");
+        MyApplication.getInstance().trackScreenView("Approved Campaign Screen");
     }
-    public static AllCampaignFragmentLive newInstance() {
-        return (new AllCampaignFragmentLive());
-    }
-
-    @Override
-    public void onRefresh() {
-        if (swipeRefreshLayout != null) {
-            swipeRefreshLayout.setRefreshing(false);
-        }else {
-            swipeRefreshLayout.setRefreshing(true);
-            AppliedCampaignFragment fragment = new AppliedCampaignFragment();
-            FragmentTransaction fragmentTransaction = Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.frame, fragment);
-            fragmentTransaction.commit();
-            swipeRefreshLayout.setRefreshing(false);
-        }
+    public static AppliedCampaignFragment newInstance() {
+        return (new AppliedCampaignFragment());
     }
 
+//    @Override
+//    public void onRefresh() {
+//        swipeRefreshLayout.setRefreshing(true);
+//        AppliedCampaignFragment fragment = new AppliedCampaignFragment();
+//        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+//        fragmentTransaction.replace(R.id.frame, fragment);
+//        fragmentTransaction.commit();
+//        swipeRefreshLayout.setRefreshing(false);
+//    }
 }

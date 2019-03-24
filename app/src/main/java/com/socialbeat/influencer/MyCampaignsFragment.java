@@ -4,24 +4,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -111,10 +106,7 @@ public class MyCampaignsFragment extends AppCompatActivity {
                                 .getText().toString();
                         String ccamppaymentstatus = ((TextView) view.findViewById(R.id.camppaymentstatus))
                                 .getText().toString();
-                        String cbloglink = ((TextView) view.findViewById(R.id.bloglink))
-                                .getText().toString();
-                        String ctweetlink = ((TextView) view.findViewById(R.id.tweetlink))
-                                .getText().toString();
+
                     }
                 });
                 // Calling async task to get json
@@ -271,8 +263,8 @@ public class MyCampaignsFragment extends AppCompatActivity {
              * Updating parsed JSON data into ListView
              * */
             ListAdapter adapter = new SimpleAdapter(MyCampaignsFragment.this, contactList,
-                    R.layout.mycamplist, new String[]{TAG_CAMPNAME, TAG_CAMPAPPLIEDSTATUS,TAG_CAMPAPPLIEDDATE, TAG_CAMPDELIVERYSTATUS, TAG_CAMPPAYMENTSTATUS,TAG_CID,TAG_CAMPID,TAG_CAMPBLOGLINK,TAG_CAMPTWEETLINK,TAG_CAMPQUOTE},
-                    new int[]{R.id.campname,R.id.campappliedstatus,R.id.campapplieddate,R.id.campdeliverystatus,R.id.camppaymentstatus,R.id.cid,R.id.campid,R.id.bloglink,R.id.tweetlink,R.id.campaignquote});
+                    R.layout.appliedcamplist, new String[]{TAG_CAMPNAME, TAG_CAMPAPPLIEDSTATUS,TAG_CAMPAPPLIEDDATE, TAG_CAMPDELIVERYSTATUS, TAG_CAMPPAYMENTSTATUS,TAG_CID,TAG_CAMPID,TAG_CAMPQUOTE},
+                    new int[]{R.id.campname,R.id.campappliedstatus,R.id.campapplieddate,R.id.campdeliverystatus,R.id.camppaymentstatus,R.id.cid,R.id.campid,R.id.campaignquote});
             lv.setAdapter(adapter);
         }
 

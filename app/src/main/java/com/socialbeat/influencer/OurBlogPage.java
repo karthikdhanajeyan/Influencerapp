@@ -38,6 +38,7 @@ public class OurBlogPage extends AppCompatActivity {
         setContentView(R.layout.webview);
 
         ActionBar bar = getSupportActionBar();
+        assert bar != null;
         bar.setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("Our Blog");
