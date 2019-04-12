@@ -59,6 +59,7 @@ public final class R {
   }
   public static final class attr {
     /**
+     * Custom divider drawable to use for elements in the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -66,6 +67,7 @@ public final class R {
      */
     public static final int actionBarDivider=0x7f040000;
     /**
+     * Custom item state list drawable background for action bar items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -73,6 +75,8 @@ public final class R {
      */
     public static final int actionBarItemBackground=0x7f040001;
     /**
+     * Reference to a theme that should be used to inflate popups
+     * shown by widgets in the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -80,6 +84,8 @@ public final class R {
      */
     public static final int actionBarPopupTheme=0x7f040002;
     /**
+     * Size of the Action Bar, including the contextual
+     * bar used to present Action Modes.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -96,6 +102,10 @@ public final class R {
      */
     public static final int actionBarSize=0x7f040003;
     /**
+     * Reference to a style for the split Action Bar. This style
+     * controls the split component that holds the menu/action
+     * buttons. actionBarStyle is still used for the primary
+     * bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -103,6 +113,7 @@ public final class R {
      */
     public static final int actionBarSplitStyle=0x7f040004;
     /**
+     * Reference to a style for the Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -117,6 +128,7 @@ public final class R {
      */
     public static final int actionBarTabBarStyle=0x7f040006;
     /**
+     * Default style for tabs within an action bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -131,6 +143,9 @@ public final class R {
      */
     public static final int actionBarTabTextStyle=0x7f040008;
     /**
+     * Reference to a theme that should be used to inflate the
+     * action bar. This will be inherited by any widget inflated
+     * into the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -138,6 +153,13 @@ public final class R {
      */
     public static final int actionBarTheme=0x7f040009;
     /**
+     * Reference to a theme that should be used to inflate widgets
+     * and layouts destined for the action bar. Most of the time
+     * this will be a reference to the current theme, but when
+     * the action bar has a significantly different contrast
+     * profile than the rest of the activity the difference
+     * can become important. If this is set to @null the current
+     * theme will be used.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -145,6 +167,7 @@ public final class R {
      */
     public static final int actionBarWidgetTheme=0x7f04000a;
     /**
+     * Default action button style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -152,6 +175,7 @@ public final class R {
      */
     public static final int actionButtonStyle=0x7f04000b;
     /**
+     * Default ActionBar dropdown style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -159,6 +183,9 @@ public final class R {
      */
     public static final int actionDropDownStyle=0x7f04000c;
     /**
+     * An optional layout to be used as an action view.
+     * See {@link android.view.MenuItem#setActionView(android.view.View)}
+     * for more info.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -166,6 +193,8 @@ public final class R {
      */
     public static final int actionLayout=0x7f04000d;
     /**
+     * TextAppearance style that will be applied to text that
+     * appears within action menu items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -173,6 +202,7 @@ public final class R {
      */
     public static final int actionMenuTextAppearance=0x7f04000e;
     /**
+     * Color for text that appears within action menu items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -183,6 +213,7 @@ public final class R {
      */
     public static final int actionMenuTextColor=0x7f04000f;
     /**
+     * Background drawable to use for action mode UI
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -197,6 +228,7 @@ public final class R {
      */
     public static final int actionModeCloseButtonStyle=0x7f040011;
     /**
+     * Drawable to use for the close action mode button
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -204,6 +236,7 @@ public final class R {
      */
     public static final int actionModeCloseDrawable=0x7f040012;
     /**
+     * Drawable to use for the Copy action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -211,6 +244,7 @@ public final class R {
      */
     public static final int actionModeCopyDrawable=0x7f040013;
     /**
+     * Drawable to use for the Cut action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -218,6 +252,7 @@ public final class R {
      */
     public static final int actionModeCutDrawable=0x7f040014;
     /**
+     * Drawable to use for the Find action button in WebView selection action modes
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -225,6 +260,7 @@ public final class R {
      */
     public static final int actionModeFindDrawable=0x7f040015;
     /**
+     * Drawable to use for the Paste action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -232,6 +268,7 @@ public final class R {
      */
     public static final int actionModePasteDrawable=0x7f040016;
     /**
+     * PopupWindow style to use for action modes when showing as a window overlay.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -239,6 +276,7 @@ public final class R {
      */
     public static final int actionModePopupWindowStyle=0x7f040017;
     /**
+     * Drawable to use for the Select all action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -246,6 +284,7 @@ public final class R {
      */
     public static final int actionModeSelectAllDrawable=0x7f040018;
     /**
+     * Drawable to use for the Share action button in WebView selection action modes
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -253,6 +292,7 @@ public final class R {
      */
     public static final int actionModeShareDrawable=0x7f040019;
     /**
+     * Background drawable to use for action mode UI in the lower split bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -267,6 +307,7 @@ public final class R {
      */
     public static final int actionModeStyle=0x7f04001b;
     /**
+     * Drawable to use for the Web Search action button in WebView selection action modes
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -288,16 +329,24 @@ public final class R {
      */
     public static final int actionOverflowMenuStyle=0x7f04001e;
     /**
+     * The name of an optional ActionProvider class to instantiate an action view
+     * and perform operations such as default action for that menu item.
+     * See {@link android.view.MenuItem#setActionProvider(android.view.ActionProvider)}
+     * for more info.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int actionProviderClass=0x7f04001f;
     /**
+     * The name of an optional View class to instantiate and use as an
+     * action view. See {@link android.view.MenuItem#setActionView(android.view.View)}
+     * for more info.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int actionViewClass=0x7f040020;
     /**
+     * Default ActivityChooserView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -339,6 +388,7 @@ public final class R {
      */
     public static final int alertDialogStyle=0x7f040027;
     /**
+     * Theme to use for alert dialogs spawned from this theme.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -346,6 +396,8 @@ public final class R {
      */
     public static final int alertDialogTheme=0x7f040028;
     /**
+     * Whether to automatically stack the buttons when there is not
+     * enough space to lay them out side-by-side.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -355,6 +407,8 @@ public final class R {
      */
     public static final int alpha=0x7f04002a;
     /**
+     * The alphabetic modifier key. This is the modifier when using a keyboard
+     * with alphabetic keys. The values should be kept in sync with KeyEvent
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -403,6 +457,7 @@ public final class R {
      */
     public static final int arcMode=0x7f04002f;
     /**
+     * The length of the arrow head when formed to make an arrow
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -411,6 +466,7 @@ public final class R {
      */
     public static final int arrowHeadLength=0x7f040030;
     /**
+     * The length of the shaft when formed to make an arrow
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -424,6 +480,7 @@ public final class R {
      */
     public static final int attributeName=0x7f040032;
     /**
+     * Default AutoCompleteTextView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -431,6 +488,7 @@ public final class R {
      */
     public static final int autoCompleteTextViewStyle=0x7f040033;
     /**
+     * The maximum text size constraint to be used when auto-sizing text.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -439,6 +497,7 @@ public final class R {
      */
     public static final int autoSizeMaxTextSize=0x7f040034;
     /**
+     * The minimum text size constraint to be used when auto-sizing text.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -447,6 +506,9 @@ public final class R {
      */
     public static final int autoSizeMinTextSize=0x7f040035;
     /**
+     * Resource array of dimensions to be used in conjunction with
+     * <code>autoSizeTextType</code> set to <code>uniform</code>. Overrides
+     * <code>autoSizeStepGranularity</code> if set.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -454,6 +516,9 @@ public final class R {
      */
     public static final int autoSizePresetSizes=0x7f040036;
     /**
+     * Specify the auto-size step size if <code>autoSizeTextType</code> is set to
+     * <code>uniform</code>. The default is 1px. Overwrites
+     * <code>autoSizePresetSizes</code> if set.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -462,18 +527,22 @@ public final class R {
      */
     public static final int autoSizeStepGranularity=0x7f040037;
     /**
+     * Specify the type of auto-size. Note that this feature is not supported by EditText,
+     * works only for TextView.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>uniform</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td>No auto-sizing (default).</td></tr>
+     * <tr><td>uniform</td><td>1</td><td>Uniform horizontal and vertical text size scaling to fit within the
+     * container.</td></tr>
      * </table>
      */
     public static final int autoSizeTextType=0x7f040038;
     /**
+     * Specifies a background drawable for the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -481,6 +550,7 @@ public final class R {
      */
     public static final int background=0x7f040039;
     /**
+     * Specifies a background drawable for the bottom component of a split action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -491,6 +561,7 @@ public final class R {
      */
     public static final int backgroundSplit=0x7f04003a;
     /**
+     * Specifies a background drawable for a second stacked row of the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -501,28 +572,36 @@ public final class R {
      */
     public static final int backgroundStacked=0x7f04003b;
     /**
+     * Tint to apply to the background.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int backgroundTint=0x7f04003c;
     /**
+     * Blending mode used to apply the background tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
     public static final int backgroundTintMode=0x7f04003d;
     /**
+     * The length of the bars when they are parallel to each other
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -604,6 +683,7 @@ public final class R {
      */
     public static final int borderWidth=0x7f040047;
     /**
+     * Style for buttons without an explicit border, often used in groups.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -716,6 +796,7 @@ public final class R {
      */
     public static final int brightness=0x7f040056;
     /**
+     * Style for buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -723,6 +804,7 @@ public final class R {
      */
     public static final int buttonBarButtonStyle=0x7f040057;
     /**
+     * Style for the "negative" buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -730,6 +812,7 @@ public final class R {
      */
     public static final int buttonBarNegativeButtonStyle=0x7f040058;
     /**
+     * Style for the "neutral" buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -737,6 +820,7 @@ public final class R {
      */
     public static final int buttonBarNeutralButtonStyle=0x7f040059;
     /**
+     * Style for the "positive" buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -744,6 +828,7 @@ public final class R {
      */
     public static final int buttonBarPositiveButtonStyle=0x7f04005a;
     /**
+     * Style for button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -757,8 +842,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      */
     public static final int buttonGravity=0x7f04005c;
@@ -795,6 +880,7 @@ public final class R {
      */
     public static final int buttonSize=0x7f04005f;
     /**
+     * Normal Button style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -802,6 +888,7 @@ public final class R {
      */
     public static final int buttonStyle=0x7f040060;
     /**
+     * Small Button style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -809,34 +896,43 @@ public final class R {
      */
     public static final int buttonStyleSmall=0x7f040061;
     /**
+     * Tint to apply to the button drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int buttonTint=0x7f040062;
     /**
+     * Blending mode used to apply the button tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
     public static final int buttonTintMode=0x7f040063;
     /**
+     * Background color for CardView.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int cardBackgroundColor=0x7f040064;
     /**
+     * Corner radius for CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -845,6 +941,7 @@ public final class R {
      */
     public static final int cardCornerRadius=0x7f040065;
     /**
+     * Elevation for CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -853,6 +950,7 @@ public final class R {
      */
     public static final int cardElevation=0x7f040066;
     /**
+     * Maximum Elevation for CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -861,11 +959,13 @@ public final class R {
      */
     public static final int cardMaxElevation=0x7f040067;
     /**
+     * Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int cardPreventCornerOverlap=0x7f040068;
     /**
+     * Add padding in API v21+ as well to have the same measurements with previous versions.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -883,6 +983,7 @@ public final class R {
      */
     public static final int chainUseRtl=0x7f04006b;
     /**
+     * Default Checkbox style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -914,6 +1015,7 @@ public final class R {
      */
     public static final int checkedIconVisible=0x7f040070;
     /**
+     * Default CheckedTextView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1102,6 +1204,7 @@ public final class R {
      */
     public static final int clickAction=0x7f04008a;
     /**
+     * Close button icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1149,6 +1252,7 @@ public final class R {
      */
     public static final int closeIconVisible=0x7f040091;
     /**
+     * Specifies a layout to use for the "close" item at the starting edge.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1156,11 +1260,13 @@ public final class R {
      */
     public static final int closeItemLayout=0x7f040092;
     /**
+     * Text to set as the content description for the collapse button.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int collapseContentDescription=0x7f040093;
     /**
+     * Icon drawable to use for the collapse button.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1195,48 +1301,58 @@ public final class R {
      */
     public static final int collapsedTitleTextAppearance=0x7f040096;
     /**
+     * The drawing color for the bars
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int color=0x7f040097;
     /**
+     * Bright complement to the primary branding color. By default, this is the color applied
+     * to framework controls (via colorControlActivated).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorAccent=0x7f040098;
     /**
+     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorBackgroundFloating=0x7f040099;
     /**
+     * The color applied to framework buttons in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorButtonNormal=0x7f04009a;
     /**
+     * The color applied to framework controls in their activated (ex. checked) state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorControlActivated=0x7f04009b;
     /**
+     * The color applied to framework control highlights (ex. ripples, list selectors).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorControlHighlight=0x7f04009c;
     /**
+     * The color applied to framework controls in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorControlNormal=0x7f04009d;
     /**
+     * Color used for error states and things that need to be drawn to
+     * the user's attention.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1247,12 +1363,16 @@ public final class R {
      */
     public static final int colorError=0x7f04009e;
     /**
+     * The primary branding color for the app. By default, this is the color applied to the
+     * action bar background.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorPrimary=0x7f04009f;
     /**
+     * Dark variant of the primary branding color. By default, this is the color applied to
+     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
@@ -1282,6 +1402,7 @@ public final class R {
      */
     public static final int colorSecondary=0x7f0400a2;
     /**
+     * The color applied to framework switch thumbs in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
@@ -1397,6 +1518,7 @@ public final class R {
      */
     public static final int com_facebook_tooltip_mode=0x7f0400af;
     /**
+     * Commit icon shown in the query suggestion row
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1444,11 +1566,14 @@ public final class R {
      */
     public static final int content=0x7f0400b6;
     /**
+     * The content description associated with the item.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int contentDescription=0x7f0400b7;
     /**
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1457,6 +1582,8 @@ public final class R {
      */
     public static final int contentInsetEnd=0x7f0400b8;
     /**
+     * Minimum inset for content views within a bar when actions from a menu
+     * are present. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1465,6 +1592,8 @@ public final class R {
      */
     public static final int contentInsetEndWithActions=0x7f0400b9;
     /**
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1473,6 +1602,8 @@ public final class R {
      */
     public static final int contentInsetLeft=0x7f0400ba;
     /**
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1481,6 +1612,8 @@ public final class R {
      */
     public static final int contentInsetRight=0x7f0400bb;
     /**
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1489,6 +1622,8 @@ public final class R {
      */
     public static final int contentInsetStart=0x7f0400bc;
     /**
+     * Minimum inset for content views within a bar when a navigation button
+     * is present, such as the Up button. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1497,6 +1632,7 @@ public final class R {
      */
     public static final int contentInsetStartWithNavigation=0x7f0400bd;
     /**
+     * Inner padding between the edges of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1505,6 +1641,7 @@ public final class R {
      */
     public static final int contentPadding=0x7f0400be;
     /**
+     * Inner padding between the bottom edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1513,6 +1650,7 @@ public final class R {
      */
     public static final int contentPaddingBottom=0x7f0400bf;
     /**
+     * Inner padding between the left edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1521,6 +1659,7 @@ public final class R {
      */
     public static final int contentPaddingLeft=0x7f0400c0;
     /**
+     * Inner padding between the right edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1529,6 +1668,7 @@ public final class R {
      */
     public static final int contentPaddingRight=0x7f0400c1;
     /**
+     * Inner padding between the top edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1547,6 +1687,7 @@ public final class R {
      */
     public static final int contrast=0x7f0400c4;
     /**
+     * The background used by framework controls.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1648,6 +1789,7 @@ public final class R {
      */
     public static final int customIntegerValue=0x7f0400d4;
     /**
+     * Specifies a layout for custom navigation. Overrides navigationMode.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1660,6 +1802,8 @@ public final class R {
      */
     public static final int customStringValue=0x7f0400d6;
     /**
+     * Default query hint used when {@code queryHint} is undefined and
+     * the search view's {@code SearchableInfo} does not provide a hint.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -1680,6 +1824,7 @@ public final class R {
      */
     public static final int deltaPolarRadius=0x7f0400da;
     /**
+     * Preferred corner radius of dialogs.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1688,6 +1833,7 @@ public final class R {
      */
     public static final int dialogCornerRadius=0x7f0400db;
     /**
+     * Preferred padding for dialog content.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1696,6 +1842,7 @@ public final class R {
      */
     public static final int dialogPreferredPadding=0x7f0400dc;
     /**
+     * Theme to use for dialogs spawned from this theme.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1703,6 +1850,7 @@ public final class R {
      */
     public static final int dialogTheme=0x7f0400dd;
     /**
+     * Options affecting how the action bar is displayed.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -1720,6 +1868,7 @@ public final class R {
      */
     public static final int displayOptions=0x7f0400de;
     /**
+     * Specifies the drawable used for item dividers.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1727,6 +1876,7 @@ public final class R {
      */
     public static final int divider=0x7f0400df;
     /**
+     * A drawable that may be used as a horizontal divider between visual elements.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1734,6 +1884,7 @@ public final class R {
      */
     public static final int dividerHorizontal=0x7f0400e0;
     /**
+     * Size of padding on either end of a divider.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1742,6 +1893,7 @@ public final class R {
      */
     public static final int dividerPadding=0x7f0400e1;
     /**
+     * A drawable that may be used as a vertical divider between visual elements.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1783,6 +1935,7 @@ public final class R {
      */
     public static final int drawPath=0x7f0400e5;
     /**
+     * The total size of the drawable
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1798,6 +1951,7 @@ public final class R {
      */
     public static final int drawerArrowStyle=0x7f0400e7;
     /**
+     * ListPopupWindow compatibility
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1805,6 +1959,7 @@ public final class R {
      */
     public static final int dropDownListViewStyle=0x7f0400e8;
     /**
+     * The preferred item height for dropdown lists.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1817,6 +1972,7 @@ public final class R {
      */
     public static final int duration=0x7f0400ea;
     /**
+     * EditText background drawable.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1824,6 +1980,7 @@ public final class R {
      */
     public static final int editTextBackground=0x7f0400eb;
     /**
+     * EditText text foreground color.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1834,6 +1991,7 @@ public final class R {
      */
     public static final int editTextColor=0x7f0400ec;
     /**
+     * Default EditText style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1883,6 +2041,11 @@ public final class R {
      */
     public static final int errorTextAppearance=0x7f0400f3;
     /**
+     * The drawable to show in the button for expanding the activities overflow popup.
+     * <strong>Note:</strong> Clients would like to set this drawable
+     * as a clue about the action the chosen activity will perform. For
+     * example, if share activity is to be chosen the drawable should
+     * give a clue that sharing is to be performed.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2180,6 +2343,8 @@ public final class R {
      */
     public static final int fastScrollVerticalTrackDrawable=0x7f04011b;
     /**
+     * Distance from the top of the TextView to the first text baseline. If set, this
+     * overrides the value set for paddingTop.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2213,6 +2378,8 @@ public final class R {
      */
     public static final int floatingActionButtonStyle=0x7f04011d;
     /**
+     * The reference to the font file to be used. This should be a file in the res/font folder
+     * and should therefore have an R reference value. E.g. @font/myfont
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2220,16 +2387,23 @@ public final class R {
      */
     public static final int font=0x7f04011e;
     /**
+     * The attribute for the font family.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontFamily=0x7f04011f;
     /**
+     * The authority of the Font Provider to be used for the request.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontProviderAuthority=0x7f040120;
     /**
+     * The sets of hashes for the certificates the provider should be signed with. This is
+     * used to verify the identity of the provider, and is only required if the provider is not
+     * part of the system image. This value may point to one list or a list of lists, where each
+     * individual list represents one collection of signature hashes. Refer to your font provider's
+     * documentation for these values.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2237,18 +2411,34 @@ public final class R {
      */
     public static final int fontProviderCerts=0x7f040121;
     /**
+     * The strategy to be used when fetching font data from a font provider in XML layouts.
+     * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
+     * choice of API between {@link
+     * androidx.core.content.res.ResourcesCompat#getFont(Context, int)} (blocking) and
+     * {@link
+     * androidx.core.content.res.ResourcesCompat#getFont(Context, int, FontCallback, Handler)}
+     * (async).
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>async</td><td>1</td><td></td></tr>
-     * <tr><td>blocking</td><td>0</td><td></td></tr>
+     * <tr><td>async</td><td>1</td><td>The async font fetch works as follows.
+     * First, check the local cache, then if the requeted font is not cached, trigger a
+     * request the font and continue with layout inflation. Once the font fetch succeeds, the
+     * target text view will be refreshed with the downloaded font data. The
+     * fontProviderFetchTimeout will be ignored if async loading is specified.</td></tr>
+     * <tr><td>blocking</td><td>0</td><td>The blocking font fetch works as follows.
+     * First, check the local cache, then if the requested font is not cached, request the
+     * font from the provider and wait until it is finished.  You can change the length of
+     * the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
+     * default typeface will be used instead.</td></tr>
      * </table>
      */
     public static final int fontProviderFetchStrategy=0x7f040122;
     /**
+     * The length of the timeout during fetching.
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -2256,21 +2446,29 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>forever</td><td>ffffffff</td><td>A special value for the timeout. In this case, the blocking font fetching will not
+     * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      */
     public static final int fontProviderFetchTimeout=0x7f040123;
     /**
+     * The package for the Font Provider to be used for the request. This is used to verify
+     * the identity of the provider.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontProviderPackage=0x7f040124;
     /**
+     * The query to be sent over to the provider. Refer to your font provider's documentation
+     * on the format of this string.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontProviderQuery=0x7f040125;
     /**
+     * The style of the given font file. This will be used when the font is being loaded into
+     * the font stack and will override any style information in the font's header tables. If
+     * unspecified, the value in the font's header tables will be used.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -2283,11 +2481,20 @@ public final class R {
      */
     public static final int fontStyle=0x7f040126;
     /**
+     * The variation settings to be applied to the font. The string should be in the following
+     * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
+     * used, or the font used does not support variation settings, this attribute needs not be
+     * specified.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontVariationSettings=0x7f040127;
     /**
+     * The weight of the given font file. This will be used when the font is being loaded into
+     * the font stack and will override any weight information in the font's header tables. Must
+     * be a positive number, a multiple of 100, and between 100 and 900, inclusive. The most
+     * common values are 400 for regular weight and 700 for bold weight. If unspecified, the value
+     * in the font's header tables will be used.
      * <p>May be an integer value, such as "<code>100</code>".
      */
     public static final int fontWeight=0x7f040128;
@@ -2301,6 +2508,7 @@ public final class R {
      */
     public static final int framePosition=0x7f04012a;
     /**
+     * The max gap between the bars when they are parallel to each other
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2309,6 +2517,7 @@ public final class R {
      */
     public static final int gapBetweenBars=0x7f04012b;
     /**
+     * Go button icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2355,6 +2564,7 @@ public final class R {
      */
     public static final int hideMotionSpec=0x7f040132;
     /**
+     * Set true to hide the action bar on a vertical nested scroll of content.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -2382,6 +2592,7 @@ public final class R {
      */
     public static final int hintTextAppearance=0x7f040137;
     /**
+     * Specifies a drawable to use for the 'home as up' indicator.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2389,6 +2600,7 @@ public final class R {
      */
     public static final int homeAsUpIndicator=0x7f040138;
     /**
+     * Specifies a layout to use for the "home" section of the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2455,28 +2667,37 @@ public final class R {
      */
     public static final int iconStartPadding=0x7f040140;
     /**
+     * Tint to apply to the icon.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int iconTint=0x7f040141;
     /**
+     * Blending mode used to apply the icon tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the icon with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the icon, but with the icon’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the icon. The icon’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the icon.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
     public static final int iconTintMode=0x7f040142;
     /**
+     * The default state of the SearchView. If true, it will be iconified when not in
+     * use and expanded when clicked.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -2499,6 +2720,7 @@ public final class R {
      */
     public static final int imageAspectRatioAdjust=0x7f040145;
     /**
+     * ImageButton background drawable.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2506,6 +2728,7 @@ public final class R {
      */
     public static final int imageButtonStyle=0x7f040146;
     /**
+     * Specifies a style resource to use for an indeterminate progress spinner.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2513,6 +2736,7 @@ public final class R {
      */
     public static final int indeterminateProgressStyle=0x7f040147;
     /**
+     * The maximal number of items initially shown in the activity list.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -2597,6 +2821,8 @@ public final class R {
      */
     public static final int itemIconTint=0x7f040151;
     /**
+     * Specifies padding that should be applied to the left and right sides of
+     * system-provided items in the bar.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2653,6 +2879,11 @@ public final class R {
      */
     public static final int keyPositionType=0x7f040158;
     /**
+     * A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.
+     * Child views can refer to these keylines for alignment using
+     * layout_keyline="index" where index is a 0-based index into
+     * this array.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2674,6 +2905,8 @@ public final class R {
      */
     public static final int labelVisibilityMode=0x7f04015a;
     /**
+     * Distance from the bottom of the TextView to the last text baseline. If set, this
+     * overrides the value set for paddingBottom.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2682,6 +2915,7 @@ public final class R {
      */
     public static final int lastBaselineToBottomHeight=0x7f04015b;
     /**
+     * The layout to use for the search view.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2696,11 +2930,21 @@ public final class R {
      */
     public static final int layoutDescription=0x7f04015d;
     /**
+     * Class name of the Layout Manager to be used.
+     * <p/>
+     * The class must extandroidx.recyclerview.widget.RecyclerViewView$LayoutManager
+     * and have either a default constructor or constructor with the signature
+     * (android.content.Context, android.util.AttributeSet, int, int).
+     * <p/>
+     * If the name starts with a '.', application package is prefixed.
+     * Else, if the name contains a '.', the classname is assumed to be a full class name.
+     * Else, the recycler view package naandroidx.appcompat.widgetdget) is prefixed.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int layoutManager=0x7f04015e;
     /**
+     * The id of an anchor view that this view should position relative to.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2708,30 +2952,40 @@ public final class R {
      */
     public static final int layout_anchor=0x7f04015f;
     /**
+     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>fill</td><td>77</td><td></td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the horizontal gravity: a left gravity will clip the right
+     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
+     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
+     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      */
     public static final int layout_anchorGravity=0x7f040160;
     /**
+     * The class name of a Behavior class defining special runtime behavior
+     * for this child view.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -3163,20 +3417,21 @@ public final class R {
      */
     public static final int layout_constraintWidth_percent=0x7f04018c;
     /**
+     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td></td></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
+     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
      * </table>
      */
     public static final int layout_dodgeInsetEdges=0x7f04018d;
@@ -3262,23 +3517,28 @@ public final class R {
      */
     public static final int layout_height=0x7f040196;
     /**
+     * Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
      * </table>
      */
     public static final int layout_insetEdge=0x7f040197;
     /**
+     * The index of a keyline this view should position relative to.
+     * android:layout_gravity will affect how the view aligns to the
+     * specified keyline.
      * <p>May be an integer value, such as "<code>100</code>".
      */
     public static final int layout_keyline=0x7f040198;
@@ -3340,7 +3600,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>ratio</td><td>10</td><td></td></tr>
@@ -3394,6 +3654,8 @@ public final class R {
      */
     public static final int liftOnScroll=0x7f0401a3;
     /**
+     * Explicit height between lines of text. If set, this will override the values set
+     * for lineSpacingExtra and lineSpacingMultiplier.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3410,6 +3672,7 @@ public final class R {
      */
     public static final int lineSpacing=0x7f0401a5;
     /**
+     * Drawable used as a background for selected list items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3417,6 +3680,7 @@ public final class R {
      */
     public static final int listChoiceBackgroundIndicator=0x7f0401a6;
     /**
+     * The list divider used in alert dialogs.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3438,6 +3702,7 @@ public final class R {
      */
     public static final int listLayout=0x7f0401a9;
     /**
+     * Default menu-style ListView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3452,6 +3717,7 @@ public final class R {
      */
     public static final int listPopupWindowStyle=0x7f0401ab;
     /**
+     * The preferred list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3460,6 +3726,7 @@ public final class R {
      */
     public static final int listPreferredItemHeight=0x7f0401ac;
     /**
+     * A larger, more robust list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3468,6 +3735,7 @@ public final class R {
      */
     public static final int listPreferredItemHeightLarge=0x7f0401ad;
     /**
+     * A smaller, sleeker list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3476,6 +3744,7 @@ public final class R {
      */
     public static final int listPreferredItemHeightSmall=0x7f0401ae;
     /**
+     * The preferred padding along the left edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3484,6 +3753,7 @@ public final class R {
      */
     public static final int listPreferredItemPaddingLeft=0x7f0401af;
     /**
+     * The preferred padding along the right edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3492,6 +3762,7 @@ public final class R {
      */
     public static final int listPreferredItemPaddingRight=0x7f0401b0;
     /**
+     * Specifies the drawable used for the application logo.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3499,6 +3770,8 @@ public final class R {
      */
     public static final int logo=0x7f0401b1;
     /**
+     * A content description string to describe the appearance of the
+     * associated logo image.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -3566,6 +3839,9 @@ public final class R {
      */
     public static final int maxWidth=0x7f0401bb;
     /**
+     * When set to true, all children with a weight will be considered having
+     * the minimum size of the largest child. If false, all children are
+     * measured normally.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -3685,6 +3961,11 @@ public final class R {
      */
     public static final int menu_labels_cornerRadius=0x7f0401cd;
     /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int menu_labels_customFont=0x7f0401ce;
+    /**
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -3698,14 +3979,14 @@ public final class R {
      * <tr><td>start</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int menu_labels_ellipsize=0x7f0401ce;
+    public static final int menu_labels_ellipsize=0x7f0401cf;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int menu_labels_hideAnimation=0x7f0401cf;
+    public static final int menu_labels_hideAnimation=0x7f0401d0;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3713,11 +3994,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int menu_labels_margin=0x7f0401d0;
+    public static final int menu_labels_margin=0x7f0401d1;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int menu_labels_maxLines=0x7f0401d1;
+    public static final int menu_labels_maxLines=0x7f0401d2;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3725,7 +4006,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int menu_labels_padding=0x7f0401d2;
+    public static final int menu_labels_padding=0x7f0401d3;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3733,7 +4014,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int menu_labels_paddingBottom=0x7f0401d3;
+    public static final int menu_labels_paddingBottom=0x7f0401d4;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3741,7 +4022,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int menu_labels_paddingLeft=0x7f0401d4;
+    public static final int menu_labels_paddingLeft=0x7f0401d5;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3749,7 +4030,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int menu_labels_paddingRight=0x7f0401d5;
+    public static final int menu_labels_paddingRight=0x7f0401d6;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3757,7 +4038,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int menu_labels_paddingTop=0x7f0401d6;
+    public static final int menu_labels_paddingTop=0x7f0401d7;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -3769,31 +4050,31 @@ public final class R {
      * <tr><td>right</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int menu_labels_position=0x7f0401d7;
+    public static final int menu_labels_position=0x7f0401d8;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int menu_labels_showAnimation=0x7f0401d8;
+    public static final int menu_labels_showAnimation=0x7f0401d9;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int menu_labels_showShadow=0x7f0401d9;
+    public static final int menu_labels_showShadow=0x7f0401da;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int menu_labels_singleLine=0x7f0401da;
+    public static final int menu_labels_singleLine=0x7f0401db;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int menu_labels_style=0x7f0401db;
+    public static final int menu_labels_style=0x7f0401dc;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -3803,7 +4084,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int menu_labels_textColor=0x7f0401dc;
+    public static final int menu_labels_textColor=0x7f0401dd;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3811,7 +4092,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int menu_labels_textSize=0x7f0401dd;
+    public static final int menu_labels_textSize=0x7f0401de;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -3823,13 +4104,13 @@ public final class R {
      * <tr><td>up</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int menu_openDirection=0x7f0401de;
+    public static final int menu_openDirection=0x7f0401df;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int menu_shadowColor=0x7f0401df;
+    public static final int menu_shadowColor=0x7f0401e0;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3837,7 +4118,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int menu_shadowRadius=0x7f0401e0;
+    public static final int menu_shadowRadius=0x7f0401e1;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3845,7 +4126,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int menu_shadowXOffset=0x7f0401e1;
+    public static final int menu_shadowXOffset=0x7f0401e2;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3853,12 +4134,12 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int menu_shadowYOffset=0x7f0401e2;
+    public static final int menu_shadowYOffset=0x7f0401e3;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int menu_showShadow=0x7f0401e3;
+    public static final int menu_showShadow=0x7f0401e4;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3866,7 +4147,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int minHeight=0x7f0401e4;
+    public static final int minHeight=0x7f0401e5;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -3874,40 +4155,40 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int minWidth=0x7f0401e5;
+    public static final int minWidth=0x7f0401e6;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int mock_diagonalsColor=0x7f0401e6;
+    public static final int mock_diagonalsColor=0x7f0401e7;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int mock_label=0x7f0401e7;
+    public static final int mock_label=0x7f0401e8;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int mock_labelBackgroundColor=0x7f0401e8;
+    public static final int mock_labelBackgroundColor=0x7f0401e9;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int mock_labelColor=0x7f0401e9;
+    public static final int mock_labelColor=0x7f0401ea;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int mock_showDiagonals=0x7f0401ea;
+    public static final int mock_showDiagonals=0x7f0401eb;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int mock_showLabel=0x7f0401eb;
+    public static final int mock_showLabel=0x7f0401ec;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -3921,52 +4202,59 @@ public final class R {
      * <tr><td>SHOW_PROGRESS</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int motionDebug=0x7f0401ec;
+    public static final int motionDebug=0x7f0401ed;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int moveWhenScrollAtTop=0x7f0401ed;
+    public static final int moveWhenScrollAtTop=0x7f0401ee;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int multiChoiceItemLayout=0x7f0401ee;
+    public static final int multiChoiceItemLayout=0x7f0401ef;
     /**
+     * Text to set as the content description for the navigation button
+     * located at the start of the toolbar.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int navigationContentDescription=0x7f0401ef;
+    public static final int navigationContentDescription=0x7f0401f0;
     /**
+     * Icon drawable to use for the navigation button located at
+     * the start of the toolbar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int navigationIcon=0x7f0401f0;
+    public static final int navigationIcon=0x7f0401f1;
     /**
+     * The type of navigation to use.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>listMode</td><td>1</td><td></td></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
-     * <tr><td>tabMode</td><td>2</td><td></td></tr>
+     * <tr><td>listMode</td><td>1</td><td>The action bar will use a selection list for navigation.</td></tr>
+     * <tr><td>normal</td><td>0</td><td>Normal static title text</td></tr>
+     * <tr><td>tabMode</td><td>2</td><td>The action bar will use a series of horizontal tabs for navigation.</td></tr>
      * </table>
      */
-    public static final int navigationMode=0x7f0401f1;
+    public static final int navigationMode=0x7f0401f2;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int navigationViewStyle=0x7f0401f2;
+    public static final int navigationViewStyle=0x7f0401f3;
     /**
+     * The numeric modifier key. This is the modifier when using a numeric (e.g., 12-key)
+     * keyboard. The values should be kept in sync with KeyEvent
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -3981,32 +4269,32 @@ public final class R {
      * <tr><td>SYM</td><td>4</td><td></td></tr>
      * </table>
      */
-    public static final int numericModifiers=0x7f0401f3;
+    public static final int numericModifiers=0x7f0401f4;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int onCross=0x7f0401f4;
+    public static final int onCross=0x7f0401f5;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int onHide=0x7f0401f5;
+    public static final int onHide=0x7f0401f6;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int onNegativeCross=0x7f0401f6;
+    public static final int onNegativeCross=0x7f0401f7;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int onPositiveCross=0x7f0401f7;
+    public static final int onPositiveCross=0x7f0401f8;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int onShow=0x7f0401f8;
+    public static final int onShow=0x7f0401f9;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4018,89 +4306,97 @@ public final class R {
      * <tr><td>vertical</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int orientation=0x7f0401f9;
+    public static final int orientation=0x7f0401fa;
     /**
+     * Whether the popup window should overlap its anchor view.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int overlapAnchor=0x7f0401fa;
+    public static final int overlapAnchor=0x7f0401fb;
     /**
+     * Bottom padding to use when no buttons are present.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingBottomNoButtons=0x7f0401fb;
+    public static final int paddingBottomNoButtons=0x7f0401fc;
     /**
+     * Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingEnd=0x7f0401fc;
+    public static final int paddingEnd=0x7f0401fd;
     /**
+     * Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingStart=0x7f0401fd;
+    public static final int paddingStart=0x7f0401fe;
     /**
+     * Top padding to use when no title is present.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingTopNoTitle=0x7f0401fe;
+    public static final int paddingTopNoTitle=0x7f0401ff;
     /**
+     * The background of a panel when it is inset from the left and right edges of the screen.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int panelBackground=0x7f0401ff;
+    public static final int panelBackground=0x7f040200;
     /**
+     * Default Panel Menu style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int panelMenuListTheme=0x7f040200;
+    public static final int panelMenuListTheme=0x7f040201;
     /**
+     * Default Panel Menu width.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int panelMenuListWidth=0x7f040201;
+    public static final int panelMenuListWidth=0x7f040202;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int passwordToggleContentDescription=0x7f040202;
+    public static final int passwordToggleContentDescription=0x7f040203;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int passwordToggleDrawable=0x7f040203;
+    public static final int passwordToggleDrawable=0x7f040204;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int passwordToggleEnabled=0x7f040204;
+    public static final int passwordToggleEnabled=0x7f040205;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int passwordToggleTint=0x7f040205;
+    public static final int passwordToggleTint=0x7f040206;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4115,7 +4411,7 @@ public final class R {
      * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int passwordToggleTintMode=0x7f040206;
+    public static final int passwordToggleTintMode=0x7f040207;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4129,31 +4425,31 @@ public final class R {
      * <tr><td>startVertical</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int pathMotionArc=0x7f040207;
+    public static final int pathMotionArc=0x7f040208;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int path_percent=0x7f040208;
+    public static final int path_percent=0x7f040209;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int percentHeight=0x7f040209;
+    public static final int percentHeight=0x7f04020a;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int percentWidth=0x7f04020a;
+    public static final int percentWidth=0x7f04020b;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int percentX=0x7f04020b;
+    public static final int percentX=0x7f04020c;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int percentY=0x7f04020c;
+    public static final int percentY=0x7f04020d;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int perpendicularPath_percent=0x7f04020d;
+    public static final int perpendicularPath_percent=0x7f04020e;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -4168,7 +4464,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int pivotAnchor=0x7f04020e;
+    public static final int pivotAnchor=0x7f04020f;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a fractional value, which is a floating point number appended with
@@ -4176,7 +4472,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int pivotX=0x7f04020f;
+    public static final int pivotX=0x7f040210;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a fractional value, which is a floating point number appended with
@@ -4184,33 +4480,38 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int pivotY=0x7f040210;
+    public static final int pivotY=0x7f040211;
     /**
+     * Default PopupMenu style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupMenuStyle=0x7f040211;
+    public static final int popupMenuStyle=0x7f040212;
     /**
+     * Reference to a theme that should be used to inflate popups
+     * shown by widgets in the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupTheme=0x7f040212;
+    public static final int popupTheme=0x7f040213;
     /**
+     * Default PopupWindow style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupWindowStyle=0x7f040213;
+    public static final int popupWindowStyle=0x7f040214;
     /**
+     * Whether space should be reserved in layout when an icon is missing.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int preserveIconSpacing=0x7f040214;
+    public static final int preserveIconSpacing=0x7f040215;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4218,66 +4519,74 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int pressedTranslationZ=0x7f040215;
+    public static final int pressedTranslationZ=0x7f040216;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int progress=0x7f040216;
+    public static final int progress=0x7f040217;
     /**
+     * Specifies the horizontal padding on either end for an embedded progress bar.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int progressBarPadding=0x7f040217;
+    public static final int progressBarPadding=0x7f040218;
     /**
+     * Specifies a style resource to use for an embedded progress bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int progressBarStyle=0x7f040218;
+    public static final int progressBarStyle=0x7f040219;
     /**
+     * Background for the section containing the search query
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int queryBackground=0x7f040219;
+    public static final int queryBackground=0x7f04021a;
     /**
+     * An optional user-defined query hint string to be displayed in the empty query field.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int queryHint=0x7f04021a;
+    public static final int queryHint=0x7f04021b;
     /**
+     * Default RadioButton style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int radioButtonStyle=0x7f04021b;
+    public static final int radioButtonStyle=0x7f04021c;
     /**
+     * Default RatingBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyle=0x7f04021c;
+    public static final int ratingBarStyle=0x7f04021d;
     /**
+     * Indicator RatingBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyleIndicator=0x7f04021d;
+    public static final int ratingBarStyleIndicator=0x7f04021e;
     /**
+     * Small indicator RatingBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyleSmall=0x7f04021e;
+    public static final int ratingBarStyleSmall=0x7f04021f;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4285,7 +4594,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int region_heightLessThan=0x7f04021f;
+    public static final int region_heightLessThan=0x7f040220;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4293,7 +4602,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int region_heightMoreThan=0x7f040220;
+    public static final int region_heightMoreThan=0x7f040221;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4301,7 +4610,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int region_widthLessThan=0x7f040221;
+    public static final int region_widthLessThan=0x7f040222;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4309,30 +4618,30 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int region_widthMoreThan=0x7f040222;
+    public static final int region_widthMoreThan=0x7f040223;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int reverseLayout=0x7f040223;
+    public static final int reverseLayout=0x7f040224;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int rippleColor=0x7f040224;
+    public static final int rippleColor=0x7f040225;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int rotation=0x7f040225;
+    public static final int rotation=0x7f040226;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int rotationX=0x7f040226;
+    public static final int rotationX=0x7f040227;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int rotationY=0x7f040227;
+    public static final int rotationY=0x7f040228;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4340,23 +4649,23 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int round=0x7f040228;
+    public static final int round=0x7f040229;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int roundPercent=0x7f040229;
+    public static final int roundPercent=0x7f04022a;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int saturation=0x7f04022a;
+    public static final int saturation=0x7f04022b;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int scaleX=0x7f04022b;
+    public static final int scaleX=0x7f04022c;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int scaleY=0x7f04022c;
+    public static final int scaleY=0x7f04022d;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -4365,11 +4674,11 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int scopeUris=0x7f04022d;
+    public static final int scopeUris=0x7f04022e;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int scrimAnimationDuration=0x7f04022e;
+    public static final int scrimAnimationDuration=0x7f04022f;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -4379,7 +4688,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int scrimBackground=0x7f04022f;
+    public static final int scrimBackground=0x7f040230;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4387,65 +4696,84 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int scrimVisibleHeightTrigger=0x7f040230;
+    public static final int scrimVisibleHeightTrigger=0x7f040231;
     /**
+     * Search icon displayed as a text field hint
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchHintIcon=0x7f040231;
+    public static final int searchHintIcon=0x7f040232;
     /**
+     * Search icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchIcon=0x7f040232;
+    public static final int searchIcon=0x7f040233;
     /**
+     * Style for the search query widget.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchViewStyle=0x7f040233;
+    public static final int searchViewStyle=0x7f040234;
     /**
+     * Default SeekBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int seekBarStyle=0x7f040234;
+    public static final int seekBarStyle=0x7f040235;
     /**
+     * A style that may be applied to buttons or other selectable items
+     * that should react to pressed and focus states, but that do not
+     * have a clear visual border along the edges.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int selectableItemBackground=0x7f040235;
+    public static final int selectableItemBackground=0x7f040236;
     /**
+     * Background drawable for borderless standalone items that need focus/pressed states.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int selectableItemBackgroundBorderless=0x7f040236;
+    public static final int selectableItemBackgroundBorderless=0x7f040237;
     /**
+     * How this item should display in the Action Bar, if present.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>always</td><td>2</td><td></td></tr>
-     * <tr><td>collapseActionView</td><td>8</td><td></td></tr>
-     * <tr><td>ifRoom</td><td>1</td><td></td></tr>
-     * <tr><td>never</td><td>0</td><td></td></tr>
-     * <tr><td>withText</td><td>4</td><td></td></tr>
+     * <tr><td>always</td><td>2</td><td>Always show this item in an actionbar, even if it would override
+     * the system's limits of how much stuff to put there. This may make
+     * your action bar look bad on some screens. In most cases you should
+     * use "ifRoom" instead. Mutually exclusive with "ifRoom" and "never".</td></tr>
+     * <tr><td>collapseActionView</td><td>8</td><td>This item's action view collapses to a normal menu
+     * item. When expanded, the action view takes over a
+     * larger segment of its container.</td></tr>
+     * <tr><td>ifRoom</td><td>1</td><td>Show this item in an action bar if there is room for it as determined
+     * by the system. Favor this option over "always" where possible.
+     * Mutually exclusive with "never" and "always".</td></tr>
+     * <tr><td>never</td><td>0</td><td>Never show this item in an action bar, show it in the overflow menu instead.
+     * Mutually exclusive with "ifRoom" and "always".</td></tr>
+     * <tr><td>withText</td><td>4</td><td>When this item is shown as an action in the action bar, show a text
+     * label with it even if it has an icon representation.</td></tr>
      * </table>
      */
-    public static final int showAsAction=0x7f040237;
+    public static final int showAsAction=0x7f040238;
     /**
+     * Setting for which dividers to show.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -4458,134 +4786,143 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int showDividers=0x7f040238;
+    public static final int showDividers=0x7f040239;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int showMotionSpec=0x7f040239;
+    public static final int showMotionSpec=0x7f04023a;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int showPaths=0x7f04023a;
+    public static final int showPaths=0x7f04023b;
+    /**
+     * Whether to draw on/off text.
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int showText=0x7f04023c;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int showText=0x7f04023b;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int showTitle=0x7f04023c;
+    public static final int showTitle=0x7f04023d;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int singleChoiceItemLayout=0x7f04023d;
+    public static final int singleChoiceItemLayout=0x7f04023e;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int singleLine=0x7f04023e;
+    public static final int singleLine=0x7f04023f;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int singleSelection=0x7f04023f;
+    public static final int singleSelection=0x7f040240;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int sizePercent=0x7f040240;
+    public static final int sizePercent=0x7f040241;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int snackbarButtonStyle=0x7f040241;
+    public static final int snackbarButtonStyle=0x7f040242;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int snackbarStyle=0x7f040242;
+    public static final int snackbarStyle=0x7f040243;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int spanCount=0x7f040243;
+    public static final int spanCount=0x7f040244;
     /**
+     * Whether bars should rotate or not during transition
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int spinBars=0x7f040244;
+    public static final int spinBars=0x7f040245;
     /**
+     * Default Spinner style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int spinnerDropDownItemStyle=0x7f040245;
+    public static final int spinnerDropDownItemStyle=0x7f040246;
     /**
+     * Default Spinner style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int spinnerStyle=0x7f040246;
+    public static final int spinnerStyle=0x7f040247;
     /**
+     * Whether to split the track and leave a gap for the thumb drawable.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int splitTrack=0x7f040247;
+    public static final int splitTrack=0x7f040248;
     /**
+     * Sets a drawable as the content of this ImageView. Allows the use of vector drawable
+     * when running on older versions of the platform.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int srcCompat=0x7f040248;
+    public static final int srcCompat=0x7f040249;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int stackFromEnd=0x7f040249;
+    public static final int stackFromEnd=0x7f04024a;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int staggered=0x7f04024a;
+    public static final int staggered=0x7f04024b;
+    /**
+     * State identifier indicating the popup will be above the anchor.
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int state_above_anchor=0x7f04024c;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int state_above_anchor=0x7f04024b;
+    public static final int state_collapsed=0x7f04024d;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int state_collapsed=0x7f04024c;
+    public static final int state_collapsible=0x7f04024e;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int state_collapsible=0x7f04024d;
+    public static final int state_liftable=0x7f04024f;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int state_liftable=0x7f04024e;
+    public static final int state_lifted=0x7f040250;
     /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int state_lifted=0x7f04024f;
-    /**
+     * Drawable to display behind the status bar when the view is set to draw behind it.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4594,19 +4931,19 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int statusBarBackground=0x7f040250;
+    public static final int statusBarBackground=0x7f040251;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int statusBarScrim=0x7f040251;
+    public static final int statusBarScrim=0x7f040252;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int strokeColor=0x7f040252;
+    public static final int strokeColor=0x7f040253;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4614,53 +4951,100 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int strokeWidth=0x7f040253;
+    public static final int strokeWidth=0x7f040254;
     /**
+     * Drawable for the arrow icon indicating a particular item is a submenu.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subMenuArrow=0x7f040254;
+    public static final int subMenuArrow=0x7f040255;
     /**
+     * Background for the section containing the action (e.g. voice search)
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int submitBackground=0x7f040255;
+    public static final int submitBackground=0x7f040256;
     /**
+     * Specifies subtitle text used for navigationMode="normal"
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int subtitle=0x7f040256;
+    public static final int subtitle=0x7f040257;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subtitleTextAppearance=0x7f040257;
+    public static final int subtitleTextAppearance=0x7f040258;
     /**
+     * A color to apply to the subtitle string.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int subtitleTextColor=0x7f040258;
+    public static final int subtitleTextColor=0x7f040259;
+    /**
+     * Specifies a style to use for subtitle text.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int subtitleTextStyle=0x7f04025a;
+    /**
+     * Layout for query suggestion rows
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int suggestionRowLayout=0x7f04025b;
+    /**
+     * Minimum width for the switch component
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int switchMinWidth=0x7f04025c;
+    /**
+     * Minimum space between the switch and caption text
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int switchPadding=0x7f04025d;
+    /**
+     * Default style for the Switch widget.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int switchStyle=0x7f04025e;
+    /**
+     * TextAppearance style for text displayed on the switch thumb.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int switchTextAppearance=0x7f04025f;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subtitleTextStyle=0x7f040259;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int suggestionRowLayout=0x7f04025a;
+    public static final int tabBackground=0x7f040260;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4668,44 +5052,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int switchMinWidth=0x7f04025b;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int switchPadding=0x7f04025c;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int switchStyle=0x7f04025d;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int switchTextAppearance=0x7f04025e;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int tabBackground=0x7f04025f;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int tabContentStart=0x7f040260;
+    public static final int tabContentStart=0x7f040261;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4717,13 +5064,13 @@ public final class R {
      * <tr><td>fill</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int tabGravity=0x7f040261;
+    public static final int tabGravity=0x7f040262;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tabIconTint=0x7f040262;
+    public static final int tabIconTint=0x7f040263;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4739,29 +5086,29 @@ public final class R {
      * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int tabIconTintMode=0x7f040263;
+    public static final int tabIconTintMode=0x7f040264;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tabIndicator=0x7f040264;
+    public static final int tabIndicator=0x7f040265;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int tabIndicatorAnimationDuration=0x7f040265;
+    public static final int tabIndicatorAnimationDuration=0x7f040266;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tabIndicatorColor=0x7f040266;
+    public static final int tabIndicatorColor=0x7f040267;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int tabIndicatorFullWidth=0x7f040267;
+    public static final int tabIndicatorFullWidth=0x7f040268;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4775,7 +5122,7 @@ public final class R {
      * <tr><td>top</td><td>2</td><td></td></tr>
      * </table>
      */
-    public static final int tabIndicatorGravity=0x7f040268;
+    public static final int tabIndicatorGravity=0x7f040269;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4783,12 +5130,12 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabIndicatorHeight=0x7f040269;
+    public static final int tabIndicatorHeight=0x7f04026a;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int tabInlineLabel=0x7f04026a;
+    public static final int tabInlineLabel=0x7f04026b;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4796,7 +5143,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabMaxWidth=0x7f04026b;
+    public static final int tabMaxWidth=0x7f04026c;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4804,7 +5151,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabMinWidth=0x7f04026c;
+    public static final int tabMinWidth=0x7f04026d;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4816,7 +5163,7 @@ public final class R {
      * <tr><td>scrollable</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int tabMode=0x7f04026d;
+    public static final int tabMode=0x7f04026e;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4824,7 +5171,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabPadding=0x7f04026e;
+    public static final int tabPadding=0x7f04026f;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4832,7 +5179,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabPaddingBottom=0x7f04026f;
+    public static final int tabPaddingBottom=0x7f040270;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4840,7 +5187,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabPaddingEnd=0x7f040270;
+    public static final int tabPaddingEnd=0x7f040271;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4848,7 +5195,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabPaddingStart=0x7f040271;
+    public static final int tabPaddingStart=0x7f040272;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4856,52 +5203,53 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabPaddingTop=0x7f040272;
+    public static final int tabPaddingTop=0x7f040273;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tabRippleColor=0x7f040273;
+    public static final int tabRippleColor=0x7f040274;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tabSelectedTextColor=0x7f040274;
+    public static final int tabSelectedTextColor=0x7f040275;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tabStyle=0x7f040275;
+    public static final int tabStyle=0x7f040276;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tabTextAppearance=0x7f040276;
+    public static final int tabTextAppearance=0x7f040277;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tabTextColor=0x7f040277;
+    public static final int tabTextColor=0x7f040278;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int tabUnboundedRipple=0x7f040278;
+    public static final int tabUnboundedRipple=0x7f040279;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int target=0x7f040279;
+    public static final int target=0x7f04027a;
     /**
+     * Present the text in ALL CAPS. This may use a small-caps form when available.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4909,155 +5257,164 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int textAllCaps=0x7f04027a;
+    public static final int textAllCaps=0x7f04027b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceBody1=0x7f04027b;
+    public static final int textAppearanceBody1=0x7f04027c;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceBody2=0x7f04027c;
+    public static final int textAppearanceBody2=0x7f04027d;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceButton=0x7f04027d;
+    public static final int textAppearanceButton=0x7f04027e;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceCaption=0x7f04027e;
+    public static final int textAppearanceCaption=0x7f04027f;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline1=0x7f04027f;
+    public static final int textAppearanceHeadline1=0x7f040280;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline2=0x7f040280;
+    public static final int textAppearanceHeadline2=0x7f040281;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline3=0x7f040281;
+    public static final int textAppearanceHeadline3=0x7f040282;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline4=0x7f040282;
+    public static final int textAppearanceHeadline4=0x7f040283;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline5=0x7f040283;
+    public static final int textAppearanceHeadline5=0x7f040284;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline6=0x7f040284;
+    public static final int textAppearanceHeadline6=0x7f040285;
+    /**
+     * Text color, typeface, size, and style for the text inside of a popup menu.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceLargePopupMenu=0x7f040286;
+    /**
+     * The preferred TextAppearance for the primary text of list items.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceListItem=0x7f040287;
+    /**
+     * The preferred TextAppearance for the secondary text of list items.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceListItemSecondary=0x7f040288;
+    /**
+     * The preferred TextAppearance for the primary text of small list items.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceListItemSmall=0x7f040289;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceLargePopupMenu=0x7f040285;
+    public static final int textAppearanceOverline=0x7f04028a;
+    /**
+     * Text color, typeface, size, and style for header text inside of a popup menu.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearancePopupMenuHeader=0x7f04028b;
+    /**
+     * Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSearchResultSubtitle=0x7f04028c;
+    /**
+     * Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSearchResultTitle=0x7f04028d;
+    /**
+     * Text color, typeface, size, and style for small text inside of a popup menu.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSmallPopupMenu=0x7f04028e;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceListItem=0x7f040286;
+    public static final int textAppearanceSubtitle1=0x7f04028f;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceListItemSecondary=0x7f040287;
+    public static final int textAppearanceSubtitle2=0x7f040290;
     /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceListItemSmall=0x7f040288;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceOverline=0x7f040289;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearancePopupMenuHeader=0x7f04028a;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceSearchResultSubtitle=0x7f04028b;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceSearchResultTitle=0x7f04028c;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceSmallPopupMenu=0x7f04028d;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceSubtitle1=0x7f04028e;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceSubtitle2=0x7f04028f;
-    /**
+     * Color of list item text in alert dialogs.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5066,8 +5423,9 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int textColorAlertDialogListItem=0x7f040290;
+    public static final int textColorAlertDialogListItem=0x7f040291;
     /**
+     * Text color for urls in search suggestions, used by things like global search
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5076,7 +5434,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int textColorSearchUrl=0x7f040291;
+    public static final int textColorSearchUrl=0x7f040292;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5084,14 +5442,14 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int textEndPadding=0x7f040292;
+    public static final int textEndPadding=0x7f040293;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textInputStyle=0x7f040293;
+    public static final int textInputStyle=0x7f040294;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5099,203 +5457,249 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int textStartPadding=0x7f040294;
+    public static final int textStartPadding=0x7f040295;
     /**
+     * Deprecated.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int theme=0x7f040295;
+    public static final int theme=0x7f040296;
     /**
+     * The thickness (stroke size) for the bar paint
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int thickness=0x7f040296;
+    public static final int thickness=0x7f040297;
     /**
+     * Amount of padding on either side of text within the switch thumb.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int thumbTextPadding=0x7f040297;
+    public static final int thumbTextPadding=0x7f040298;
     /**
+     * Tint to apply to the thumb drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int thumbTint=0x7f040298;
+    public static final int thumbTint=0x7f040299;
     /**
+     * Blending mode used to apply the thumb tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int thumbTintMode=0x7f040299;
+    public static final int thumbTintMode=0x7f04029a;
     /**
+     * Drawable displayed at each progress position on a seekbar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tickMark=0x7f04029a;
+    public static final int tickMark=0x7f04029b;
     /**
+     * Tint to apply to the tick mark drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tickMarkTint=0x7f04029b;
+    public static final int tickMarkTint=0x7f04029c;
     /**
+     * Blending mode used to apply the tick mark tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int tickMarkTintMode=0x7f04029c;
+    public static final int tickMarkTintMode=0x7f04029d;
     /**
+     * Tint to apply to the image source.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tint=0x7f04029d;
+    public static final int tint=0x7f04029e;
     /**
+     * Blending mode used to apply the image source tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int tintMode=0x7f04029e;
+    public static final int tintMode=0x7f04029f;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int title=0x7f04029f;
+    public static final int title=0x7f0402a0;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int titleEnabled=0x7f0402a0;
+    public static final int titleEnabled=0x7f0402a1;
     /**
+     * Specifies extra space on the left, start, right and end sides
+     * of the toolbar's title. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMargin=0x7f0402a1;
+    public static final int titleMargin=0x7f0402a2;
     /**
+     * Specifies extra space on the bottom side of the toolbar's title.
+     * If both this attribute and titleMargin are specified, then this
+     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginBottom=0x7f0402a2;
+    public static final int titleMarginBottom=0x7f0402a3;
     /**
+     * Specifies extra space on the end side of the toolbar's title.
+     * If both this attribute and titleMargin are specified, then this
+     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginEnd=0x7f0402a3;
+    public static final int titleMarginEnd=0x7f0402a4;
     /**
+     * Specifies extra space on the start side of the toolbar's title.
+     * If both this attribute and titleMargin are specified, then this
+     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginStart=0x7f0402a4;
+    public static final int titleMarginStart=0x7f0402a5;
     /**
+     * Specifies extra space on the top side of the toolbar's title.
+     * If both this attribute and titleMargin are specified, then this
+     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginTop=0x7f0402a5;
+    public static final int titleMarginTop=0x7f0402a6;
     /**
+     * {@deprecated Use titleMargin}
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMargins=0x7f0402a6;
+    @Deprecated
+    public static final int titleMargins=0x7f0402a7;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int titleTextAppearance=0x7f0402a7;
+    public static final int titleTextAppearance=0x7f0402a8;
     /**
+     * A color to apply to the title string.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int titleTextColor=0x7f0402a8;
+    public static final int titleTextColor=0x7f0402a9;
+    /**
+     * Specifies a style to use for title text.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int titleTextStyle=0x7f0402aa;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int titleTextStyle=0x7f0402a9;
+    public static final int toolbarId=0x7f0402ab;
     /**
+     * Default Toolar NavigationButtonStyle
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int toolbarId=0x7f0402aa;
+    public static final int toolbarNavigationButtonStyle=0x7f0402ac;
     /**
+     * Default Toolbar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int toolbarNavigationButtonStyle=0x7f0402ab;
+    public static final int toolbarStyle=0x7f0402ad;
     /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int toolbarStyle=0x7f0402ac;
-    /**
+     * Foreground color to use for tooltips
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5304,26 +5708,28 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tooltipForegroundColor=0x7f0402ad;
+    public static final int tooltipForegroundColor=0x7f0402ae;
     /**
+     * Background to use for tooltips
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tooltipFrameBackground=0x7f0402ae;
+    public static final int tooltipFrameBackground=0x7f0402af;
     /**
+     * The tooltip text associated with the item.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int tooltipText=0x7f0402af;
+    public static final int tooltipText=0x7f0402b0;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int touchAnchorId=0x7f0402b0;
+    public static final int touchAnchorId=0x7f0402b1;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -5337,36 +5743,44 @@ public final class R {
      * <tr><td>top</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int touchAnchorSide=0x7f0402b1;
+    public static final int touchAnchorSide=0x7f0402b2;
     /**
+     * Drawable to use as the "track" that the switch thumb slides within.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int track=0x7f0402b2;
+    public static final int track=0x7f0402b3;
     /**
+     * Tint to apply to the track.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int trackTint=0x7f0402b3;
+    public static final int trackTint=0x7f0402b4;
     /**
+     * Blending mode used to apply the track tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int trackTintMode=0x7f0402b4;
+    public static final int trackTintMode=0x7f0402b5;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5374,7 +5788,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int transformPivotX=0x7f0402b5;
+    public static final int transformPivotX=0x7f0402b6;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5382,7 +5796,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int transformPivotY=0x7f0402b6;
+    public static final int transformPivotY=0x7f0402b7;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -5398,11 +5812,11 @@ public final class R {
      * <tr><td>standard</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int transitionEasing=0x7f0402b7;
+    public static final int transitionEasing=0x7f0402b8;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int transitionPathRotate=0x7f0402b8;
+    public static final int transitionPathRotate=0x7f0402b9;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5410,7 +5824,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int translationX=0x7f0402b9;
+    public static final int translationX=0x7f0402ba;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5418,7 +5832,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int translationY=0x7f0402ba;
+    public static final int translationY=0x7f0402bb;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5426,32 +5840,34 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int translationZ=0x7f0402bb;
+    public static final int translationZ=0x7f0402bc;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int triggerId=0x7f0402bc;
+    public static final int triggerId=0x7f0402bd;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int triggerSlack=0x7f0402bd;
+    public static final int triggerSlack=0x7f0402be;
     /**
+     * The index of the font in the tcc font file. If the font file referenced is not in the
+     * tcc format, this attribute needs not be specified.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int ttcIndex=0x7f0402be;
+    public static final int ttcIndex=0x7f0402bf;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int useCompatPadding=0x7f0402bf;
+    public static final int useCompatPadding=0x7f0402c0;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int viewInflaterClass=0x7f0402c0;
+    public static final int viewInflaterClass=0x7f0402c1;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -5464,18 +5880,19 @@ public final class R {
      * <tr><td>visible</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int visibility=0x7f0402c1;
+    public static final int visibility=0x7f0402c2;
     /**
+     * Voice button icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int voiceIcon=0x7f0402c2;
+    public static final int voiceIcon=0x7f0402c3;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int warmth=0x7f0402c3;
+    public static final int warmth=0x7f0402c4;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -5484,11 +5901,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int waveOffset=0x7f0402c4;
+    public static final int waveOffset=0x7f0402c5;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int wavePeriod=0x7f0402c5;
+    public static final int wavePeriod=0x7f0402c6;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -5505,7 +5922,7 @@ public final class R {
      * <tr><td>triangle</td><td>2</td><td></td></tr>
      * </table>
      */
-    public static final int waveShape=0x7f0402c6;
+    public static final int waveShape=0x7f0402c7;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -5517,23 +5934,33 @@ public final class R {
      * <tr><td>position</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int waveVariesBy=0x7f0402c7;
+    public static final int waveVariesBy=0x7f0402c8;
     /**
+     * Flag indicating whether this window should have an Action Bar
+     * in place of the usual title bar.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBar=0x7f0402c8;
+    public static final int windowActionBar=0x7f0402c9;
     /**
+     * Flag indicating whether this window's Action Bar should overlay
+     * application content. Does nothing if the window would not
+     * have an Action Bar.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBarOverlay=0x7f0402c9;
+    public static final int windowActionBarOverlay=0x7f0402ca;
     /**
+     * Flag indicating whether action modes should overlay window content
+     * when there is not reserved space for their UI (such as an Action Bar).
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionModeOverlay=0x7f0402ca;
+    public static final int windowActionModeOverlay=0x7f0402cb;
     /**
+     * A fixed height for the window along the major axis of the screen,
+     * that is, when in portrait. Can be either an absolute dimension
+     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5544,8 +5971,11 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMajor=0x7f0402cb;
+    public static final int windowFixedHeightMajor=0x7f0402cc;
     /**
+     * A fixed height for the window along the minor axis of the screen,
+     * that is, when in landscape. Can be either an absolute dimension
+     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5556,8 +5986,11 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMinor=0x7f0402cc;
+    public static final int windowFixedHeightMinor=0x7f0402cd;
     /**
+     * A fixed width for the window along the major axis of the screen,
+     * that is, when in landscape. Can be either an absolute dimension
+     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5568,8 +6001,11 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMajor=0x7f0402cd;
+    public static final int windowFixedWidthMajor=0x7f0402ce;
     /**
+     * A fixed width for the window along the minor axis of the screen,
+     * that is, when in portrait. Can be either an absolute dimension
+     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5580,8 +6016,12 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMinor=0x7f0402ce;
+    public static final int windowFixedWidthMinor=0x7f0402cf;
     /**
+     * The minimum width the window is allowed to be, along the major
+     * axis of the screen.  That is, when in landscape.  Can be either
+     * an absolute dimension or a fraction of the screen size in that
+     * dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5592,8 +6032,12 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMajor=0x7f0402cf;
+    public static final int windowMinWidthMajor=0x7f0402d0;
     /**
+     * The minimum width the window is allowed to be, along the minor
+     * axis of the screen.  That is, when in portrait.  Can be either
+     * an absolute dimension or a fraction of the screen size in that
+     * dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5604,12 +6048,13 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMinor=0x7f0402d0;
+    public static final int windowMinWidthMinor=0x7f0402d1;
     /**
+     * Flag indicating whether there should be no title on this window.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowNoTitle=0x7f0402d1;
+    public static final int windowNoTitle=0x7f0402d2;
   }
   public static final class bool {
     public static final int abc_action_bar_embed_tabs=0x7f050000;
@@ -5653,170 +6098,171 @@ public final class R {
     public static final int background_floating_material_light=0x7f060020;
     public static final int background_material_dark=0x7f060021;
     public static final int background_material_light=0x7f060022;
-    public static final int black=0x7f060023;
-    public static final int blue=0x7f060024;
-    public static final int bright_foreground_disabled_material_dark=0x7f060025;
-    public static final int bright_foreground_disabled_material_light=0x7f060026;
-    public static final int bright_foreground_inverse_material_dark=0x7f060027;
-    public static final int bright_foreground_inverse_material_light=0x7f060028;
-    public static final int bright_foreground_material_dark=0x7f060029;
-    public static final int bright_foreground_material_light=0x7f06002a;
-    public static final int button_material_dark=0x7f06002b;
-    public static final int button_material_light=0x7f06002c;
-    public static final int cardclr=0x7f06002d;
-    public static final int cardview_dark_background=0x7f06002e;
-    public static final int cardview_light_background=0x7f06002f;
-    public static final int cardview_shadow_end_color=0x7f060030;
-    public static final int cardview_shadow_start_color=0x7f060031;
-    public static final int colorAccent=0x7f060032;
-    public static final int colorAccentdark=0x7f060033;
-    public static final int colorAccentnew=0x7f060034;
-    public static final int colorPrimary=0x7f060035;
-    public static final int colorPrimaryDark=0x7f060036;
-    public static final int coloraccent=0x7f060037;
-    public static final int com_facebook_blue=0x7f060038;
-    public static final int com_facebook_button_background_color=0x7f060039;
-    public static final int com_facebook_button_background_color_disabled=0x7f06003a;
-    public static final int com_facebook_button_background_color_focused=0x7f06003b;
-    public static final int com_facebook_button_background_color_focused_disabled=0x7f06003c;
-    public static final int com_facebook_button_background_color_pressed=0x7f06003d;
-    public static final int com_facebook_button_background_color_selected=0x7f06003e;
-    public static final int com_facebook_button_border_color_focused=0x7f06003f;
-    public static final int com_facebook_button_login_background_color=0x7f060040;
-    public static final int com_facebook_button_login_silver_background_color=0x7f060041;
-    public static final int com_facebook_button_login_silver_background_color_pressed=0x7f060042;
-    public static final int com_facebook_button_send_background_color=0x7f060043;
-    public static final int com_facebook_button_send_background_color_pressed=0x7f060044;
-    public static final int com_facebook_button_text_color=0x7f060045;
-    public static final int com_facebook_device_auth_text=0x7f060046;
-    public static final int com_facebook_likeboxcountview_border_color=0x7f060047;
-    public static final int com_facebook_likeboxcountview_text_color=0x7f060048;
-    public static final int com_facebook_likeview_text_color=0x7f060049;
-    public static final int com_facebook_messenger_blue=0x7f06004a;
-    public static final int com_facebook_send_button_text_color=0x7f06004b;
-    public static final int com_smart_login_code=0x7f06004c;
-    public static final int common_google_signin_btn_text_dark=0x7f06004d;
-    public static final int common_google_signin_btn_text_dark_default=0x7f06004e;
-    public static final int common_google_signin_btn_text_dark_disabled=0x7f06004f;
-    public static final int common_google_signin_btn_text_dark_focused=0x7f060050;
-    public static final int common_google_signin_btn_text_dark_pressed=0x7f060051;
-    public static final int common_google_signin_btn_text_light=0x7f060052;
-    public static final int common_google_signin_btn_text_light_default=0x7f060053;
-    public static final int common_google_signin_btn_text_light_disabled=0x7f060054;
-    public static final int common_google_signin_btn_text_light_focused=0x7f060055;
-    public static final int common_google_signin_btn_text_light_pressed=0x7f060056;
-    public static final int common_google_signin_btn_tint=0x7f060057;
-    public static final int counter_text_bg=0x7f060058;
-    public static final int counter_text_color=0x7f060059;
-    public static final int dark_ashe=0x7f06005a;
-    public static final int darkashe=0x7f06005b;
-    public static final int darkblue=0x7f06005c;
-    public static final int darkg_ashe=0x7f06005d;
-    public static final int darkpink=0x7f06005e;
-    public static final int design_bottom_navigation_shadow_color=0x7f06005f;
-    public static final int design_default_color_primary=0x7f060060;
-    public static final int design_default_color_primary_dark=0x7f060061;
-    public static final int design_error=0x7f060062;
-    public static final int design_fab_shadow_end_color=0x7f060063;
-    public static final int design_fab_shadow_mid_color=0x7f060064;
-    public static final int design_fab_shadow_start_color=0x7f060065;
-    public static final int design_fab_stroke_end_inner_color=0x7f060066;
-    public static final int design_fab_stroke_end_outer_color=0x7f060067;
-    public static final int design_fab_stroke_top_inner_color=0x7f060068;
-    public static final int design_fab_stroke_top_outer_color=0x7f060069;
-    public static final int design_snackbar_background_color=0x7f06006a;
-    public static final int design_tint_password_toggle=0x7f06006b;
-    public static final int dim_foreground_disabled_material_dark=0x7f06006c;
-    public static final int dim_foreground_disabled_material_light=0x7f06006d;
-    public static final int dim_foreground_material_dark=0x7f06006e;
-    public static final int dim_foreground_material_light=0x7f06006f;
-    public static final int error_color_material_dark=0x7f060070;
-    public static final int error_color_material_light=0x7f060071;
-    public static final int foreground_material_dark=0x7f060072;
-    public static final int foreground_material_light=0x7f060073;
-    public static final int highlighted_text_material_dark=0x7f060074;
-    public static final int highlighted_text_material_light=0x7f060075;
-    public static final int ic_launcher_background=0x7f060076;
-    public static final int list_background=0x7f060077;
-    public static final int list_background_pressed=0x7f060078;
-    public static final int list_divider=0x7f060079;
-    public static final int list_item_title=0x7f06007a;
-    public static final int lite_ashe=0x7f06007b;
-    public static final int material_blue_grey_800=0x7f06007c;
-    public static final int material_blue_grey_900=0x7f06007d;
-    public static final int material_blue_grey_950=0x7f06007e;
-    public static final int material_deep_teal_200=0x7f06007f;
-    public static final int material_deep_teal_500=0x7f060080;
-    public static final int material_grey_100=0x7f060081;
-    public static final int material_grey_300=0x7f060082;
-    public static final int material_grey_50=0x7f060083;
-    public static final int material_grey_600=0x7f060084;
-    public static final int material_grey_800=0x7f060085;
-    public static final int material_grey_850=0x7f060086;
-    public static final int material_grey_900=0x7f060087;
-    public static final int mtrl_bottom_nav_colored_item_tint=0x7f060088;
-    public static final int mtrl_bottom_nav_item_tint=0x7f060089;
-    public static final int mtrl_btn_bg_color_disabled=0x7f06008a;
-    public static final int mtrl_btn_bg_color_selector=0x7f06008b;
-    public static final int mtrl_btn_ripple_color=0x7f06008c;
-    public static final int mtrl_btn_stroke_color_selector=0x7f06008d;
-    public static final int mtrl_btn_text_btn_ripple_color=0x7f06008e;
-    public static final int mtrl_btn_text_color_disabled=0x7f06008f;
-    public static final int mtrl_btn_text_color_selector=0x7f060090;
-    public static final int mtrl_btn_transparent_bg_color=0x7f060091;
-    public static final int mtrl_chip_background_color=0x7f060092;
-    public static final int mtrl_chip_close_icon_tint=0x7f060093;
-    public static final int mtrl_chip_ripple_color=0x7f060094;
-    public static final int mtrl_chip_text_color=0x7f060095;
-    public static final int mtrl_fab_ripple_color=0x7f060096;
-    public static final int mtrl_scrim_color=0x7f060097;
-    public static final int mtrl_tabs_colored_ripple_color=0x7f060098;
-    public static final int mtrl_tabs_icon_color_selector=0x7f060099;
-    public static final int mtrl_tabs_icon_color_selector_colored=0x7f06009a;
-    public static final int mtrl_tabs_legacy_text_color_selector=0x7f06009b;
-    public static final int mtrl_tabs_ripple_color=0x7f06009c;
-    public static final int mtrl_text_btn_text_color_selector=0x7f06009d;
-    public static final int mtrl_textinput_default_box_stroke_color=0x7f06009e;
-    public static final int mtrl_textinput_disabled_color=0x7f06009f;
-    public static final int mtrl_textinput_filled_box_default_background_color=0x7f0600a0;
-    public static final int mtrl_textinput_hovered_box_stroke_color=0x7f0600a1;
-    public static final int navigationBarColor=0x7f0600a2;
-    public static final int notification_action_color_filter=0x7f0600a3;
-    public static final int notification_icon_bg_color=0x7f0600a4;
-    public static final int notification_material_background_media_default_color=0x7f0600a5;
-    public static final int orange=0x7f0600a6;
-    public static final int orangenew=0x7f0600a7;
-    public static final int primary_dark_material_dark=0x7f0600a8;
-    public static final int primary_dark_material_light=0x7f0600a9;
-    public static final int primary_material_dark=0x7f0600aa;
-    public static final int primary_material_light=0x7f0600ab;
-    public static final int primary_text_default_material_dark=0x7f0600ac;
-    public static final int primary_text_default_material_light=0x7f0600ad;
-    public static final int primary_text_disabled_material_dark=0x7f0600ae;
-    public static final int primary_text_disabled_material_light=0x7f0600af;
-    public static final int red=0x7f0600b0;
-    public static final int ripple_material_dark=0x7f0600b1;
-    public static final int ripple_material_light=0x7f0600b2;
-    public static final int sandal=0x7f0600b3;
-    public static final int secondary_text_default_material_dark=0x7f0600b4;
-    public static final int secondary_text_default_material_light=0x7f0600b5;
-    public static final int secondary_text_disabled_material_dark=0x7f0600b6;
-    public static final int secondary_text_disabled_material_light=0x7f0600b7;
-    public static final int switch_thumb_disabled_material_dark=0x7f0600b8;
-    public static final int switch_thumb_disabled_material_light=0x7f0600b9;
-    public static final int switch_thumb_material_dark=0x7f0600ba;
-    public static final int switch_thumb_material_light=0x7f0600bb;
-    public static final int switch_thumb_normal_material_dark=0x7f0600bc;
-    public static final int switch_thumb_normal_material_light=0x7f0600bd;
-    public static final int textColorPrimary=0x7f0600be;
-    public static final int tooltip_background_dark=0x7f0600bf;
-    public static final int tooltip_background_light=0x7f0600c0;
-    public static final int transperent=0x7f0600c1;
-    public static final int violet=0x7f0600c2;
-    public static final int violet1=0x7f0600c3;
-    public static final int white=0x7f0600c4;
-    public static final int windowBackground=0x7f0600c5;
-    public static final int yellow=0x7f0600c6;
+    public static final int bg_color=0x7f060023;
+    public static final int black=0x7f060024;
+    public static final int blue=0x7f060025;
+    public static final int bright_foreground_disabled_material_dark=0x7f060026;
+    public static final int bright_foreground_disabled_material_light=0x7f060027;
+    public static final int bright_foreground_inverse_material_dark=0x7f060028;
+    public static final int bright_foreground_inverse_material_light=0x7f060029;
+    public static final int bright_foreground_material_dark=0x7f06002a;
+    public static final int bright_foreground_material_light=0x7f06002b;
+    public static final int button_material_dark=0x7f06002c;
+    public static final int button_material_light=0x7f06002d;
+    public static final int cardclr=0x7f06002e;
+    public static final int cardview_dark_background=0x7f06002f;
+    public static final int cardview_light_background=0x7f060030;
+    public static final int cardview_shadow_end_color=0x7f060031;
+    public static final int cardview_shadow_start_color=0x7f060032;
+    public static final int colorAccent=0x7f060033;
+    public static final int colorAccentdark=0x7f060034;
+    public static final int colorAccentnew=0x7f060035;
+    public static final int colorPrimary=0x7f060036;
+    public static final int colorPrimaryDark=0x7f060037;
+    public static final int coloraccent=0x7f060038;
+    public static final int com_facebook_blue=0x7f060039;
+    public static final int com_facebook_button_background_color=0x7f06003a;
+    public static final int com_facebook_button_background_color_disabled=0x7f06003b;
+    public static final int com_facebook_button_background_color_focused=0x7f06003c;
+    public static final int com_facebook_button_background_color_focused_disabled=0x7f06003d;
+    public static final int com_facebook_button_background_color_pressed=0x7f06003e;
+    public static final int com_facebook_button_background_color_selected=0x7f06003f;
+    public static final int com_facebook_button_border_color_focused=0x7f060040;
+    public static final int com_facebook_button_login_background_color=0x7f060041;
+    public static final int com_facebook_button_login_silver_background_color=0x7f060042;
+    public static final int com_facebook_button_login_silver_background_color_pressed=0x7f060043;
+    public static final int com_facebook_button_send_background_color=0x7f060044;
+    public static final int com_facebook_button_send_background_color_pressed=0x7f060045;
+    public static final int com_facebook_button_text_color=0x7f060046;
+    public static final int com_facebook_device_auth_text=0x7f060047;
+    public static final int com_facebook_likeboxcountview_border_color=0x7f060048;
+    public static final int com_facebook_likeboxcountview_text_color=0x7f060049;
+    public static final int com_facebook_likeview_text_color=0x7f06004a;
+    public static final int com_facebook_messenger_blue=0x7f06004b;
+    public static final int com_facebook_send_button_text_color=0x7f06004c;
+    public static final int com_smart_login_code=0x7f06004d;
+    public static final int common_google_signin_btn_text_dark=0x7f06004e;
+    public static final int common_google_signin_btn_text_dark_default=0x7f06004f;
+    public static final int common_google_signin_btn_text_dark_disabled=0x7f060050;
+    public static final int common_google_signin_btn_text_dark_focused=0x7f060051;
+    public static final int common_google_signin_btn_text_dark_pressed=0x7f060052;
+    public static final int common_google_signin_btn_text_light=0x7f060053;
+    public static final int common_google_signin_btn_text_light_default=0x7f060054;
+    public static final int common_google_signin_btn_text_light_disabled=0x7f060055;
+    public static final int common_google_signin_btn_text_light_focused=0x7f060056;
+    public static final int common_google_signin_btn_text_light_pressed=0x7f060057;
+    public static final int common_google_signin_btn_tint=0x7f060058;
+    public static final int counter_text_bg=0x7f060059;
+    public static final int counter_text_color=0x7f06005a;
+    public static final int dark_ashe=0x7f06005b;
+    public static final int darkashe=0x7f06005c;
+    public static final int darkblue=0x7f06005d;
+    public static final int darkg_ashe=0x7f06005e;
+    public static final int darkpink=0x7f06005f;
+    public static final int design_bottom_navigation_shadow_color=0x7f060060;
+    public static final int design_default_color_primary=0x7f060061;
+    public static final int design_default_color_primary_dark=0x7f060062;
+    public static final int design_error=0x7f060063;
+    public static final int design_fab_shadow_end_color=0x7f060064;
+    public static final int design_fab_shadow_mid_color=0x7f060065;
+    public static final int design_fab_shadow_start_color=0x7f060066;
+    public static final int design_fab_stroke_end_inner_color=0x7f060067;
+    public static final int design_fab_stroke_end_outer_color=0x7f060068;
+    public static final int design_fab_stroke_top_inner_color=0x7f060069;
+    public static final int design_fab_stroke_top_outer_color=0x7f06006a;
+    public static final int design_snackbar_background_color=0x7f06006b;
+    public static final int design_tint_password_toggle=0x7f06006c;
+    public static final int dim_foreground_disabled_material_dark=0x7f06006d;
+    public static final int dim_foreground_disabled_material_light=0x7f06006e;
+    public static final int dim_foreground_material_dark=0x7f06006f;
+    public static final int dim_foreground_material_light=0x7f060070;
+    public static final int error_color_material_dark=0x7f060071;
+    public static final int error_color_material_light=0x7f060072;
+    public static final int foreground_material_dark=0x7f060073;
+    public static final int foreground_material_light=0x7f060074;
+    public static final int highlighted_text_material_dark=0x7f060075;
+    public static final int highlighted_text_material_light=0x7f060076;
+    public static final int ic_launcher_background=0x7f060077;
+    public static final int list_background=0x7f060078;
+    public static final int list_background_pressed=0x7f060079;
+    public static final int list_divider=0x7f06007a;
+    public static final int list_item_title=0x7f06007b;
+    public static final int lite_ashe=0x7f06007c;
+    public static final int material_blue_grey_800=0x7f06007d;
+    public static final int material_blue_grey_900=0x7f06007e;
+    public static final int material_blue_grey_950=0x7f06007f;
+    public static final int material_deep_teal_200=0x7f060080;
+    public static final int material_deep_teal_500=0x7f060081;
+    public static final int material_grey_100=0x7f060082;
+    public static final int material_grey_300=0x7f060083;
+    public static final int material_grey_50=0x7f060084;
+    public static final int material_grey_600=0x7f060085;
+    public static final int material_grey_800=0x7f060086;
+    public static final int material_grey_850=0x7f060087;
+    public static final int material_grey_900=0x7f060088;
+    public static final int mtrl_bottom_nav_colored_item_tint=0x7f060089;
+    public static final int mtrl_bottom_nav_item_tint=0x7f06008a;
+    public static final int mtrl_btn_bg_color_disabled=0x7f06008b;
+    public static final int mtrl_btn_bg_color_selector=0x7f06008c;
+    public static final int mtrl_btn_ripple_color=0x7f06008d;
+    public static final int mtrl_btn_stroke_color_selector=0x7f06008e;
+    public static final int mtrl_btn_text_btn_ripple_color=0x7f06008f;
+    public static final int mtrl_btn_text_color_disabled=0x7f060090;
+    public static final int mtrl_btn_text_color_selector=0x7f060091;
+    public static final int mtrl_btn_transparent_bg_color=0x7f060092;
+    public static final int mtrl_chip_background_color=0x7f060093;
+    public static final int mtrl_chip_close_icon_tint=0x7f060094;
+    public static final int mtrl_chip_ripple_color=0x7f060095;
+    public static final int mtrl_chip_text_color=0x7f060096;
+    public static final int mtrl_fab_ripple_color=0x7f060097;
+    public static final int mtrl_scrim_color=0x7f060098;
+    public static final int mtrl_tabs_colored_ripple_color=0x7f060099;
+    public static final int mtrl_tabs_icon_color_selector=0x7f06009a;
+    public static final int mtrl_tabs_icon_color_selector_colored=0x7f06009b;
+    public static final int mtrl_tabs_legacy_text_color_selector=0x7f06009c;
+    public static final int mtrl_tabs_ripple_color=0x7f06009d;
+    public static final int mtrl_text_btn_text_color_selector=0x7f06009e;
+    public static final int mtrl_textinput_default_box_stroke_color=0x7f06009f;
+    public static final int mtrl_textinput_disabled_color=0x7f0600a0;
+    public static final int mtrl_textinput_filled_box_default_background_color=0x7f0600a1;
+    public static final int mtrl_textinput_hovered_box_stroke_color=0x7f0600a2;
+    public static final int navigationBarColor=0x7f0600a3;
+    public static final int notification_action_color_filter=0x7f0600a4;
+    public static final int notification_icon_bg_color=0x7f0600a5;
+    public static final int notification_material_background_media_default_color=0x7f0600a6;
+    public static final int orange=0x7f0600a7;
+    public static final int orangenew=0x7f0600a8;
+    public static final int primary_dark_material_dark=0x7f0600a9;
+    public static final int primary_dark_material_light=0x7f0600aa;
+    public static final int primary_material_dark=0x7f0600ab;
+    public static final int primary_material_light=0x7f0600ac;
+    public static final int primary_text_default_material_dark=0x7f0600ad;
+    public static final int primary_text_default_material_light=0x7f0600ae;
+    public static final int primary_text_disabled_material_dark=0x7f0600af;
+    public static final int primary_text_disabled_material_light=0x7f0600b0;
+    public static final int red=0x7f0600b1;
+    public static final int ripple_material_dark=0x7f0600b2;
+    public static final int ripple_material_light=0x7f0600b3;
+    public static final int sandal=0x7f0600b4;
+    public static final int secondary_text_default_material_dark=0x7f0600b5;
+    public static final int secondary_text_default_material_light=0x7f0600b6;
+    public static final int secondary_text_disabled_material_dark=0x7f0600b7;
+    public static final int secondary_text_disabled_material_light=0x7f0600b8;
+    public static final int switch_thumb_disabled_material_dark=0x7f0600b9;
+    public static final int switch_thumb_disabled_material_light=0x7f0600ba;
+    public static final int switch_thumb_material_dark=0x7f0600bb;
+    public static final int switch_thumb_material_light=0x7f0600bc;
+    public static final int switch_thumb_normal_material_dark=0x7f0600bd;
+    public static final int switch_thumb_normal_material_light=0x7f0600be;
+    public static final int textColorPrimary=0x7f0600bf;
+    public static final int tooltip_background_dark=0x7f0600c0;
+    public static final int tooltip_background_light=0x7f0600c1;
+    public static final int transperent=0x7f0600c2;
+    public static final int violet=0x7f0600c3;
+    public static final int violet1=0x7f0600c4;
+    public static final int white=0x7f0600c5;
+    public static final int windowBackground=0x7f0600c6;
+    public static final int yellow=0x7f0600c7;
   }
   public static final class dimen {
     public static final int abc_action_bar_content_inset_material=0x7f070000;
@@ -6153,108 +6599,112 @@ public final class R {
     public static final int avd_hide_password=0x7f08005a;
     public static final int avd_show_password=0x7f08005b;
     public static final int bordercolor=0x7f08005c;
-    public static final int com_facebook_auth_dialog_background=0x7f08005d;
-    public static final int com_facebook_auth_dialog_cancel_background=0x7f08005e;
-    public static final int com_facebook_auth_dialog_header_background=0x7f08005f;
-    public static final int com_facebook_button_background=0x7f080060;
-    public static final int com_facebook_button_icon=0x7f080061;
-    public static final int com_facebook_button_icon_blue=0x7f080062;
-    public static final int com_facebook_button_icon_white=0x7f080063;
-    public static final int com_facebook_button_like_background=0x7f080064;
-    public static final int com_facebook_button_like_icon_selected=0x7f080065;
-    public static final int com_facebook_button_login_background=0x7f080066;
-    public static final int com_facebook_button_login_logo=0x7f080067;
-    public static final int com_facebook_button_login_silver_background=0x7f080068;
-    public static final int com_facebook_button_send_background=0x7f080069;
-    public static final int com_facebook_button_send_icon_blue=0x7f08006a;
-    public static final int com_facebook_button_send_icon_white=0x7f08006b;
-    public static final int com_facebook_close=0x7f08006c;
-    public static final int com_facebook_favicon_blue=0x7f08006d;
-    public static final int com_facebook_profile_picture_blank_portrait=0x7f08006e;
-    public static final int com_facebook_profile_picture_blank_square=0x7f08006f;
-    public static final int com_facebook_send_button_icon=0x7f080070;
-    public static final int com_facebook_tooltip_black_background=0x7f080071;
-    public static final int com_facebook_tooltip_black_bottomnub=0x7f080072;
-    public static final int com_facebook_tooltip_black_topnub=0x7f080073;
-    public static final int com_facebook_tooltip_black_xout=0x7f080074;
-    public static final int com_facebook_tooltip_blue_background=0x7f080075;
-    public static final int com_facebook_tooltip_blue_bottomnub=0x7f080076;
-    public static final int com_facebook_tooltip_blue_topnub=0x7f080077;
-    public static final int com_facebook_tooltip_blue_xout=0x7f080078;
-    public static final int common_full_open_on_phone=0x7f080079;
-    public static final int common_google_signin_btn_icon_dark=0x7f08007a;
-    public static final int common_google_signin_btn_icon_dark_focused=0x7f08007b;
-    public static final int common_google_signin_btn_icon_dark_normal=0x7f08007c;
-    public static final int common_google_signin_btn_icon_dark_normal_background=0x7f08007d;
-    public static final int common_google_signin_btn_icon_disabled=0x7f08007e;
-    public static final int common_google_signin_btn_icon_light=0x7f08007f;
-    public static final int common_google_signin_btn_icon_light_focused=0x7f080080;
-    public static final int common_google_signin_btn_icon_light_normal=0x7f080081;
-    public static final int common_google_signin_btn_icon_light_normal_background=0x7f080082;
-    public static final int common_google_signin_btn_text_dark=0x7f080083;
-    public static final int common_google_signin_btn_text_dark_focused=0x7f080084;
-    public static final int common_google_signin_btn_text_dark_normal=0x7f080085;
-    public static final int common_google_signin_btn_text_dark_normal_background=0x7f080086;
-    public static final int common_google_signin_btn_text_disabled=0x7f080087;
-    public static final int common_google_signin_btn_text_light=0x7f080088;
-    public static final int common_google_signin_btn_text_light_focused=0x7f080089;
-    public static final int common_google_signin_btn_text_light_normal=0x7f08008a;
-    public static final int common_google_signin_btn_text_light_normal_background=0x7f08008b;
-    public static final int design_bottom_navigation_item_background=0x7f08008c;
-    public static final int design_fab_background=0x7f08008d;
-    public static final int design_ic_visibility=0x7f08008e;
-    public static final int design_ic_visibility_off=0x7f08008f;
-    public static final int design_password_eye=0x7f080090;
-    public static final int design_snackbar_background=0x7f080091;
-    public static final int fab_label_background=0x7f080092;
-    public static final int googleg_disabled_color_18=0x7f080093;
-    public static final int googleg_standard_color_18=0x7f080094;
-    public static final int gradient=0x7f080095;
-    public static final int ic_close=0x7f080096;
-    public static final int ic_launcher_background=0x7f080097;
-    public static final int ic_menu=0x7f080098;
-    public static final int ic_mtrl_chip_checked_black=0x7f080099;
-    public static final int ic_mtrl_chip_checked_circle=0x7f08009a;
-    public static final int ic_mtrl_chip_close_circle=0x7f08009b;
-    public static final int messenger_bubble_large_blue=0x7f08009c;
-    public static final int messenger_bubble_large_white=0x7f08009d;
-    public static final int messenger_bubble_small_blue=0x7f08009e;
-    public static final int messenger_bubble_small_white=0x7f08009f;
-    public static final int messenger_button_blue_bg_round=0x7f0800a0;
-    public static final int messenger_button_blue_bg_selector=0x7f0800a1;
-    public static final int messenger_button_send_round_shadow=0x7f0800a2;
-    public static final int messenger_button_white_bg_round=0x7f0800a3;
-    public static final int messenger_button_white_bg_selector=0x7f0800a4;
-    public static final int mtrl_snackbar_background=0x7f0800a5;
-    public static final int mtrl_tabs_default_indicator=0x7f0800a6;
-    public static final int navigation_empty_icon=0x7f0800a7;
-    public static final int notification_action_background=0x7f0800a8;
-    public static final int notification_bg=0x7f0800a9;
-    public static final int notification_bg_low=0x7f0800aa;
-    public static final int notification_bg_low_normal=0x7f0800ab;
-    public static final int notification_bg_low_pressed=0x7f0800ac;
-    public static final int notification_bg_normal=0x7f0800ad;
-    public static final int notification_bg_normal_pressed=0x7f0800ae;
-    public static final int notification_icon_background=0x7f0800af;
-    public static final int notification_template_icon_bg=0x7f0800b0;
-    public static final int notification_template_icon_low_bg=0x7f0800b1;
-    public static final int notification_tile_bg=0x7f0800b2;
-    public static final int notify_panel_notification_icon_bg=0x7f0800b3;
-    public static final int round_outline=0x7f0800b4;
-    public static final int rounded_corner=0x7f0800b5;
-    public static final int rounded_corner1=0x7f0800b6;
-    public static final int rounded_corner_button=0x7f0800b7;
-    public static final int rounded_corner_button_ash=0x7f0800b8;
-    public static final int rounded_corner_button_first=0x7f0800b9;
-    public static final int rounded_corner_button_mnus=0x7f0800ba;
-    public static final int rounded_corner_button_new=0x7f0800bb;
-    public static final int rounded_corner_button_new1=0x7f0800bc;
-    public static final int rounded_corner_button_newone=0x7f0800bd;
-    public static final int rounded_corner_button_orange=0x7f0800be;
-    public static final int rounded_corner_new=0x7f0800bf;
-    public static final int side_nav_bar=0x7f0800c0;
-    public static final int tooltip_frame_dark=0x7f0800c1;
-    public static final int tooltip_frame_light=0x7f0800c2;
+    public static final int bottom_border_on_dark=0x7f08005d;
+    public static final int bottom_border_on_light=0x7f08005e;
+    public static final int com_facebook_auth_dialog_background=0x7f08005f;
+    public static final int com_facebook_auth_dialog_cancel_background=0x7f080060;
+    public static final int com_facebook_auth_dialog_header_background=0x7f080061;
+    public static final int com_facebook_button_background=0x7f080062;
+    public static final int com_facebook_button_icon=0x7f080063;
+    public static final int com_facebook_button_icon_blue=0x7f080064;
+    public static final int com_facebook_button_icon_white=0x7f080065;
+    public static final int com_facebook_button_like_background=0x7f080066;
+    public static final int com_facebook_button_like_icon_selected=0x7f080067;
+    public static final int com_facebook_button_login_background=0x7f080068;
+    public static final int com_facebook_button_login_logo=0x7f080069;
+    public static final int com_facebook_button_login_silver_background=0x7f08006a;
+    public static final int com_facebook_button_send_background=0x7f08006b;
+    public static final int com_facebook_button_send_icon_blue=0x7f08006c;
+    public static final int com_facebook_button_send_icon_white=0x7f08006d;
+    public static final int com_facebook_close=0x7f08006e;
+    public static final int com_facebook_favicon_blue=0x7f08006f;
+    public static final int com_facebook_profile_picture_blank_portrait=0x7f080070;
+    public static final int com_facebook_profile_picture_blank_square=0x7f080071;
+    public static final int com_facebook_send_button_icon=0x7f080072;
+    public static final int com_facebook_tooltip_black_background=0x7f080073;
+    public static final int com_facebook_tooltip_black_bottomnub=0x7f080074;
+    public static final int com_facebook_tooltip_black_topnub=0x7f080075;
+    public static final int com_facebook_tooltip_black_xout=0x7f080076;
+    public static final int com_facebook_tooltip_blue_background=0x7f080077;
+    public static final int com_facebook_tooltip_blue_bottomnub=0x7f080078;
+    public static final int com_facebook_tooltip_blue_topnub=0x7f080079;
+    public static final int com_facebook_tooltip_blue_xout=0x7f08007a;
+    public static final int common_full_open_on_phone=0x7f08007b;
+    public static final int common_google_signin_btn_icon_dark=0x7f08007c;
+    public static final int common_google_signin_btn_icon_dark_focused=0x7f08007d;
+    public static final int common_google_signin_btn_icon_dark_normal=0x7f08007e;
+    public static final int common_google_signin_btn_icon_dark_normal_background=0x7f08007f;
+    public static final int common_google_signin_btn_icon_disabled=0x7f080080;
+    public static final int common_google_signin_btn_icon_light=0x7f080081;
+    public static final int common_google_signin_btn_icon_light_focused=0x7f080082;
+    public static final int common_google_signin_btn_icon_light_normal=0x7f080083;
+    public static final int common_google_signin_btn_icon_light_normal_background=0x7f080084;
+    public static final int common_google_signin_btn_text_dark=0x7f080085;
+    public static final int common_google_signin_btn_text_dark_focused=0x7f080086;
+    public static final int common_google_signin_btn_text_dark_normal=0x7f080087;
+    public static final int common_google_signin_btn_text_dark_normal_background=0x7f080088;
+    public static final int common_google_signin_btn_text_disabled=0x7f080089;
+    public static final int common_google_signin_btn_text_light=0x7f08008a;
+    public static final int common_google_signin_btn_text_light_focused=0x7f08008b;
+    public static final int common_google_signin_btn_text_light_normal=0x7f08008c;
+    public static final int common_google_signin_btn_text_light_normal_background=0x7f08008d;
+    public static final int design_bottom_navigation_item_background=0x7f08008e;
+    public static final int design_fab_background=0x7f08008f;
+    public static final int design_ic_visibility=0x7f080090;
+    public static final int design_ic_visibility_off=0x7f080091;
+    public static final int design_password_eye=0x7f080092;
+    public static final int design_snackbar_background=0x7f080093;
+    public static final int fab_add=0x7f080094;
+    public static final int fab_label_background=0x7f080095;
+    public static final int googleg_disabled_color_18=0x7f080096;
+    public static final int googleg_standard_color_18=0x7f080097;
+    public static final int gradient=0x7f080098;
+    public static final int ic_close=0x7f080099;
+    public static final int ic_launcher_background=0x7f08009a;
+    public static final int ic_menu=0x7f08009b;
+    public static final int ic_mtrl_chip_checked_black=0x7f08009c;
+    public static final int ic_mtrl_chip_checked_circle=0x7f08009d;
+    public static final int ic_mtrl_chip_close_circle=0x7f08009e;
+    public static final int messenger_bubble_large_blue=0x7f08009f;
+    public static final int messenger_bubble_large_white=0x7f0800a0;
+    public static final int messenger_bubble_small_blue=0x7f0800a1;
+    public static final int messenger_bubble_small_white=0x7f0800a2;
+    public static final int messenger_button_blue_bg_round=0x7f0800a3;
+    public static final int messenger_button_blue_bg_selector=0x7f0800a4;
+    public static final int messenger_button_send_round_shadow=0x7f0800a5;
+    public static final int messenger_button_white_bg_round=0x7f0800a6;
+    public static final int messenger_button_white_bg_selector=0x7f0800a7;
+    public static final int mtrl_snackbar_background=0x7f0800a8;
+    public static final int mtrl_tabs_default_indicator=0x7f0800a9;
+    public static final int navigation_empty_icon=0x7f0800aa;
+    public static final int notification_action_background=0x7f0800ab;
+    public static final int notification_bg=0x7f0800ac;
+    public static final int notification_bg_low=0x7f0800ad;
+    public static final int notification_bg_low_normal=0x7f0800ae;
+    public static final int notification_bg_low_pressed=0x7f0800af;
+    public static final int notification_bg_normal=0x7f0800b0;
+    public static final int notification_bg_normal_pressed=0x7f0800b1;
+    public static final int notification_icon_background=0x7f0800b2;
+    public static final int notification_template_icon_bg=0x7f0800b3;
+    public static final int notification_template_icon_low_bg=0x7f0800b4;
+    public static final int notification_tile_bg=0x7f0800b5;
+    public static final int notify_panel_notification_icon_bg=0x7f0800b6;
+    public static final int round_outline=0x7f0800b7;
+    public static final int rounded_corner=0x7f0800b8;
+    public static final int rounded_corner1=0x7f0800b9;
+    public static final int rounded_corner_button=0x7f0800ba;
+    public static final int rounded_corner_button_ash=0x7f0800bb;
+    public static final int rounded_corner_button_first=0x7f0800bc;
+    public static final int rounded_corner_button_mnus=0x7f0800bd;
+    public static final int rounded_corner_button_new=0x7f0800be;
+    public static final int rounded_corner_button_new1=0x7f0800bf;
+    public static final int rounded_corner_button_newone=0x7f0800c0;
+    public static final int rounded_corner_button_newtwo=0x7f0800c1;
+    public static final int rounded_corner_button_orange=0x7f0800c2;
+    public static final int rounded_corner_new=0x7f0800c3;
+    public static final int side_nav_bar=0x7f0800c4;
+    public static final int tooltip_frame_dark=0x7f0800c5;
+    public static final int tooltip_frame_light=0x7f0800c6;
   }
   public static final class id {
     public static final int ALT=0x7f090000;
@@ -6289,695 +6739,777 @@ public final class R {
     public static final int action_mode_bar_stub=0x7f09001d;
     public static final int action_mode_close_button=0x7f09001e;
     public static final int action_text=0x7f09001f;
-    public static final int actions=0x7f090020;
-    public static final int activity_chooser_view_content=0x7f090021;
-    public static final int add=0x7f090022;
-    public static final int add_button=0x7f090023;
-    public static final int addinfo=0x7f090024;
-    public static final int address_profile=0x7f090025;
-    public static final int adjust_height=0x7f090026;
-    public static final int adjust_width=0x7f090027;
-    public static final int alertTitle=0x7f090028;
-    public static final int all=0x7f090029;
-    public static final int alreadyapplied=0x7f09002a;
-    public static final int always=0x7f09002b;
-    public static final int amount=0x7f09002c;
-    public static final int analtyics_value=0x7f09002d;
-    public static final int analyticsvalues=0x7f09002e;
-    public static final int anticipate=0x7f09002f;
-    public static final int appbar=0x7f090030;
-    public static final int appdatetext=0x7f090031;
-    public static final int applied_amount=0x7f090032;
-    public static final int applied_date=0x7f090033;
-    public static final int applied_status=0x7f090034;
-    public static final int appliedcampvalues=0x7f090035;
-    public static final int applydate=0x7f090036;
-    public static final int applydatetext=0x7f090037;
-    public static final int applynow=0x7f090038;
-    public static final int applystatus=0x7f090039;
-    public static final int applystatustext=0x7f09003a;
-    public static final int applytill=0x7f09003b;
-    public static final int applytilltext=0x7f09003c;
-    public static final int approved_status=0x7f09003d;
-    public static final int approvedcampvalues=0x7f09003e;
-    public static final int approveddate=0x7f09003f;
-    public static final int approveddate_status=0x7f090040;
-    public static final int approveddatetext=0x7f090041;
-    public static final int approveddatetext1=0x7f090042;
-    public static final int asConfigured=0x7f090043;
-    public static final int async=0x7f090044;
-    public static final int auto=0x7f090045;
-    public static final int automatic=0x7f090046;
-    public static final int bankImg=0x7f090047;
-    public static final int banktransfer=0x7f090048;
-    public static final int barrier=0x7f090049;
-    public static final int bcall=0x7f09004a;
-    public static final int bcompanyaddress=0x7f09004b;
-    public static final int bcompanyname=0x7f09004c;
-    public static final int beginning=0x7f09004d;
-    public static final int blocking=0x7f09004e;
-    public static final int blog_select=0x7f09004f;
-    public static final int blog_text=0x7f090050;
-    public static final int blogger_clr=0x7f090051;
-    public static final int blogger_clr_icon=0x7f090052;
-    public static final int blogger_handle=0x7f090053;
-    public static final int bloginfotext=0x7f090054;
-    public static final int bloglink=0x7f090055;
-    public static final int bloglinktext=0x7f090056;
-    public static final int blogname=0x7f090057;
-    public static final int blogtext=0x7f090058;
-    public static final int blogtrafic=0x7f090059;
-    public static final int bmail=0x7f09005a;
-    public static final int bmap=0x7f09005b;
-    public static final int bottom=0x7f09005c;
-    public static final int bottomlayout=0x7f09005d;
-    public static final int bottomline=0x7f09005e;
-    public static final int bottomline1=0x7f09005f;
-    public static final int bounce=0x7f090060;
-    public static final int box_count=0x7f090061;
-    public static final int brief_title=0x7f090062;
-    public static final int btn_edit_mobile=0x7f090063;
-    public static final int btn_request_sms=0x7f090064;
-    public static final int btn_verify_otp=0x7f090065;
-    public static final int button=0x7f090066;
-    public static final int buttonPanel=0x7f090067;
-    public static final int calender_icon=0x7f090068;
-    public static final int campApplyTill=0x7f090069;
-    public static final int campBacklink=0x7f09006a;
-    public static final int campCat=0x7f09006b;
-    public static final int campDeliverables=0x7f09006c;
-    public static final int campDeliverablestext=0x7f09006d;
-    public static final int campDont=0x7f09006e;
-    public static final int campDos=0x7f09006f;
-    public static final int campEligibility=0x7f090070;
-    public static final int campEligibilitytext=0x7f090071;
-    public static final int campGoal=0x7f090072;
-    public static final int campImg=0x7f090073;
-    public static final int campLongNote=0x7f090074;
-    public static final int campName=0x7f090075;
-    public static final int campRewardType=0x7f090076;
-    public static final int campRewards=0x7f090077;
-    public static final int campShortNote=0x7f090078;
-    public static final int campTag=0x7f090079;
-    public static final int camp_brief=0x7f09007a;
-    public static final int camp_brieftext=0x7f09007b;
-    public static final int camp_brieftext1=0x7f09007c;
-    public static final int campaignclosed=0x7f09007d;
-    public static final int campaignquote=0x7f09007e;
-    public static final int campaignquotext=0x7f09007f;
-    public static final int campapplieddate=0x7f090080;
-    public static final int campappliedstatus=0x7f090081;
-    public static final int campappliedtext=0x7f090082;
-    public static final int campappliedtext1=0x7f090083;
-    public static final int campapprovedtext=0x7f090084;
-    public static final int campapprovedtext1=0x7f090085;
-    public static final int campbacklinktext=0x7f090086;
-    public static final int campbrief=0x7f090087;
-    public static final int campbrief_value=0x7f090088;
-    public static final int campcompletedtext=0x7f090089;
-    public static final int campcompletedtext1=0x7f09008a;
-    public static final int campdeliverystatus=0x7f09008b;
-    public static final int campdeliverytext=0x7f09008c;
-    public static final int campdeliverytext1=0x7f09008d;
-    public static final int campdonttext=0x7f09008e;
-    public static final int campdotext=0x7f09008f;
-    public static final int campid=0x7f090090;
-    public static final int camplgbrieftext=0x7f090091;
-    public static final int campname=0x7f090092;
-    public static final int camppaymentstatus=0x7f090093;
-    public static final int camppaymenttext=0x7f090094;
-    public static final int camppaymenttext1=0x7f090095;
-    public static final int camprewardstext=0x7f090096;
-    public static final int campshbrieftext=0x7f090097;
-    public static final int campstatus=0x7f090098;
-    public static final int cancel_action=0x7f090099;
-    public static final int cancel_button=0x7f09009a;
-    public static final int cardvienine=0x7f09009b;
-    public static final int cardview=0x7f09009c;
-    public static final int cardview0=0x7f09009d;
-    public static final int cardview01=0x7f09009e;
-    public static final int cardview1=0x7f09009f;
-    public static final int cardview2=0x7f0900a0;
-    public static final int cardvieweight=0x7f0900a1;
-    public static final int cardvieweleven=0x7f0900a2;
-    public static final int cardviewfive=0x7f0900a3;
-    public static final int cardviewfour=0x7f0900a4;
-    public static final int cardviewone=0x7f0900a5;
-    public static final int cardviewsecond=0x7f0900a6;
-    public static final int cardviewseven=0x7f0900a7;
-    public static final int cardviewsix=0x7f0900a8;
-    public static final int cardviewten=0x7f0900a9;
-    public static final int cardviewthird=0x7f0900aa;
-    public static final int category_home=0x7f0900ab;
-    public static final int category_mycamp=0x7f0900ac;
-    public static final int category_proflie=0x7f0900ad;
-    public static final int category_settings=0x7f0900ae;
-    public static final int category_wallet=0x7f0900af;
-    public static final int ccall=0x7f0900b0;
-    public static final int ccompanyaddress=0x7f0900b1;
-    public static final int ccompanyname=0x7f0900b2;
-    public static final int center=0x7f0900b3;
-    public static final int center_horizontal=0x7f0900b4;
-    public static final int center_vertical=0x7f0900b5;
-    public static final int chains=0x7f0900b6;
-    public static final int check_update_icon=0x7f0900b7;
-    public static final int check_update_select=0x7f0900b8;
-    public static final int check_update_text=0x7f0900b9;
-    public static final int checkbox=0x7f0900ba;
-    public static final int chronometer=0x7f0900bb;
-    public static final int cid=0x7f0900bc;
-    public static final int city=0x7f0900bd;
-    public static final int city_profile=0x7f0900be;
-    public static final int city_profile0=0x7f0900bf;
-    public static final int city_profile1=0x7f0900c0;
-    public static final int city_spinner=0x7f0900c1;
-    public static final int clip_horizontal=0x7f0900c2;
-    public static final int clip_vertical=0x7f0900c3;
-    public static final int close=0x7f0900c4;
-    public static final int close_img=0x7f0900c5;
-    public static final int cmail=0x7f0900c6;
-    public static final int cmap=0x7f0900c7;
-    public static final int collapseActionView=0x7f0900c8;
-    public static final int com_facebook_body_frame=0x7f0900c9;
-    public static final int com_facebook_button_xout=0x7f0900ca;
-    public static final int com_facebook_device_auth_instructions=0x7f0900cb;
-    public static final int com_facebook_fragment_container=0x7f0900cc;
-    public static final int com_facebook_login_fragment_progress_bar=0x7f0900cd;
-    public static final int com_facebook_smart_instructions_0=0x7f0900ce;
-    public static final int com_facebook_smart_instructions_or=0x7f0900cf;
-    public static final int com_facebook_tooltip_bubble_view_bottom_pointer=0x7f0900d0;
-    public static final int com_facebook_tooltip_bubble_view_text_body=0x7f0900d1;
-    public static final int com_facebook_tooltip_bubble_view_top_pointer=0x7f0900d2;
-    public static final int commentstext=0x7f0900d3;
-    public static final int completedcampvalues=0x7f0900d4;
-    public static final int completeddate=0x7f0900d5;
-    public static final int completeddate_status=0x7f0900d6;
-    public static final int completeddatetext=0x7f0900d7;
-    public static final int completeddatetext1=0x7f0900d8;
-    public static final int conditiontext=0x7f0900d9;
-    public static final int confirmation_code=0x7f0900da;
-    public static final int connectfacebook=0x7f0900db;
-    public static final int connectinstagram=0x7f0900dc;
-    public static final int connecttwitter=0x7f0900dd;
-    public static final int connectyoutube=0x7f0900de;
-    public static final int container=0x7f0900df;
-    public static final int content=0x7f0900e0;
-    public static final int contentPanel=0x7f0900e1;
-    public static final int content_value=0x7f0900e2;
-    public static final int contentshared=0x7f0900e3;
-    public static final int contentsharedtext=0x7f0900e4;
-    public static final int contentstatus=0x7f0900e5;
-    public static final int contentstatustext=0x7f0900e6;
-    public static final int coordinator=0x7f0900e7;
-    public static final int coordinatorLayout=0x7f0900e8;
-    public static final int copyright=0x7f0900e9;
-    public static final int cos=0x7f0900ea;
-    public static final int currentamttext=0x7f0900eb;
-    public static final int custom=0x7f0900ec;
-    public static final int customPanel=0x7f0900ed;
-    public static final int dark=0x7f0900ee;
-    public static final int date=0x7f0900ef;
-    public static final int datetime=0x7f0900f0;
-    public static final int decelerate=0x7f0900f1;
-    public static final int decor_content_parent=0x7f0900f2;
-    public static final int default_activity_button=0x7f0900f3;
-    public static final int delivery_status=0x7f0900f4;
-    public static final int deliverystatus=0x7f0900f5;
-    public static final int deliverystatustext=0x7f0900f6;
-    public static final int deltaRelative=0x7f0900f7;
-    public static final int design_bottom_sheet=0x7f0900f8;
-    public static final int design_menu_item_action_area=0x7f0900f9;
-    public static final int design_menu_item_action_area_stub=0x7f0900fa;
-    public static final int design_menu_item_text=0x7f0900fb;
-    public static final int design_navigation_view=0x7f0900fc;
-    public static final int dimensions=0x7f0900fd;
-    public static final int direct=0x7f0900fe;
-    public static final int disableHome=0x7f0900ff;
-    public static final int display_always=0x7f090100;
-    public static final int dob_profile=0x7f090101;
-    public static final int down=0x7f090102;
-    public static final int dragDown=0x7f090103;
-    public static final int dragLeft=0x7f090104;
-    public static final int dragRight=0x7f090105;
-    public static final int dragUp=0x7f090106;
-    public static final int drawer_layout=0x7f090107;
-    public static final int dummy=0x7f090108;
-    public static final int easeIn=0x7f090109;
-    public static final int easeInOut=0x7f09010a;
-    public static final int easeOut=0x7f09010b;
-    public static final int edit_profile_icon=0x7f09010c;
-    public static final int edit_profile_select=0x7f09010d;
-    public static final int edit_profile_text=0x7f09010e;
-    public static final int edit_query=0x7f09010f;
-    public static final int eligibilitytext=0x7f090110;
-    public static final int email=0x7f090111;
-    public static final int emailid=0x7f090112;
-    public static final int end=0x7f090113;
-    public static final int end_padder=0x7f090114;
-    public static final int enterAlways=0x7f090115;
-    public static final int enterAlwaysCollapsed=0x7f090116;
-    public static final int exitUntilCollapsed=0x7f090117;
-    public static final int expand_activities_button=0x7f090118;
-    public static final int expanded_menu=0x7f090119;
-    public static final int fab_label=0x7f09011a;
-    public static final int facebook_clr=0x7f09011b;
-    public static final int facebook_clr_icon=0x7f09011c;
-    public static final int facebook_handle=0x7f09011d;
-    public static final int facebookinfotext=0x7f09011e;
-    public static final int facebooklink=0x7f09011f;
-    public static final int facebooktext=0x7f090120;
-    public static final int femailid=0x7f090121;
-    public static final int fieldinterest=0x7f090122;
-    public static final int fill=0x7f090123;
-    public static final int fill_horizontal=0x7f090124;
-    public static final int fill_parent=0x7f090125;
-    public static final int fill_vertical=0x7f090126;
-    public static final int filled=0x7f090127;
-    public static final int fixed=0x7f090128;
-    public static final int fixedamount=0x7f090129;
-    public static final int flip=0x7f09012a;
-    public static final int forever=0x7f09012b;
-    public static final int forgotpassword=0x7f09012c;
-    public static final int fquoteamt=0x7f09012d;
-    public static final int frame=0x7f09012e;
-    public static final int framenew=0x7f09012f;
-    public static final int gender_profile=0x7f090130;
-    public static final int gender_profile0=0x7f090131;
-    public static final int gender_spinner=0x7f090132;
-    public static final int ghost_view=0x7f090133;
-    public static final int gone=0x7f090134;
-    public static final int group_divider=0x7f090135;
-    public static final int groups=0x7f090136;
-    public static final int head=0x7f090137;
-    public static final int head1=0x7f090138;
-    public static final int header_user_email=0x7f090139;
-    public static final int header_user_icon=0x7f09013a;
-    public static final int header_user_mobile=0x7f09013b;
-    public static final int header_user_name=0x7f09013c;
-    public static final int home=0x7f09013d;
-    public static final int homeAsUp=0x7f09013e;
-    public static final int homeicon=0x7f09013f;
-    public static final int hometext=0x7f090140;
-    public static final int horizontal=0x7f090141;
-    public static final int icon=0x7f090142;
-    public static final int icon_group=0x7f090143;
-    public static final int icon_only=0x7f090144;
-    public static final int ifRoom=0x7f090145;
-    public static final int image=0x7f090146;
-    public static final int imageView=0x7f090147;
-    public static final int imageView3=0x7f090148;
-    public static final int info=0x7f090149;
-    public static final int infoicon=0x7f09014a;
-    public static final int infotext=0x7f09014b;
-    public static final int inline=0x7f09014c;
-    public static final int inputMobile=0x7f09014d;
-    public static final int inputOtp=0x7f09014e;
-    public static final int insta_clr_icon=0x7f09014f;
-    public static final int instagram=0x7f090150;
-    public static final int instagram_clr=0x7f090151;
-    public static final int instagram_clr_icon=0x7f090152;
-    public static final int instagram_handle=0x7f090153;
-    public static final int instagraminfotext=0x7f090154;
-    public static final int instagramlink=0x7f090155;
-    public static final int instagramtext=0x7f090156;
-    public static final int invisible=0x7f090157;
-    public static final int italic=0x7f090158;
-    public static final int item_touch_helper_previous_elevation=0x7f090159;
-    public static final int ivImage=0x7f09015a;
-    public static final int jumpToEnd=0x7f09015b;
-    public static final int jumpToStart=0x7f09015c;
-    public static final int labeled=0x7f09015d;
-    public static final int large=0x7f09015e;
-    public static final int largeLabel=0x7f09015f;
-    public static final int layout_edit_mobile=0x7f090160;
-    public static final int layout_otp=0x7f090161;
-    public static final int layout_sms=0x7f090162;
-    public static final int left=0x7f090163;
-    public static final int light=0x7f090164;
-    public static final int line=0x7f090165;
-    public static final int line0=0x7f090166;
-    public static final int line00=0x7f090167;
-    public static final int line01=0x7f090168;
-    public static final int line02=0x7f090169;
-    public static final int line03=0x7f09016a;
-    public static final int line04=0x7f09016b;
-    public static final int line1=0x7f09016c;
-    public static final int line2=0x7f09016d;
-    public static final int line3=0x7f09016e;
-    public static final int line4=0x7f09016f;
-    public static final int line5=0x7f090170;
-    public static final int line6=0x7f090171;
-    public static final int linear=0x7f090172;
-    public static final int linear1=0x7f090173;
-    public static final int linear11=0x7f090174;
-    public static final int linear111=0x7f090175;
-    public static final int linear2=0x7f090176;
-    public static final int linear22=0x7f090177;
-    public static final int linear222=0x7f090178;
-    public static final int linearLayout=0x7f090179;
-    public static final int linearfour=0x7f09017a;
-    public static final int linearone=0x7f09017b;
-    public static final int linearonee=0x7f09017c;
-    public static final int linee=0x7f09017d;
-    public static final int linee01=0x7f09017e;
-    public static final int linefour=0x7f09017f;
-    public static final int linenew=0x7f090180;
-    public static final int lineone=0x7f090181;
-    public static final int linethree=0x7f090182;
-    public static final int linetwo=0x7f090183;
-    public static final int listMode=0x7f090184;
-    public static final int list_item=0x7f090185;
-    public static final int listtop=0x7f090186;
-    public static final int login=0x7f090187;
-    public static final int login_button=0x7f090188;
-    public static final int login_icon=0x7f090189;
-    public static final int login_title=0x7f09018a;
-    public static final int logo=0x7f09018b;
-    public static final int logout_select=0x7f09018c;
-    public static final int logout_text=0x7f09018d;
-    public static final int logoview=0x7f09018e;
-    public static final int marquee=0x7f09018f;
-    public static final int masked=0x7f090190;
-    public static final int mcall=0x7f090191;
-    public static final int mcompanyaddress=0x7f090192;
-    public static final int mcompanyname=0x7f090193;
-    public static final int media_actions=0x7f090194;
-    public static final int message=0x7f090195;
-    public static final int messenger_send_button=0x7f090196;
-    public static final int middle=0x7f090197;
-    public static final int mini=0x7f090198;
-    public static final int mmail=0x7f090199;
-    public static final int mmap=0x7f09019a;
-    public static final int mobile=0x7f09019b;
-    public static final int mobile_profile=0x7f09019c;
-    public static final int more_text=0x7f09019d;
-    public static final int moreicon=0x7f09019e;
-    public static final int moretext=0x7f09019f;
-    public static final int mozrank_social=0x7f0901a0;
-    public static final int mozrankstatus=0x7f0901a1;
-    public static final int mozranktext=0x7f0901a2;
-    public static final int mtrl_child_content_container=0x7f0901a3;
-    public static final int mtrl_internal_children_alpha_tag=0x7f0901a4;
-    public static final int multiply=0x7f0901a5;
-    public static final int mycampicon=0x7f0901a6;
-    public static final int mycamptext=0x7f0901a7;
-    public static final int name=0x7f0901a8;
-    public static final int nav_add=0x7f0901a9;
-    public static final int nav_contactus=0x7f0901aa;
-    public static final int nav_dashboard=0x7f0901ab;
-    public static final int nav_ecommerce=0x7f0901ac;
-    public static final int nav_fashion=0x7f0901ad;
-    public static final int nav_food=0x7f0901ae;
-    public static final int nav_investment=0x7f0901af;
-    public static final int nav_lifestyle=0x7f0901b0;
-    public static final int nav_logout=0x7f0901b1;
-    public static final int nav_manageinterests=0x7f0901b2;
-    public static final int nav_mycampaigns=0x7f0901b3;
-    public static final int nav_myearnings=0x7f0901b4;
-    public static final int nav_ourblog=0x7f0901b5;
-    public static final int nav_parenting=0x7f0901b6;
-    public static final int nav_settings=0x7f0901b7;
-    public static final int nav_technology=0x7f0901b8;
-    public static final int nav_travel=0x7f0901b9;
-    public static final int nav_view=0x7f0901ba;
-    public static final int navigation_header_container=0x7f0901bb;
-    public static final int never=0x7f0901bc;
-    public static final int never_display=0x7f0901bd;
-    public static final int newbrieftext=0x7f0901be;
-    public static final int newtoolbar=0x7f0901bf;
-    public static final int newuser=0x7f0901c0;
-    public static final int nme_profile=0x7f0901c1;
-    public static final int none=0x7f0901c2;
-    public static final int normal=0x7f0901c3;
-    public static final int notification=0x7f0901c4;
-    public static final int notification_background=0x7f0901c5;
-    public static final int notification_main_column=0x7f0901c6;
-    public static final int notification_main_column_container=0x7f0901c7;
-    public static final int notificationid=0x7f0901c8;
-    public static final int notificationtype=0x7f0901c9;
-    public static final int notificationwindowlist=0x7f0901ca;
-    public static final int notifyimg=0x7f0901cb;
-    public static final int okbutton=0x7f0901cc;
-    public static final int open_graph=0x7f0901cd;
-    public static final int ortext=0x7f0901ce;
-    public static final int otherstext=0x7f0901cf;
-    public static final int outline=0x7f0901d0;
-    public static final int overalllist=0x7f0901d1;
-    public static final int overallreach_social=0x7f0901d2;
-    public static final int overallreachstatus=0x7f0901d3;
-    public static final int overallreachtext=0x7f0901d4;
-    public static final int overallscore_social=0x7f0901d5;
-    public static final int overallscorestatus=0x7f0901d6;
-    public static final int overallscoretext=0x7f0901d7;
-    public static final int packed=0x7f0901d8;
-    public static final int page=0x7f0901d9;
-    public static final int parallax=0x7f0901da;
-    public static final int parent=0x7f0901db;
-    public static final int parentPanel=0x7f0901dc;
-    public static final int parentRelative=0x7f0901dd;
-    public static final int parent_matrix=0x7f0901de;
-    public static final int pass_invisible=0x7f0901df;
-    public static final int pass_visible=0x7f0901e0;
-    public static final int password=0x7f0901e1;
-    public static final int path=0x7f0901e2;
-    public static final int pathRelative=0x7f0901e3;
-    public static final int payment_fulldetails=0x7f0901e4;
-    public static final int payment_history_icon=0x7f0901e5;
-    public static final int payment_history_select=0x7f0901e6;
-    public static final int payment_history_text=0x7f0901e7;
-    public static final int payment_method_icon=0x7f0901e8;
-    public static final int payment_method_select=0x7f0901e9;
-    public static final int payment_method_text=0x7f0901ea;
-    public static final int payment_status=0x7f0901eb;
-    public static final int payment_statustext=0x7f0901ec;
-    public static final int payment_title=0x7f0901ed;
-    public static final int paymentstatus=0x7f0901ee;
-    public static final int paymentstatustext=0x7f0901ef;
-    public static final int paymenttext=0x7f0901f0;
-    public static final int paytmImg=0x7f0901f1;
-    public static final int paytmtransfer=0x7f0901f2;
-    public static final int pcity=0x7f0901f3;
-    public static final int pemail=0x7f0901f4;
-    public static final int percent=0x7f0901f5;
-    public static final int pin=0x7f0901f6;
-    public static final int policy_icon=0x7f0901f7;
-    public static final int policy_select=0x7f0901f8;
-    public static final int policy_text=0x7f0901f9;
-    public static final int position=0x7f0901fa;
-    public static final int profile_top=0x7f0901fb;
-    public static final int profileicon=0x7f0901fc;
-    public static final int profileimage=0x7f0901fd;
-    public static final int profiletext=0x7f0901fe;
-    public static final int progressBar=0x7f0901ff;
-    public static final int progress_bar=0x7f090200;
-    public static final int progress_circular=0x7f090201;
-    public static final int progress_horizontal=0x7f090202;
-    public static final int pusername=0x7f090203;
-    public static final int radio=0x7f090204;
-    public static final int rate_app_icon=0x7f090205;
-    public static final int rate_app_select=0x7f090206;
-    public static final int rate_app_text=0x7f090207;
-    public static final int rate_select=0x7f090208;
-    public static final int rate_text=0x7f090209;
-    public static final int ratio=0x7f09020a;
-    public static final int rectangles=0x7f09020b;
-    public static final int refreshcamp=0x7f09020c;
-    public static final int register=0x7f09020d;
-    public static final int register_button=0x7f09020e;
-    public static final int registration_title=0x7f09020f;
-    public static final int relativeLayout=0x7f090210;
-    public static final int relativeLayout1=0x7f090211;
-    public static final int relativeLayout2=0x7f090212;
-    public static final int reverseSawtooth=0x7f090213;
-    public static final int rewardtypetext=0x7f090214;
-    public static final int right=0x7f090215;
-    public static final int right_icon=0x7f090216;
-    public static final int right_side=0x7f090217;
-    public static final int rlay1=0x7f090218;
-    public static final int save_button=0x7f090219;
-    public static final int save_image_matrix=0x7f09021a;
-    public static final int save_non_transition_alpha=0x7f09021b;
-    public static final int save_scale_type=0x7f09021c;
-    public static final int sawtooth=0x7f09021d;
-    public static final int scmenu=0x7f09021e;
-    public static final int scmenu1=0x7f09021f;
-    public static final int scmenu2=0x7f090220;
-    public static final int scmenu3=0x7f090221;
-    public static final int scmenu4=0x7f090222;
-    public static final int screen=0x7f090223;
-    public static final int scroll=0x7f090224;
-    public static final int scrollIndicatorDown=0x7f090225;
-    public static final int scrollIndicatorUp=0x7f090226;
-    public static final int scrollView=0x7f090227;
-    public static final int scrollable=0x7f090228;
-    public static final int search_badge=0x7f090229;
-    public static final int search_bar=0x7f09022a;
-    public static final int search_button=0x7f09022b;
-    public static final int search_close_btn=0x7f09022c;
-    public static final int search_edit_frame=0x7f09022d;
-    public static final int search_go_btn=0x7f09022e;
-    public static final int search_mag_icon=0x7f09022f;
-    public static final int search_plate=0x7f090230;
-    public static final int search_src_text=0x7f090231;
-    public static final int search_voice_btn=0x7f090232;
-    public static final int select_dialog_listview=0x7f090233;
-    public static final int selected=0x7f090234;
-    public static final int sendbutton=0x7f090235;
-    public static final int setting_blog=0x7f090236;
-    public static final int setting_logout=0x7f090237;
-    public static final int setting_policy=0x7f090238;
-    public static final int setting_rate=0x7f090239;
-    public static final int setting_share=0x7f09023a;
-    public static final int setting_terms=0x7f09023b;
-    public static final int settinglayout=0x7f09023c;
-    public static final int settings_check_update=0x7f09023d;
-    public static final int settings_edit_profile=0x7f09023e;
-    public static final int settings_payment_history=0x7f09023f;
-    public static final int settings_payment_method=0x7f090240;
-    public static final int settings_rate_app=0x7f090241;
-    public static final int settings_share_app=0x7f090242;
-    public static final int settings_social_media=0x7f090243;
-    public static final int settings_terms=0x7f090244;
-    public static final int share_app_icon=0x7f090245;
-    public static final int share_app_select=0x7f090246;
-    public static final int share_app_text=0x7f090247;
-    public static final int share_select=0x7f090248;
-    public static final int share_text=0x7f090249;
-    public static final int shortcut=0x7f09024a;
-    public static final int showCustom=0x7f09024b;
-    public static final int showHome=0x7f09024c;
-    public static final int showTitle=0x7f09024d;
-    public static final int show_button=0x7f09024e;
-    public static final int show_file=0x7f09024f;
-    public static final int signin=0x7f090250;
-    public static final int signup=0x7f090251;
-    public static final int sin=0x7f090252;
-    public static final int skip_button=0x7f090253;
-    public static final int small=0x7f090254;
-    public static final int smallLabel=0x7f090255;
-    public static final int snackbar_action=0x7f090256;
-    public static final int snackbar_text=0x7f090257;
-    public static final int snap=0x7f090258;
-    public static final int snapMargins=0x7f090259;
-    public static final int social_media_icon=0x7f09025a;
-    public static final int social_media_text=0x7f09025b;
-    public static final int spacer=0x7f09025c;
-    public static final int spline=0x7f09025d;
-    public static final int split_action_bar=0x7f09025e;
-    public static final int spread=0x7f09025f;
-    public static final int spread_inside=0x7f090260;
-    public static final int square=0x7f090261;
-    public static final int src_atop=0x7f090262;
-    public static final int src_in=0x7f090263;
-    public static final int src_over=0x7f090264;
-    public static final int standard=0x7f090265;
-    public static final int start=0x7f090266;
-    public static final int startHorizontal=0x7f090267;
-    public static final int startVertical=0x7f090268;
-    public static final int status=0x7f090269;
-    public static final int status_bar_latest_event_content=0x7f09026a;
-    public static final int stretch=0x7f09026b;
-    public static final int submenuarrow=0x7f09026c;
-    public static final int submit_area=0x7f09026d;
-    public static final int summernote=0x7f09026e;
-    public static final int swiperefresh=0x7f09026f;
-    public static final int tabMode=0x7f090270;
-    public static final int tabs=0x7f090271;
-    public static final int tag_transition_group=0x7f090272;
-    public static final int tag_unhandled_key_event_manager=0x7f090273;
-    public static final int tag_unhandled_key_listeners=0x7f090274;
-    public static final int tagtext=0x7f090275;
-    public static final int terms=0x7f090276;
-    public static final int terms_icon=0x7f090277;
-    public static final int terms_select=0x7f090278;
-    public static final int terms_text=0x7f090279;
-    public static final int text=0x7f09027a;
-    public static final int text1=0x7f09027b;
-    public static final int text2=0x7f09027c;
-    public static final int textSpacerNoButtons=0x7f09027d;
-    public static final int textSpacerNoTitle=0x7f09027e;
-    public static final int textStart=0x7f09027f;
-    public static final int textView4=0x7f090280;
-    public static final int text_gender=0x7f090281;
-    public static final int text_input_password_toggle=0x7f090282;
-    public static final int textinput_counter=0x7f090283;
-    public static final int textinput_error=0x7f090284;
-    public static final int textinput_helper_text=0x7f090285;
-    public static final int thumbnail=0x7f090286;
-    public static final int time=0x7f090287;
-    public static final int title=0x7f090288;
-    public static final int titleDividerNoCustom=0x7f090289;
-    public static final int title_template=0x7f09028a;
-    public static final int toggle=0x7f09028b;
-    public static final int toolbar=0x7f09028c;
-    public static final int top=0x7f09028d;
-    public static final int topPanel=0x7f09028e;
-    public static final int topone=0x7f09028f;
-    public static final int touch_outside=0x7f090290;
-    public static final int tran_img=0x7f090291;
-    public static final int transactionamount=0x7f090292;
-    public static final int transactionamounttext=0x7f090293;
-    public static final int transactiondate=0x7f090294;
-    public static final int transactiondatetext=0x7f090295;
-    public static final int transactionid=0x7f090296;
-    public static final int transactionidtext=0x7f090297;
-    public static final int transactionstatus=0x7f090298;
-    public static final int transactionstatustext=0x7f090299;
-    public static final int transitionToEnd=0x7f09029a;
-    public static final int transitionToStart=0x7f09029b;
-    public static final int transition_current_scene=0x7f09029c;
-    public static final int transition_layout_save=0x7f09029d;
-    public static final int transition_position=0x7f09029e;
-    public static final int transition_scene_layoutid_cache=0x7f09029f;
-    public static final int transition_transform=0x7f0902a0;
-    public static final int triangle=0x7f0902a1;
-    public static final int twitter=0x7f0902a2;
-    public static final int twitter_clr=0x7f0902a3;
-    public static final int twitter_handle=0x7f0902a4;
-    public static final int twitterinfotext=0x7f0902a5;
-    public static final int twitterlink=0x7f0902a6;
-    public static final int twitterlinktext=0x7f0902a7;
-    public static final int twittertext=0x7f0902a8;
-    public static final int txamount=0x7f0902a9;
-    public static final int txdate=0x7f0902aa;
-    public static final int txid=0x7f0902ab;
-    public static final int txnhistoryvalues=0x7f0902ac;
-    public static final int txt_edit_mobile=0x7f0902ad;
-    public static final int txtype=0x7f0902ae;
-    public static final int uniform=0x7f0902af;
-    public static final int unknown=0x7f0902b0;
-    public static final int unlabeled=0x7f0902b1;
-    public static final int up=0x7f0902b2;
-    public static final int update_button=0x7f0902b3;
-    public static final int updatebutton=0x7f0902b4;
-    public static final int urlContainer=0x7f0902b5;
-    public static final int useLogo=0x7f0902b6;
-    public static final int userimg_text=0x7f0902b7;
-    public static final int vertical=0x7f0902b8;
-    public static final int viewContainer=0x7f0902b9;
-    public static final int viewPagerVertical=0x7f0902ba;
-    public static final int view_conversation=0x7f0902bb;
-    public static final int view_offset_helper=0x7f0902bc;
-    public static final int viewpager=0x7f0902bd;
-    public static final int visible=0x7f0902be;
-    public static final int walletamount=0x7f0902bf;
-    public static final int walleticon=0x7f0902c0;
-    public static final int wallettext=0x7f0902c1;
-    public static final int webView=0x7f0902c2;
-    public static final int webv=0x7f0902c3;
-    public static final int webview=0x7f0902c4;
-    public static final int welcome_text_one=0x7f0902c5;
-    public static final int welcometext=0x7f0902c6;
-    public static final int wide=0x7f0902c7;
-    public static final int withText=0x7f0902c8;
-    public static final int wrap=0x7f0902c9;
-    public static final int wrap_content=0x7f0902ca;
-    public static final int youtube_clr=0x7f0902cb;
-    public static final int youtube_clr_icon=0x7f0902cc;
-    public static final int youtube_handle=0x7f0902cd;
-    public static final int youtubeinfotext=0x7f0902ce;
-    public static final int youtubelink=0x7f0902cf;
-    public static final int youtubetext=0x7f0902d0;
+    public static final int action_type=0x7f090020;
+    public static final int action_view=0x7f090021;
+    public static final int actions=0x7f090022;
+    public static final int activity_chooser_view_content=0x7f090023;
+    public static final int add=0x7f090024;
+    public static final int add_button=0x7f090025;
+    public static final int added_date=0x7f090026;
+    public static final int addinfo=0x7f090027;
+    public static final int address_profile=0x7f090028;
+    public static final int adjust_height=0x7f090029;
+    public static final int adjust_width=0x7f09002a;
+    public static final int alertTitle=0x7f09002b;
+    public static final int all=0x7f09002c;
+    public static final int alreadyapplied=0x7f09002d;
+    public static final int always=0x7f09002e;
+    public static final int amount=0x7f09002f;
+    public static final int analtyics_value=0x7f090030;
+    public static final int analyticsvalues=0x7f090031;
+    public static final int anticipate=0x7f090032;
+    public static final int appbar=0x7f090033;
+    public static final int appdatetext=0x7f090034;
+    public static final int applied_amount=0x7f090035;
+    public static final int applied_date=0x7f090036;
+    public static final int applied_status=0x7f090037;
+    public static final int appliedcampvalues=0x7f090038;
+    public static final int applydate=0x7f090039;
+    public static final int applydatetext=0x7f09003a;
+    public static final int applynow=0x7f09003b;
+    public static final int applystatus=0x7f09003c;
+    public static final int applystatustext=0x7f09003d;
+    public static final int applytill=0x7f09003e;
+    public static final int applytilltext=0x7f09003f;
+    public static final int approved_status=0x7f090040;
+    public static final int approvedcampvalues=0x7f090041;
+    public static final int approveddate=0x7f090042;
+    public static final int approveddate_status=0x7f090043;
+    public static final int approveddatetext=0x7f090044;
+    public static final int approveddatetext1=0x7f090045;
+    public static final int asConfigured=0x7f090046;
+    public static final int async=0x7f090047;
+    public static final int auto=0x7f090048;
+    public static final int automatic=0x7f090049;
+    public static final int bankImg=0x7f09004a;
+    public static final int banktransfer=0x7f09004b;
+    public static final int barrier=0x7f09004c;
+    public static final int bcall=0x7f09004d;
+    public static final int bcompanyaddress=0x7f09004e;
+    public static final int bcompanyname=0x7f09004f;
+    public static final int beginning=0x7f090050;
+    public static final int blocking=0x7f090051;
+    public static final int blog_select=0x7f090052;
+    public static final int blog_text=0x7f090053;
+    public static final int blogger=0x7f090054;
+    public static final int blogger_clr=0x7f090055;
+    public static final int blogger_clr_icon=0x7f090056;
+    public static final int blogger_handle=0x7f090057;
+    public static final int bloginfotext=0x7f090058;
+    public static final int bloglink=0x7f090059;
+    public static final int bloglinktext=0x7f09005a;
+    public static final int blogname=0x7f09005b;
+    public static final int blogtext=0x7f09005c;
+    public static final int blogtrafic=0x7f09005d;
+    public static final int bmail=0x7f09005e;
+    public static final int bmap=0x7f09005f;
+    public static final int bottom=0x7f090060;
+    public static final int bottomlayout=0x7f090061;
+    public static final int bottomline=0x7f090062;
+    public static final int bottomline1=0x7f090063;
+    public static final int bounce=0x7f090064;
+    public static final int box_count=0x7f090065;
+    public static final int brief_title=0x7f090066;
+    public static final int btn_edit_mobile=0x7f090067;
+    public static final int btn_request_sms=0x7f090068;
+    public static final int btn_verify_otp=0x7f090069;
+    public static final int button=0x7f09006a;
+    public static final int buttonPanel=0x7f09006b;
+    public static final int calender_icon=0x7f09006c;
+    public static final int calender_icon1=0x7f09006d;
+    public static final int calender_icon2=0x7f09006e;
+    public static final int campApplyTill=0x7f09006f;
+    public static final int campBacklink=0x7f090070;
+    public static final int campCat=0x7f090071;
+    public static final int campDeliverables=0x7f090072;
+    public static final int campDeliverablestext=0x7f090073;
+    public static final int campDont=0x7f090074;
+    public static final int campDos=0x7f090075;
+    public static final int campEligibility=0x7f090076;
+    public static final int campEligibilitytext=0x7f090077;
+    public static final int campGoal=0x7f090078;
+    public static final int campImg=0x7f090079;
+    public static final int campLongNote=0x7f09007a;
+    public static final int campName=0x7f09007b;
+    public static final int campRewardType=0x7f09007c;
+    public static final int campRewards=0x7f09007d;
+    public static final int campShortNote=0x7f09007e;
+    public static final int campTag=0x7f09007f;
+    public static final int camp_brief=0x7f090080;
+    public static final int camp_brieftext=0x7f090081;
+    public static final int camp_brieftext1=0x7f090082;
+    public static final int campaignclosed=0x7f090083;
+    public static final int campaignquote=0x7f090084;
+    public static final int campaignquotext=0x7f090085;
+    public static final int campapplieddate=0x7f090086;
+    public static final int campappliedstatus=0x7f090087;
+    public static final int campappliedtext=0x7f090088;
+    public static final int campappliedtext1=0x7f090089;
+    public static final int campapprovedtext=0x7f09008a;
+    public static final int campapprovedtext1=0x7f09008b;
+    public static final int campbacklinktext=0x7f09008c;
+    public static final int campbrief=0x7f09008d;
+    public static final int campbrief_value=0x7f09008e;
+    public static final int campcompletedtext=0x7f09008f;
+    public static final int campcompletedtext1=0x7f090090;
+    public static final int campdeliverystatus=0x7f090091;
+    public static final int campdeliverytext=0x7f090092;
+    public static final int campdeliverytext1=0x7f090093;
+    public static final int campdonttext=0x7f090094;
+    public static final int campdotext=0x7f090095;
+    public static final int campid=0x7f090096;
+    public static final int camplgbrieftext=0x7f090097;
+    public static final int campname=0x7f090098;
+    public static final int camppaymentstatus=0x7f090099;
+    public static final int camppaymenttext=0x7f09009a;
+    public static final int camppaymenttext1=0x7f09009b;
+    public static final int camprewardstext=0x7f09009c;
+    public static final int campshbrieftext=0x7f09009d;
+    public static final int campstatus=0x7f09009e;
+    public static final int cancel_action=0x7f09009f;
+    public static final int cancel_button=0x7f0900a0;
+    public static final int captiontext=0x7f0900a1;
+    public static final int captiontext1=0x7f0900a2;
+    public static final int cardvienine=0x7f0900a3;
+    public static final int cardview=0x7f0900a4;
+    public static final int cardview0=0x7f0900a5;
+    public static final int cardview01=0x7f0900a6;
+    public static final int cardview1=0x7f0900a7;
+    public static final int cardview2=0x7f0900a8;
+    public static final int cardvieweight=0x7f0900a9;
+    public static final int cardvieweleven=0x7f0900aa;
+    public static final int cardviewfive=0x7f0900ab;
+    public static final int cardviewfour=0x7f0900ac;
+    public static final int cardviewone=0x7f0900ad;
+    public static final int cardviewsecond=0x7f0900ae;
+    public static final int cardviewseven=0x7f0900af;
+    public static final int cardviewsix=0x7f0900b0;
+    public static final int cardviewten=0x7f0900b1;
+    public static final int cardviewthird=0x7f0900b2;
+    public static final int category_home=0x7f0900b3;
+    public static final int category_mycamp=0x7f0900b4;
+    public static final int category_proflie=0x7f0900b5;
+    public static final int category_settings=0x7f0900b6;
+    public static final int category_wallet=0x7f0900b7;
+    public static final int ccall=0x7f0900b8;
+    public static final int ccompanyaddress=0x7f0900b9;
+    public static final int ccompanyname=0x7f0900ba;
+    public static final int center=0x7f0900bb;
+    public static final int center_horizontal=0x7f0900bc;
+    public static final int center_vertical=0x7f0900bd;
+    public static final int chains=0x7f0900be;
+    public static final int check_update_icon=0x7f0900bf;
+    public static final int check_update_select=0x7f0900c0;
+    public static final int check_update_text=0x7f0900c1;
+    public static final int checkbox=0x7f0900c2;
+    public static final int chronometer=0x7f0900c3;
+    public static final int cid=0x7f0900c4;
+    public static final int city=0x7f0900c5;
+    public static final int city_profile=0x7f0900c6;
+    public static final int city_profile0=0x7f0900c7;
+    public static final int city_profile1=0x7f0900c8;
+    public static final int city_spinner=0x7f0900c9;
+    public static final int clear=0x7f0900ca;
+    public static final int clip_horizontal=0x7f0900cb;
+    public static final int clip_vertical=0x7f0900cc;
+    public static final int close=0x7f0900cd;
+    public static final int close_img=0x7f0900ce;
+    public static final int cmail=0x7f0900cf;
+    public static final int cmap=0x7f0900d0;
+    public static final int collapseActionView=0x7f0900d1;
+    public static final int com_facebook_body_frame=0x7f0900d2;
+    public static final int com_facebook_button_xout=0x7f0900d3;
+    public static final int com_facebook_device_auth_instructions=0x7f0900d4;
+    public static final int com_facebook_fragment_container=0x7f0900d5;
+    public static final int com_facebook_login_fragment_progress_bar=0x7f0900d6;
+    public static final int com_facebook_smart_instructions_0=0x7f0900d7;
+    public static final int com_facebook_smart_instructions_or=0x7f0900d8;
+    public static final int com_facebook_tooltip_bubble_view_bottom_pointer=0x7f0900d9;
+    public static final int com_facebook_tooltip_bubble_view_text_body=0x7f0900da;
+    public static final int com_facebook_tooltip_bubble_view_top_pointer=0x7f0900db;
+    public static final int commentstext=0x7f0900dc;
+    public static final int completedcampvalues=0x7f0900dd;
+    public static final int completeddate=0x7f0900de;
+    public static final int completeddate_status=0x7f0900df;
+    public static final int completeddatetext=0x7f0900e0;
+    public static final int completeddatetext1=0x7f0900e1;
+    public static final int conditiontext=0x7f0900e2;
+    public static final int confirmation_code=0x7f0900e3;
+    public static final int connectfacebook=0x7f0900e4;
+    public static final int connectinstagram=0x7f0900e5;
+    public static final int connecttwitter=0x7f0900e6;
+    public static final int connectyoutube=0x7f0900e7;
+    public static final int container=0x7f0900e8;
+    public static final int content=0x7f0900e9;
+    public static final int contentPanel=0x7f0900ea;
+    public static final int content_value=0x7f0900eb;
+    public static final int contentid=0x7f0900ec;
+    public static final int contentstatus=0x7f0900ed;
+    public static final int contentstatustext=0x7f0900ee;
+    public static final int conversation_author=0x7f0900ef;
+    public static final int conversation_thumbnail_url=0x7f0900f0;
+    public static final int coordinator=0x7f0900f1;
+    public static final int coordinatorLayout=0x7f0900f2;
+    public static final int copyright=0x7f0900f3;
+    public static final int cos=0x7f0900f4;
+    public static final int currentamttext=0x7f0900f5;
+    public static final int custom=0x7f0900f6;
+    public static final int customPanel=0x7f0900f7;
+    public static final int dark=0x7f0900f8;
+    public static final int date=0x7f0900f9;
+    public static final int datetime=0x7f0900fa;
+    public static final int decelerate=0x7f0900fb;
+    public static final int decor_content_parent=0x7f0900fc;
+    public static final int default_activity_button=0x7f0900fd;
+    public static final int delivery_status=0x7f0900fe;
+    public static final int deliverystatus=0x7f0900ff;
+    public static final int deliverystatustext=0x7f090100;
+    public static final int deltaRelative=0x7f090101;
+    public static final int design_bottom_sheet=0x7f090102;
+    public static final int design_menu_item_action_area=0x7f090103;
+    public static final int design_menu_item_action_area_stub=0x7f090104;
+    public static final int design_menu_item_text=0x7f090105;
+    public static final int design_navigation_view=0x7f090106;
+    public static final int dimensions=0x7f090107;
+    public static final int direct=0x7f090108;
+    public static final int disableHome=0x7f090109;
+    public static final int display_always=0x7f09010a;
+    public static final int dob_profile=0x7f09010b;
+    public static final int down=0x7f09010c;
+    public static final int dragDown=0x7f09010d;
+    public static final int dragLeft=0x7f09010e;
+    public static final int dragRight=0x7f09010f;
+    public static final int dragUp=0x7f090110;
+    public static final int drawer_layout=0x7f090111;
+    public static final int dummy=0x7f090112;
+    public static final int easeIn=0x7f090113;
+    public static final int easeInOut=0x7f090114;
+    public static final int easeOut=0x7f090115;
+    public static final int edit_profile_icon=0x7f090116;
+    public static final int edit_profile_select=0x7f090117;
+    public static final int edit_profile_text=0x7f090118;
+    public static final int edit_query=0x7f090119;
+    public static final int eligibilitytext=0x7f09011a;
+    public static final int email=0x7f09011b;
+    public static final int emailid=0x7f09011c;
+    public static final int end=0x7f09011d;
+    public static final int end_padder=0x7f09011e;
+    public static final int enddate=0x7f09011f;
+    public static final int enddateTxt=0x7f090120;
+    public static final int engage_attach=0x7f090121;
+    public static final int engagefilename=0x7f090122;
+    public static final int engageimg=0x7f090123;
+    public static final int engagement=0x7f090124;
+    public static final int engagestatus=0x7f090125;
+    public static final int engagetext=0x7f090126;
+    public static final int engagevalue=0x7f090127;
+    public static final int enterAlways=0x7f090128;
+    public static final int enterAlwaysCollapsed=0x7f090129;
+    public static final int esm_type=0x7f09012a;
+    public static final int estatus_type=0x7f09012b;
+    public static final int estatustext=0x7f09012c;
+    public static final int eusertypetext=0x7f09012d;
+    public static final int exitUntilCollapsed=0x7f09012e;
+    public static final int expand_activities_button=0x7f09012f;
+    public static final int expandableView=0x7f090130;
+    public static final int expanded_menu=0x7f090131;
+    public static final int fab=0x7f090132;
+    public static final int fab1=0x7f090133;
+    public static final int fab_label=0x7f090134;
+    public static final int facebook=0x7f090135;
+    public static final int facebook_clr=0x7f090136;
+    public static final int facebook_clr_icon=0x7f090137;
+    public static final int facebook_handle=0x7f090138;
+    public static final int facebookinfotext=0x7f090139;
+    public static final int facebooklink=0x7f09013a;
+    public static final int facebooktext=0x7f09013b;
+    public static final int femailid=0x7f09013c;
+    public static final int fieldinterest=0x7f09013d;
+    public static final int filefour=0x7f09013e;
+    public static final int filename=0x7f09013f;
+    public static final int fileone=0x7f090140;
+    public static final int filethree=0x7f090141;
+    public static final int filetwo=0x7f090142;
+    public static final int fill=0x7f090143;
+    public static final int fill_horizontal=0x7f090144;
+    public static final int fill_parent=0x7f090145;
+    public static final int fill_vertical=0x7f090146;
+    public static final int filled=0x7f090147;
+    public static final int fixed=0x7f090148;
+    public static final int fixedamount=0x7f090149;
+    public static final int flip=0x7f09014a;
+    public static final int forever=0x7f09014b;
+    public static final int forgotpassword=0x7f09014c;
+    public static final int fquoteamt=0x7f09014d;
+    public static final int frame=0x7f09014e;
+    public static final int framenew=0x7f09014f;
+    public static final int from_date=0x7f090150;
+    public static final int gender_profile=0x7f090151;
+    public static final int gender_profile0=0x7f090152;
+    public static final int gender_spinner=0x7f090153;
+    public static final int ghost_view=0x7f090154;
+    public static final int go_icon=0x7f090155;
+    public static final int go_icon1=0x7f090156;
+    public static final int go_icon2=0x7f090157;
+    public static final int go_icon3=0x7f090158;
+    public static final int go_icon4=0x7f090159;
+    public static final int gone=0x7f09015a;
+    public static final int group_divider=0x7f09015b;
+    public static final int groups=0x7f09015c;
+    public static final int head=0x7f09015d;
+    public static final int head1=0x7f09015e;
+    public static final int header_user_email=0x7f09015f;
+    public static final int header_user_icon=0x7f090160;
+    public static final int header_user_mobile=0x7f090161;
+    public static final int header_user_name=0x7f090162;
+    public static final int headingTxt=0x7f090163;
+    public static final int home=0x7f090164;
+    public static final int homeAsUp=0x7f090165;
+    public static final int homeicon=0x7f090166;
+    public static final int hometext=0x7f090167;
+    public static final int horizontal=0x7f090168;
+    public static final int icon=0x7f090169;
+    public static final int icon_group=0x7f09016a;
+    public static final int icon_only=0x7f09016b;
+    public static final int id_post_attach=0x7f09016c;
+    public static final int id_post_conversation=0x7f09016d;
+    public static final int ifRoom=0x7f09016e;
+    public static final int image=0x7f09016f;
+    public static final int imageView=0x7f090170;
+    public static final int imageView3=0x7f090171;
+    public static final int info=0x7f090172;
+    public static final int infoicon=0x7f090173;
+    public static final int infotext=0x7f090174;
+    public static final int inline=0x7f090175;
+    public static final int inputMobile=0x7f090176;
+    public static final int inputOtp=0x7f090177;
+    public static final int insta_clr_icon=0x7f090178;
+    public static final int instagram=0x7f090179;
+    public static final int instagram_clr=0x7f09017a;
+    public static final int instagram_clr_icon=0x7f09017b;
+    public static final int instagram_handle=0x7f09017c;
+    public static final int instagraminfotext=0x7f09017d;
+    public static final int instagramlink=0x7f09017e;
+    public static final int instagramtext=0x7f09017f;
+    public static final int invisible=0x7f090180;
+    public static final int italic=0x7f090181;
+    public static final int item_touch_helper_previous_elevation=0x7f090182;
+    public static final int ivImage=0x7f090183;
+    public static final int jumpToEnd=0x7f090184;
+    public static final int jumpToStart=0x7f090185;
+    public static final int labeled=0x7f090186;
+    public static final int large=0x7f090187;
+    public static final int largeLabel=0x7f090188;
+    public static final int layout_edit_mobile=0x7f090189;
+    public static final int layout_otp=0x7f09018a;
+    public static final int layout_sms=0x7f09018b;
+    public static final int left=0x7f09018c;
+    public static final int light=0x7f09018d;
+    public static final int line=0x7f09018e;
+    public static final int line0=0x7f09018f;
+    public static final int line00=0x7f090190;
+    public static final int line01=0x7f090191;
+    public static final int line02=0x7f090192;
+    public static final int line03=0x7f090193;
+    public static final int line04=0x7f090194;
+    public static final int line1=0x7f090195;
+    public static final int line2=0x7f090196;
+    public static final int line3=0x7f090197;
+    public static final int line4=0x7f090198;
+    public static final int line5=0x7f090199;
+    public static final int line6=0x7f09019a;
+    public static final int linear=0x7f09019b;
+    public static final int linear1=0x7f09019c;
+    public static final int linear11=0x7f09019d;
+    public static final int linear111=0x7f09019e;
+    public static final int linear2=0x7f09019f;
+    public static final int linear22=0x7f0901a0;
+    public static final int linear222=0x7f0901a1;
+    public static final int linearLayout=0x7f0901a2;
+    public static final int linearengage=0x7f0901a3;
+    public static final int linearfour=0x7f0901a4;
+    public static final int linearn=0x7f0901a5;
+    public static final int linearnew=0x7f0901a6;
+    public static final int linearnew1=0x7f0901a7;
+    public static final int linearone=0x7f0901a8;
+    public static final int linearonee=0x7f0901a9;
+    public static final int linearreach=0x7f0901aa;
+    public static final int linee=0x7f0901ab;
+    public static final int linee01=0x7f0901ac;
+    public static final int linefour=0x7f0901ad;
+    public static final int linenew=0x7f0901ae;
+    public static final int lineone=0x7f0901af;
+    public static final int linethree=0x7f0901b0;
+    public static final int linetwo=0x7f0901b1;
+    public static final int listMode=0x7f0901b2;
+    public static final int list_item=0x7f0901b3;
+    public static final int listtop=0x7f0901b4;
+    public static final int login=0x7f0901b5;
+    public static final int login_button=0x7f0901b6;
+    public static final int login_icon=0x7f0901b7;
+    public static final int login_title=0x7f0901b8;
+    public static final int logo=0x7f0901b9;
+    public static final int logout_select=0x7f0901ba;
+    public static final int logout_text=0x7f0901bb;
+    public static final int logoview=0x7f0901bc;
+    public static final int marquee=0x7f0901bd;
+    public static final int masked=0x7f0901be;
+    public static final int mcall=0x7f0901bf;
+    public static final int mcompanyaddress=0x7f0901c0;
+    public static final int mcompanyname=0x7f0901c1;
+    public static final int media_actions=0x7f0901c2;
+    public static final int message=0x7f0901c3;
+    public static final int messenger_send_button=0x7f0901c4;
+    public static final int middle=0x7f0901c5;
+    public static final int mini=0x7f0901c6;
+    public static final int mmail=0x7f0901c7;
+    public static final int mmap=0x7f0901c8;
+    public static final int mobile=0x7f0901c9;
+    public static final int mobile_profile=0x7f0901ca;
+    public static final int more_text=0x7f0901cb;
+    public static final int moreicon=0x7f0901cc;
+    public static final int moretext=0x7f0901cd;
+    public static final int mozrank_social=0x7f0901ce;
+    public static final int mozrankstatus=0x7f0901cf;
+    public static final int mozranktext=0x7f0901d0;
+    public static final int mtrl_child_content_container=0x7f0901d1;
+    public static final int mtrl_internal_children_alpha_tag=0x7f0901d2;
+    public static final int multiply=0x7f0901d3;
+    public static final int mycampicon=0x7f0901d4;
+    public static final int mycamptext=0x7f0901d5;
+    public static final int name=0x7f0901d6;
+    public static final int nav_add=0x7f0901d7;
+    public static final int nav_contactus=0x7f0901d8;
+    public static final int nav_dashboard=0x7f0901d9;
+    public static final int nav_ecommerce=0x7f0901da;
+    public static final int nav_fashion=0x7f0901db;
+    public static final int nav_food=0x7f0901dc;
+    public static final int nav_investment=0x7f0901dd;
+    public static final int nav_lifestyle=0x7f0901de;
+    public static final int nav_logout=0x7f0901df;
+    public static final int nav_manageinterests=0x7f0901e0;
+    public static final int nav_mycampaigns=0x7f0901e1;
+    public static final int nav_myearnings=0x7f0901e2;
+    public static final int nav_ourblog=0x7f0901e3;
+    public static final int nav_parenting=0x7f0901e4;
+    public static final int nav_settings=0x7f0901e5;
+    public static final int nav_technology=0x7f0901e6;
+    public static final int nav_travel=0x7f0901e7;
+    public static final int nav_view=0x7f0901e8;
+    public static final int navigation_header_container=0x7f0901e9;
+    public static final int never=0x7f0901ea;
+    public static final int never_display=0x7f0901eb;
+    public static final int newbrieftext=0x7f0901ec;
+    public static final int newframe=0x7f0901ed;
+    public static final int newframeid=0x7f0901ee;
+    public static final int newtoolbar=0x7f0901ef;
+    public static final int newuser=0x7f0901f0;
+    public static final int nme_profile=0x7f0901f1;
+    public static final int none=0x7f0901f2;
+    public static final int normal=0x7f0901f3;
+    public static final int notification=0x7f0901f4;
+    public static final int notification_background=0x7f0901f5;
+    public static final int notification_main_column=0x7f0901f6;
+    public static final int notification_main_column_container=0x7f0901f7;
+    public static final int notificationid=0x7f0901f8;
+    public static final int notificationtype=0x7f0901f9;
+    public static final int notificationwindowlist=0x7f0901fa;
+    public static final int notifyimg=0x7f0901fb;
+    public static final int okbutton=0x7f0901fc;
+    public static final int open_graph=0x7f0901fd;
+    public static final int ortext=0x7f0901fe;
+    public static final int otherstext=0x7f0901ff;
+    public static final int outline=0x7f090200;
+    public static final int overalllist=0x7f090201;
+    public static final int overallreach_social=0x7f090202;
+    public static final int overallreachstatus=0x7f090203;
+    public static final int overallreachtext=0x7f090204;
+    public static final int overallscore_social=0x7f090205;
+    public static final int overallscorestatus=0x7f090206;
+    public static final int overallscoretext=0x7f090207;
+    public static final int packed=0x7f090208;
+    public static final int page=0x7f090209;
+    public static final int parallax=0x7f09020a;
+    public static final int parent=0x7f09020b;
+    public static final int parentPanel=0x7f09020c;
+    public static final int parentRelative=0x7f09020d;
+    public static final int parent_matrix=0x7f09020e;
+    public static final int pass_invisible=0x7f09020f;
+    public static final int pass_visible=0x7f090210;
+    public static final int password=0x7f090211;
+    public static final int path=0x7f090212;
+    public static final int pathRelative=0x7f090213;
+    public static final int payment_fulldetails=0x7f090214;
+    public static final int payment_history_icon=0x7f090215;
+    public static final int payment_history_select=0x7f090216;
+    public static final int payment_history_text=0x7f090217;
+    public static final int payment_method_icon=0x7f090218;
+    public static final int payment_method_select=0x7f090219;
+    public static final int payment_method_text=0x7f09021a;
+    public static final int payment_status=0x7f09021b;
+    public static final int payment_statustext=0x7f09021c;
+    public static final int payment_title=0x7f09021d;
+    public static final int paymentstatus=0x7f09021e;
+    public static final int paymentstatustext=0x7f09021f;
+    public static final int paymenttext=0x7f090220;
+    public static final int paytmImg=0x7f090221;
+    public static final int paytmtransfer=0x7f090222;
+    public static final int pcity=0x7f090223;
+    public static final int pemail=0x7f090224;
+    public static final int percent=0x7f090225;
+    public static final int pin=0x7f090226;
+    public static final int policy_icon=0x7f090227;
+    public static final int policy_select=0x7f090228;
+    public static final int policy_text=0x7f090229;
+    public static final int position=0x7f09022a;
+    public static final int posted_date=0x7f09022b;
+    public static final int posted_link=0x7f09022c;
+    public static final int posturl=0x7f09022d;
+    public static final int profile_top=0x7f09022e;
+    public static final int profileicon=0x7f09022f;
+    public static final int profileimage=0x7f090230;
+    public static final int profiletext=0x7f090231;
+    public static final int progressBar=0x7f090232;
+    public static final int progress_bar=0x7f090233;
+    public static final int progress_circular=0x7f090234;
+    public static final int progress_horizontal=0x7f090235;
+    public static final int pusername=0x7f090236;
+    public static final int radio=0x7f090237;
+    public static final int rate_app_icon=0x7f090238;
+    public static final int rate_app_select=0x7f090239;
+    public static final int rate_app_text=0x7f09023a;
+    public static final int rate_select=0x7f09023b;
+    public static final int rate_text=0x7f09023c;
+    public static final int ratio=0x7f09023d;
+    public static final int reach=0x7f09023e;
+    public static final int reach_attach=0x7f09023f;
+    public static final int reach_type=0x7f090240;
+    public static final int reach_value=0x7f090241;
+    public static final int reachfilename=0x7f090242;
+    public static final int reachimg=0x7f090243;
+    public static final int reachstatus=0x7f090244;
+    public static final int reachtext=0x7f090245;
+    public static final int reachvalue=0x7f090246;
+    public static final int rectangles=0x7f090247;
+    public static final int refreshcamp=0x7f090248;
+    public static final int register=0x7f090249;
+    public static final int register_button=0x7f09024a;
+    public static final int registration_title=0x7f09024b;
+    public static final int relativeLayout=0x7f09024c;
+    public static final int relativeLayout1=0x7f09024d;
+    public static final int relativeLayout2=0x7f09024e;
+    public static final int reverseSawtooth=0x7f09024f;
+    public static final int rewardtypetext=0x7f090250;
+    public static final int right=0x7f090251;
+    public static final int right_icon=0x7f090252;
+    public static final int right_side=0x7f090253;
+    public static final int rlay1=0x7f090254;
+    public static final int save_button=0x7f090255;
+    public static final int save_image_matrix=0x7f090256;
+    public static final int save_non_transition_alpha=0x7f090257;
+    public static final int save_scale_type=0x7f090258;
+    public static final int sawtooth=0x7f090259;
+    public static final int scmenu=0x7f09025a;
+    public static final int scmenu1=0x7f09025b;
+    public static final int scmenu2=0x7f09025c;
+    public static final int scmenu3=0x7f09025d;
+    public static final int scmenu4=0x7f09025e;
+    public static final int screen=0x7f09025f;
+    public static final int scroll=0x7f090260;
+    public static final int scrollIndicatorDown=0x7f090261;
+    public static final int scrollIndicatorUp=0x7f090262;
+    public static final int scrollView=0x7f090263;
+    public static final int scrollable=0x7f090264;
+    public static final int search_badge=0x7f090265;
+    public static final int search_bar=0x7f090266;
+    public static final int search_button=0x7f090267;
+    public static final int search_close_btn=0x7f090268;
+    public static final int search_edit_frame=0x7f090269;
+    public static final int search_go_btn=0x7f09026a;
+    public static final int search_mag_icon=0x7f09026b;
+    public static final int search_plate=0x7f09026c;
+    public static final int search_src_text=0x7f09026d;
+    public static final int search_voice_btn=0x7f09026e;
+    public static final int select_dialog_listview=0x7f09026f;
+    public static final int selected=0x7f090270;
+    public static final int sendbutton=0x7f090271;
+    public static final int setting_blog=0x7f090272;
+    public static final int setting_logout=0x7f090273;
+    public static final int setting_policy=0x7f090274;
+    public static final int setting_rate=0x7f090275;
+    public static final int setting_share=0x7f090276;
+    public static final int setting_terms=0x7f090277;
+    public static final int settinglayout=0x7f090278;
+    public static final int settings_check_update=0x7f090279;
+    public static final int settings_edit_profile=0x7f09027a;
+    public static final int settings_payment_history=0x7f09027b;
+    public static final int settings_payment_method=0x7f09027c;
+    public static final int settings_rate_app=0x7f09027d;
+    public static final int settings_share_app=0x7f09027e;
+    public static final int settings_social_media=0x7f09027f;
+    public static final int settings_terms=0x7f090280;
+    public static final int share_app_icon=0x7f090281;
+    public static final int share_app_select=0x7f090282;
+    public static final int share_app_text=0x7f090283;
+    public static final int share_select=0x7f090284;
+    public static final int share_text=0x7f090285;
+    public static final int shortcut=0x7f090286;
+    public static final int showCustom=0x7f090287;
+    public static final int showHome=0x7f090288;
+    public static final int showTitle=0x7f090289;
+    public static final int show_button=0x7f09028a;
+    public static final int show_file=0x7f09028b;
+    public static final int show_file1=0x7f09028c;
+    public static final int signin=0x7f09028d;
+    public static final int signup=0x7f09028e;
+    public static final int sin=0x7f09028f;
+    public static final int skip_button=0x7f090290;
+    public static final int sm_type=0x7f090291;
+    public static final int sm_typetext=0x7f090292;
+    public static final int small=0x7f090293;
+    public static final int smallLabel=0x7f090294;
+    public static final int snackbar_action=0x7f090295;
+    public static final int snackbar_text=0x7f090296;
+    public static final int snap=0x7f090297;
+    public static final int snapMargins=0x7f090298;
+    public static final int social_media=0x7f090299;
+    public static final int social_media_icon=0x7f09029a;
+    public static final int social_media_text=0x7f09029b;
+    public static final int socialmediatype=0x7f09029c;
+    public static final int spacer=0x7f09029d;
+    public static final int spline=0x7f09029e;
+    public static final int split_action_bar=0x7f09029f;
+    public static final int spread=0x7f0902a0;
+    public static final int spread_inside=0x7f0902a1;
+    public static final int square=0x7f0902a2;
+    public static final int src_atop=0x7f0902a3;
+    public static final int src_in=0x7f0902a4;
+    public static final int src_over=0x7f0902a5;
+    public static final int standard=0x7f0902a6;
+    public static final int start=0x7f0902a7;
+    public static final int startHorizontal=0x7f0902a8;
+    public static final int startVertical=0x7f0902a9;
+    public static final int startdate=0x7f0902aa;
+    public static final int startdateTxt=0x7f0902ab;
+    public static final int status=0x7f0902ac;
+    public static final int status_bar_latest_event_content=0x7f0902ad;
+    public static final int status_type=0x7f0902ae;
+    public static final int statustext=0x7f0902af;
+    public static final int stretch=0x7f0902b0;
+    public static final int submenuarrow=0x7f0902b1;
+    public static final int submit=0x7f0902b2;
+    public static final int submit_area=0x7f0902b3;
+    public static final int summernote=0x7f0902b4;
+    public static final int swiperefresh=0x7f0902b5;
+    public static final int tabMode=0x7f0902b6;
+    public static final int tabs=0x7f0902b7;
+    public static final int tag_transition_group=0x7f0902b8;
+    public static final int tag_unhandled_key_event_manager=0x7f0902b9;
+    public static final int tag_unhandled_key_listeners=0x7f0902ba;
+    public static final int tagtext=0x7f0902bb;
+    public static final int terms=0x7f0902bc;
+    public static final int terms_icon=0x7f0902bd;
+    public static final int terms_select=0x7f0902be;
+    public static final int terms_text=0x7f0902bf;
+    public static final int text=0x7f0902c0;
+    public static final int text1=0x7f0902c1;
+    public static final int text2=0x7f0902c2;
+    public static final int textSpacerNoButtons=0x7f0902c3;
+    public static final int textSpacerNoTitle=0x7f0902c4;
+    public static final int textStart=0x7f0902c5;
+    public static final int textView4=0x7f0902c6;
+    public static final int text_gender=0x7f0902c7;
+    public static final int text_input_password_toggle=0x7f0902c8;
+    public static final int textinput_counter=0x7f0902c9;
+    public static final int textinput_error=0x7f0902ca;
+    public static final int textinput_helper_text=0x7f0902cb;
+    public static final int thumbnail=0x7f0902cc;
+    public static final int time=0x7f0902cd;
+    public static final int title=0x7f0902ce;
+    public static final int titleDividerNoCustom=0x7f0902cf;
+    public static final int title_template=0x7f0902d0;
+    public static final int to_date=0x7f0902d1;
+    public static final int toggle=0x7f0902d2;
+    public static final int toggleIcon=0x7f0902d3;
+    public static final int toggleView=0x7f0902d4;
+    public static final int toolbar=0x7f0902d5;
+    public static final int top=0x7f0902d6;
+    public static final int topPanel=0x7f0902d7;
+    public static final int topone=0x7f0902d8;
+    public static final int touch_outside=0x7f0902d9;
+    public static final int tran_img=0x7f0902da;
+    public static final int transactionamount=0x7f0902db;
+    public static final int transactionamounttext=0x7f0902dc;
+    public static final int transactiondate=0x7f0902dd;
+    public static final int transactiondatetext=0x7f0902de;
+    public static final int transactionid=0x7f0902df;
+    public static final int transactionidtext=0x7f0902e0;
+    public static final int transactionstatus=0x7f0902e1;
+    public static final int transactionstatustext=0x7f0902e2;
+    public static final int transitionToEnd=0x7f0902e3;
+    public static final int transitionToStart=0x7f0902e4;
+    public static final int transition_current_scene=0x7f0902e5;
+    public static final int transition_layout_save=0x7f0902e6;
+    public static final int transition_position=0x7f0902e7;
+    public static final int transition_scene_layoutid_cache=0x7f0902e8;
+    public static final int transition_transform=0x7f0902e9;
+    public static final int triangle=0x7f0902ea;
+    public static final int twitter=0x7f0902eb;
+    public static final int twitter_clr=0x7f0902ec;
+    public static final int twitter_handle=0x7f0902ed;
+    public static final int twitterinfotext=0x7f0902ee;
+    public static final int twitterlink=0x7f0902ef;
+    public static final int twitterlinktext=0x7f0902f0;
+    public static final int twittertext=0x7f0902f1;
+    public static final int txamount=0x7f0902f2;
+    public static final int txdate=0x7f0902f3;
+    public static final int txid=0x7f0902f4;
+    public static final int txnhistoryvalues=0x7f0902f5;
+    public static final int txt_edit_mobile=0x7f0902f6;
+    public static final int txtype=0x7f0902f7;
+    public static final int uniform=0x7f0902f8;
+    public static final int unknown=0x7f0902f9;
+    public static final int unlabeled=0x7f0902fa;
+    public static final int up=0x7f0902fb;
+    public static final int update_button=0x7f0902fc;
+    public static final int updatebutton=0x7f0902fd;
+    public static final int urlContainer=0x7f0902fe;
+    public static final int urllinkTxt=0x7f0902ff;
+    public static final int urllink_valuetext=0x7f090300;
+    public static final int useLogo=0x7f090301;
+    public static final int userengage=0x7f090302;
+    public static final int userengageTxt=0x7f090303;
+    public static final int userimg_text=0x7f090304;
+    public static final int userreach=0x7f090305;
+    public static final int userreachTxt=0x7f090306;
+    public static final int usertypetext=0x7f090307;
+    public static final int vertical=0x7f090308;
+    public static final int viewContainer=0x7f090309;
+    public static final int viewPagerVertical=0x7f09030a;
+    public static final int view_conversation=0x7f09030b;
+    public static final int view_offset_helper=0x7f09030c;
+    public static final int viewconversationlist=0x7f09030d;
+    public static final int viewpager=0x7f09030e;
+    public static final int visible=0x7f09030f;
+    public static final int walletamount=0x7f090310;
+    public static final int walleticon=0x7f090311;
+    public static final int wallettext=0x7f090312;
+    public static final int webView=0x7f090313;
+    public static final int webv=0x7f090314;
+    public static final int webview=0x7f090315;
+    public static final int welcome_text_one=0x7f090316;
+    public static final int welcometext=0x7f090317;
+    public static final int wide=0x7f090318;
+    public static final int withText=0x7f090319;
+    public static final int wrap=0x7f09031a;
+    public static final int wrap_content=0x7f09031b;
+    public static final int youtube=0x7f09031c;
+    public static final int youtube_clr=0x7f09031d;
+    public static final int youtube_clr_icon=0x7f09031e;
+    public static final int youtube_handle=0x7f09031f;
+    public static final int youtubeinfotext=0x7f090320;
+    public static final int youtubelink=0x7f090321;
+    public static final int youtubetext=0x7f090322;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f0a0000;
@@ -7072,66 +7604,74 @@ public final class R {
     public static final int design_navigation_menu_item=0x7f0c0041;
     public static final int design_text_input_password_icon=0x7f0c0042;
     public static final int drawer_list_item=0x7f0c0043;
-    public static final int firstscreen_new=0x7f0c0044;
-    public static final int forgotpassword_new=0x7f0c0045;
-    public static final int fragment_layout=0x7f0c0046;
-    public static final int login_screen_new=0x7f0c0047;
-    public static final int messenger_button_send_blue_large=0x7f0c0048;
-    public static final int messenger_button_send_blue_round=0x7f0c0049;
-    public static final int messenger_button_send_blue_small=0x7f0c004a;
-    public static final int messenger_button_send_white_large=0x7f0c004b;
-    public static final int messenger_button_send_white_round=0x7f0c004c;
-    public static final int messenger_button_send_white_small=0x7f0c004d;
-    public static final int more_settings=0x7f0c004e;
-    public static final int mtrl_layout_snackbar=0x7f0c004f;
-    public static final int mtrl_layout_snackbar_include=0x7f0c0050;
-    public static final int mycamp=0x7f0c0051;
-    public static final int mycampaigns=0x7f0c0052;
-    public static final int mycampdetails=0x7f0c0053;
-    public static final int myprofilenew=0x7f0c0054;
-    public static final int mywallet=0x7f0c0055;
-    public static final int nav_header_new_home=0x7f0c0056;
-    public static final int notification_action=0x7f0c0057;
-    public static final int notification_action_tombstone=0x7f0c0058;
-    public static final int notification_media_action=0x7f0c0059;
-    public static final int notification_media_cancel_action=0x7f0c005a;
-    public static final int notification_template_big_media=0x7f0c005b;
-    public static final int notification_template_big_media_custom=0x7f0c005c;
-    public static final int notification_template_big_media_narrow=0x7f0c005d;
-    public static final int notification_template_big_media_narrow_custom=0x7f0c005e;
-    public static final int notification_template_custom_big=0x7f0c005f;
-    public static final int notification_template_icon_group=0x7f0c0060;
-    public static final int notification_template_lines_media=0x7f0c0061;
-    public static final int notification_template_media=0x7f0c0062;
-    public static final int notification_template_media_custom=0x7f0c0063;
-    public static final int notification_template_part_chronometer=0x7f0c0064;
-    public static final int notification_template_part_time=0x7f0c0065;
-    public static final int notificationlist=0x7f0c0066;
-    public static final int notificationwindowmsg=0x7f0c0067;
-    public static final int notificationwindownomsg=0x7f0c0068;
-    public static final int paymentview=0x7f0c0069;
-    public static final int profile_dummy=0x7f0c006a;
-    public static final int quoteamount=0x7f0c006b;
-    public static final int quoteamounts=0x7f0c006c;
-    public static final int registration_screen1_new=0x7f0c006d;
-    public static final int registration_screen1_new1=0x7f0c006e;
-    public static final int registration_screen2_new=0x7f0c006f;
-    public static final int select_dialog_item_material=0x7f0c0070;
-    public static final int select_dialog_multichoice_material=0x7f0c0071;
-    public static final int select_dialog_singlechoice_material=0x7f0c0072;
-    public static final int socialmedia=0x7f0c0073;
-    public static final int socialmediaauth=0x7f0c0074;
-    public static final int spinner_item=0x7f0c0075;
-    public static final int spinner_item1=0x7f0c0076;
-    public static final int splashscreen=0x7f0c0077;
-    public static final int support_simple_spinner_dropdown_item=0x7f0c0078;
-    public static final int tool_bar=0x7f0c0079;
-    public static final int transactionlist=0x7f0c007a;
-    public static final int transactionlist1=0x7f0c007b;
-    public static final int txnhistory=0x7f0c007c;
-    public static final int user_settings=0x7f0c007d;
-    public static final int walletold=0x7f0c007e;
-    public static final int webview=0x7f0c007f;
+    public static final int feed_heading=0x7f0c0044;
+    public static final int feed_item=0x7f0c0045;
+    public static final int firstscreen_new=0x7f0c0046;
+    public static final int forgotpassword_new=0x7f0c0047;
+    public static final int fragment_layout=0x7f0c0048;
+    public static final int login_screen_new=0x7f0c0049;
+    public static final int messenger_button_send_blue_large=0x7f0c004a;
+    public static final int messenger_button_send_blue_round=0x7f0c004b;
+    public static final int messenger_button_send_blue_small=0x7f0c004c;
+    public static final int messenger_button_send_white_large=0x7f0c004d;
+    public static final int messenger_button_send_white_round=0x7f0c004e;
+    public static final int messenger_button_send_white_small=0x7f0c004f;
+    public static final int more_settings=0x7f0c0050;
+    public static final int mtrl_layout_snackbar=0x7f0c0051;
+    public static final int mtrl_layout_snackbar_include=0x7f0c0052;
+    public static final int mycamp=0x7f0c0053;
+    public static final int mycampaigns=0x7f0c0054;
+    public static final int mycampdetails=0x7f0c0055;
+    public static final int myprofilenew=0x7f0c0056;
+    public static final int mywallet=0x7f0c0057;
+    public static final int nav_header_new_home=0x7f0c0058;
+    public static final int newreport=0x7f0c0059;
+    public static final int notification_action=0x7f0c005a;
+    public static final int notification_action_tombstone=0x7f0c005b;
+    public static final int notification_media_action=0x7f0c005c;
+    public static final int notification_media_cancel_action=0x7f0c005d;
+    public static final int notification_template_big_media=0x7f0c005e;
+    public static final int notification_template_big_media_custom=0x7f0c005f;
+    public static final int notification_template_big_media_narrow=0x7f0c0060;
+    public static final int notification_template_big_media_narrow_custom=0x7f0c0061;
+    public static final int notification_template_custom_big=0x7f0c0062;
+    public static final int notification_template_icon_group=0x7f0c0063;
+    public static final int notification_template_lines_media=0x7f0c0064;
+    public static final int notification_template_media=0x7f0c0065;
+    public static final int notification_template_media_custom=0x7f0c0066;
+    public static final int notification_template_part_chronometer=0x7f0c0067;
+    public static final int notification_template_part_time=0x7f0c0068;
+    public static final int notificationlist=0x7f0c0069;
+    public static final int notificationwindowmsg=0x7f0c006a;
+    public static final int notificationwindownomsg=0x7f0c006b;
+    public static final int paymentview=0x7f0c006c;
+    public static final int profile_dummy=0x7f0c006d;
+    public static final int quoteamount=0x7f0c006e;
+    public static final int quoteamounts=0x7f0c006f;
+    public static final int reachview=0x7f0c0070;
+    public static final int registration_screen1_new=0x7f0c0071;
+    public static final int registration_screen1_new1=0x7f0c0072;
+    public static final int registration_screen2_new=0x7f0c0073;
+    public static final int select_dialog_item_material=0x7f0c0074;
+    public static final int select_dialog_multichoice_material=0x7f0c0075;
+    public static final int select_dialog_singlechoice_material=0x7f0c0076;
+    public static final int smdetaillist=0x7f0c0077;
+    public static final int smreportsupdate=0x7f0c0078;
+    public static final int socialmedia=0x7f0c0079;
+    public static final int socialmediaauth=0x7f0c007a;
+    public static final int spinner_item=0x7f0c007b;
+    public static final int spinner_item1=0x7f0c007c;
+    public static final int splashscreen=0x7f0c007d;
+    public static final int support_simple_spinner_dropdown_item=0x7f0c007e;
+    public static final int tool_bar=0x7f0c007f;
+    public static final int transactionlist=0x7f0c0080;
+    public static final int transactionlist1=0x7f0c0081;
+    public static final int txnhistory=0x7f0c0082;
+    public static final int user_settings=0x7f0c0083;
+    public static final int viewconversation=0x7f0c0084;
+    public static final int viewconversationlist=0x7f0c0085;
+    public static final int walletold=0x7f0c0086;
+    public static final int webview=0x7f0c0087;
   }
   public static final class menu {
     public static final int activity_home_new_drawer=0x7f0d0000;
@@ -7144,146 +7684,152 @@ public final class R {
   public static final class mipmap {
     public static final int ac_icon=0x7f0e0000;
     public static final int add_icon=0x7f0e0001;
-    public static final int auto_icon=0x7f0e0002;
-    public static final int background=0x7f0e0003;
-    public static final int bank_pay=0x7f0e0004;
-    public static final int bank_transfer=0x7f0e0005;
-    public static final int beauty_icon=0x7f0e0006;
-    public static final int bg_grad=0x7f0e0007;
-    public static final int bgscreen=0x7f0e0008;
-    public static final int blog_icon_bw=0x7f0e0009;
-    public static final int blog_icon_clr=0x7f0e000a;
-    public static final int blogger=0x7f0e000b;
-    public static final int blogger_clr_icon=0x7f0e000c;
-    public static final int blogger_icon=0x7f0e000d;
-    public static final int blogger_r_icon=0x7f0e000e;
-    public static final int bloggerprofile_bg=0x7f0e000f;
-    public static final int book_icon=0x7f0e0010;
-    public static final int bulb=0x7f0e0011;
-    public static final int bulbnew=0x7f0e0012;
-    public static final int calendar=0x7f0e0013;
-    public static final int calendar_icon=0x7f0e0014;
-    public static final int callicon=0x7f0e0015;
-    public static final int cat_sleeping=0x7f0e0016;
-    public static final int category_icon=0x7f0e0017;
-    public static final int clap_hands=0x7f0e0018;
-    public static final int closebutton=0x7f0e0019;
-    public static final int ecommerce_icon=0x7f0e001a;
-    public static final int edit=0x7f0e001b;
-    public static final int edit_icon=0x7f0e001c;
-    public static final int eye_icon_blue=0x7f0e001d;
-    public static final int eye_icon_blue_no=0x7f0e001e;
-    public static final int eye_icon_white=0x7f0e001f;
-    public static final int facebook_clr_icon=0x7f0e0020;
-    public static final int facebook_r_icon=0x7f0e0021;
-    public static final int fashion_icon=0x7f0e0022;
-    public static final int food_icon=0x7f0e0023;
-    public static final int food_icon1=0x7f0e0024;
-    public static final int front_background=0x7f0e0025;
-    public static final int frontbg=0x7f0e0026;
-    public static final int hand_shake=0x7f0e0027;
-    public static final int hands_globe=0x7f0e0028;
-    public static final int home=0x7f0e0029;
-    public static final int home_icon_bw=0x7f0e002a;
-    public static final int home_icon_clr=0x7f0e002b;
-    public static final int hraicon=0x7f0e002c;
-    public static final int ic_edit_mobile=0x7f0e002d;
-    public static final int ic_launcher=0x7f0e002e;
-    public static final int ic_launcher_foreground=0x7f0e002f;
-    public static final int ic_launcher_round=0x7f0e0030;
-    public static final int icon_wallet_dark=0x7f0e0031;
-    public static final int icon_wallet_lite=0x7f0e0032;
-    public static final int iconfinal=0x7f0e0033;
-    public static final int influencerheader300=0x7f0e0034;
-    public static final int influencerheader400=0x7f0e0035;
-    public static final int influencerlistimg=0x7f0e0036;
-    public static final int influencerlogo=0x7f0e0037;
-    public static final int influencerprofile=0x7f0e0038;
-    public static final int infoicon1=0x7f0e0039;
-    public static final int instagram_clr_icon=0x7f0e003a;
-    public static final int instagram_icon=0x7f0e003b;
-    public static final int instagram_r_icon=0x7f0e003c;
-    public static final int investment_icon=0x7f0e003d;
-    public static final int left_arrow=0x7f0e003e;
-    public static final int lifestyle_icon=0x7f0e003f;
-    public static final int list=0x7f0e0040;
-    public static final int location_icon=0x7f0e0041;
-    public static final int login_background=0x7f0e0042;
-    public static final int loginbutton=0x7f0e0043;
-    public static final int logo=0x7f0e0044;
-    public static final int logo_temp=0x7f0e0045;
-    public static final int logoinfluencer=0x7f0e0046;
-    public static final int logout_icon=0x7f0e0047;
-    public static final int mailicon=0x7f0e0048;
-    public static final int mails=0x7f0e0049;
-    public static final int mapicon=0x7f0e004a;
-    public static final int marketing_icon=0x7f0e004b;
-    public static final int menu_all_icon=0x7f0e004c;
-    public static final int mobile_camp_icon=0x7f0e004d;
-    public static final int more_icon=0x7f0e004e;
-    public static final int more_icon1=0x7f0e004f;
-    public static final int more_icon_bw=0x7f0e0050;
-    public static final int more_icon_clr=0x7f0e0051;
-    public static final int mycampaign_bw=0x7f0e0052;
-    public static final int mycampaign_clr=0x7f0e0053;
-    public static final int myprofile_icon=0x7f0e0054;
-    public static final int new_background=0x7f0e0055;
-    public static final int newicon80=0x7f0e0056;
-    public static final int next_btn=0x7f0e0057;
-    public static final int notification_icon=0x7f0e0058;
-    public static final int notification_icon_label=0x7f0e0059;
-    public static final int notification_icon_label1=0x7f0e005a;
-    public static final int notificationflaticon40=0x7f0e005b;
-    public static final int out=0x7f0e005c;
-    public static final int parent_icon=0x7f0e005d;
-    public static final int parenting=0x7f0e005e;
-    public static final int paytm_icon=0x7f0e005f;
-    public static final int paytm_wallet_transfer=0x7f0e0060;
-    public static final int paytm_wallet_transfer_small=0x7f0e0061;
-    public static final int paytmtextbg=0x7f0e0062;
-    public static final int plus_icon=0x7f0e0063;
-    public static final int post_tweet=0x7f0e0064;
-    public static final int profile_background=0x7f0e0065;
-    public static final int profile_icon=0x7f0e0066;
-    public static final int profile_icon_bl=0x7f0e0067;
-    public static final int profile_icon_clr=0x7f0e0068;
-    public static final int rating=0x7f0e0069;
-    public static final int realestate_icon=0x7f0e006a;
-    public static final int refresh_icon=0x7f0e006b;
-    public static final int register_background=0x7f0e006c;
-    public static final int registerbutton=0x7f0e006d;
-    public static final int rightarrow1=0x7f0e006e;
-    public static final int rightarrow2=0x7f0e006f;
-    public static final int sampleimgview=0x7f0e0070;
-    public static final int schedule=0x7f0e0071;
-    public static final int search_icon=0x7f0e0072;
-    public static final int shareapp=0x7f0e0073;
-    public static final int sharebutton=0x7f0e0074;
-    public static final int splash_screen_bg=0x7f0e0075;
-    public static final int splash_screen_logo=0x7f0e0076;
-    public static final int splash_screen_name=0x7f0e0077;
-    public static final int splashscreen_influencer=0x7f0e0078;
-    public static final int splashscreen_mobile=0x7f0e0079;
-    public static final int star=0x7f0e007a;
-    public static final int target_icon=0x7f0e007b;
-    public static final int technology_icon=0x7f0e007c;
-    public static final int travel_icon=0x7f0e007d;
-    public static final int twitter_clr_icon=0x7f0e007e;
-    public static final int twitter_icon=0x7f0e007f;
-    public static final int twitter_icon_glass=0x7f0e0080;
-    public static final int twitter_r_icon=0x7f0e0081;
-    public static final int updatecheck=0x7f0e0082;
-    public static final int user_color_icon=0x7f0e0083;
-    public static final int user_icon1=0x7f0e0084;
-    public static final int user_icon_blue=0x7f0e0085;
-    public static final int user_icon_new=0x7f0e0086;
-    public static final int walleamttbg=0x7f0e0087;
-    public static final int wallet_blr=0x7f0e0088;
-    public static final int wallet_clr=0x7f0e0089;
-    public static final int whiteimg=0x7f0e008a;
-    public static final int whiteimg1=0x7f0e008b;
-    public static final int whitelogo=0x7f0e008c;
-    public static final int youtube_r_icon=0x7f0e008d;
+    public static final int addnewreport=0x7f0e0002;
+    public static final int auto_icon=0x7f0e0003;
+    public static final int background=0x7f0e0004;
+    public static final int bank_pay=0x7f0e0005;
+    public static final int bank_transfer=0x7f0e0006;
+    public static final int beauty_icon=0x7f0e0007;
+    public static final int bg_grad=0x7f0e0008;
+    public static final int bgscreen=0x7f0e0009;
+    public static final int blog_icon_bw=0x7f0e000a;
+    public static final int blog_icon_clr=0x7f0e000b;
+    public static final int blogger=0x7f0e000c;
+    public static final int blogger_clr_icon=0x7f0e000d;
+    public static final int blogger_icon=0x7f0e000e;
+    public static final int blogger_r_icon=0x7f0e000f;
+    public static final int bloggerprofile_bg=0x7f0e0010;
+    public static final int book_icon=0x7f0e0011;
+    public static final int bulb=0x7f0e0012;
+    public static final int bulbnew=0x7f0e0013;
+    public static final int calendar=0x7f0e0014;
+    public static final int calendar_icon=0x7f0e0015;
+    public static final int callicon=0x7f0e0016;
+    public static final int cat_sleeping=0x7f0e0017;
+    public static final int category_icon=0x7f0e0018;
+    public static final int chatusericon=0x7f0e0019;
+    public static final int clap_hands=0x7f0e001a;
+    public static final int closebutton=0x7f0e001b;
+    public static final int ecommerce_icon=0x7f0e001c;
+    public static final int edit=0x7f0e001d;
+    public static final int edit_icon=0x7f0e001e;
+    public static final int eye_icon_blue=0x7f0e001f;
+    public static final int eye_icon_blue_no=0x7f0e0020;
+    public static final int eye_icon_white=0x7f0e0021;
+    public static final int facebook_clr_icon=0x7f0e0022;
+    public static final int facebook_r_icon=0x7f0e0023;
+    public static final int fashion_icon=0x7f0e0024;
+    public static final int food_icon=0x7f0e0025;
+    public static final int food_icon1=0x7f0e0026;
+    public static final int front_background=0x7f0e0027;
+    public static final int frontbg=0x7f0e0028;
+    public static final int hand_shake=0x7f0e0029;
+    public static final int hands_globe=0x7f0e002a;
+    public static final int home=0x7f0e002b;
+    public static final int home_icon_bw=0x7f0e002c;
+    public static final int home_icon_clr=0x7f0e002d;
+    public static final int hraicon=0x7f0e002e;
+    public static final int ic_edit_mobile=0x7f0e002f;
+    public static final int ic_launcher=0x7f0e0030;
+    public static final int ic_launcher_foreground=0x7f0e0031;
+    public static final int ic_launcher_round=0x7f0e0032;
+    public static final int icon_wallet_dark=0x7f0e0033;
+    public static final int icon_wallet_lite=0x7f0e0034;
+    public static final int iconfinal=0x7f0e0035;
+    public static final int influencerheader300=0x7f0e0036;
+    public static final int influencerheader400=0x7f0e0037;
+    public static final int influencerlistimg=0x7f0e0038;
+    public static final int influencerlogo=0x7f0e0039;
+    public static final int influencerprofile=0x7f0e003a;
+    public static final int infoicon1=0x7f0e003b;
+    public static final int instagram_clr_icon=0x7f0e003c;
+    public static final int instagram_icon=0x7f0e003d;
+    public static final int instagram_r_icon=0x7f0e003e;
+    public static final int investment_icon=0x7f0e003f;
+    public static final int left_arrow=0x7f0e0040;
+    public static final int lifestyle_icon=0x7f0e0041;
+    public static final int list=0x7f0e0042;
+    public static final int location_icon=0x7f0e0043;
+    public static final int login_background=0x7f0e0044;
+    public static final int loginbutton=0x7f0e0045;
+    public static final int logo=0x7f0e0046;
+    public static final int logo_temp=0x7f0e0047;
+    public static final int logoinfluencer=0x7f0e0048;
+    public static final int logout_icon=0x7f0e0049;
+    public static final int mailicon=0x7f0e004a;
+    public static final int mails=0x7f0e004b;
+    public static final int mapicon=0x7f0e004c;
+    public static final int marketing_icon=0x7f0e004d;
+    public static final int menu_all_icon=0x7f0e004e;
+    public static final int mobile_camp_icon=0x7f0e004f;
+    public static final int more_icon=0x7f0e0050;
+    public static final int more_icon1=0x7f0e0051;
+    public static final int more_icon_bw=0x7f0e0052;
+    public static final int more_icon_clr=0x7f0e0053;
+    public static final int mycampaign_bw=0x7f0e0054;
+    public static final int mycampaign_clr=0x7f0e0055;
+    public static final int myprofile_icon=0x7f0e0056;
+    public static final int new_background=0x7f0e0057;
+    public static final int newicon80=0x7f0e0058;
+    public static final int next_btn=0x7f0e0059;
+    public static final int noimage=0x7f0e005a;
+    public static final int noimagenew=0x7f0e005b;
+    public static final int notification_icon=0x7f0e005c;
+    public static final int notification_icon_label=0x7f0e005d;
+    public static final int notification_icon_label1=0x7f0e005e;
+    public static final int notificationflaticon40=0x7f0e005f;
+    public static final int out=0x7f0e0060;
+    public static final int parent_icon=0x7f0e0061;
+    public static final int parenting=0x7f0e0062;
+    public static final int paytm_icon=0x7f0e0063;
+    public static final int paytm_wallet_transfer=0x7f0e0064;
+    public static final int paytm_wallet_transfer_small=0x7f0e0065;
+    public static final int paytmtextbg=0x7f0e0066;
+    public static final int plus_icon=0x7f0e0067;
+    public static final int post_tweet=0x7f0e0068;
+    public static final int profile_background=0x7f0e0069;
+    public static final int profile_icon=0x7f0e006a;
+    public static final int profile_icon_bl=0x7f0e006b;
+    public static final int profile_icon_clr=0x7f0e006c;
+    public static final int rarrow=0x7f0e006d;
+    public static final int rating=0x7f0e006e;
+    public static final int realestate_icon=0x7f0e006f;
+    public static final int refresh_icon=0x7f0e0070;
+    public static final int register_background=0x7f0e0071;
+    public static final int registerbutton=0x7f0e0072;
+    public static final int rightarrow1=0x7f0e0073;
+    public static final int rightarrow2=0x7f0e0074;
+    public static final int sampleimgview=0x7f0e0075;
+    public static final int schedule=0x7f0e0076;
+    public static final int search_icon=0x7f0e0077;
+    public static final int shareapp=0x7f0e0078;
+    public static final int sharebutton=0x7f0e0079;
+    public static final int splash_screen_bg=0x7f0e007a;
+    public static final int splash_screen_logo=0x7f0e007b;
+    public static final int splash_screen_name=0x7f0e007c;
+    public static final int splashscreen_influencer=0x7f0e007d;
+    public static final int splashscreen_mobile=0x7f0e007e;
+    public static final int star=0x7f0e007f;
+    public static final int target_icon=0x7f0e0080;
+    public static final int technology_icon=0x7f0e0081;
+    public static final int travel_icon=0x7f0e0082;
+    public static final int twitter_clr_icon=0x7f0e0083;
+    public static final int twitter_icon=0x7f0e0084;
+    public static final int twitter_icon_glass=0x7f0e0085;
+    public static final int twitter_r_icon=0x7f0e0086;
+    public static final int updatecheck=0x7f0e0087;
+    public static final int user_color_icon=0x7f0e0088;
+    public static final int user_icon1=0x7f0e0089;
+    public static final int user_icon_blue=0x7f0e008a;
+    public static final int user_icon_new=0x7f0e008b;
+    public static final int walleamttbg=0x7f0e008c;
+    public static final int wallet_blr=0x7f0e008d;
+    public static final int wallet_clr=0x7f0e008e;
+    public static final int whiteimg=0x7f0e008f;
+    public static final int whiteimg1=0x7f0e0090;
+    public static final int whitelogo=0x7f0e0091;
+    public static final int youtube_r_icon=0x7f0e0092;
+    public static final int youtube_r_icon_w=0x7f0e0093;
   }
   public static final class string {
     public static final int abc_action_bar_home_description=0x7f0f0000;
@@ -7438,39 +7984,40 @@ public final class R {
     public static final int paytm_recharge_url=0x7f0f0095;
     public static final int profile_url=0x7f0f0096;
     public static final int push_url=0x7f0f0097;
-    public static final int register_terms=0x7f0f0098;
-    public static final int regsitration_one_url=0x7f0f0099;
-    public static final int rs=0x7f0f009a;
-    public static final int s1=0x7f0f009b;
-    public static final int s2=0x7f0f009c;
-    public static final int s3=0x7f0f009d;
-    public static final int s4=0x7f0f009e;
-    public static final int s5=0x7f0f009f;
-    public static final int s6=0x7f0f00a0;
-    public static final int s7=0x7f0f00a1;
-    public static final int sbproduct=0x7f0f00a2;
-    public static final int search_menu_title=0x7f0f00a3;
-    public static final int sender_id=0x7f0f00a4;
-    public static final int sent_mail_string=0x7f0f00a5;
-    public static final int settings=0x7f0f00a6;
-    public static final int share_instructions=0x7f0f00a7;
-    public static final int skip=0x7f0f00a8;
-    public static final int spam_string=0x7f0f00a9;
-    public static final int stage_base_url=0x7f0f00aa;
-    public static final int starred_string=0x7f0f00ab;
-    public static final int status_bar_notification_info_overflow=0x7f0f00ac;
-    public static final int subheader=0x7f0f00ad;
-    public static final int textforhead=0x7f0f00ae;
-    public static final int title_activity_sms=0x7f0f00af;
-    public static final int transaction_history_url=0x7f0f00b0;
-    public static final int trash_string=0x7f0f00b1;
-    public static final int twitter_callback=0x7f0f00b2;
-    public static final int twitter_consumer_key=0x7f0f00b3;
-    public static final int twitter_consumer_secret=0x7f0f00b4;
-    public static final int twitter_oauth_verifier=0x7f0f00b5;
-    public static final int updateprofile_url=0x7f0f00b6;
-    public static final int userInfo_url=0x7f0f00b7;
-    public static final int wallet_balance_url=0x7f0f00b8;
+    public static final int reachengage=0x7f0f0098;
+    public static final int register_terms=0x7f0f0099;
+    public static final int regsitration_one_url=0x7f0f009a;
+    public static final int rs=0x7f0f009b;
+    public static final int s1=0x7f0f009c;
+    public static final int s2=0x7f0f009d;
+    public static final int s3=0x7f0f009e;
+    public static final int s4=0x7f0f009f;
+    public static final int s5=0x7f0f00a0;
+    public static final int s6=0x7f0f00a1;
+    public static final int s7=0x7f0f00a2;
+    public static final int sbproduct=0x7f0f00a3;
+    public static final int search_menu_title=0x7f0f00a4;
+    public static final int sender_id=0x7f0f00a5;
+    public static final int sent_mail_string=0x7f0f00a6;
+    public static final int settings=0x7f0f00a7;
+    public static final int share_instructions=0x7f0f00a8;
+    public static final int skip=0x7f0f00a9;
+    public static final int spam_string=0x7f0f00aa;
+    public static final int stage_base_url=0x7f0f00ab;
+    public static final int starred_string=0x7f0f00ac;
+    public static final int status_bar_notification_info_overflow=0x7f0f00ad;
+    public static final int subheader=0x7f0f00ae;
+    public static final int textforhead=0x7f0f00af;
+    public static final int title_activity_sms=0x7f0f00b0;
+    public static final int transaction_history_url=0x7f0f00b1;
+    public static final int trash_string=0x7f0f00b2;
+    public static final int twitter_callback=0x7f0f00b3;
+    public static final int twitter_consumer_key=0x7f0f00b4;
+    public static final int twitter_consumer_secret=0x7f0f00b5;
+    public static final int twitter_oauth_verifier=0x7f0f00b6;
+    public static final int updateprofile_url=0x7f0f00b7;
+    public static final int userInfo_url=0x7f0f00b8;
+    public static final int wallet_balance_url=0x7f0f00b9;
   }
   public static final class style {
     public static final int ActionBarTheme=0x7f100000;
@@ -8020,35 +8567,39 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActionBar_background com.socialbeat.influencer:background}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_backgroundSplit com.socialbeat.influencer:backgroundSplit}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_backgroundStacked com.socialbeat.influencer:backgroundStacked}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetEnd com.socialbeat.influencer:contentInsetEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetEndWithActions com.socialbeat.influencer:contentInsetEndWithActions}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetLeft com.socialbeat.influencer:contentInsetLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetRight com.socialbeat.influencer:contentInsetRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetStart com.socialbeat.influencer:contentInsetStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetStartWithNavigation com.socialbeat.influencer:contentInsetStartWithNavigation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_customNavigationLayout com.socialbeat.influencer:customNavigationLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_displayOptions com.socialbeat.influencer:displayOptions}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_divider com.socialbeat.influencer:divider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_background com.socialbeat.influencer:background}</code></td><td>Specifies a background drawable for the action bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundSplit com.socialbeat.influencer:backgroundSplit}</code></td><td>Specifies a background drawable for the bottom component of a split action bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundStacked com.socialbeat.influencer:backgroundStacked}</code></td><td>Specifies a background drawable for a second stacked row of the action bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetEnd com.socialbeat.influencer:contentInsetEnd}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetEndWithActions com.socialbeat.influencer:contentInsetEndWithActions}</code></td><td>Minimum inset for content views within a bar when actions from a menu
+     * are present.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetLeft com.socialbeat.influencer:contentInsetLeft}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetRight com.socialbeat.influencer:contentInsetRight}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetStart com.socialbeat.influencer:contentInsetStart}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetStartWithNavigation com.socialbeat.influencer:contentInsetStartWithNavigation}</code></td><td>Minimum inset for content views within a bar when a navigation button
+     * is present, such as the Up button.</td></tr>
+     * <tr><td><code>{@link #ActionBar_customNavigationLayout com.socialbeat.influencer:customNavigationLayout}</code></td><td>Specifies a layout for custom navigation.</td></tr>
+     * <tr><td><code>{@link #ActionBar_displayOptions com.socialbeat.influencer:displayOptions}</code></td><td>Options affecting how the action bar is displayed.</td></tr>
+     * <tr><td><code>{@link #ActionBar_divider com.socialbeat.influencer:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
      * <tr><td><code>{@link #ActionBar_elevation com.socialbeat.influencer:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #ActionBar_height com.socialbeat.influencer:height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.socialbeat.influencer:hideOnContentScroll}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.socialbeat.influencer:homeAsUpIndicator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_homeLayout com.socialbeat.influencer:homeLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.socialbeat.influencer:hideOnContentScroll}</code></td><td>Set true to hide the action bar on a vertical nested scroll of content.</td></tr>
+     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.socialbeat.influencer:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
+     * <tr><td><code>{@link #ActionBar_homeLayout com.socialbeat.influencer:homeLayout}</code></td><td>Specifies a layout to use for the "home" section of the action bar.</td></tr>
      * <tr><td><code>{@link #ActionBar_icon com.socialbeat.influencer:icon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.socialbeat.influencer:indeterminateProgressStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_itemPadding com.socialbeat.influencer:itemPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_logo com.socialbeat.influencer:logo}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_navigationMode com.socialbeat.influencer:navigationMode}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_popupTheme com.socialbeat.influencer:popupTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_progressBarPadding com.socialbeat.influencer:progressBarPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_progressBarStyle com.socialbeat.influencer:progressBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_subtitle com.socialbeat.influencer:subtitle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_subtitleTextStyle com.socialbeat.influencer:subtitleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.socialbeat.influencer:indeterminateProgressStyle}</code></td><td>Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
+     * <tr><td><code>{@link #ActionBar_itemPadding com.socialbeat.influencer:itemPadding}</code></td><td>Specifies padding that should be applied to the left and right sides of
+     * system-provided items in the bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_logo com.socialbeat.influencer:logo}</code></td><td>Specifies the drawable used for the application logo.</td></tr>
+     * <tr><td><code>{@link #ActionBar_navigationMode com.socialbeat.influencer:navigationMode}</code></td><td>The type of navigation to use.</td></tr>
+     * <tr><td><code>{@link #ActionBar_popupTheme com.socialbeat.influencer:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
+     * shown by widgets in the action bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarPadding com.socialbeat.influencer:progressBarPadding}</code></td><td>Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarStyle com.socialbeat.influencer:progressBarStyle}</code></td><td>Specifies a style resource to use for an embedded progress bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitle com.socialbeat.influencer:subtitle}</code></td><td>Specifies subtitle text used for navigationMode="normal"</td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitleTextStyle com.socialbeat.influencer:subtitleTextStyle}</code></td><td>Specifies a style to use for subtitle text.</td></tr>
      * <tr><td><code>{@link #ActionBar_title com.socialbeat.influencer:title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_titleTextStyle com.socialbeat.influencer:titleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_titleTextStyle com.socialbeat.influencer:titleTextStyle}</code></td><td>Specifies a style to use for title text.</td></tr>
      * </table>
      * @see #ActionBar_background
      * @see #ActionBar_backgroundSplit
@@ -8086,13 +8637,14 @@ public final class R {
       0x7f0400bd, 0x7f0400d5, 0x7f0400de, 0x7f0400df, 
       0x7f0400ee, 0x7f04012e, 0x7f040133, 0x7f040138, 
       0x7f040139, 0x7f04013b, 0x7f040147, 0x7f040152, 
-      0x7f0401b1, 0x7f0401f1, 0x7f040212, 0x7f040217, 
-      0x7f040218, 0x7f040256, 0x7f040259, 0x7f04029f, 
-      0x7f0402a9
+      0x7f0401b1, 0x7f0401f2, 0x7f040213, 0x7f040218, 
+      0x7f040219, 0x7f040257, 0x7f04025a, 0x7f0402a0, 
+      0x7f0402aa
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#background}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies a background drawable for the action bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8103,8 +8655,9 @@ public final class R {
      */
     public static final int ActionBar_background=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#backgroundSplit}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies a background drawable for the bottom component of a split action bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8118,8 +8671,9 @@ public final class R {
      */
     public static final int ActionBar_backgroundSplit=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#backgroundStacked}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies a background drawable for a second stacked row of the action bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8133,8 +8687,10 @@ public final class R {
      */
     public static final int ActionBar_backgroundStacked=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetEnd}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8146,8 +8702,10 @@ public final class R {
      */
     public static final int ActionBar_contentInsetEnd=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetEndWithActions}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar when actions from a menu
+     * are present. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8159,8 +8717,10 @@ public final class R {
      */
     public static final int ActionBar_contentInsetEndWithActions=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetLeft}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8172,8 +8732,10 @@ public final class R {
      */
     public static final int ActionBar_contentInsetLeft=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetRight}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8185,8 +8747,10 @@ public final class R {
      */
     public static final int ActionBar_contentInsetRight=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetStart}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8198,8 +8762,10 @@ public final class R {
      */
     public static final int ActionBar_contentInsetStart=7;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetStartWithNavigation}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar when a navigation button
+     * is present, such as the Up button. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8211,8 +8777,9 @@ public final class R {
      */
     public static final int ActionBar_contentInsetStartWithNavigation=8;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#customNavigationLayout}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies a layout for custom navigation. Overrides navigationMode.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8223,8 +8790,9 @@ public final class R {
      */
     public static final int ActionBar_customNavigationLayout=9;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#displayOptions}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Options affecting how the action bar is displayed.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -8245,8 +8813,9 @@ public final class R {
      */
     public static final int ActionBar_displayOptions=10;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#divider}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies the drawable used for item dividers.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8257,8 +8826,9 @@ public final class R {
      */
     public static final int ActionBar_divider=11;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#elevation}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Elevation for the action bar itself
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8270,8 +8840,9 @@ public final class R {
      */
     public static final int ActionBar_elevation=12;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#height}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies a fixed height.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8283,8 +8854,9 @@ public final class R {
      */
     public static final int ActionBar_height=13;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#hideOnContentScroll}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Set true to hide the action bar on a vertical nested scroll of content.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8293,8 +8865,9 @@ public final class R {
      */
     public static final int ActionBar_hideOnContentScroll=14;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#homeAsUpIndicator}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Up navigation glyph
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8305,8 +8878,9 @@ public final class R {
      */
     public static final int ActionBar_homeAsUpIndicator=15;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#homeLayout}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies a layout to use for the "home" section of the action bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8317,8 +8891,9 @@ public final class R {
      */
     public static final int ActionBar_homeLayout=16;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#icon}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies the drawable used for the application icon.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8329,8 +8904,9 @@ public final class R {
      */
     public static final int ActionBar_icon=17;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#indeterminateProgressStyle}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies a style resource to use for an indeterminate progress spinner.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8341,8 +8917,10 @@ public final class R {
      */
     public static final int ActionBar_indeterminateProgressStyle=18;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#itemPadding}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies padding that should be applied to the left and right sides of
+     * system-provided items in the bar.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8354,8 +8932,9 @@ public final class R {
      */
     public static final int ActionBar_itemPadding=19;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#logo}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies the drawable used for the application logo.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8366,8 +8945,9 @@ public final class R {
      */
     public static final int ActionBar_logo=20;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#navigationMode}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * The type of navigation to use.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -8375,17 +8955,19 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>listMode</td><td>1</td><td></td></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
-     * <tr><td>tabMode</td><td>2</td><td></td></tr>
+     * <tr><td>listMode</td><td>1</td><td>The action bar will use a selection list for navigation.</td></tr>
+     * <tr><td>normal</td><td>0</td><td>Normal static title text</td></tr>
+     * <tr><td>tabMode</td><td>2</td><td>The action bar will use a series of horizontal tabs for navigation.</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:navigationMode
      */
     public static final int ActionBar_navigationMode=21;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#popupTheme}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Reference to a theme that should be used to inflate popups
+     * shown by widgets in the action bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8396,8 +8978,9 @@ public final class R {
      */
     public static final int ActionBar_popupTheme=22;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#progressBarPadding}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies the horizontal padding on either end for an embedded progress bar.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8409,8 +8992,9 @@ public final class R {
      */
     public static final int ActionBar_progressBarPadding=23;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#progressBarStyle}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies a style resource to use for an embedded progress bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8421,8 +9005,9 @@ public final class R {
      */
     public static final int ActionBar_progressBarStyle=24;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#subtitle}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies subtitle text used for navigationMode="normal"
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -8431,8 +9016,9 @@ public final class R {
      */
     public static final int ActionBar_subtitle=25;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#subtitleTextStyle}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies a style to use for subtitle text.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8443,8 +9029,9 @@ public final class R {
      */
     public static final int ActionBar_subtitleTextStyle=26;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#title}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies title text used for navigationMode="normal"
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -8453,8 +9040,9 @@ public final class R {
      */
     public static final int ActionBar_title=27;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#titleTextStyle}
-     * attribute's value can be found in the {@link #ActionBar} array.
+     * <p>
+     * @attr description
+     * Specifies a style to use for title text.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8543,12 +9131,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActionMode_background com.socialbeat.influencer:background}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_backgroundSplit com.socialbeat.influencer:backgroundSplit}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_closeItemLayout com.socialbeat.influencer:closeItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_background com.socialbeat.influencer:background}</code></td><td>Specifies a background drawable for the action bar.</td></tr>
+     * <tr><td><code>{@link #ActionMode_backgroundSplit com.socialbeat.influencer:backgroundSplit}</code></td><td>Specifies a background drawable for the bottom component of a split action bar.</td></tr>
+     * <tr><td><code>{@link #ActionMode_closeItemLayout com.socialbeat.influencer:closeItemLayout}</code></td><td>Specifies a layout to use for the "close" item at the starting edge.</td></tr>
      * <tr><td><code>{@link #ActionMode_height com.socialbeat.influencer:height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_subtitleTextStyle com.socialbeat.influencer:subtitleTextStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_titleTextStyle com.socialbeat.influencer:titleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_subtitleTextStyle com.socialbeat.influencer:subtitleTextStyle}</code></td><td>Specifies a style to use for subtitle text.</td></tr>
+     * <tr><td><code>{@link #ActionMode_titleTextStyle com.socialbeat.influencer:titleTextStyle}</code></td><td>Specifies a style to use for title text.</td></tr>
      * </table>
      * @see #ActionMode_background
      * @see #ActionMode_backgroundSplit
@@ -8559,11 +9147,12 @@ public final class R {
      */
     public static final int[] ActionMode={
       0x7f040039, 0x7f04003a, 0x7f040092, 0x7f04012e, 
-      0x7f040259, 0x7f0402a9
+      0x7f04025a, 0x7f0402aa
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#background}
-     * attribute's value can be found in the {@link #ActionMode} array.
+     * <p>
+     * @attr description
+     * Specifies a background for the action mode bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8574,8 +9163,9 @@ public final class R {
      */
     public static final int ActionMode_background=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#backgroundSplit}
-     * attribute's value can be found in the {@link #ActionMode} array.
+     * <p>
+     * @attr description
+     * Specifies a background for the split action mode bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8589,8 +9179,9 @@ public final class R {
      */
     public static final int ActionMode_backgroundSplit=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#closeItemLayout}
-     * attribute's value can be found in the {@link #ActionMode} array.
+     * <p>
+     * @attr description
+     * Specifies a layout to use for the "close" item at the starting edge.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8601,8 +9192,9 @@ public final class R {
      */
     public static final int ActionMode_closeItemLayout=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#height}
-     * attribute's value can be found in the {@link #ActionMode} array.
+     * <p>
+     * @attr description
+     * Specifies a fixed height for the action mode bar.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8614,8 +9206,9 @@ public final class R {
      */
     public static final int ActionMode_height=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#subtitleTextStyle}
-     * attribute's value can be found in the {@link #ActionMode} array.
+     * <p>
+     * @attr description
+     * Specifies a style to use for subtitle text.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8626,8 +9219,9 @@ public final class R {
      */
     public static final int ActionMode_subtitleTextStyle=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#titleTextStyle}
-     * attribute's value can be found in the {@link #ActionMode} array.
+     * <p>
+     * @attr description
+     * Specifies a style to use for title text.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8644,8 +9238,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.socialbeat.influencer:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.socialbeat.influencer:initialActivityCount}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.socialbeat.influencer:expandActivityOverflowButtonDrawable}</code></td><td>The drawable to show in the button for expanding the activities overflow popup.</td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.socialbeat.influencer:initialActivityCount}</code></td><td>The maximal number of items initially shown in the activity list.</td></tr>
      * </table>
      * @see #ActivityChooserView_expandActivityOverflowButtonDrawable
      * @see #ActivityChooserView_initialActivityCount
@@ -8654,8 +9248,13 @@ public final class R {
       0x7f0400f4, 0x7f040148
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#expandActivityOverflowButtonDrawable}
-     * attribute's value can be found in the {@link #ActivityChooserView} array.
+     * <p>
+     * @attr description
+     * The drawable to show in the button for expanding the activities overflow popup.
+     * <strong>Note:</strong> Clients would like to set this drawable
+     * as a clue about the action the chosen activity will perform. For
+     * example, if share activity is to be chosen the drawable should
+     * give a clue that sharing is to be performed.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8666,8 +9265,9 @@ public final class R {
      */
     public static final int ActivityChooserView_expandActivityOverflowButtonDrawable=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#initialActivityCount}
-     * attribute's value can be found in the {@link #ActivityChooserView} array.
+     * <p>
+     * @attr description
+     * The maximal number of items initially shown in the activity list.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -8750,7 +9350,7 @@ public final class R {
      */
     public static final int[] AlertDialog={
       0x010100f2, 0x7f04005d, 0x7f04005e, 0x7f0401a8, 
-      0x7f0401a9, 0x7f0401ee, 0x7f04023c, 0x7f04023d
+      0x7f0401a9, 0x7f0401ef, 0x7f04023d, 0x7f04023e
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout}
@@ -8873,8 +9473,11 @@ public final class R {
       0x0101030c, 0x0101030d
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#dither}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
+     * <p>
+     * @attr description
+     * Enables or disables dithering of the bitmap if the bitmap does not have the
+     * same pixel configuration as the screen (for instance: a ARGB 8888 bitmap with
+     * an RGB 565 screen).
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8883,8 +9486,9 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_dither=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#visible}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
+     * <p>
+     * @attr description
+     * Indicates whether the drawable should be initially visible.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8893,8 +9497,14 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_visible=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#variablePadding}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
+     * <p>
+     * @attr description
+     * If true, allows the drawable's padding to change based on the
+     * current state that is selected.  If false, the padding will
+     * stay the same (based on the maximum padding of all the states).
+     * Enabling this feature requires that the owner of the drawable
+     * deal with performing layout when the state changes, which is
+     * often not supported.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8903,8 +9513,12 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_variablePadding=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#constantSize}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
+     * <p>
+     * @attr description
+     * If true, the drawable's reported internal size will remain
+     * constant as the state changes; the size is the maximum of all
+     * of the states.  If false, the size will vary based on the
+     * current state.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8913,8 +9527,9 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_constantSize=3;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#enterFadeDuration}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
+     * <p>
+     * @attr description
+     * Amount of time (in milliseconds) to fade in a new state drawable.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -8922,8 +9537,9 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_enterFadeDuration=4;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#exitFadeDuration}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
+     * <p>
+     * @attr description
+     * Amount of time (in milliseconds) to fade out an old state drawable.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -8947,8 +9563,9 @@ public final class R {
       0x010100d0, 0x01010199
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#id}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableItem} array.
+     * <p>
+     * @attr description
+     * Keyframe identifier for use in specifying transitions.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8959,8 +9576,10 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableItem_android_id=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#drawable}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableItem} array.
+     * <p>
+     * @attr description
+     * Reference to a drawable resource to use for the frame.  If not
+     * given, the drawable must be defined by the first child tag.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8991,8 +9610,10 @@ public final class R {
       0x01010199, 0x01010449, 0x0101044a, 0x0101044b
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#drawable}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
+     * <p>
+     * @attr description
+     * Reference to a animation drawable resource to use for the frame.  If not
+     * given, the animation drawable must be defined by the first child tag.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9003,8 +9624,9 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableTransition_android_drawable=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#toId}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
+     * <p>
+     * @attr description
+     * Keyframe identifier for the ending state.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9015,8 +9637,9 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableTransition_android_toId=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#fromId}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
+     * <p>
+     * @attr description
+     * Keyframe identifier for the starting state.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9027,8 +9650,9 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableTransition_android_fromId=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#reversible}
-     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
+     * <p>
+     * @attr description
+     * Whether this transition is reversible.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -9147,7 +9771,7 @@ public final class R {
      * @see #AppBarLayoutStates_state_lifted
      */
     public static final int[] AppBarLayoutStates={
-      0x7f04024c, 0x7f04024d, 0x7f04024e, 0x7f04024f
+      0x7f04024d, 0x7f04024e, 0x7f04024f, 0x7f040250
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#state_collapsed}
@@ -9246,9 +9870,9 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatImageView_android_src android:src}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_srcCompat com.socialbeat.influencer:srcCompat}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_tint com.socialbeat.influencer:tint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_tintMode com.socialbeat.influencer:tintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_srcCompat com.socialbeat.influencer:srcCompat}</code></td><td>Sets a drawable as the content of this ImageView.</td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_tint com.socialbeat.influencer:tint}</code></td><td>Tint to apply to the image source.</td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_tintMode com.socialbeat.influencer:tintMode}</code></td><td>Blending mode used to apply the image source tint.</td></tr>
      * </table>
      * @see #AppCompatImageView_android_src
      * @see #AppCompatImageView_srcCompat
@@ -9256,7 +9880,7 @@ public final class R {
      * @see #AppCompatImageView_tintMode
      */
     public static final int[] AppCompatImageView={
-      0x01010119, 0x7f040248, 0x7f04029d, 0x7f04029e
+      0x01010119, 0x7f040249, 0x7f04029e, 0x7f04029f
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#src}
@@ -9274,8 +9898,10 @@ public final class R {
      */
     public static final int AppCompatImageView_android_src=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#srcCompat}
-     * attribute's value can be found in the {@link #AppCompatImageView} array.
+     * <p>
+     * @attr description
+     * Sets a drawable as the content of this ImageView. Allows the use of vector drawable
+     * when running on older versions of the platform.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9286,8 +9912,9 @@ public final class R {
      */
     public static final int AppCompatImageView_srcCompat=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#tint}
-     * attribute's value can be found in the {@link #AppCompatImageView} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the image source.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -9297,8 +9924,9 @@ public final class R {
      */
     public static final int AppCompatImageView_tint=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#tintMode}
-     * attribute's value can be found in the {@link #AppCompatImageView} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the image source tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -9306,12 +9934,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:tintMode
@@ -9325,9 +9958,9 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatSeekBar_android_thumb android:thumb}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMark com.socialbeat.influencer:tickMark}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTint com.socialbeat.influencer:tickMarkTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTintMode com.socialbeat.influencer:tickMarkTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMark com.socialbeat.influencer:tickMark}</code></td><td>Drawable displayed at each progress position on a seekbar.</td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTint com.socialbeat.influencer:tickMarkTint}</code></td><td>Tint to apply to the tick mark drawable.</td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTintMode com.socialbeat.influencer:tickMarkTintMode}</code></td><td>Blending mode used to apply the tick mark tint.</td></tr>
      * </table>
      * @see #AppCompatSeekBar_android_thumb
      * @see #AppCompatSeekBar_tickMark
@@ -9335,7 +9968,7 @@ public final class R {
      * @see #AppCompatSeekBar_tickMarkTintMode
      */
     public static final int[] AppCompatSeekBar={
-      0x01010142, 0x7f04029a, 0x7f04029b, 0x7f04029c
+      0x01010142, 0x7f04029b, 0x7f04029c, 0x7f04029d
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#thumb}
@@ -9350,8 +9983,9 @@ public final class R {
      */
     public static final int AppCompatSeekBar_android_thumb=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#tickMark}
-     * attribute's value can be found in the {@link #AppCompatSeekBar} array.
+     * <p>
+     * @attr description
+     * Drawable displayed at each progress position on a seekbar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9362,8 +9996,9 @@ public final class R {
      */
     public static final int AppCompatSeekBar_tickMark=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#tickMarkTint}
-     * attribute's value can be found in the {@link #AppCompatSeekBar} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the tick mark drawable.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -9373,8 +10008,9 @@ public final class R {
      */
     public static final int AppCompatSeekBar_tickMarkTint=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#tickMarkTintMode}
-     * attribute's value can be found in the {@link #AppCompatSeekBar} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the tick mark tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -9382,12 +10018,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:tickMarkTintMode
@@ -9530,16 +10171,18 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeMaxTextSize com.socialbeat.influencer:autoSizeMaxTextSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeMinTextSize com.socialbeat.influencer:autoSizeMinTextSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizePresetSizes com.socialbeat.influencer:autoSizePresetSizes}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeStepGranularity com.socialbeat.influencer:autoSizeStepGranularity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeTextType com.socialbeat.influencer:autoSizeTextType}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_firstBaselineToTopHeight com.socialbeat.influencer:firstBaselineToTopHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_fontFamily com.socialbeat.influencer:fontFamily}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_lastBaselineToBottomHeight com.socialbeat.influencer:lastBaselineToBottomHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_lineHeight com.socialbeat.influencer:lineHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_textAllCaps com.socialbeat.influencer:textAllCaps}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeMaxTextSize com.socialbeat.influencer:autoSizeMaxTextSize}</code></td><td>The maximum text size constraint to be used when auto-sizing text.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeMinTextSize com.socialbeat.influencer:autoSizeMinTextSize}</code></td><td>The minimum text size constraint to be used when auto-sizing text.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizePresetSizes com.socialbeat.influencer:autoSizePresetSizes}</code></td><td>Resource array of dimensions to be used in conjunction with
+     * <code>autoSizeTextType</code> set to <code>uniform</code>.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeStepGranularity com.socialbeat.influencer:autoSizeStepGranularity}</code></td><td>Specify the auto-size step size if <code>autoSizeTextType</code> is set to
+     * <code>uniform</code>.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeTextType com.socialbeat.influencer:autoSizeTextType}</code></td><td>Specify the type of auto-size.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_firstBaselineToTopHeight com.socialbeat.influencer:firstBaselineToTopHeight}</code></td><td>Distance from the top of the TextView to the first text baseline.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_fontFamily com.socialbeat.influencer:fontFamily}</code></td><td>The attribute for the font family.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_lastBaselineToBottomHeight com.socialbeat.influencer:lastBaselineToBottomHeight}</code></td><td>Distance from the bottom of the TextView to the last text baseline.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_lineHeight com.socialbeat.influencer:lineHeight}</code></td><td>Explicit height between lines of text.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_textAllCaps com.socialbeat.influencer:textAllCaps}</code></td><td>Present the text in ALL CAPS.</td></tr>
      * </table>
      * @see #AppCompatTextView_android_textAppearance
      * @see #AppCompatTextView_autoSizeMaxTextSize
@@ -9556,7 +10199,7 @@ public final class R {
     public static final int[] AppCompatTextView={
       0x01010034, 0x7f040034, 0x7f040035, 0x7f040036, 
       0x7f040037, 0x7f040038, 0x7f04011c, 0x7f04011f, 
-      0x7f04015b, 0x7f0401a4, 0x7f04027a
+      0x7f04015b, 0x7f0401a4, 0x7f04027b
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
@@ -9571,8 +10214,9 @@ public final class R {
      */
     public static final int AppCompatTextView_android_textAppearance=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#autoSizeMaxTextSize}
-     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     * <p>
+     * @attr description
+     * The maximum text size constraint to be used when auto-sizing text.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9584,8 +10228,9 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizeMaxTextSize=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#autoSizeMinTextSize}
-     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     * <p>
+     * @attr description
+     * The minimum text size constraint to be used when auto-sizing text.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9597,8 +10242,11 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizeMinTextSize=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#autoSizePresetSizes}
-     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     * <p>
+     * @attr description
+     * Resource array of dimensions to be used in conjunction with
+     * <code>autoSizeTextType</code> set to <code>uniform</code>. Overrides
+     * <code>autoSizeStepGranularity</code> if set.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9609,8 +10257,11 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizePresetSizes=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#autoSizeStepGranularity}
-     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     * <p>
+     * @attr description
+     * Specify the auto-size step size if <code>autoSizeTextType</code> is set to
+     * <code>uniform</code>. The default is 1px. Overwrites
+     * <code>autoSizePresetSizes</code> if set.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9622,8 +10273,10 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizeStepGranularity=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#autoSizeTextType}
-     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     * <p>
+     * @attr description
+     * Specify the type of auto-size. Note that this feature is not supported by EditText,
+     * works only for TextView.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -9631,16 +10284,19 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>uniform</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td>No auto-sizing (default).</td></tr>
+     * <tr><td>uniform</td><td>1</td><td>Uniform horizontal and vertical text size scaling to fit within the
+     * container.</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:autoSizeTextType
      */
     public static final int AppCompatTextView_autoSizeTextType=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#firstBaselineToTopHeight}
-     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     * <p>
+     * @attr description
+     * Distance from the top of the TextView to the first text baseline. If set, this
+     * overrides the value set for paddingTop.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9652,8 +10308,9 @@ public final class R {
      */
     public static final int AppCompatTextView_firstBaselineToTopHeight=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontFamily}
-     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     * <p>
+     * @attr description
+     * The attribute for the font family.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -9662,8 +10319,10 @@ public final class R {
      */
     public static final int AppCompatTextView_fontFamily=7;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#lastBaselineToBottomHeight}
-     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     * <p>
+     * @attr description
+     * Distance from the bottom of the TextView to the last text baseline. If set, this
+     * overrides the value set for paddingBottom.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9675,8 +10334,10 @@ public final class R {
      */
     public static final int AppCompatTextView_lastBaselineToBottomHeight=8;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#lineHeight}
-     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     * <p>
+     * @attr description
+     * Explicit height between lines of text. If set, this will override the values set
+     * for lineSpacingExtra and lineSpacingMultiplier.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9688,8 +10349,9 @@ public final class R {
      */
     public static final int AppCompatTextView_lineHeight=9;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textAllCaps}
-     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     * <p>
+     * @attr description
+     * Present the text in ALL CAPS. This may use a small-caps form when available.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9710,125 +10372,142 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatTheme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.socialbeat.influencer:actionBarDivider}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.socialbeat.influencer:actionBarItemBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.socialbeat.influencer:actionBarPopupTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarSize com.socialbeat.influencer:actionBarSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.socialbeat.influencer:actionBarSplitStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.socialbeat.influencer:actionBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.socialbeat.influencer:actionBarDivider}</code></td><td>Custom divider drawable to use for elements in the action bar.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.socialbeat.influencer:actionBarItemBackground}</code></td><td>Custom item state list drawable background for action bar items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.socialbeat.influencer:actionBarPopupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
+     * shown by widgets in the action bar.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarSize com.socialbeat.influencer:actionBarSize}</code></td><td>Size of the Action Bar, including the contextual
+     * bar used to present Action Modes.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.socialbeat.influencer:actionBarSplitStyle}</code></td><td>Reference to a style for the split Action Bar.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.socialbeat.influencer:actionBarStyle}</code></td><td>Reference to a style for the Action Bar</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.socialbeat.influencer:actionBarTabBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.socialbeat.influencer:actionBarTabStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.socialbeat.influencer:actionBarTabStyle}</code></td><td>Default style for tabs within an action bar</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.socialbeat.influencer:actionBarTabTextStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.socialbeat.influencer:actionBarTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.socialbeat.influencer:actionBarWidgetTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.socialbeat.influencer:actionButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.socialbeat.influencer:actionDropDownStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.socialbeat.influencer:actionMenuTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.socialbeat.influencer:actionMenuTextColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.socialbeat.influencer:actionModeBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.socialbeat.influencer:actionBarTheme}</code></td><td>Reference to a theme that should be used to inflate the
+     * action bar.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.socialbeat.influencer:actionBarWidgetTheme}</code></td><td>Reference to a theme that should be used to inflate widgets
+     * and layouts destined for the action bar.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.socialbeat.influencer:actionButtonStyle}</code></td><td>Default action button style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.socialbeat.influencer:actionDropDownStyle}</code></td><td>Default ActionBar dropdown style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.socialbeat.influencer:actionMenuTextAppearance}</code></td><td>TextAppearance style that will be applied to text that
+     * appears within action menu items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.socialbeat.influencer:actionMenuTextColor}</code></td><td>Color for text that appears within action menu items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.socialbeat.influencer:actionModeBackground}</code></td><td>Background drawable to use for action mode UI</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.socialbeat.influencer:actionModeCloseButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.socialbeat.influencer:actionModeCloseDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.socialbeat.influencer:actionModeCopyDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.socialbeat.influencer:actionModeCutDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.socialbeat.influencer:actionModeFindDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.socialbeat.influencer:actionModePasteDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.socialbeat.influencer:actionModePopupWindowStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.socialbeat.influencer:actionModeSelectAllDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.socialbeat.influencer:actionModeShareDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.socialbeat.influencer:actionModeSplitBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.socialbeat.influencer:actionModeCloseDrawable}</code></td><td>Drawable to use for the close action mode button</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.socialbeat.influencer:actionModeCopyDrawable}</code></td><td>Drawable to use for the Copy action button in Contextual Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.socialbeat.influencer:actionModeCutDrawable}</code></td><td>Drawable to use for the Cut action button in Contextual Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.socialbeat.influencer:actionModeFindDrawable}</code></td><td>Drawable to use for the Find action button in WebView selection action modes</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.socialbeat.influencer:actionModePasteDrawable}</code></td><td>Drawable to use for the Paste action button in Contextual Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.socialbeat.influencer:actionModePopupWindowStyle}</code></td><td>PopupWindow style to use for action modes when showing as a window overlay.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.socialbeat.influencer:actionModeSelectAllDrawable}</code></td><td>Drawable to use for the Select all action button in Contextual Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.socialbeat.influencer:actionModeShareDrawable}</code></td><td>Drawable to use for the Share action button in WebView selection action modes</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.socialbeat.influencer:actionModeSplitBackground}</code></td><td>Background drawable to use for action mode UI in the lower split bar</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.socialbeat.influencer:actionModeStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.socialbeat.influencer:actionModeWebSearchDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.socialbeat.influencer:actionModeWebSearchDrawable}</code></td><td>Drawable to use for the Web Search action button in WebView selection action modes</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.socialbeat.influencer:actionOverflowButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.socialbeat.influencer:actionOverflowMenuStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.socialbeat.influencer:activityChooserViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.socialbeat.influencer:activityChooserViewStyle}</code></td><td>Default ActivityChooserView style.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.socialbeat.influencer:alertDialogButtonGroupStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.socialbeat.influencer:alertDialogCenterButtons}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.socialbeat.influencer:alertDialogStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.socialbeat.influencer:alertDialogTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.socialbeat.influencer:autoCompleteTextViewStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.socialbeat.influencer:borderlessButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.socialbeat.influencer:buttonBarButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.socialbeat.influencer:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.socialbeat.influencer:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.socialbeat.influencer:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.socialbeat.influencer:buttonBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonStyle com.socialbeat.influencer:buttonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.socialbeat.influencer:buttonStyleSmall}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.socialbeat.influencer:checkboxStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.socialbeat.influencer:checkedTextViewStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.socialbeat.influencer:colorAccent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.socialbeat.influencer:colorBackgroundFloating}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.socialbeat.influencer:colorButtonNormal}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.socialbeat.influencer:colorControlActivated}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.socialbeat.influencer:colorControlHighlight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.socialbeat.influencer:colorControlNormal}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorError com.socialbeat.influencer:colorError}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.socialbeat.influencer:colorPrimary}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.socialbeat.influencer:colorPrimaryDark}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.socialbeat.influencer:colorSwitchThumbNormal}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_controlBackground com.socialbeat.influencer:controlBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogCornerRadius com.socialbeat.influencer:dialogCornerRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.socialbeat.influencer:dialogPreferredPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogTheme com.socialbeat.influencer:dialogTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.socialbeat.influencer:dividerHorizontal}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dividerVertical com.socialbeat.influencer:dividerVertical}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.socialbeat.influencer:dropDownListViewStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.socialbeat.influencer:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextBackground com.socialbeat.influencer:editTextBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextColor com.socialbeat.influencer:editTextColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.socialbeat.influencer:editTextStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.socialbeat.influencer:homeAsUpIndicator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.socialbeat.influencer:imageButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.socialbeat.influencer:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.socialbeat.influencer:listDividerAlertDialog}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listMenuViewStyle com.socialbeat.influencer:listMenuViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.socialbeat.influencer:alertDialogTheme}</code></td><td>Theme to use for alert dialogs spawned from this theme.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.socialbeat.influencer:autoCompleteTextViewStyle}</code></td><td>Default AutoCompleteTextView style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.socialbeat.influencer:borderlessButtonStyle}</code></td><td>Style for buttons without an explicit border, often used in groups.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.socialbeat.influencer:buttonBarButtonStyle}</code></td><td>Style for buttons within button bars</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.socialbeat.influencer:buttonBarNegativeButtonStyle}</code></td><td>Style for the "negative" buttons within button bars</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.socialbeat.influencer:buttonBarNeutralButtonStyle}</code></td><td>Style for the "neutral" buttons within button bars</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.socialbeat.influencer:buttonBarPositiveButtonStyle}</code></td><td>Style for the "positive" buttons within button bars</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.socialbeat.influencer:buttonBarStyle}</code></td><td>Style for button bars</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonStyle com.socialbeat.influencer:buttonStyle}</code></td><td>Normal Button style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.socialbeat.influencer:buttonStyleSmall}</code></td><td>Small Button style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.socialbeat.influencer:checkboxStyle}</code></td><td>Default Checkbox style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.socialbeat.influencer:checkedTextViewStyle}</code></td><td>Default CheckedTextView style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.socialbeat.influencer:colorAccent}</code></td><td>Bright complement to the primary branding color.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.socialbeat.influencer:colorBackgroundFloating}</code></td><td>Default color of background imagery for floating components, ex.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.socialbeat.influencer:colorButtonNormal}</code></td><td>The color applied to framework buttons in their normal state.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.socialbeat.influencer:colorControlActivated}</code></td><td>The color applied to framework controls in their activated (ex.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.socialbeat.influencer:colorControlHighlight}</code></td><td>The color applied to framework control highlights (ex.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.socialbeat.influencer:colorControlNormal}</code></td><td>The color applied to framework controls in their normal state.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorError com.socialbeat.influencer:colorError}</code></td><td>Color used for error states and things that need to be drawn to
+     * the user's attention.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.socialbeat.influencer:colorPrimary}</code></td><td>The primary branding color for the app.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.socialbeat.influencer:colorPrimaryDark}</code></td><td>Dark variant of the primary branding color.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.socialbeat.influencer:colorSwitchThumbNormal}</code></td><td>The color applied to framework switch thumbs in their normal state.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_controlBackground com.socialbeat.influencer:controlBackground}</code></td><td>The background used by framework controls.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogCornerRadius com.socialbeat.influencer:dialogCornerRadius}</code></td><td>Preferred corner radius of dialogs.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.socialbeat.influencer:dialogPreferredPadding}</code></td><td>Preferred padding for dialog content.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogTheme com.socialbeat.influencer:dialogTheme}</code></td><td>Theme to use for dialogs spawned from this theme.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.socialbeat.influencer:dividerHorizontal}</code></td><td>A drawable that may be used as a horizontal divider between visual elements.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dividerVertical com.socialbeat.influencer:dividerVertical}</code></td><td>A drawable that may be used as a vertical divider between visual elements.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.socialbeat.influencer:dropDownListViewStyle}</code></td><td>ListPopupWindow compatibility</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.socialbeat.influencer:dropdownListPreferredItemHeight}</code></td><td>The preferred item height for dropdown lists.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextBackground com.socialbeat.influencer:editTextBackground}</code></td><td>EditText background drawable.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextColor com.socialbeat.influencer:editTextColor}</code></td><td>EditText text foreground color.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.socialbeat.influencer:editTextStyle}</code></td><td>Default EditText style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.socialbeat.influencer:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.socialbeat.influencer:imageButtonStyle}</code></td><td>ImageButton background drawable.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.socialbeat.influencer:listChoiceBackgroundIndicator}</code></td><td>Drawable used as a background for selected list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.socialbeat.influencer:listDividerAlertDialog}</code></td><td>The list divider used in alert dialogs.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listMenuViewStyle com.socialbeat.influencer:listMenuViewStyle}</code></td><td>Default menu-style ListView style.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.socialbeat.influencer:listPopupWindowStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.socialbeat.influencer:listPreferredItemHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.socialbeat.influencer:listPreferredItemHeightLarge}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.socialbeat.influencer:listPreferredItemHeightSmall}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.socialbeat.influencer:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.socialbeat.influencer:listPreferredItemPaddingRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelBackground com.socialbeat.influencer:panelBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.socialbeat.influencer:panelMenuListTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.socialbeat.influencer:panelMenuListWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.socialbeat.influencer:popupMenuStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.socialbeat.influencer:popupWindowStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.socialbeat.influencer:radioButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.socialbeat.influencer:ratingBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.socialbeat.influencer:ratingBarStyleIndicator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.socialbeat.influencer:ratingBarStyleSmall}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.socialbeat.influencer:searchViewStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.socialbeat.influencer:seekBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.socialbeat.influencer:selectableItemBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.socialbeat.influencer:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.socialbeat.influencer:spinnerDropDownItemStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.socialbeat.influencer:spinnerStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_switchStyle com.socialbeat.influencer:switchStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.socialbeat.influencer:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.socialbeat.influencer:textAppearanceListItem}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSecondary com.socialbeat.influencer:textAppearanceListItemSecondary}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.socialbeat.influencer:textAppearanceListItemSmall}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearancePopupMenuHeader com.socialbeat.influencer:textAppearancePopupMenuHeader}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.socialbeat.influencer:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.socialbeat.influencer:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.socialbeat.influencer:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.socialbeat.influencer:textColorAlertDialogListItem}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.socialbeat.influencer:textColorSearchUrl}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.socialbeat.influencer:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.socialbeat.influencer:toolbarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_tooltipForegroundColor com.socialbeat.influencer:tooltipForegroundColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_tooltipFrameBackground com.socialbeat.influencer:tooltipFrameBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.socialbeat.influencer:listPreferredItemHeight}</code></td><td>The preferred list item height.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.socialbeat.influencer:listPreferredItemHeightLarge}</code></td><td>A larger, more robust list item height.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.socialbeat.influencer:listPreferredItemHeightSmall}</code></td><td>A smaller, sleeker list item height.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.socialbeat.influencer:listPreferredItemPaddingLeft}</code></td><td>The preferred padding along the left edge of list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.socialbeat.influencer:listPreferredItemPaddingRight}</code></td><td>The preferred padding along the right edge of list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelBackground com.socialbeat.influencer:panelBackground}</code></td><td>The background of a panel when it is inset from the left and right edges of the screen.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.socialbeat.influencer:panelMenuListTheme}</code></td><td>Default Panel Menu style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.socialbeat.influencer:panelMenuListWidth}</code></td><td>Default Panel Menu width.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.socialbeat.influencer:popupMenuStyle}</code></td><td>Default PopupMenu style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.socialbeat.influencer:popupWindowStyle}</code></td><td>Default PopupWindow style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.socialbeat.influencer:radioButtonStyle}</code></td><td>Default RadioButton style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.socialbeat.influencer:ratingBarStyle}</code></td><td>Default RatingBar style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.socialbeat.influencer:ratingBarStyleIndicator}</code></td><td>Indicator RatingBar style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.socialbeat.influencer:ratingBarStyleSmall}</code></td><td>Small indicator RatingBar style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.socialbeat.influencer:searchViewStyle}</code></td><td>Style for the search query widget.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.socialbeat.influencer:seekBarStyle}</code></td><td>Default SeekBar style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.socialbeat.influencer:selectableItemBackground}</code></td><td>A style that may be applied to buttons or other selectable items
+     * that should react to pressed and focus states, but that do not
+     * have a clear visual border along the edges.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.socialbeat.influencer:selectableItemBackgroundBorderless}</code></td><td>Background drawable for borderless standalone items that need focus/pressed states.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.socialbeat.influencer:spinnerDropDownItemStyle}</code></td><td>Default Spinner style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.socialbeat.influencer:spinnerStyle}</code></td><td>Default Spinner style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_switchStyle com.socialbeat.influencer:switchStyle}</code></td><td>Default style for the Switch widget.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.socialbeat.influencer:textAppearanceLargePopupMenu}</code></td><td>Text color, typeface, size, and style for the text inside of a popup menu.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.socialbeat.influencer:textAppearanceListItem}</code></td><td>The preferred TextAppearance for the primary text of list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSecondary com.socialbeat.influencer:textAppearanceListItemSecondary}</code></td><td>The preferred TextAppearance for the secondary text of list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.socialbeat.influencer:textAppearanceListItemSmall}</code></td><td>The preferred TextAppearance for the primary text of small list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearancePopupMenuHeader com.socialbeat.influencer:textAppearancePopupMenuHeader}</code></td><td>Text color, typeface, size, and style for header text inside of a popup menu.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.socialbeat.influencer:textAppearanceSearchResultSubtitle}</code></td><td>Text color, typeface, size, and style for system search result subtitle.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.socialbeat.influencer:textAppearanceSearchResultTitle}</code></td><td>Text color, typeface, size, and style for system search result title.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.socialbeat.influencer:textAppearanceSmallPopupMenu}</code></td><td>Text color, typeface, size, and style for small text inside of a popup menu.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.socialbeat.influencer:textColorAlertDialogListItem}</code></td><td>Color of list item text in alert dialogs.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.socialbeat.influencer:textColorSearchUrl}</code></td><td>Text color for urls in search suggestions, used by things like global search</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.socialbeat.influencer:toolbarNavigationButtonStyle}</code></td><td>Default Toolar NavigationButtonStyle</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.socialbeat.influencer:toolbarStyle}</code></td><td>Default Toolbar style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_tooltipForegroundColor com.socialbeat.influencer:tooltipForegroundColor}</code></td><td>Foreground color to use for tooltips</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_tooltipFrameBackground com.socialbeat.influencer:tooltipFrameBackground}</code></td><td>Background to use for tooltips</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_viewInflaterClass com.socialbeat.influencer:viewInflaterClass}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionBar com.socialbeat.influencer:windowActionBar}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.socialbeat.influencer:windowActionBarOverlay}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.socialbeat.influencer:windowActionModeOverlay}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.socialbeat.influencer:windowFixedHeightMajor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.socialbeat.influencer:windowFixedHeightMinor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.socialbeat.influencer:windowFixedWidthMajor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.socialbeat.influencer:windowFixedWidthMinor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.socialbeat.influencer:windowMinWidthMajor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.socialbeat.influencer:windowMinWidthMinor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.socialbeat.influencer:windowNoTitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionBar com.socialbeat.influencer:windowActionBar}</code></td><td>Flag indicating whether this window should have an Action Bar
+     * in place of the usual title bar.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.socialbeat.influencer:windowActionBarOverlay}</code></td><td>Flag indicating whether this window's Action Bar should overlay
+     * application content.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.socialbeat.influencer:windowActionModeOverlay}</code></td><td>Flag indicating whether action modes should overlay window content
+     * when there is not reserved space for their UI (such as an Action Bar).</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.socialbeat.influencer:windowFixedHeightMajor}</code></td><td>A fixed height for the window along the major axis of the screen,
+     * that is, when in portrait.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.socialbeat.influencer:windowFixedHeightMinor}</code></td><td>A fixed height for the window along the minor axis of the screen,
+     * that is, when in landscape.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.socialbeat.influencer:windowFixedWidthMajor}</code></td><td>A fixed width for the window along the major axis of the screen,
+     * that is, when in landscape.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.socialbeat.influencer:windowFixedWidthMinor}</code></td><td>A fixed width for the window along the minor axis of the screen,
+     * that is, when in portrait.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.socialbeat.influencer:windowMinWidthMajor}</code></td><td>The minimum width the window is allowed to be, along the major
+     * axis of the screen.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.socialbeat.influencer:windowMinWidthMinor}</code></td><td>The minimum width the window is allowed to be, along the minor
+     * axis of the screen.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.socialbeat.influencer:windowNoTitle}</code></td><td>Flag indicating whether there should be no title on this window.</td></tr>
      * </table>
      * @see #AppCompatTheme_android_windowIsFloating
      * @see #AppCompatTheme_android_windowAnimationStyle
@@ -9973,17 +10652,17 @@ public final class R {
       0x7f0400ed, 0x7f040138, 0x7f040146, 0x7f0401a6, 
       0x7f0401a7, 0x7f0401aa, 0x7f0401ab, 0x7f0401ac, 
       0x7f0401ad, 0x7f0401ae, 0x7f0401af, 0x7f0401b0, 
-      0x7f0401ff, 0x7f040200, 0x7f040201, 0x7f040211, 
-      0x7f040213, 0x7f04021b, 0x7f04021c, 0x7f04021d, 
-      0x7f04021e, 0x7f040233, 0x7f040234, 0x7f040235, 
-      0x7f040236, 0x7f040245, 0x7f040246, 0x7f04025d, 
-      0x7f040285, 0x7f040286, 0x7f040287, 0x7f040288, 
-      0x7f04028a, 0x7f04028b, 0x7f04028c, 0x7f04028d, 
-      0x7f040290, 0x7f040291, 0x7f0402ab, 0x7f0402ac, 
-      0x7f0402ad, 0x7f0402ae, 0x7f0402c0, 0x7f0402c8, 
-      0x7f0402c9, 0x7f0402ca, 0x7f0402cb, 0x7f0402cc, 
-      0x7f0402cd, 0x7f0402ce, 0x7f0402cf, 0x7f0402d0, 
-      0x7f0402d1
+      0x7f040200, 0x7f040201, 0x7f040202, 0x7f040212, 
+      0x7f040214, 0x7f04021c, 0x7f04021d, 0x7f04021e, 
+      0x7f04021f, 0x7f040234, 0x7f040235, 0x7f040236, 
+      0x7f040237, 0x7f040246, 0x7f040247, 0x7f04025e, 
+      0x7f040286, 0x7f040287, 0x7f040288, 0x7f040289, 
+      0x7f04028b, 0x7f04028c, 0x7f04028d, 0x7f04028e, 
+      0x7f040291, 0x7f040292, 0x7f0402ac, 0x7f0402ad, 
+      0x7f0402ae, 0x7f0402af, 0x7f0402c1, 0x7f0402c9, 
+      0x7f0402ca, 0x7f0402cb, 0x7f0402cc, 0x7f0402cd, 
+      0x7f0402ce, 0x7f0402cf, 0x7f0402d0, 0x7f0402d1, 
+      0x7f0402d2
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
@@ -10008,8 +10687,9 @@ public final class R {
      */
     public static final int AppCompatTheme_android_windowAnimationStyle=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionBarDivider}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Custom divider drawable to use for elements in the action bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10020,8 +10700,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarDivider=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionBarItemBackground}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Custom item state list drawable background for action bar items.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10032,8 +10713,10 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarItemBackground=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionBarPopupTheme}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Reference to a theme that should be used to inflate popups
+     * shown by widgets in the action bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10044,8 +10727,10 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarPopupTheme=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionBarSize}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Size of the Action Bar, including the contextual
+     * bar used to present Action Modes.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10065,8 +10750,12 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarSize=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionBarSplitStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Reference to a style for the split Action Bar. This style
+     * controls the split component that holds the menu/action
+     * buttons. actionBarStyle is still used for the primary
+     * bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10077,8 +10766,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarSplitStyle=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionBarStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Reference to a style for the Action Bar
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10101,8 +10791,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarTabBarStyle=8;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionBarTabStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default style for tabs within an action bar
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10125,8 +10816,11 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarTabTextStyle=10;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionBarTheme}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Reference to a theme that should be used to inflate the
+     * action bar. This will be inherited by any widget inflated
+     * into the action bar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10137,8 +10831,15 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarTheme=11;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionBarWidgetTheme}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Reference to a theme that should be used to inflate widgets
+     * and layouts destined for the action bar. Most of the time
+     * this will be a reference to the current theme, but when
+     * the action bar has a significantly different contrast
+     * profile than the rest of the activity the difference
+     * can become important. If this is set to @null the current
+     * theme will be used.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10149,8 +10850,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarWidgetTheme=12;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionButtonStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default action button style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10161,8 +10863,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionButtonStyle=13;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionDropDownStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default ActionBar dropdown style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10173,8 +10876,10 @@ public final class R {
      */
     public static final int AppCompatTheme_actionDropDownStyle=14;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionMenuTextAppearance}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * TextAppearance style that will be applied to text that
+     * appears within action menu items.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10185,8 +10890,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionMenuTextAppearance=15;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionMenuTextColor}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Color for text that appears within action menu items.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10200,8 +10906,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionMenuTextColor=16;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModeBackground}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Background drawable to use for action mode UI
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10224,8 +10931,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCloseButtonStyle=18;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModeCloseDrawable}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Drawable to use for the close action mode button
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10236,8 +10944,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCloseDrawable=19;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModeCopyDrawable}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Drawable to use for the Copy action button in Contextual Action Bar
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10248,8 +10957,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCopyDrawable=20;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModeCutDrawable}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Drawable to use for the Cut action button in Contextual Action Bar
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10260,8 +10970,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCutDrawable=21;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModeFindDrawable}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Drawable to use for the Find action button in WebView selection action modes
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10272,8 +10983,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeFindDrawable=22;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModePasteDrawable}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Drawable to use for the Paste action button in Contextual Action Bar
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10284,8 +10996,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModePasteDrawable=23;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModePopupWindowStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * PopupWindow style to use for action modes when showing as a window overlay.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10296,8 +11009,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModePopupWindowStyle=24;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModeSelectAllDrawable}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Drawable to use for the Select all action button in Contextual Action Bar
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10308,8 +11022,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeSelectAllDrawable=25;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModeShareDrawable}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Drawable to use for the Share action button in WebView selection action modes
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10320,8 +11035,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeShareDrawable=26;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModeSplitBackground}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Background drawable to use for action mode UI in the lower split bar
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10344,8 +11060,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeStyle=28;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionModeWebSearchDrawable}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Drawable to use for the Web Search action button in WebView selection action modes
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10380,8 +11097,9 @@ public final class R {
      */
     public static final int AppCompatTheme_actionOverflowMenuStyle=31;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#activityChooserViewStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default ActivityChooserView style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10426,8 +11144,9 @@ public final class R {
      */
     public static final int AppCompatTheme_alertDialogStyle=35;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#alertDialogTheme}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Theme to use for alert dialogs spawned from this theme.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10438,8 +11157,9 @@ public final class R {
      */
     public static final int AppCompatTheme_alertDialogTheme=36;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#autoCompleteTextViewStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default AutoCompleteTextView style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10450,8 +11170,9 @@ public final class R {
      */
     public static final int AppCompatTheme_autoCompleteTextViewStyle=37;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#borderlessButtonStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Style for buttons without an explicit border, often used in groups.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10462,8 +11183,9 @@ public final class R {
      */
     public static final int AppCompatTheme_borderlessButtonStyle=38;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#buttonBarButtonStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Style for buttons within button bars
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10474,8 +11196,9 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarButtonStyle=39;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#buttonBarNegativeButtonStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Style for the "negative" buttons within button bars
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10486,8 +11209,9 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarNegativeButtonStyle=40;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#buttonBarNeutralButtonStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Style for the "neutral" buttons within button bars
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10498,8 +11222,9 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarNeutralButtonStyle=41;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#buttonBarPositiveButtonStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Style for the "positive" buttons within button bars
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10510,8 +11235,9 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarPositiveButtonStyle=42;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#buttonBarStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Style for button bars
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10522,8 +11248,9 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarStyle=43;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#buttonStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Normal Button style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10534,8 +11261,9 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonStyle=44;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#buttonStyleSmall}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Small Button style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10546,8 +11274,9 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonStyleSmall=45;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#checkboxStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default Checkbox style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10558,8 +11287,9 @@ public final class R {
      */
     public static final int AppCompatTheme_checkboxStyle=46;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#checkedTextViewStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default CheckedTextView style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10570,8 +11300,10 @@ public final class R {
      */
     public static final int AppCompatTheme_checkedTextViewStyle=47;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorAccent}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Bright complement to the primary branding color. By default, this is the color applied
+     * to framework controls (via colorControlActivated).
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10581,8 +11313,9 @@ public final class R {
      */
     public static final int AppCompatTheme_colorAccent=48;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorBackgroundFloating}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10592,8 +11325,9 @@ public final class R {
      */
     public static final int AppCompatTheme_colorBackgroundFloating=49;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorButtonNormal}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The color applied to framework buttons in their normal state.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10603,8 +11337,9 @@ public final class R {
      */
     public static final int AppCompatTheme_colorButtonNormal=50;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorControlActivated}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The color applied to framework controls in their activated (ex. checked) state.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10614,8 +11349,9 @@ public final class R {
      */
     public static final int AppCompatTheme_colorControlActivated=51;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorControlHighlight}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The color applied to framework control highlights (ex. ripples, list selectors).
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10625,8 +11361,9 @@ public final class R {
      */
     public static final int AppCompatTheme_colorControlHighlight=52;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorControlNormal}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The color applied to framework controls in their normal state.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10636,8 +11373,10 @@ public final class R {
      */
     public static final int AppCompatTheme_colorControlNormal=53;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorError}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Color used for error states and things that need to be drawn to
+     * the user's attention.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10651,8 +11390,10 @@ public final class R {
      */
     public static final int AppCompatTheme_colorError=54;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorPrimary}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The primary branding color for the app. By default, this is the color applied to the
+     * action bar background.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10662,8 +11403,10 @@ public final class R {
      */
     public static final int AppCompatTheme_colorPrimary=55;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorPrimaryDark}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Dark variant of the primary branding color. By default, this is the color applied to
+     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10673,8 +11416,9 @@ public final class R {
      */
     public static final int AppCompatTheme_colorPrimaryDark=56;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorSwitchThumbNormal}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The color applied to framework switch thumbs in their normal state.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10684,8 +11428,9 @@ public final class R {
      */
     public static final int AppCompatTheme_colorSwitchThumbNormal=57;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#controlBackground}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The background used by framework controls.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10696,8 +11441,9 @@ public final class R {
      */
     public static final int AppCompatTheme_controlBackground=58;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#dialogCornerRadius}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Preferred corner radius of dialogs.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10709,8 +11455,9 @@ public final class R {
      */
     public static final int AppCompatTheme_dialogCornerRadius=59;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#dialogPreferredPadding}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Preferred padding for dialog content.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10722,8 +11469,9 @@ public final class R {
      */
     public static final int AppCompatTheme_dialogPreferredPadding=60;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#dialogTheme}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Theme to use for dialogs spawned from this theme.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10734,8 +11482,9 @@ public final class R {
      */
     public static final int AppCompatTheme_dialogTheme=61;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#dividerHorizontal}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * A drawable that may be used as a horizontal divider between visual elements.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10746,8 +11495,9 @@ public final class R {
      */
     public static final int AppCompatTheme_dividerHorizontal=62;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#dividerVertical}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * A drawable that may be used as a vertical divider between visual elements.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10758,8 +11508,9 @@ public final class R {
      */
     public static final int AppCompatTheme_dividerVertical=63;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#dropDownListViewStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * ListPopupWindow compatibility
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10770,8 +11521,9 @@ public final class R {
      */
     public static final int AppCompatTheme_dropDownListViewStyle=64;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#dropdownListPreferredItemHeight}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The preferred item height for dropdown lists.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10783,8 +11535,9 @@ public final class R {
      */
     public static final int AppCompatTheme_dropdownListPreferredItemHeight=65;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#editTextBackground}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * EditText background drawable.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10795,8 +11548,9 @@ public final class R {
      */
     public static final int AppCompatTheme_editTextBackground=66;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#editTextColor}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * EditText text foreground color.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10810,8 +11564,9 @@ public final class R {
      */
     public static final int AppCompatTheme_editTextColor=67;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#editTextStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default EditText style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10822,8 +11577,9 @@ public final class R {
      */
     public static final int AppCompatTheme_editTextStyle=68;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#homeAsUpIndicator}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Specifies a drawable to use for the 'home as up' indicator.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10834,8 +11590,9 @@ public final class R {
      */
     public static final int AppCompatTheme_homeAsUpIndicator=69;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#imageButtonStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * ImageButton background drawable.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10846,8 +11603,9 @@ public final class R {
      */
     public static final int AppCompatTheme_imageButtonStyle=70;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#listChoiceBackgroundIndicator}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Drawable used as a background for selected list items.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10858,8 +11616,9 @@ public final class R {
      */
     public static final int AppCompatTheme_listChoiceBackgroundIndicator=71;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#listDividerAlertDialog}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The list divider used in alert dialogs.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10870,8 +11629,9 @@ public final class R {
      */
     public static final int AppCompatTheme_listDividerAlertDialog=72;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#listMenuViewStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default menu-style ListView style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10894,8 +11654,9 @@ public final class R {
      */
     public static final int AppCompatTheme_listPopupWindowStyle=74;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#listPreferredItemHeight}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The preferred list item height.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10907,8 +11668,9 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemHeight=75;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#listPreferredItemHeightLarge}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * A larger, more robust list item height.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10920,8 +11682,9 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemHeightLarge=76;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#listPreferredItemHeightSmall}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * A smaller, sleeker list item height.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10933,8 +11696,9 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemHeightSmall=77;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#listPreferredItemPaddingLeft}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The preferred padding along the left edge of list items.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10946,8 +11710,9 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemPaddingLeft=78;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#listPreferredItemPaddingRight}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The preferred padding along the right edge of list items.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10959,8 +11724,9 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemPaddingRight=79;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#panelBackground}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The background of a panel when it is inset from the left and right edges of the screen.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10971,8 +11737,9 @@ public final class R {
      */
     public static final int AppCompatTheme_panelBackground=80;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#panelMenuListTheme}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default Panel Menu style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10983,8 +11750,9 @@ public final class R {
      */
     public static final int AppCompatTheme_panelMenuListTheme=81;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#panelMenuListWidth}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default Panel Menu width.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10996,8 +11764,9 @@ public final class R {
      */
     public static final int AppCompatTheme_panelMenuListWidth=82;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#popupMenuStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default PopupMenu style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11008,8 +11777,9 @@ public final class R {
      */
     public static final int AppCompatTheme_popupMenuStyle=83;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#popupWindowStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default PopupWindow style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11020,8 +11790,9 @@ public final class R {
      */
     public static final int AppCompatTheme_popupWindowStyle=84;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#radioButtonStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default RadioButton style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11032,8 +11803,9 @@ public final class R {
      */
     public static final int AppCompatTheme_radioButtonStyle=85;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#ratingBarStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default RatingBar style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11044,8 +11816,9 @@ public final class R {
      */
     public static final int AppCompatTheme_ratingBarStyle=86;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#ratingBarStyleIndicator}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Indicator RatingBar style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11056,8 +11829,9 @@ public final class R {
      */
     public static final int AppCompatTheme_ratingBarStyleIndicator=87;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#ratingBarStyleSmall}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Small indicator RatingBar style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11068,8 +11842,9 @@ public final class R {
      */
     public static final int AppCompatTheme_ratingBarStyleSmall=88;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#searchViewStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Style for the search query widget.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11080,8 +11855,9 @@ public final class R {
      */
     public static final int AppCompatTheme_searchViewStyle=89;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#seekBarStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default SeekBar style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11092,8 +11868,11 @@ public final class R {
      */
     public static final int AppCompatTheme_seekBarStyle=90;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#selectableItemBackground}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * A style that may be applied to buttons or other selectable items
+     * that should react to pressed and focus states, but that do not
+     * have a clear visual border along the edges.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11104,8 +11883,9 @@ public final class R {
      */
     public static final int AppCompatTheme_selectableItemBackground=91;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#selectableItemBackgroundBorderless}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Background drawable for borderless standalone items that need focus/pressed states.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11116,8 +11896,9 @@ public final class R {
      */
     public static final int AppCompatTheme_selectableItemBackgroundBorderless=92;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#spinnerDropDownItemStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default Spinner style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11128,8 +11909,9 @@ public final class R {
      */
     public static final int AppCompatTheme_spinnerDropDownItemStyle=93;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#spinnerStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default Spinner style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11140,8 +11922,9 @@ public final class R {
      */
     public static final int AppCompatTheme_spinnerStyle=94;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#switchStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default style for the Switch widget.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11152,8 +11935,9 @@ public final class R {
      */
     public static final int AppCompatTheme_switchStyle=95;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textAppearanceLargePopupMenu}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Text color, typeface, size, and style for the text inside of a popup menu.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11164,8 +11948,9 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceLargePopupMenu=96;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textAppearanceListItem}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The preferred TextAppearance for the primary text of list items.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11176,8 +11961,9 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceListItem=97;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textAppearanceListItemSecondary}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The preferred TextAppearance for the secondary text of list items.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11188,8 +11974,9 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceListItemSecondary=98;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textAppearanceListItemSmall}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The preferred TextAppearance for the primary text of small list items.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11200,8 +11987,9 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceListItemSmall=99;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textAppearancePopupMenuHeader}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Text color, typeface, size, and style for header text inside of a popup menu.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11212,8 +12000,9 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearancePopupMenuHeader=100;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textAppearanceSearchResultSubtitle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11224,8 +12013,9 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceSearchResultSubtitle=101;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textAppearanceSearchResultTitle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11236,8 +12026,9 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceSearchResultTitle=102;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textAppearanceSmallPopupMenu}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Text color, typeface, size, and style for small text inside of a popup menu.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11248,8 +12039,9 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceSmallPopupMenu=103;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textColorAlertDialogListItem}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Color of list item text in alert dialogs.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11263,8 +12055,9 @@ public final class R {
      */
     public static final int AppCompatTheme_textColorAlertDialogListItem=104;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textColorSearchUrl}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Text color for urls in search suggestions, used by things like global search
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11278,8 +12071,9 @@ public final class R {
      */
     public static final int AppCompatTheme_textColorSearchUrl=105;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#toolbarNavigationButtonStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default Toolar NavigationButtonStyle
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11290,8 +12084,9 @@ public final class R {
      */
     public static final int AppCompatTheme_toolbarNavigationButtonStyle=106;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#toolbarStyle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Default Toolbar style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11302,8 +12097,9 @@ public final class R {
      */
     public static final int AppCompatTheme_toolbarStyle=107;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#tooltipForegroundColor}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Foreground color to use for tooltips
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11317,8 +12113,9 @@ public final class R {
      */
     public static final int AppCompatTheme_tooltipForegroundColor=108;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#tooltipFrameBackground}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Background to use for tooltips
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11339,8 +12136,10 @@ public final class R {
      */
     public static final int AppCompatTheme_viewInflaterClass=110;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#windowActionBar}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Flag indicating whether this window should have an Action Bar
+     * in place of the usual title bar.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11349,8 +12148,11 @@ public final class R {
      */
     public static final int AppCompatTheme_windowActionBar=111;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#windowActionBarOverlay}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Flag indicating whether this window's Action Bar should overlay
+     * application content. Does nothing if the window would not
+     * have an Action Bar.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11359,8 +12161,10 @@ public final class R {
      */
     public static final int AppCompatTheme_windowActionBarOverlay=112;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#windowActionModeOverlay}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Flag indicating whether action modes should overlay window content
+     * when there is not reserved space for their UI (such as an Action Bar).
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11369,8 +12173,11 @@ public final class R {
      */
     public static final int AppCompatTheme_windowActionModeOverlay=113;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#windowFixedHeightMajor}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * A fixed height for the window along the major axis of the screen,
+     * that is, when in portrait. Can be either an absolute dimension
+     * or a fraction of the screen size in that dimension.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11386,8 +12193,11 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedHeightMajor=114;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#windowFixedHeightMinor}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * A fixed height for the window along the minor axis of the screen,
+     * that is, when in landscape. Can be either an absolute dimension
+     * or a fraction of the screen size in that dimension.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11403,8 +12213,11 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedHeightMinor=115;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#windowFixedWidthMajor}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * A fixed width for the window along the major axis of the screen,
+     * that is, when in landscape. Can be either an absolute dimension
+     * or a fraction of the screen size in that dimension.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11420,8 +12233,11 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedWidthMajor=116;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#windowFixedWidthMinor}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * A fixed width for the window along the minor axis of the screen,
+     * that is, when in portrait. Can be either an absolute dimension
+     * or a fraction of the screen size in that dimension.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11437,8 +12253,12 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedWidthMinor=117;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#windowMinWidthMajor}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The minimum width the window is allowed to be, along the major
+     * axis of the screen.  That is, when in landscape.  Can be either
+     * an absolute dimension or a fraction of the screen size in that
+     * dimension.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11454,8 +12274,12 @@ public final class R {
      */
     public static final int AppCompatTheme_windowMinWidthMajor=118;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#windowMinWidthMinor}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * The minimum width the window is allowed to be, along the minor
+     * axis of the screen.  That is, when in portrait.  Can be either
+     * an absolute dimension or a fraction of the screen size in that
+     * dimension.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11471,8 +12295,9 @@ public final class R {
      */
     public static final int AppCompatTheme_windowMinWidthMinor=119;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#windowNoTitle}
-     * attribute's value can be found in the {@link #AppCompatTheme} array.
+     * <p>
+     * @attr description
+     * Flag indicating whether there should be no title on this window.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11487,7 +12312,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #BottomAppBar_backgroundTint com.socialbeat.influencer:backgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BottomAppBar_backgroundTint com.socialbeat.influencer:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabAlignmentMode com.socialbeat.influencer:fabAlignmentMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabCradleMargin com.socialbeat.influencer:fabCradleMargin}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabCradleRoundedCornerRadius com.socialbeat.influencer:fabCradleRoundedCornerRadius}</code></td><td></td></tr>
@@ -11506,8 +12331,9 @@ public final class R {
       0x7f040100, 0x7f040134
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#backgroundTint}
-     * attribute's value can be found in the {@link #BottomAppBar} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the background.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11819,7 +12645,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ButtonBarLayout_allowStacking com.socialbeat.influencer:allowStacking}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ButtonBarLayout_allowStacking com.socialbeat.influencer:allowStacking}</code></td><td>Whether to automatically stack the buttons when there is not
+     * enough space to lay them out side-by-side.</td></tr>
      * </table>
      * @see #ButtonBarLayout_allowStacking
      */
@@ -11827,8 +12654,10 @@ public final class R {
       0x7f040029
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#allowStacking}
-     * attribute's value can be found in the {@link #ButtonBarLayout} array.
+     * <p>
+     * @attr description
+     * Whether to automatically stack the buttons when there is not
+     * enough space to lay them out side-by-side.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11845,17 +12674,17 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CardView_android_minWidth android:minWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #CardView_android_minHeight android:minHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_cardBackgroundColor com.socialbeat.influencer:cardBackgroundColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_cardCornerRadius com.socialbeat.influencer:cardCornerRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_cardElevation com.socialbeat.influencer:cardElevation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_cardMaxElevation com.socialbeat.influencer:cardMaxElevation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_cardPreventCornerOverlap com.socialbeat.influencer:cardPreventCornerOverlap}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_cardUseCompatPadding com.socialbeat.influencer:cardUseCompatPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_contentPadding com.socialbeat.influencer:contentPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingBottom com.socialbeat.influencer:contentPaddingBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingLeft com.socialbeat.influencer:contentPaddingLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingRight com.socialbeat.influencer:contentPaddingRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingTop com.socialbeat.influencer:contentPaddingTop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardBackgroundColor com.socialbeat.influencer:cardBackgroundColor}</code></td><td>Background color for CardView.</td></tr>
+     * <tr><td><code>{@link #CardView_cardCornerRadius com.socialbeat.influencer:cardCornerRadius}</code></td><td>Corner radius for CardView.</td></tr>
+     * <tr><td><code>{@link #CardView_cardElevation com.socialbeat.influencer:cardElevation}</code></td><td>Elevation for CardView.</td></tr>
+     * <tr><td><code>{@link #CardView_cardMaxElevation com.socialbeat.influencer:cardMaxElevation}</code></td><td>Maximum Elevation for CardView.</td></tr>
+     * <tr><td><code>{@link #CardView_cardPreventCornerOverlap com.socialbeat.influencer:cardPreventCornerOverlap}</code></td><td>Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.</td></tr>
+     * <tr><td><code>{@link #CardView_cardUseCompatPadding com.socialbeat.influencer:cardUseCompatPadding}</code></td><td>Add padding in API v21+ as well to have the same measurements with previous versions.</td></tr>
+     * <tr><td><code>{@link #CardView_contentPadding com.socialbeat.influencer:contentPadding}</code></td><td>Inner padding between the edges of the Card and children of the CardView.</td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingBottom com.socialbeat.influencer:contentPaddingBottom}</code></td><td>Inner padding between the bottom edge of the Card and children of the CardView.</td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingLeft com.socialbeat.influencer:contentPaddingLeft}</code></td><td>Inner padding between the left edge of the Card and children of the CardView.</td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingRight com.socialbeat.influencer:contentPaddingRight}</code></td><td>Inner padding between the right edge of the Card and children of the CardView.</td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingTop com.socialbeat.influencer:contentPaddingTop}</code></td><td>Inner padding between the top edge of the Card and children of the CardView.</td></tr>
      * </table>
      * @see #CardView_android_minWidth
      * @see #CardView_android_minHeight
@@ -11878,8 +12707,9 @@ public final class R {
       0x7f0400c2
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#minWidth}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Workaround to read user defined minimum width
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11891,8 +12721,9 @@ public final class R {
      */
     public static final int CardView_android_minWidth=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#minHeight}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Workaround to read user defined minimum height
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11904,8 +12735,9 @@ public final class R {
      */
     public static final int CardView_android_minHeight=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#cardBackgroundColor}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Background color for CardView.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11915,8 +12747,9 @@ public final class R {
      */
     public static final int CardView_cardBackgroundColor=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#cardCornerRadius}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Corner radius for CardView.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11928,8 +12761,9 @@ public final class R {
      */
     public static final int CardView_cardCornerRadius=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#cardElevation}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Elevation for CardView.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11941,8 +12775,9 @@ public final class R {
      */
     public static final int CardView_cardElevation=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#cardMaxElevation}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Maximum Elevation for CardView.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11954,8 +12789,9 @@ public final class R {
      */
     public static final int CardView_cardMaxElevation=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#cardPreventCornerOverlap}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11964,8 +12800,9 @@ public final class R {
      */
     public static final int CardView_cardPreventCornerOverlap=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#cardUseCompatPadding}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Add padding in API v21+ as well to have the same measurements with previous versions.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11974,8 +12811,9 @@ public final class R {
      */
     public static final int CardView_cardUseCompatPadding=7;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentPadding}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Inner padding between the edges of the Card and children of the CardView.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11987,8 +12825,9 @@ public final class R {
      */
     public static final int CardView_contentPadding=8;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentPaddingBottom}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Inner padding between the bottom edge of the Card and children of the CardView.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12000,8 +12839,9 @@ public final class R {
      */
     public static final int CardView_contentPaddingBottom=9;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentPaddingLeft}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Inner padding between the left edge of the Card and children of the CardView.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12013,8 +12853,9 @@ public final class R {
      */
     public static final int CardView_contentPaddingLeft=10;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentPaddingRight}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Inner padding between the right edge of the Card and children of the CardView.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12026,8 +12867,9 @@ public final class R {
      */
     public static final int CardView_contentPaddingRight=11;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentPaddingTop}
-     * attribute's value can be found in the {@link #CardView} array.
+     * <p>
+     * @attr description
+     * Inner padding between the top edge of the Card and children of the CardView.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12065,7 +12907,7 @@ public final class R {
      * <tr><td><code>{@link #Chip_chipStartPadding com.socialbeat.influencer:chipStartPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_chipStrokeColor com.socialbeat.influencer:chipStrokeColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_chipStrokeWidth com.socialbeat.influencer:chipStrokeWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Chip_closeIcon com.socialbeat.influencer:closeIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Chip_closeIcon com.socialbeat.influencer:closeIcon}</code></td><td>Close button icon</td></tr>
      * <tr><td><code>{@link #Chip_closeIconEnabled com.socialbeat.influencer:closeIconEnabled}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_closeIconEndPadding com.socialbeat.influencer:closeIconEndPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_closeIconSize com.socialbeat.influencer:closeIconSize}</code></td><td></td></tr>
@@ -12123,8 +12965,8 @@ public final class R {
       0x7f04007b, 0x7f040080, 0x7f040081, 0x7f040082, 
       0x7f04008b, 0x7f04008c, 0x7f04008d, 0x7f04008e, 
       0x7f04008f, 0x7f040090, 0x7f040091, 0x7f040132, 
-      0x7f04013c, 0x7f040140, 0x7f040224, 0x7f040239, 
-      0x7f040292, 0x7f040294
+      0x7f04013c, 0x7f040140, 0x7f040225, 0x7f04023a, 
+      0x7f040293, 0x7f040295
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
@@ -12367,8 +13209,9 @@ public final class R {
      */
     public static final int Chip_chipStrokeWidth=19;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#closeIcon}
-     * attribute's value can be found in the {@link #Chip} array.
+     * <p>
+     * @attr description
+     * Close button icon
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12558,7 +13401,7 @@ public final class R {
      */
     public static final int[] ChipGroup={
       0x7f04006d, 0x7f04007c, 0x7f04007d, 0x7f04007e, 
-      0x7f04023e, 0x7f04023f
+      0x7f04023f, 0x7f040240
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#checkedChip}
@@ -12740,8 +13583,8 @@ public final class R {
     public static final int[] CollapsingToolbarLayout={
       0x7f040095, 0x7f040096, 0x7f0400c3, 0x7f0400f6, 
       0x7f0400f7, 0x7f0400f8, 0x7f0400f9, 0x7f0400fa, 
-      0x7f0400fb, 0x7f0400fc, 0x7f04022e, 0x7f040230, 
-      0x7f040251, 0x7f04029f, 0x7f0402a0, 0x7f0402aa
+      0x7f0400fb, 0x7f0400fc, 0x7f04022f, 0x7f040231, 
+      0x7f040252, 0x7f0402a0, 0x7f0402a1, 0x7f0402ab
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#collapsedTitleGravity}
@@ -13020,8 +13863,9 @@ public final class R {
       0x010101a5, 0x0101031f, 0x7f04002a
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#color}
-     * attribute's value can be found in the {@link #ColorStateListItem} array.
+     * <p>
+     * @attr description
+     * Base color for this state.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -13040,8 +13884,9 @@ public final class R {
      */
     public static final int ColorStateListItem_android_alpha=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#alpha}
-     * attribute's value can be found in the {@link #ColorStateListItem} array.
+     * <p>
+     * @attr description
+     * Alpha multiplier applied to the base color.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -13056,8 +13901,8 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CompoundButton_android_button android:button}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonTint com.socialbeat.influencer:buttonTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonTintMode com.socialbeat.influencer:buttonTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonTint com.socialbeat.influencer:buttonTint}</code></td><td>Tint to apply to the button drawable.</td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonTintMode com.socialbeat.influencer:buttonTintMode}</code></td><td>Blending mode used to apply the button tint.</td></tr>
      * </table>
      * @see #CompoundButton_android_button
      * @see #CompoundButton_buttonTint
@@ -13079,8 +13924,9 @@ public final class R {
      */
     public static final int CompoundButton_android_button=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#buttonTint}
-     * attribute's value can be found in the {@link #CompoundButton} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the button drawable.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -13090,8 +13936,9 @@ public final class R {
      */
     public static final int CompoundButton_buttonTint=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#buttonTintMode}
-     * attribute's value can be found in the {@link #CompoundButton} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the button tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -13099,12 +13946,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:buttonTintMode
@@ -13319,8 +14171,8 @@ public final class R {
       0x7f040189, 0x7f04018a, 0x7f04018b, 0x7f04018c, 
       0x7f04018e, 0x7f04018f, 0x7f040190, 0x7f040191, 
       0x7f040192, 0x7f040193, 0x7f040194, 0x7f040195, 
-      0x7f040207, 0x7f04020e, 0x7f040216, 0x7f0402b7, 
-      0x7f0402b8
+      0x7f040208, 0x7f04020f, 0x7f040217, 0x7f0402b8, 
+      0x7f0402b9
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -15607,7 +16459,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>ratio</td><td>10</td><td></td></tr>
@@ -15871,8 +16723,8 @@ public final class R {
       0x7f040189, 0x7f04018a, 0x7f04018b, 0x7f04018c, 
       0x7f04018e, 0x7f04018f, 0x7f040190, 0x7f040191, 
       0x7f040192, 0x7f040193, 0x7f040194, 0x7f040195, 
-      0x7f040207, 0x7f04020e, 0x7f040216, 0x7f0402b7, 
-      0x7f0402b8
+      0x7f040208, 0x7f04020f, 0x7f040217, 0x7f0402b8, 
+      0x7f0402b9
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -17142,18 +17994,24 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_keylines com.socialbeat.influencer:keylines}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.socialbeat.influencer:statusBarBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_keylines com.socialbeat.influencer:keylines}</code></td><td>A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.socialbeat.influencer:statusBarBackground}</code></td><td>Drawable to display behind the status bar when the view is set to draw behind it.</td></tr>
      * </table>
      * @see #CoordinatorLayout_keylines
      * @see #CoordinatorLayout_statusBarBackground
      */
     public static final int[] CoordinatorLayout={
-      0x7f040159, 0x7f040250
+      0x7f040159, 0x7f040251
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#keylines}
-     * attribute's value can be found in the {@link #CoordinatorLayout} array.
+     * <p>
+     * @attr description
+     * A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.
+     * Child views can refer to these keylines for alignment using
+     * layout_keyline="index" where index is a 0-based index into
+     * this array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -17164,8 +18022,9 @@ public final class R {
      */
     public static final int CoordinatorLayout_keylines=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#statusBarBackground}
-     * attribute's value can be found in the {@link #CoordinatorLayout} array.
+     * <p>
+     * @attr description
+     * Drawable to display behind the status bar when the view is set to draw behind it.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -17186,12 +18045,15 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CoordinatorLayout_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.socialbeat.influencer:layout_anchor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.socialbeat.influencer:layout_anchorGravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.socialbeat.influencer:layout_behavior}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.socialbeat.influencer:layout_dodgeInsetEdges}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.socialbeat.influencer:layout_insetEdge}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.socialbeat.influencer:layout_keyline}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.socialbeat.influencer:layout_anchor}</code></td><td>The id of an anchor view that this view should position relative to.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.socialbeat.influencer:layout_anchorGravity}</code></td><td>Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.socialbeat.influencer:layout_behavior}</code></td><td>The class name of a Behavior class defining special runtime behavior
+     * for this child view.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.socialbeat.influencer:layout_dodgeInsetEdges}</code></td><td>Specifies how this view dodges the inset edges of the CoordinatorLayout.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.socialbeat.influencer:layout_insetEdge}</code></td><td>Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.socialbeat.influencer:layout_keyline}</code></td><td>The index of a keyline this view should position relative to.</td></tr>
      * </table>
      * @see #CoordinatorLayout_Layout_android_layout_gravity
      * @see #CoordinatorLayout_Layout_layout_anchor
@@ -17235,8 +18097,9 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_android_layout_gravity=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#layout_anchor}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * The id of an anchor view that this view should position relative to.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -17247,8 +18110,10 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_layout_anchor=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#layout_anchorGravity}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -17256,28 +18121,36 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>fill</td><td>77</td><td></td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the horizontal gravity: a left gravity will clip the right
+     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
+     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
+     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:layout_anchorGravity
      */
     public static final int CoordinatorLayout_Layout_layout_anchorGravity=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#layout_behavior}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * The class name of a Behavior class defining special runtime behavior
+     * for this child view.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -17286,8 +18159,9 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_layout_behavior=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#layout_dodgeInsetEdges}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -17295,22 +18169,24 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td></td></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
+     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:layout_dodgeInsetEdges
      */
     public static final int CoordinatorLayout_Layout_layout_dodgeInsetEdges=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#layout_insetEdge}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -17318,21 +18194,24 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:layout_insetEdge
      */
     public static final int CoordinatorLayout_Layout_layout_insetEdge=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#layout_keyline}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * The index of a keyline this view should position relative to.
+     * android:layout_gravity will affect how the view aligns to the
+     * specified keyline.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -17498,14 +18377,14 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.socialbeat.influencer:arrowHeadLength}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.socialbeat.influencer:arrowShaftLength}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_barLength com.socialbeat.influencer:barLength}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_color com.socialbeat.influencer:color}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.socialbeat.influencer:drawableSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.socialbeat.influencer:gapBetweenBars}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_spinBars com.socialbeat.influencer:spinBars}</code></td><td></td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_thickness com.socialbeat.influencer:thickness}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.socialbeat.influencer:arrowHeadLength}</code></td><td>The length of the arrow head when formed to make an arrow</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.socialbeat.influencer:arrowShaftLength}</code></td><td>The length of the shaft when formed to make an arrow</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_barLength com.socialbeat.influencer:barLength}</code></td><td>The length of the bars when they are parallel to each other</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_color com.socialbeat.influencer:color}</code></td><td>The drawing color for the bars</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.socialbeat.influencer:drawableSize}</code></td><td>The total size of the drawable</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.socialbeat.influencer:gapBetweenBars}</code></td><td>The max gap between the bars when they are parallel to each other</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_spinBars com.socialbeat.influencer:spinBars}</code></td><td>Whether bars should rotate or not during transition</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_thickness com.socialbeat.influencer:thickness}</code></td><td>The thickness (stroke size) for the bar paint</td></tr>
      * </table>
      * @see #DrawerArrowToggle_arrowHeadLength
      * @see #DrawerArrowToggle_arrowShaftLength
@@ -17518,11 +18397,12 @@ public final class R {
      */
     public static final int[] DrawerArrowToggle={
       0x7f040030, 0x7f040031, 0x7f04003e, 0x7f040097, 
-      0x7f0400e6, 0x7f04012b, 0x7f040244, 0x7f040296
+      0x7f0400e6, 0x7f04012b, 0x7f040245, 0x7f040297
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#arrowHeadLength}
-     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
+     * <p>
+     * @attr description
+     * The length of the arrow head when formed to make an arrow
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -17534,8 +18414,9 @@ public final class R {
      */
     public static final int DrawerArrowToggle_arrowHeadLength=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#arrowShaftLength}
-     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
+     * <p>
+     * @attr description
+     * The length of the shaft when formed to make an arrow
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -17547,8 +18428,9 @@ public final class R {
      */
     public static final int DrawerArrowToggle_arrowShaftLength=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#barLength}
-     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
+     * <p>
+     * @attr description
+     * The length of the bars when they are parallel to each other
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -17560,8 +18442,9 @@ public final class R {
      */
     public static final int DrawerArrowToggle_barLength=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#color}
-     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
+     * <p>
+     * @attr description
+     * The drawing color for the bars
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -17571,8 +18454,9 @@ public final class R {
      */
     public static final int DrawerArrowToggle_color=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#drawableSize}
-     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
+     * <p>
+     * @attr description
+     * The total size of the drawable
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -17584,8 +18468,9 @@ public final class R {
      */
     public static final int DrawerArrowToggle_drawableSize=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#gapBetweenBars}
-     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
+     * <p>
+     * @attr description
+     * The max gap between the bars when they are parallel to each other
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -17597,8 +18482,9 @@ public final class R {
      */
     public static final int DrawerArrowToggle_gapBetweenBars=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#spinBars}
-     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
+     * <p>
+     * @attr description
+     * Whether bars should rotate or not during transition
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -17607,8 +18493,9 @@ public final class R {
      */
     public static final int DrawerArrowToggle_spinBars=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#thickness}
-     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
+     * <p>
+     * @attr description
+     * The thickness (stroke size) for the bar paint
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -17626,8 +18513,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FloatingActionButton_backgroundTint com.socialbeat.influencer:backgroundTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.socialbeat.influencer:backgroundTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_backgroundTint com.socialbeat.influencer:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.socialbeat.influencer:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
      * <tr><td><code>{@link #FloatingActionButton_borderWidth com.socialbeat.influencer:borderWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_elevation com.socialbeat.influencer:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_fabCustomSize com.socialbeat.influencer:fabCustomSize}</code></td><td></td></tr>
@@ -17702,12 +18589,13 @@ public final class R {
       0x7f04010d, 0x7f04010e, 0x7f04010f, 0x7f040110, 
       0x7f040111, 0x7f040112, 0x7f040113, 0x7f040114, 
       0x7f040115, 0x7f040116, 0x7f040132, 0x7f04013a, 
-      0x7f0401b9, 0x7f040215, 0x7f040224, 0x7f040239, 
-      0x7f0402bf
+      0x7f0401b9, 0x7f040216, 0x7f040225, 0x7f04023a, 
+      0x7f0402c0
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#backgroundTint}
-     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the background.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -17717,8 +18605,9 @@ public final class R {
      */
     public static final int FloatingActionButton_backgroundTint=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#backgroundTintMode}
-     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the background tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -17726,12 +18615,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:backgroundTintMode
@@ -18153,6 +19047,7 @@ public final class R {
      * <tr><td><code>{@link #FloatingActionMenu_menu_labels_colorPressed com.socialbeat.influencer:menu_labels_colorPressed}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionMenu_menu_labels_colorRipple com.socialbeat.influencer:menu_labels_colorRipple}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionMenu_menu_labels_cornerRadius com.socialbeat.influencer:menu_labels_cornerRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionMenu_menu_labels_customFont com.socialbeat.influencer:menu_labels_customFont}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionMenu_menu_labels_ellipsize com.socialbeat.influencer:menu_labels_ellipsize}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionMenu_menu_labels_hideAnimation com.socialbeat.influencer:menu_labels_hideAnimation}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionMenu_menu_labels_margin com.socialbeat.influencer:menu_labels_margin}</code></td><td></td></tr>
@@ -18192,6 +19087,7 @@ public final class R {
      * @see #FloatingActionMenu_menu_labels_colorPressed
      * @see #FloatingActionMenu_menu_labels_colorRipple
      * @see #FloatingActionMenu_menu_labels_cornerRadius
+     * @see #FloatingActionMenu_menu_labels_customFont
      * @see #FloatingActionMenu_menu_labels_ellipsize
      * @see #FloatingActionMenu_menu_labels_hideAnimation
      * @see #FloatingActionMenu_menu_labels_margin
@@ -18225,7 +19121,7 @@ public final class R {
       0x7f0401d6, 0x7f0401d7, 0x7f0401d8, 0x7f0401d9, 
       0x7f0401da, 0x7f0401db, 0x7f0401dc, 0x7f0401dd, 
       0x7f0401de, 0x7f0401df, 0x7f0401e0, 0x7f0401e1, 
-      0x7f0401e2, 0x7f0401e3
+      0x7f0401e2, 0x7f0401e3, 0x7f0401e4
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_animationDelayPerItem}
@@ -18415,6 +19311,16 @@ public final class R {
      */
     public static final int FloatingActionMenu_menu_labels_cornerRadius=15;
     /**
+     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_customFont}
+     * attribute's value can be found in the {@link #FloatingActionMenu} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.socialbeat.influencer:menu_labels_customFont
+     */
+    public static final int FloatingActionMenu_menu_labels_customFont=16;
+    /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_ellipsize}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
      *
@@ -18433,7 +19339,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_ellipsize
      */
-    public static final int FloatingActionMenu_menu_labels_ellipsize=16;
+    public static final int FloatingActionMenu_menu_labels_ellipsize=17;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_hideAnimation}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18445,7 +19351,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_hideAnimation
      */
-    public static final int FloatingActionMenu_menu_labels_hideAnimation=17;
+    public static final int FloatingActionMenu_menu_labels_hideAnimation=18;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_margin}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18458,7 +19364,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_margin
      */
-    public static final int FloatingActionMenu_menu_labels_margin=18;
+    public static final int FloatingActionMenu_menu_labels_margin=19;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_maxLines}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18467,7 +19373,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_maxLines
      */
-    public static final int FloatingActionMenu_menu_labels_maxLines=19;
+    public static final int FloatingActionMenu_menu_labels_maxLines=20;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_padding}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18480,7 +19386,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_padding
      */
-    public static final int FloatingActionMenu_menu_labels_padding=20;
+    public static final int FloatingActionMenu_menu_labels_padding=21;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_paddingBottom}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18493,7 +19399,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_paddingBottom
      */
-    public static final int FloatingActionMenu_menu_labels_paddingBottom=21;
+    public static final int FloatingActionMenu_menu_labels_paddingBottom=22;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_paddingLeft}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18506,7 +19412,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_paddingLeft
      */
-    public static final int FloatingActionMenu_menu_labels_paddingLeft=22;
+    public static final int FloatingActionMenu_menu_labels_paddingLeft=23;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_paddingRight}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18519,7 +19425,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_paddingRight
      */
-    public static final int FloatingActionMenu_menu_labels_paddingRight=23;
+    public static final int FloatingActionMenu_menu_labels_paddingRight=24;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_paddingTop}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18532,7 +19438,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_paddingTop
      */
-    public static final int FloatingActionMenu_menu_labels_paddingTop=24;
+    public static final int FloatingActionMenu_menu_labels_paddingTop=25;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_position}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18549,7 +19455,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_position
      */
-    public static final int FloatingActionMenu_menu_labels_position=25;
+    public static final int FloatingActionMenu_menu_labels_position=26;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_showAnimation}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18561,7 +19467,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_showAnimation
      */
-    public static final int FloatingActionMenu_menu_labels_showAnimation=26;
+    public static final int FloatingActionMenu_menu_labels_showAnimation=27;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_showShadow}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18571,7 +19477,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_showShadow
      */
-    public static final int FloatingActionMenu_menu_labels_showShadow=27;
+    public static final int FloatingActionMenu_menu_labels_showShadow=28;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_singleLine}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18581,7 +19487,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_singleLine
      */
-    public static final int FloatingActionMenu_menu_labels_singleLine=28;
+    public static final int FloatingActionMenu_menu_labels_singleLine=29;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_style}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18593,7 +19499,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_style
      */
-    public static final int FloatingActionMenu_menu_labels_style=29;
+    public static final int FloatingActionMenu_menu_labels_style=30;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_textColor}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18608,7 +19514,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_textColor
      */
-    public static final int FloatingActionMenu_menu_labels_textColor=30;
+    public static final int FloatingActionMenu_menu_labels_textColor=31;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_labels_textSize}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18621,7 +19527,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_labels_textSize
      */
-    public static final int FloatingActionMenu_menu_labels_textSize=31;
+    public static final int FloatingActionMenu_menu_labels_textSize=32;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_openDirection}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18638,7 +19544,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_openDirection
      */
-    public static final int FloatingActionMenu_menu_openDirection=32;
+    public static final int FloatingActionMenu_menu_openDirection=33;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_shadowColor}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18649,7 +19555,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_shadowColor
      */
-    public static final int FloatingActionMenu_menu_shadowColor=33;
+    public static final int FloatingActionMenu_menu_shadowColor=34;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_shadowRadius}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18662,7 +19568,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_shadowRadius
      */
-    public static final int FloatingActionMenu_menu_shadowRadius=34;
+    public static final int FloatingActionMenu_menu_shadowRadius=35;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_shadowXOffset}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18675,7 +19581,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_shadowXOffset
      */
-    public static final int FloatingActionMenu_menu_shadowXOffset=35;
+    public static final int FloatingActionMenu_menu_shadowXOffset=36;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_shadowYOffset}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18688,7 +19594,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_shadowYOffset
      */
-    public static final int FloatingActionMenu_menu_shadowYOffset=36;
+    public static final int FloatingActionMenu_menu_shadowYOffset=37;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#menu_showShadow}
      * attribute's value can be found in the {@link #FloatingActionMenu} array.
@@ -18698,7 +19604,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:menu_showShadow
      */
-    public static final int FloatingActionMenu_menu_showShadow=37;
+    public static final int FloatingActionMenu_menu_showShadow=38;
     /**
      * Attributes that can be used with a FlowLayout.
      * <p>Includes the following attributes:</p>
@@ -18748,12 +19654,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.socialbeat.influencer:fontProviderAuthority}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.socialbeat.influencer:fontProviderCerts}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.socialbeat.influencer:fontProviderFetchStrategy}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.socialbeat.influencer:fontProviderFetchTimeout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.socialbeat.influencer:fontProviderPackage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.socialbeat.influencer:fontProviderQuery}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.socialbeat.influencer:fontProviderAuthority}</code></td><td>The authority of the Font Provider to be used for the request.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.socialbeat.influencer:fontProviderCerts}</code></td><td>The sets of hashes for the certificates the provider should be signed with.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.socialbeat.influencer:fontProviderFetchStrategy}</code></td><td>The strategy to be used when fetching font data from a font provider in XML layouts.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.socialbeat.influencer:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.socialbeat.influencer:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.socialbeat.influencer:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -18767,8 +19673,9 @@ public final class R {
       0x7f040124, 0x7f040125
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontProviderAuthority}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The authority of the Font Provider to be used for the request.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -18777,8 +19684,13 @@ public final class R {
      */
     public static final int FontFamily_fontProviderAuthority=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontProviderCerts}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The sets of hashes for the certificates the provider should be signed with. This is
+     * used to verify the identity of the provider, and is only required if the provider is not
+     * part of the system image. This value may point to one list or a list of lists, where each
+     * individual list represents one collection of signature hashes. Refer to your font provider's
+     * documentation for these values.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -18789,8 +19701,15 @@ public final class R {
      */
     public static final int FontFamily_fontProviderCerts=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontProviderFetchStrategy}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The strategy to be used when fetching font data from a font provider in XML layouts.
+     * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
+     * choice of API between {@link
+     * androidx.core.content.res.ResourcesCompat#getFont(Context, int)} (blocking) and
+     * {@link
+     * androidx.core.content.res.ResourcesCompat#getFont(Context, int, FontCallback, Handler)}
+     * (async).
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -18798,16 +19717,25 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>async</td><td>1</td><td></td></tr>
-     * <tr><td>blocking</td><td>0</td><td></td></tr>
+     * <tr><td>async</td><td>1</td><td>The async font fetch works as follows.
+     * First, check the local cache, then if the requeted font is not cached, trigger a
+     * request the font and continue with layout inflation. Once the font fetch succeeds, the
+     * target text view will be refreshed with the downloaded font data. The
+     * fontProviderFetchTimeout will be ignored if async loading is specified.</td></tr>
+     * <tr><td>blocking</td><td>0</td><td>The blocking font fetch works as follows.
+     * First, check the local cache, then if the requested font is not cached, request the
+     * font from the provider and wait until it is finished.  You can change the length of
+     * the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
+     * default typeface will be used instead.</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:fontProviderFetchStrategy
      */
     public static final int FontFamily_fontProviderFetchStrategy=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontProviderFetchTimeout}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The length of the timeout during fetching.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
@@ -18816,15 +19744,18 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>forever</td><td>ffffffff</td><td>A special value for the timeout. In this case, the blocking font fetching will not
+     * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:fontProviderFetchTimeout
      */
     public static final int FontFamily_fontProviderFetchTimeout=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontProviderPackage}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The package for the Font Provider to be used for the request. This is used to verify
+     * the identity of the provider.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -18833,8 +19764,10 @@ public final class R {
      */
     public static final int FontFamily_fontProviderPackage=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontProviderQuery}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The query to be sent over to the provider. Refer to your font provider's documentation
+     * on the format of this string.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -18854,11 +19787,11 @@ public final class R {
      * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_ttcIndex android:ttcIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_fontVariationSettings android:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font com.socialbeat.influencer:font}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.socialbeat.influencer:fontStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.socialbeat.influencer:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.socialbeat.influencer:fontWeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.socialbeat.influencer:ttcIndex}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font com.socialbeat.influencer:font}</code></td><td>The reference to the font file to be used.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.socialbeat.influencer:fontStyle}</code></td><td>The style of the given font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.socialbeat.influencer:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.socialbeat.influencer:fontWeight}</code></td><td>The weight of the given font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.socialbeat.influencer:ttcIndex}</code></td><td>The index of the font in the tcc font file.</td></tr>
      * </table>
      * @see #FontFamilyFont_android_font
      * @see #FontFamilyFont_android_fontWeight
@@ -18874,7 +19807,7 @@ public final class R {
     public static final int[] FontFamilyFont={
       0x01010532, 0x01010533, 0x0101053f, 0x0101056f, 
       0x01010570, 0x7f04011e, 0x7f040126, 0x7f040127, 
-      0x7f040128, 0x7f0402be
+      0x7f040128, 0x7f0402bf
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#font}
@@ -18898,8 +19831,9 @@ public final class R {
      */
     public static final int FontFamilyFont_android_fontWeight=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#fontStyle}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     * <p>
+     * @attr description
+     * References to the framework attrs
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -18934,8 +19868,10 @@ public final class R {
      */
     public static final int FontFamilyFont_android_fontVariationSettings=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#font}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     * <p>
+     * @attr description
+     * The reference to the font file to be used. This should be a file in the res/font folder
+     * and should therefore have an R reference value. E.g. @font/myfont
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -18946,8 +19882,11 @@ public final class R {
      */
     public static final int FontFamilyFont_font=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontStyle}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     * <p>
+     * @attr description
+     * The style of the given font file. This will be used when the font is being loaded into
+     * the font stack and will override any style information in the font's header tables. If
+     * unspecified, the value in the font's header tables will be used.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -18963,8 +19902,12 @@ public final class R {
      */
     public static final int FontFamilyFont_fontStyle=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontVariationSettings}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     * <p>
+     * @attr description
+     * The variation settings to be applied to the font. The string should be in the following
+     * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
+     * used, or the font used does not support variation settings, this attribute needs not be
+     * specified.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -18973,8 +19916,13 @@ public final class R {
      */
     public static final int FontFamilyFont_fontVariationSettings=7;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontWeight}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     * <p>
+     * @attr description
+     * The weight of the given font file. This will be used when the font is being loaded into
+     * the font stack and will override any weight information in the font's header tables. Must
+     * be a positive number, a multiple of 100, and between 100 and 900, inclusive. The most
+     * common values are 400 for regular weight and 700 for bold weight. If unspecified, the value
+     * in the font's header tables will be used.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -18982,8 +19930,10 @@ public final class R {
      */
     public static final int FontFamilyFont_fontWeight=8;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#ttcIndex}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     * <p>
+     * @attr description
+     * The index of the font in the tcc font file. If the font file referenced is not in the
+     * tcc format, this attribute needs not be specified.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -19099,8 +20049,9 @@ public final class R {
       0x01010510, 0x01010511, 0x01010512, 0x01010513
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#startColor}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * Start color of the gradient.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -19110,8 +20061,9 @@ public final class R {
      */
     public static final int GradientColor_android_startColor=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#endColor}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * End color of the gradient.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -19121,8 +20073,9 @@ public final class R {
      */
     public static final int GradientColor_android_endColor=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#type}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * Type of gradient. The default type is linear.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -19139,8 +20092,9 @@ public final class R {
      */
     public static final int GradientColor_android_type=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#centerX}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * X coordinate of the center of the gradient within the path.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a fractional value, which is a floating point number appended with
@@ -19152,8 +20106,9 @@ public final class R {
      */
     public static final int GradientColor_android_centerX=3;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#centerY}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * Y coordinate of the center of the gradient within the path.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a fractional value, which is a floating point number appended with
@@ -19165,8 +20120,9 @@ public final class R {
      */
     public static final int GradientColor_android_centerY=4;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#gradientRadius}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * Radius of the gradient, used only with radial gradient.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -19183,8 +20139,9 @@ public final class R {
      */
     public static final int GradientColor_android_gradientRadius=5;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#tileMode}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * Defines the tile mode of the gradient. SweepGradient doesn't support tiling.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -19202,8 +20159,9 @@ public final class R {
      */
     public static final int GradientColor_android_tileMode=6;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#centerColor}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * Optional center color.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -19213,8 +20171,10 @@ public final class R {
      */
     public static final int GradientColor_android_centerColor=7;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#startX}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * X coordinate of the start point origin of the gradient.
+     * Defined in same coordinates as the path itself
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -19222,8 +20182,10 @@ public final class R {
      */
     public static final int GradientColor_android_startX=8;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#startY}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * Y coordinate of the start point of the gradient within the shape.
+     * Defined in same coordinates as the path itself
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -19231,8 +20193,10 @@ public final class R {
      */
     public static final int GradientColor_android_startY=9;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#endX}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * X coordinate of the end point origin of the gradient.
+     * Defined in same coordinates as the path itself
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -19240,8 +20204,10 @@ public final class R {
      */
     public static final int GradientColor_android_endX=10;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#endY}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>
+     * @attr description
+     * Y coordinate of the end point of the gradient within the shape.
+     * Defined in same coordinates as the path itself
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -19265,8 +20231,9 @@ public final class R {
       0x010101a5, 0x01010514
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#color}
-     * attribute's value can be found in the {@link #GradientColorItem} array.
+     * <p>
+     * @attr description
+     * The current color for the offset inside the gradient.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -19276,8 +20243,10 @@ public final class R {
      */
     public static final int GradientColorItem_android_color=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#offset}
-     * attribute's value can be found in the {@link #GradientColorItem} array.
+     * <p>
+     * @attr description
+     * The offset (or ratio) of this current color item inside the gradient.
+     * The value is only meaningful when it is between 0 and 1.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -19311,7 +20280,7 @@ public final class R {
      */
     public static final int[] ImageFilterView={
       0x7f04002c, 0x7f040056, 0x7f0400c4, 0x7f0400cc, 
-      0x7f040228, 0x7f040229, 0x7f04022a, 0x7f0402c3
+      0x7f040229, 0x7f04022a, 0x7f04022b, 0x7f0402c4
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#altSrc}
@@ -19439,8 +20408,8 @@ public final class R {
       0x010100dc, 0x0101031f, 0x01010322, 0x01010323, 
       0x01010324, 0x01010325, 0x01010326, 0x01010327, 
       0x01010328, 0x010103fa, 0x01010440, 0x7f0400ce, 
-      0x7f04012a, 0x7f040216, 0x7f040279, 0x7f0402b7, 
-      0x7f0402b8
+      0x7f04012a, 0x7f040217, 0x7f04027a, 0x7f0402b8, 
+      0x7f0402b9
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#visibility}
@@ -19696,8 +20665,8 @@ public final class R {
       0x0101031f, 0x01010322, 0x01010323, 0x01010324, 
       0x01010325, 0x01010326, 0x01010327, 0x01010328, 
       0x010103fa, 0x01010440, 0x7f0400ce, 0x7f04012a, 
-      0x7f040216, 0x7f040279, 0x7f0402b7, 0x7f0402b8, 
-      0x7f0402c4, 0x7f0402c5, 0x7f0402c6, 0x7f0402c7
+      0x7f040217, 0x7f04027a, 0x7f0402b8, 0x7f0402b9, 
+      0x7f0402c5, 0x7f0402c6, 0x7f0402c7, 0x7f0402c8
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#alpha}
@@ -19985,8 +20954,8 @@ public final class R {
      */
     public static final int[] KeyPosition={
       0x7f0400ce, 0x7f0400e5, 0x7f04012a, 0x7f040158, 
-      0x7f040207, 0x7f040209, 0x7f04020a, 0x7f04020b, 
-      0x7f04020c, 0x7f040240, 0x7f040279, 0x7f0402b7
+      0x7f040208, 0x7f04020a, 0x7f04020b, 0x7f04020c, 
+      0x7f04020d, 0x7f040241, 0x7f04027a, 0x7f0402b8
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#curveFit}
@@ -20201,8 +21170,8 @@ public final class R {
       0x0101031f, 0x01010322, 0x01010323, 0x01010324, 
       0x01010325, 0x01010326, 0x01010327, 0x01010328, 
       0x010103fa, 0x01010440, 0x7f0400ce, 0x7f04012a, 
-      0x7f040216, 0x7f040279, 0x7f0402b7, 0x7f0402b8, 
-      0x7f0402c4, 0x7f0402c5, 0x7f0402c6
+      0x7f040217, 0x7f04027a, 0x7f0402b8, 0x7f0402b9, 
+      0x7f0402c5, 0x7f0402c6, 0x7f0402c7
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#alpha}
@@ -20456,8 +21425,8 @@ public final class R {
      * @see #KeyTrigger_triggerSlack
      */
     public static final int[] KeyTrigger={
-      0x7f04012a, 0x7f0401f4, 0x7f0401f6, 0x7f0401f7, 
-      0x7f040279, 0x7f0402bc, 0x7f0402bd
+      0x7f04012a, 0x7f0401f5, 0x7f0401f7, 0x7f0401f8, 
+      0x7f04027a, 0x7f0402bd, 0x7f0402be
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#framePosition}
@@ -20688,8 +21657,8 @@ public final class R {
       0x7f040191, 0x7f040192, 0x7f040193, 0x7f040194, 
       0x7f040195, 0x7f040196, 0x7f040199, 0x7f04019a, 
       0x7f04019b, 0x7f04019c, 0x7f04019d, 0x7f04019e, 
-      0x7f0401a2, 0x7f0401b8, 0x7f0401bb, 0x7f0401e4, 
-      0x7f0401e5, 0x7f0401f9
+      0x7f0401a2, 0x7f0401b8, 0x7f0401bb, 0x7f0401e5, 
+      0x7f0401e6, 0x7f0401fa
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#barrierAllowsGoneWidgets}
@@ -21663,10 +22632,11 @@ public final class R {
      * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAligned android:baselineAligned}</code></td><td></td></tr>
      * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAlignedChildIndex android:baselineAlignedChildIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_divider com.socialbeat.influencer:divider}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.socialbeat.influencer:dividerPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.socialbeat.influencer:measureWithLargestChild}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_showDividers com.socialbeat.influencer:showDividers}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_divider com.socialbeat.influencer:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.socialbeat.influencer:dividerPadding}</code></td><td>Size of padding on either end of a divider.</td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.socialbeat.influencer:measureWithLargestChild}</code></td><td>When set to true, all children with a weight will be considered having
+     * the minimum size of the largest child.</td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_showDividers com.socialbeat.influencer:showDividers}</code></td><td>Setting for which dividers to show.</td></tr>
      * </table>
      * @see #LinearLayoutCompat_android_gravity
      * @see #LinearLayoutCompat_android_orientation
@@ -21681,7 +22651,7 @@ public final class R {
     public static final int[] LinearLayoutCompat={
       0x010100af, 0x010100c4, 0x01010126, 0x01010127, 
       0x01010128, 0x7f0400df, 0x7f0400e1, 0x7f0401bc, 
-      0x7f040238
+      0x7f040239
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#gravity}
@@ -21713,8 +22683,11 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_gravity=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#orientation}
-     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     * <p>
+     * @attr description
+     * Should the layout be a column or a row?  Use "horizontal"
+     * for a row, "vertical" for a column.  The default is
+     * horizontal.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -21730,8 +22703,11 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_orientation=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#baselineAligned}
-     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     * <p>
+     * @attr description
+     * When set to false, prevents the layout from aligning its children's
+     * baselines. This attribute is particularly useful when the children
+     * use different values for gravity. The default value is true.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -21740,8 +22716,11 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_baselineAligned=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#baselineAlignedChildIndex}
-     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     * <p>
+     * @attr description
+     * When a linear layout is part of another layout that is baseline
+     * aligned, it can specify which of its children to baseline align to
+     * (that is, which child TextView).
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -21749,8 +22728,13 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_baselineAlignedChildIndex=3;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#weightSum}
-     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     * <p>
+     * @attr description
+     * Defines the maximum weight sum. If unspecified, the sum is computed
+     * by adding the layout_weight of all of the children. This can be
+     * used for instance to give a single child 50% of the total available
+     * space by giving it a layout_weight of 0.5 and setting the weightSum
+     * to 1.0.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -21758,8 +22742,9 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_weightSum=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#divider}
-     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     * <p>
+     * @attr description
+     * Drawable to use as a vertical divider between buttons.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -21770,8 +22755,9 @@ public final class R {
      */
     public static final int LinearLayoutCompat_divider=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#dividerPadding}
-     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     * <p>
+     * @attr description
+     * Size of padding on either end of a divider.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -21783,8 +22769,11 @@ public final class R {
      */
     public static final int LinearLayoutCompat_dividerPadding=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#measureWithLargestChild}
-     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     * <p>
+     * @attr description
+     * When set to true, all children with a weight will be considered having
+     * the minimum size of the largest child. If false, all children are
+     * measured normally.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -21793,8 +22782,9 @@ public final class R {
      */
     public static final int LinearLayoutCompat_measureWithLargestChild=7;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#showDividers}
-     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     * <p>
+     * @attr description
+     * Setting for which dividers to show.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -21932,8 +22922,9 @@ public final class R {
       0x010102ac, 0x010102ad
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#dropDownHorizontalOffset}
-     * attribute's value can be found in the {@link #ListPopupWindow} array.
+     * <p>
+     * @attr description
+     * Amount of pixels by which the drop down should be offset horizontally.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -21945,8 +22936,9 @@ public final class R {
      */
     public static final int ListPopupWindow_android_dropDownHorizontalOffset=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#dropDownVerticalOffset}
-     * attribute's value can be found in the {@link #ListPopupWindow} array.
+     * <p>
+     * @attr description
+     * Amount of pixels by which the drop down should be offset vertically.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22023,15 +23015,15 @@ public final class R {
      * <tr><td><code>{@link #MaterialButton_android_insetRight android:insetRight}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_android_insetTop android:insetTop}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_android_insetBottom android:insetBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_backgroundTint com.socialbeat.influencer:backgroundTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_backgroundTintMode com.socialbeat.influencer:backgroundTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialButton_backgroundTint com.socialbeat.influencer:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
+     * <tr><td><code>{@link #MaterialButton_backgroundTintMode com.socialbeat.influencer:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
      * <tr><td><code>{@link #MaterialButton_cornerRadius com.socialbeat.influencer:cornerRadius}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_icon com.socialbeat.influencer:icon}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconGravity com.socialbeat.influencer:iconGravity}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconPadding com.socialbeat.influencer:iconPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconSize com.socialbeat.influencer:iconSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_iconTint com.socialbeat.influencer:iconTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_iconTintMode com.socialbeat.influencer:iconTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialButton_iconTint com.socialbeat.influencer:iconTint}</code></td><td>Tint to apply to the icon.</td></tr>
+     * <tr><td><code>{@link #MaterialButton_iconTintMode com.socialbeat.influencer:iconTintMode}</code></td><td>Blending mode used to apply the icon tint.</td></tr>
      * <tr><td><code>{@link #MaterialButton_rippleColor com.socialbeat.influencer:rippleColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_strokeColor com.socialbeat.influencer:strokeColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_strokeWidth com.socialbeat.influencer:strokeWidth}</code></td><td></td></tr>
@@ -22057,7 +23049,7 @@ public final class R {
       0x010101b7, 0x010101b8, 0x010101b9, 0x010101ba, 
       0x7f04003c, 0x7f04003d, 0x7f0400c7, 0x7f04013b, 
       0x7f04013d, 0x7f04013e, 0x7f04013f, 0x7f040141, 
-      0x7f040142, 0x7f040224, 0x7f040252, 0x7f040253
+      0x7f040142, 0x7f040225, 0x7f040253, 0x7f040254
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#insetLeft}
@@ -22128,8 +23120,9 @@ public final class R {
      */
     public static final int MaterialButton_android_insetBottom=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#backgroundTint}
-     * attribute's value can be found in the {@link #MaterialButton} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the background.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -22139,8 +23132,9 @@ public final class R {
      */
     public static final int MaterialButton_backgroundTint=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#backgroundTintMode}
-     * attribute's value can be found in the {@link #MaterialButton} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the background tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -22148,12 +23142,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:backgroundTintMode
@@ -22228,8 +23227,9 @@ public final class R {
      */
     public static final int MaterialButton_iconSize=10;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#iconTint}
-     * attribute's value can be found in the {@link #MaterialButton} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the icon.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -22239,8 +23239,9 @@ public final class R {
      */
     public static final int MaterialButton_iconTint=11;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#iconTintMode}
-     * attribute's value can be found in the {@link #MaterialButton} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the icon tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -22248,12 +23249,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the icon with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the icon, but with the icon’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the icon. The icon’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the icon.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:iconTintMode
@@ -22308,7 +23314,7 @@ public final class R {
      * @see #MaterialCardView_strokeWidth
      */
     public static final int[] MaterialCardView={
-      0x7f040252, 0x7f040253
+      0x7f040253, 0x7f040254
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#strokeColor}
@@ -22346,12 +23352,12 @@ public final class R {
      * <tr><td><code>{@link #MaterialComponentsTheme_chipGroupStyle com.socialbeat.influencer:chipGroupStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_chipStandaloneStyle com.socialbeat.influencer:chipStandaloneStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_chipStyle com.socialbeat.influencer:chipStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorAccent com.socialbeat.influencer:colorAccent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorBackgroundFloating com.socialbeat.influencer:colorBackgroundFloating}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimary com.socialbeat.influencer:colorPrimary}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimaryDark com.socialbeat.influencer:colorPrimaryDark}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorAccent com.socialbeat.influencer:colorAccent}</code></td><td>Bright complement to the primary branding color.</td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorBackgroundFloating com.socialbeat.influencer:colorBackgroundFloating}</code></td><td>Default color of background imagery for floating components, ex.</td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimary com.socialbeat.influencer:colorPrimary}</code></td><td>The primary branding color for the app.</td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimaryDark com.socialbeat.influencer:colorPrimaryDark}</code></td><td>Dark variant of the primary branding color.</td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_colorSecondary com.socialbeat.influencer:colorSecondary}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_editTextStyle com.socialbeat.influencer:editTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_editTextStyle com.socialbeat.influencer:editTextStyle}</code></td><td>Default EditText style.</td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_floatingActionButtonStyle com.socialbeat.influencer:floatingActionButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_materialButtonStyle com.socialbeat.influencer:materialButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_materialCardViewStyle com.socialbeat.influencer:materialCardViewStyle}</code></td><td></td></tr>
@@ -22411,11 +23417,11 @@ public final class R {
       0x7f04004b, 0x7f04004c, 0x7f040075, 0x7f04007f, 
       0x7f040083, 0x7f040098, 0x7f040099, 0x7f04009f, 
       0x7f0400a0, 0x7f0400a2, 0x7f0400ed, 0x7f04011d, 
-      0x7f0401b3, 0x7f0401b4, 0x7f0401f2, 0x7f04022f, 
-      0x7f040241, 0x7f040275, 0x7f04027b, 0x7f04027c, 
-      0x7f04027d, 0x7f04027e, 0x7f04027f, 0x7f040280, 
-      0x7f040281, 0x7f040282, 0x7f040283, 0x7f040284, 
-      0x7f040289, 0x7f04028e, 0x7f04028f, 0x7f040293
+      0x7f0401b3, 0x7f0401b4, 0x7f0401f3, 0x7f040230, 
+      0x7f040242, 0x7f040276, 0x7f04027c, 0x7f04027d, 
+      0x7f04027e, 0x7f04027f, 0x7f040280, 0x7f040281, 
+      0x7f040282, 0x7f040283, 0x7f040284, 0x7f040285, 
+      0x7f04028a, 0x7f04028f, 0x7f040290, 0x7f040294
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#bottomSheetDialogTheme}
@@ -22478,8 +23484,10 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_chipStyle=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorAccent}
-     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
+     * <p>
+     * @attr description
+     * Bright complement to the primary branding color. By default, this is the color applied
+     * to framework controls (via colorControlActivated).
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -22489,8 +23497,9 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorAccent=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorBackgroundFloating}
-     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
+     * <p>
+     * @attr description
+     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -22500,8 +23509,10 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorBackgroundFloating=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorPrimary}
-     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
+     * <p>
+     * @attr description
+     * The primary branding color for the app. By default, this is the color applied to the
+     * action bar background.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -22511,8 +23522,10 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorPrimary=7;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#colorPrimaryDark}
-     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
+     * <p>
+     * @attr description
+     * Dark variant of the primary branding color. By default, this is the color applied to
+     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -22533,8 +23546,9 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorSecondary=9;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#editTextStyle}
-     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
+     * <p>
+     * @attr description
+     * Default EditText style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -22843,8 +23857,9 @@ public final class R {
       0x010101df, 0x010101e0
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#enabled}
-     * attribute's value can be found in the {@link #MenuGroup} array.
+     * <p>
+     * @attr description
+     * Whether the items are enabled.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -22853,8 +23868,9 @@ public final class R {
      */
     public static final int MenuGroup_android_enabled=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#id}
-     * attribute's value can be found in the {@link #MenuGroup} array.
+     * <p>
+     * @attr description
+     * The ID of the group.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -22865,8 +23881,9 @@ public final class R {
      */
     public static final int MenuGroup_android_id=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#visible}
-     * attribute's value can be found in the {@link #MenuGroup} array.
+     * <p>
+     * @attr description
+     * Whether the items are shown/visible.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -22875,8 +23892,10 @@ public final class R {
      */
     public static final int MenuGroup_android_visible=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#menuCategory}
-     * attribute's value can be found in the {@link #MenuGroup} array.
+     * <p>
+     * @attr description
+     * The category applied to all items within this group.
+     * (This will be or'ed with the orderInCategory attribute.)
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -22894,8 +23913,10 @@ public final class R {
      */
     public static final int MenuGroup_android_menuCategory=3;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#orderInCategory}
-     * attribute's value can be found in the {@link #MenuGroup} array.
+     * <p>
+     * @attr description
+     * The order within the category applied to all items within this group.
+     * (This will be or'ed with the category attribute.)
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -22903,8 +23924,9 @@ public final class R {
      */
     public static final int MenuGroup_android_orderInCategory=4;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#checkableBehavior}
-     * attribute's value can be found in the {@link #MenuGroup} array.
+     * <p>
+     * @attr description
+     * Whether the items are capable of displaying a check mark.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -22940,16 +23962,18 @@ public final class R {
      * <tr><td><code>{@link #MenuItem_android_numericShortcut android:numericShortcut}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuItem_android_onClick android:onClick}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_actionLayout com.socialbeat.influencer:actionLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_actionProviderClass com.socialbeat.influencer:actionProviderClass}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_actionViewClass com.socialbeat.influencer:actionViewClass}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_alphabeticModifiers com.socialbeat.influencer:alphabeticModifiers}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_contentDescription com.socialbeat.influencer:contentDescription}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_iconTint com.socialbeat.influencer:iconTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_iconTintMode com.socialbeat.influencer:iconTintMode}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_numericModifiers com.socialbeat.influencer:numericModifiers}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_showAsAction com.socialbeat.influencer:showAsAction}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_tooltipText com.socialbeat.influencer:tooltipText}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionLayout com.socialbeat.influencer:actionLayout}</code></td><td>An optional layout to be used as an action view.</td></tr>
+     * <tr><td><code>{@link #MenuItem_actionProviderClass com.socialbeat.influencer:actionProviderClass}</code></td><td>The name of an optional ActionProvider class to instantiate an action view
+     * and perform operations such as default action for that menu item.</td></tr>
+     * <tr><td><code>{@link #MenuItem_actionViewClass com.socialbeat.influencer:actionViewClass}</code></td><td>The name of an optional View class to instantiate and use as an
+     * action view.</td></tr>
+     * <tr><td><code>{@link #MenuItem_alphabeticModifiers com.socialbeat.influencer:alphabeticModifiers}</code></td><td>The alphabetic modifier key.</td></tr>
+     * <tr><td><code>{@link #MenuItem_contentDescription com.socialbeat.influencer:contentDescription}</code></td><td>The content description associated with the item.</td></tr>
+     * <tr><td><code>{@link #MenuItem_iconTint com.socialbeat.influencer:iconTint}</code></td><td>Tint to apply to the icon.</td></tr>
+     * <tr><td><code>{@link #MenuItem_iconTintMode com.socialbeat.influencer:iconTintMode}</code></td><td>Blending mode used to apply the icon tint.</td></tr>
+     * <tr><td><code>{@link #MenuItem_numericModifiers com.socialbeat.influencer:numericModifiers}</code></td><td>The numeric modifier key.</td></tr>
+     * <tr><td><code>{@link #MenuItem_showAsAction com.socialbeat.influencer:showAsAction}</code></td><td>How this item should display in the Action Bar, if present.</td></tr>
+     * <tr><td><code>{@link #MenuItem_tooltipText com.socialbeat.influencer:tooltipText}</code></td><td>The tooltip text associated with the item.</td></tr>
      * </table>
      * @see #MenuItem_android_icon
      * @see #MenuItem_android_enabled
@@ -22981,11 +24005,13 @@ public final class R {
       0x010101e2, 0x010101e3, 0x010101e4, 0x010101e5, 
       0x0101026f, 0x7f04000d, 0x7f04001f, 0x7f040020, 
       0x7f04002b, 0x7f0400b7, 0x7f040141, 0x7f040142, 
-      0x7f0401f3, 0x7f040237, 0x7f0402af
+      0x7f0401f4, 0x7f040238, 0x7f0402b0
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#icon}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The icon associated with this item.  This icon will not always be shown, so
+     * the title should be sufficient in describing this item.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -22996,8 +24022,9 @@ public final class R {
      */
     public static final int MenuItem_android_icon=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#enabled}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * Whether the item is enabled.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -23006,8 +24033,9 @@ public final class R {
      */
     public static final int MenuItem_android_enabled=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#id}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The ID of the item.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23018,8 +24046,10 @@ public final class R {
      */
     public static final int MenuItem_android_id=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#checked}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * Whether the item is checked.  Note that you must first have enabled checking with
+     * the checkable attribute or else the check mark will not appear.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -23028,8 +24058,9 @@ public final class R {
      */
     public static final int MenuItem_android_checked=3;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#visible}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * Whether the item is shown/visible.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -23038,8 +24069,10 @@ public final class R {
      */
     public static final int MenuItem_android_visible=4;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#menuCategory}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The category applied to the item.
+     * (This will be or'ed with the orderInCategory attribute.)
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -23057,8 +24090,10 @@ public final class R {
      */
     public static final int MenuItem_android_menuCategory=5;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#orderInCategory}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The order within the category applied to the item.
+     * (This will be or'ed with the category attribute.)
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -23066,8 +24101,9 @@ public final class R {
      */
     public static final int MenuItem_android_orderInCategory=6;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#title}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The title associated with the item.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -23076,8 +24112,10 @@ public final class R {
      */
     public static final int MenuItem_android_title=7;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#titleCondensed}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The condensed title associated with the item.  This is used in situations where the
+     * normal title may be too long to be displayed.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -23086,8 +24124,10 @@ public final class R {
      */
     public static final int MenuItem_android_titleCondensed=8;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#alphabeticShortcut}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The alphabetic shortcut key.  This is the shortcut when using a keyboard
+     * with alphabetic keys.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -23096,8 +24136,10 @@ public final class R {
      */
     public static final int MenuItem_android_alphabeticShortcut=9;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#numericShortcut}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The numeric shortcut key.  This is the shortcut when using a numeric (e.g., 12-key)
+     * keyboard.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -23106,8 +24148,9 @@ public final class R {
      */
     public static final int MenuItem_android_numericShortcut=10;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#checkable}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * Whether the item is capable of displaying a check mark.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -23116,8 +24159,10 @@ public final class R {
      */
     public static final int MenuItem_android_checkable=11;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#onClick}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * Name of a method on the Context used to inflate the menu that will be
+     * called when the item is clicked.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -23126,8 +24171,11 @@ public final class R {
      */
     public static final int MenuItem_android_onClick=12;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionLayout}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * An optional layout to be used as an action view.
+     * See {@link android.view.MenuItem#setActionView(android.view.View)}
+     * for more info.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23138,8 +24186,12 @@ public final class R {
      */
     public static final int MenuItem_actionLayout=13;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionProviderClass}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The name of an optional ActionProvider class to instantiate an action view
+     * and perform operations such as default action for that menu item.
+     * See {@link android.view.MenuItem#setActionProvider(android.view.ActionProvider)}
+     * for more info.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -23148,8 +24200,11 @@ public final class R {
      */
     public static final int MenuItem_actionProviderClass=14;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#actionViewClass}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The name of an optional View class to instantiate and use as an
+     * action view. See {@link android.view.MenuItem#setActionView(android.view.View)}
+     * for more info.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -23158,8 +24213,10 @@ public final class R {
      */
     public static final int MenuItem_actionViewClass=15;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#alphabeticModifiers}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The alphabetic modifier key. This is the modifier when using a keyboard
+     * with alphabetic keys. The values should be kept in sync with KeyEvent
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -23179,8 +24236,9 @@ public final class R {
      */
     public static final int MenuItem_alphabeticModifiers=16;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentDescription}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The content description associated with the item.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -23189,8 +24247,9 @@ public final class R {
      */
     public static final int MenuItem_contentDescription=17;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#iconTint}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the icon.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -23200,8 +24259,9 @@ public final class R {
      */
     public static final int MenuItem_iconTint=18;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#iconTintMode}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the icon tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -23209,20 +24269,27 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the icon with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the icon, but with the icon’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the icon. The icon’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the icon.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:iconTintMode
      */
     public static final int MenuItem_iconTintMode=19;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#numericModifiers}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The numeric modifier key. This is the modifier when using a numeric (e.g., 12-key)
+     * keyboard. The values should be kept in sync with KeyEvent
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -23242,8 +24309,9 @@ public final class R {
      */
     public static final int MenuItem_numericModifiers=20;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#showAsAction}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * How this item should display in the Action Bar, if present.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -23251,19 +24319,29 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>always</td><td>2</td><td></td></tr>
-     * <tr><td>collapseActionView</td><td>8</td><td></td></tr>
-     * <tr><td>ifRoom</td><td>1</td><td></td></tr>
-     * <tr><td>never</td><td>0</td><td></td></tr>
-     * <tr><td>withText</td><td>4</td><td></td></tr>
+     * <tr><td>always</td><td>2</td><td>Always show this item in an actionbar, even if it would override
+     * the system's limits of how much stuff to put there. This may make
+     * your action bar look bad on some screens. In most cases you should
+     * use "ifRoom" instead. Mutually exclusive with "ifRoom" and "never".</td></tr>
+     * <tr><td>collapseActionView</td><td>8</td><td>This item's action view collapses to a normal menu
+     * item. When expanded, the action view takes over a
+     * larger segment of its container.</td></tr>
+     * <tr><td>ifRoom</td><td>1</td><td>Show this item in an action bar if there is room for it as determined
+     * by the system. Favor this option over "always" where possible.
+     * Mutually exclusive with "never" and "always".</td></tr>
+     * <tr><td>never</td><td>0</td><td>Never show this item in an action bar, show it in the overflow menu instead.
+     * Mutually exclusive with "ifRoom" and "always".</td></tr>
+     * <tr><td>withText</td><td>4</td><td>When this item is shown as an action in the action bar, show a text
+     * label with it even if it has an icon representation.</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:showAsAction
      */
     public static final int MenuItem_showAsAction=21;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#tooltipText}
-     * attribute's value can be found in the {@link #MenuItem} array.
+     * <p>
+     * @attr description
+     * The tooltip text associated with the item.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -23285,8 +24363,8 @@ public final class R {
      * <tr><td><code>{@link #MenuView_android_headerBackground android:headerBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuView_android_itemBackground android:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuView_android_itemIconDisabledAlpha android:itemIconDisabledAlpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuView_preserveIconSpacing com.socialbeat.influencer:preserveIconSpacing}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuView_subMenuArrow com.socialbeat.influencer:subMenuArrow}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_preserveIconSpacing com.socialbeat.influencer:preserveIconSpacing}</code></td><td>Whether space should be reserved in layout when an icon is missing.</td></tr>
+     * <tr><td><code>{@link #MenuView_subMenuArrow com.socialbeat.influencer:subMenuArrow}</code></td><td>Drawable for the arrow icon indicating a particular item is a submenu.</td></tr>
      * </table>
      * @see #MenuView_android_windowAnimationStyle
      * @see #MenuView_android_itemTextAppearance
@@ -23300,12 +24378,13 @@ public final class R {
      */
     public static final int[] MenuView={
       0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e, 
-      0x0101012f, 0x01010130, 0x01010131, 0x7f040214, 
-      0x7f040254
+      0x0101012f, 0x01010130, 0x01010131, 0x7f040215, 
+      0x7f040255
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#windowAnimationStyle}
-     * attribute's value can be found in the {@link #MenuView} array.
+     * <p>
+     * @attr description
+     * Default animations for the menu.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23316,8 +24395,9 @@ public final class R {
      */
     public static final int MenuView_android_windowAnimationStyle=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#itemTextAppearance}
-     * attribute's value can be found in the {@link #MenuView} array.
+     * <p>
+     * @attr description
+     * Default appearance of menu item text.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23328,8 +24408,9 @@ public final class R {
      */
     public static final int MenuView_android_itemTextAppearance=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#horizontalDivider}
-     * attribute's value can be found in the {@link #MenuView} array.
+     * <p>
+     * @attr description
+     * Default horizontal divider between rows of menu items.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23340,8 +24421,9 @@ public final class R {
      */
     public static final int MenuView_android_horizontalDivider=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#verticalDivider}
-     * attribute's value can be found in the {@link #MenuView} array.
+     * <p>
+     * @attr description
+     * Default vertical divider between menu items.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23352,8 +24434,9 @@ public final class R {
      */
     public static final int MenuView_android_verticalDivider=3;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#headerBackground}
-     * attribute's value can be found in the {@link #MenuView} array.
+     * <p>
+     * @attr description
+     * Default background for the menu header.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23367,8 +24450,9 @@ public final class R {
      */
     public static final int MenuView_android_headerBackground=4;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#itemBackground}
-     * attribute's value can be found in the {@link #MenuView} array.
+     * <p>
+     * @attr description
+     * Default background for each menu item.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23382,8 +24466,9 @@ public final class R {
      */
     public static final int MenuView_android_itemBackground=5;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#itemIconDisabledAlpha}
-     * attribute's value can be found in the {@link #MenuView} array.
+     * <p>
+     * @attr description
+     * Default disabled icon alpha for each menu item that shows an icon.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -23391,8 +24476,9 @@ public final class R {
      */
     public static final int MenuView_android_itemIconDisabledAlpha=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#preserveIconSpacing}
-     * attribute's value can be found in the {@link #MenuView} array.
+     * <p>
+     * @attr description
+     * Whether space should be reserved in layout when an icon is missing.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -23401,8 +24487,9 @@ public final class R {
      */
     public static final int MenuView_preserveIconSpacing=7;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#subMenuArrow}
-     * attribute's value can be found in the {@link #MenuView} array.
+     * <p>
+     * @attr description
+     * Drawable for the arrow icon indicating a particular item is a submenu.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23434,8 +24521,8 @@ public final class R {
      * @see #MockView_mock_showLabel
      */
     public static final int[] MockView={
-      0x7f0401e6, 0x7f0401e7, 0x7f0401e8, 0x7f0401e9, 
-      0x7f0401ea, 0x7f0401eb
+      0x7f0401e7, 0x7f0401e8, 0x7f0401e9, 0x7f0401ea, 
+      0x7f0401eb, 0x7f0401ec
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#mock_diagonalsColor}
@@ -23520,8 +24607,8 @@ public final class R {
      * @see #Motion_transitionPathRotate
      */
     public static final int[] Motion={
-      0x7f04002d, 0x7f0400e5, 0x7f040207, 0x7f0402b7, 
-      0x7f0402b8
+      0x7f04002d, 0x7f0400e5, 0x7f040208, 0x7f0402b8, 
+      0x7f0402b9
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#animate_relativeTo}
@@ -23619,7 +24706,7 @@ public final class R {
      * @see #MotionHelper_onShow
      */
     public static final int[] MotionHelper={
-      0x7f0401f5, 0x7f0401f8
+      0x7f0401f6, 0x7f0401f9
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#onHide}
@@ -23663,8 +24750,8 @@ public final class R {
      * @see #MotionLayout_showPaths
      */
     public static final int[] MotionLayout={
-      0x7f04002e, 0x7f0400cd, 0x7f04015d, 0x7f0401ec, 
-      0x7f040216, 0x7f04023a
+      0x7f04002e, 0x7f0400cd, 0x7f04015d, 0x7f0401ed, 
+      0x7f040217, 0x7f04023b
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#applyMotionScene}
@@ -23960,7 +25047,7 @@ public final class R {
      * @see #OnClick_target
      */
     public static final int[] OnClick={
-      0x7f04008a, 0x7f040279
+      0x7f04008a, 0x7f04027a
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#clickAction}
@@ -24019,7 +25106,7 @@ public final class R {
      */
     public static final int[] OnSwipe={
       0x7f0400e3, 0x7f0400e4, 0x7f0401b5, 0x7f0401ba, 
-      0x7f0401ed, 0x7f0402b0, 0x7f0402b1
+      0x7f0401ee, 0x7f0402b1, 0x7f0402b2
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#dragDirection}
@@ -24117,14 +25204,14 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #PopupWindow_android_popupAnimationStyle android:popupAnimationStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #PopupWindow_overlapAnchor com.socialbeat.influencer:overlapAnchor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #PopupWindow_overlapAnchor com.socialbeat.influencer:overlapAnchor}</code></td><td>Whether the popup window should overlap its anchor view.</td></tr>
      * </table>
      * @see #PopupWindow_android_popupBackground
      * @see #PopupWindow_android_popupAnimationStyle
      * @see #PopupWindow_overlapAnchor
      */
     public static final int[] PopupWindow={
-      0x01010176, 0x010102c9, 0x7f0401fa
+      0x01010176, 0x010102c9, 0x7f0401fb
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
@@ -24154,8 +25241,9 @@ public final class R {
      */
     public static final int PopupWindow_android_popupAnimationStyle=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#overlapAnchor}
-     * attribute's value can be found in the {@link #PopupWindow} array.
+     * <p>
+     * @attr description
+     * Whether the popup window should overlap its anchor view.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -24170,16 +25258,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.socialbeat.influencer:state_above_anchor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.socialbeat.influencer:state_above_anchor}</code></td><td>State identifier indicating the popup will be above the anchor.</td></tr>
      * </table>
      * @see #PopupWindowBackgroundState_state_above_anchor
      */
     public static final int[] PopupWindowBackgroundState={
-      0x7f04024b
+      0x7f04024c
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#state_above_anchor}
-     * attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
+     * <p>
+     * @attr description
+     * State identifier indicating the popup will be above the anchor.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -24203,7 +25292,7 @@ public final class R {
      * @see #PropertySet_visibility
      */
     public static final int[] PropertySet={
-      0x7f04002a, 0x7f040216, 0x7f0402c1
+      0x7f04002a, 0x7f040217, 0x7f0402c2
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#alpha}
@@ -24248,18 +25337,19 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #RecycleListView_paddingBottomNoButtons com.socialbeat.influencer:paddingBottomNoButtons}</code></td><td></td></tr>
-     * <tr><td><code>{@link #RecycleListView_paddingTopNoTitle com.socialbeat.influencer:paddingTopNoTitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #RecycleListView_paddingBottomNoButtons com.socialbeat.influencer:paddingBottomNoButtons}</code></td><td>Bottom padding to use when no buttons are present.</td></tr>
+     * <tr><td><code>{@link #RecycleListView_paddingTopNoTitle com.socialbeat.influencer:paddingTopNoTitle}</code></td><td>Top padding to use when no title is present.</td></tr>
      * </table>
      * @see #RecycleListView_paddingBottomNoButtons
      * @see #RecycleListView_paddingTopNoTitle
      */
     public static final int[] RecycleListView={
-      0x7f0401fb, 0x7f0401fe
+      0x7f0401fc, 0x7f0401ff
     };
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#paddingBottomNoButtons}
-     * attribute's value can be found in the {@link #RecycleListView} array.
+     * <p>
+     * @attr description
+     * Bottom padding to use when no buttons are present.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -24271,8 +25361,9 @@ public final class R {
      */
     public static final int RecycleListView_paddingBottomNoButtons=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#paddingTopNoTitle}
-     * attribute's value can be found in the {@link #RecycleListView} array.
+     * <p>
+     * @attr description
+     * Top padding to use when no title is present.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -24297,7 +25388,7 @@ public final class R {
      * <tr><td><code>{@link #RecyclerView_fastScrollHorizontalTrackDrawable com.socialbeat.influencer:fastScrollHorizontalTrackDrawable}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_fastScrollVerticalThumbDrawable com.socialbeat.influencer:fastScrollVerticalThumbDrawable}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_fastScrollVerticalTrackDrawable com.socialbeat.influencer:fastScrollVerticalTrackDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #RecyclerView_layoutManager com.socialbeat.influencer:layoutManager}</code></td><td></td></tr>
+     * <tr><td><code>{@link #RecyclerView_layoutManager com.socialbeat.influencer:layoutManager}</code></td><td>Class name of the Layout Manager to be used.</td></tr>
      * <tr><td><code>{@link #RecyclerView_reverseLayout com.socialbeat.influencer:reverseLayout}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_spanCount com.socialbeat.influencer:spanCount}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_stackFromEnd com.socialbeat.influencer:stackFromEnd}</code></td><td></td></tr>
@@ -24317,7 +25408,7 @@ public final class R {
     public static final int[] RecyclerView={
       0x010100c4, 0x010100f1, 0x7f040117, 0x7f040118, 
       0x7f040119, 0x7f04011a, 0x7f04011b, 0x7f04015e, 
-      0x7f040223, 0x7f040243, 0x7f040249
+      0x7f040224, 0x7f040244, 0x7f04024a
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -24413,8 +25504,17 @@ public final class R {
      */
     public static final int RecyclerView_fastScrollVerticalTrackDrawable=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#layoutManager}
-     * attribute's value can be found in the {@link #RecyclerView} array.
+     * <p>
+     * @attr description
+     * Class name of the Layout Manager to be used.
+     * <p/>
+     * The class must extandroidx.recyclerview.widget.RecyclerViewView$LayoutManager
+     * and have either a default constructor or constructor with the signature
+     * (android.content.Context, android.util.AttributeSet, int, int).
+     * <p/>
+     * If the name starts with a '.', application package is prefixed.
+     * Else, if the name contains a '.', the classname is assumed to be a full class name.
+     * Else, the recycler view package naandroidx.appcompat.widgetdget) is prefixed.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -24518,19 +25618,20 @@ public final class R {
      * <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_closeIcon com.socialbeat.influencer:closeIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_commitIcon com.socialbeat.influencer:commitIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_defaultQueryHint com.socialbeat.influencer:defaultQueryHint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_goIcon com.socialbeat.influencer:goIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_iconifiedByDefault com.socialbeat.influencer:iconifiedByDefault}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_layout com.socialbeat.influencer:layout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_queryBackground com.socialbeat.influencer:queryBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_queryHint com.socialbeat.influencer:queryHint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_searchHintIcon com.socialbeat.influencer:searchHintIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_searchIcon com.socialbeat.influencer:searchIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_submitBackground com.socialbeat.influencer:submitBackground}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_suggestionRowLayout com.socialbeat.influencer:suggestionRowLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_voiceIcon com.socialbeat.influencer:voiceIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_closeIcon com.socialbeat.influencer:closeIcon}</code></td><td>Close button icon</td></tr>
+     * <tr><td><code>{@link #SearchView_commitIcon com.socialbeat.influencer:commitIcon}</code></td><td>Commit icon shown in the query suggestion row</td></tr>
+     * <tr><td><code>{@link #SearchView_defaultQueryHint com.socialbeat.influencer:defaultQueryHint}</code></td><td>Default query hint used when {@code queryHint} is undefined and
+     * the search view's {@code SearchableInfo} does not provide a hint.</td></tr>
+     * <tr><td><code>{@link #SearchView_goIcon com.socialbeat.influencer:goIcon}</code></td><td>Go button icon</td></tr>
+     * <tr><td><code>{@link #SearchView_iconifiedByDefault com.socialbeat.influencer:iconifiedByDefault}</code></td><td>The default state of the SearchView.</td></tr>
+     * <tr><td><code>{@link #SearchView_layout com.socialbeat.influencer:layout}</code></td><td>The layout to use for the search view.</td></tr>
+     * <tr><td><code>{@link #SearchView_queryBackground com.socialbeat.influencer:queryBackground}</code></td><td>Background for the section containing the search query</td></tr>
+     * <tr><td><code>{@link #SearchView_queryHint com.socialbeat.influencer:queryHint}</code></td><td>An optional user-defined query hint string to be displayed in the empty query field.</td></tr>
+     * <tr><td><code>{@link #SearchView_searchHintIcon com.socialbeat.influencer:searchHintIcon}</code></td><td>Search icon displayed as a text field hint</td></tr>
+     * <tr><td><code>{@link #SearchView_searchIcon com.socialbeat.influencer:searchIcon}</code></td><td>Search icon</td></tr>
+     * <tr><td><code>{@link #SearchView_submitBackground com.socialbeat.influencer:submitBackground}</code></td><td>Background for the section containing the action (e.g.</td></tr>
+     * <tr><td><code>{@link #SearchView_suggestionRowLayout com.socialbeat.influencer:suggestionRowLayout}</code></td><td>Layout for query suggestion rows</td></tr>
+     * <tr><td><code>{@link #SearchView_voiceIcon com.socialbeat.influencer:voiceIcon}</code></td><td>Voice button icon</td></tr>
      * </table>
      * @see #SearchView_android_focusable
      * @see #SearchView_android_maxWidth
@@ -24553,9 +25654,9 @@ public final class R {
     public static final int[] SearchView={
       0x010100da, 0x0101011f, 0x01010220, 0x01010264, 
       0x7f04008b, 0x7f0400b0, 0x7f0400d7, 0x7f04012c, 
-      0x7f040143, 0x7f04015c, 0x7f040219, 0x7f04021a, 
-      0x7f040231, 0x7f040232, 0x7f040255, 0x7f04025a, 
-      0x7f0402c2
+      0x7f040143, 0x7f04015c, 0x7f04021a, 0x7f04021b, 
+      0x7f040232, 0x7f040233, 0x7f040256, 0x7f04025b, 
+      0x7f0402c3
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#focusable}
@@ -24576,8 +25677,9 @@ public final class R {
      */
     public static final int SearchView_android_focusable=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * An optional maximum width of the SearchView.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -24589,8 +25691,9 @@ public final class R {
      */
     public static final int SearchView_android_maxWidth=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#inputType}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * The input type to set on the query text field.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -24636,8 +25739,9 @@ public final class R {
      */
     public static final int SearchView_android_inputType=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#imeOptions}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * The IME options to set on the query text field.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -24668,8 +25772,9 @@ public final class R {
      */
     public static final int SearchView_android_imeOptions=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#closeIcon}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * Close button icon
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24680,8 +25785,9 @@ public final class R {
      */
     public static final int SearchView_closeIcon=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#commitIcon}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * Commit icon shown in the query suggestion row
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24692,8 +25798,10 @@ public final class R {
      */
     public static final int SearchView_commitIcon=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#defaultQueryHint}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * Default query hint used when {@code queryHint} is undefined and
+     * the search view's {@code SearchableInfo} does not provide a hint.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -24702,8 +25810,9 @@ public final class R {
      */
     public static final int SearchView_defaultQueryHint=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#goIcon}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * Go button icon
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24714,8 +25823,10 @@ public final class R {
      */
     public static final int SearchView_goIcon=7;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#iconifiedByDefault}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * The default state of the SearchView. If true, it will be iconified when not in
+     * use and expanded when clicked.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -24724,8 +25835,9 @@ public final class R {
      */
     public static final int SearchView_iconifiedByDefault=8;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#layout}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * The layout to use for the search view.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24736,8 +25848,9 @@ public final class R {
      */
     public static final int SearchView_layout=9;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#queryBackground}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * Background for the section containing the search query
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24748,8 +25861,9 @@ public final class R {
      */
     public static final int SearchView_queryBackground=10;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#queryHint}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * An optional user-defined query hint string to be displayed in the empty query field.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -24758,8 +25872,9 @@ public final class R {
      */
     public static final int SearchView_queryHint=11;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#searchHintIcon}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * Search icon displayed as a text field hint
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24770,8 +25885,9 @@ public final class R {
      */
     public static final int SearchView_searchHintIcon=12;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#searchIcon}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * Search icon
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24782,8 +25898,9 @@ public final class R {
      */
     public static final int SearchView_searchIcon=13;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#submitBackground}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * Background for the section containing the action (e.g. voice search)
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24794,8 +25911,9 @@ public final class R {
      */
     public static final int SearchView_submitBackground=14;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#suggestionRowLayout}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * Layout for query suggestion rows
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24806,8 +25924,9 @@ public final class R {
      */
     public static final int SearchView_suggestionRowLayout=15;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#voiceIcon}
-     * attribute's value can be found in the {@link #SearchView} array.
+     * <p>
+     * @attr description
+     * Voice button icon
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24833,7 +25952,7 @@ public final class R {
      * @see #SignInButton_scopeUris
      */
     public static final int[] SignInButton={
-      0x7f04005f, 0x7f0400a1, 0x7f04022d
+      0x7f04005f, 0x7f0400a1, 0x7f04022e
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#buttonSize}
@@ -24907,7 +26026,7 @@ public final class R {
      * @see #Snackbar_snackbarStyle
      */
     public static final int[] Snackbar={
-      0x7f040241, 0x7f040242
+      0x7f040242, 0x7f040243
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#snackbarButtonStyle}
@@ -25001,7 +26120,8 @@ public final class R {
      * <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #Spinner_android_prompt android:prompt}</code></td><td></td></tr>
      * <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Spinner_popupTheme com.socialbeat.influencer:popupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_popupTheme com.socialbeat.influencer:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
+     * shown by widgets in the action bar.</td></tr>
      * </table>
      * @see #Spinner_android_entries
      * @see #Spinner_android_popupBackground
@@ -25011,11 +26131,12 @@ public final class R {
      */
     public static final int[] Spinner={
       0x010100b2, 0x01010176, 0x0101017b, 0x01010262, 
-      0x7f040212
+      0x7f040213
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#entries}
-     * attribute's value can be found in the {@link #Spinner} array.
+     * <p>
+     * @attr description
+     * Reference to an array resource that will populate the Spinner.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25026,8 +26147,9 @@ public final class R {
      */
     public static final int Spinner_android_entries=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
-     * attribute's value can be found in the {@link #Spinner} array.
+     * <p>
+     * @attr description
+     * Background drawable to use for the dropdown in spinnerMode="dropdown".
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25041,8 +26163,9 @@ public final class R {
      */
     public static final int Spinner_android_popupBackground=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#prompt}
-     * attribute's value can be found in the {@link #Spinner} array.
+     * <p>
+     * @attr description
+     * The prompt to display when the spinner's dialog is shown.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25053,8 +26176,9 @@ public final class R {
      */
     public static final int Spinner_android_prompt=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#dropDownWidth}
-     * attribute's value can be found in the {@link #Spinner} array.
+     * <p>
+     * @attr description
+     * Width of the dropdown in spinnerMode="dropdown".
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -25076,8 +26200,9 @@ public final class R {
      */
     public static final int Spinner_android_dropDownWidth=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#popupTheme}
-     * attribute's value can be found in the {@link #Spinner} array.
+     * <p>
+     * @attr description
+     * Theme to use for the drop-down or dialog popup window.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25153,8 +26278,11 @@ public final class R {
       0x0101030c, 0x0101030d
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#dither}
-     * attribute's value can be found in the {@link #StateListDrawable} array.
+     * <p>
+     * @attr description
+     * Enables or disables dithering of the bitmap if the bitmap does not have the
+     * same pixel configuration as the screen (for instance: a ARGB 8888 bitmap with
+     * an RGB 565 screen).
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25163,8 +26291,9 @@ public final class R {
      */
     public static final int StateListDrawable_android_dither=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#visible}
-     * attribute's value can be found in the {@link #StateListDrawable} array.
+     * <p>
+     * @attr description
+     * Indicates whether the drawable should be initially visible.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25173,8 +26302,14 @@ public final class R {
      */
     public static final int StateListDrawable_android_visible=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#variablePadding}
-     * attribute's value can be found in the {@link #StateListDrawable} array.
+     * <p>
+     * @attr description
+     * If true, allows the drawable's padding to change based on the
+     * current state that is selected.  If false, the padding will
+     * stay the same (based on the maximum padding of all the states).
+     * Enabling this feature requires that the owner of the drawable
+     * deal with performing layout when the state changes, which is
+     * often not supported.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25183,8 +26318,12 @@ public final class R {
      */
     public static final int StateListDrawable_android_variablePadding=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#constantSize}
-     * attribute's value can be found in the {@link #StateListDrawable} array.
+     * <p>
+     * @attr description
+     * If true, the drawable's reported internal size will remain
+     * constant as the state changes; the size is the maximum of all
+     * of the states.  If false, the size will vary based on the
+     * current state.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25193,8 +26332,9 @@ public final class R {
      */
     public static final int StateListDrawable_android_constantSize=3;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#enterFadeDuration}
-     * attribute's value can be found in the {@link #StateListDrawable} array.
+     * <p>
+     * @attr description
+     * Amount of time (in milliseconds) to fade in a new state drawable.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -25202,8 +26342,9 @@ public final class R {
      */
     public static final int StateListDrawable_android_enterFadeDuration=4;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#exitFadeDuration}
-     * attribute's value can be found in the {@link #StateListDrawable} array.
+     * <p>
+     * @attr description
+     * Amount of time (in milliseconds) to fade out an old state drawable.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -25225,8 +26366,10 @@ public final class R {
       0x01010199
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#drawable}
-     * attribute's value can be found in the {@link #StateListDrawableItem} array.
+     * <p>
+     * @attr description
+     * Reference to a drawable resource to use for the state. If not
+     * given, the drawable must be defined by the first child tag.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25272,17 +26415,17 @@ public final class R {
      * <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
      * <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
      * <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_showText com.socialbeat.influencer:showText}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_splitTrack com.socialbeat.influencer:splitTrack}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchMinWidth com.socialbeat.influencer:switchMinWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchPadding com.socialbeat.influencer:switchPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.socialbeat.influencer:switchTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.socialbeat.influencer:thumbTextPadding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTint com.socialbeat.influencer:thumbTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTintMode com.socialbeat.influencer:thumbTintMode}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_track com.socialbeat.influencer:track}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_trackTint com.socialbeat.influencer:trackTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_trackTintMode com.socialbeat.influencer:trackTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_showText com.socialbeat.influencer:showText}</code></td><td>Whether to draw on/off text.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_splitTrack com.socialbeat.influencer:splitTrack}</code></td><td>Whether to split the track and leave a gap for the thumb drawable.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchMinWidth com.socialbeat.influencer:switchMinWidth}</code></td><td>Minimum width for the switch component</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchPadding com.socialbeat.influencer:switchPadding}</code></td><td>Minimum space between the switch and caption text</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.socialbeat.influencer:switchTextAppearance}</code></td><td>TextAppearance style for text displayed on the switch thumb.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.socialbeat.influencer:thumbTextPadding}</code></td><td>Amount of padding on either side of text within the switch thumb.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTint com.socialbeat.influencer:thumbTint}</code></td><td>Tint to apply to the thumb drawable.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTintMode com.socialbeat.influencer:thumbTintMode}</code></td><td>Blending mode used to apply the thumb tint.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_track com.socialbeat.influencer:track}</code></td><td>Drawable to use as the "track" that the switch thumb slides within.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_trackTint com.socialbeat.influencer:trackTint}</code></td><td>Tint to apply to the track.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_trackTintMode com.socialbeat.influencer:trackTintMode}</code></td><td>Blending mode used to apply the track tint.</td></tr>
      * </table>
      * @see #SwitchCompat_android_textOn
      * @see #SwitchCompat_android_textOff
@@ -25300,14 +26443,15 @@ public final class R {
      * @see #SwitchCompat_trackTintMode
      */
     public static final int[] SwitchCompat={
-      0x01010124, 0x01010125, 0x01010142, 0x7f04023b, 
-      0x7f040247, 0x7f04025b, 0x7f04025c, 0x7f04025e, 
-      0x7f040297, 0x7f040298, 0x7f040299, 0x7f0402b2, 
-      0x7f0402b3, 0x7f0402b4
+      0x01010124, 0x01010125, 0x01010142, 0x7f04023c, 
+      0x7f040248, 0x7f04025c, 0x7f04025d, 0x7f04025f, 
+      0x7f040298, 0x7f040299, 0x7f04029a, 0x7f0402b3, 
+      0x7f0402b4, 0x7f0402b5
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#textOn}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Text to use when the switch is in the checked/"on" state.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -25316,8 +26460,9 @@ public final class R {
      */
     public static final int SwitchCompat_android_textOn=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#textOff}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Text to use when the switch is in the unchecked/"off" state.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -25326,8 +26471,9 @@ public final class R {
      */
     public static final int SwitchCompat_android_textOff=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#thumb}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Drawable to use as the "thumb" that switches back and forth.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25338,8 +26484,9 @@ public final class R {
      */
     public static final int SwitchCompat_android_thumb=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#showText}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Whether to draw on/off text.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25348,8 +26495,9 @@ public final class R {
      */
     public static final int SwitchCompat_showText=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#splitTrack}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Whether to split the track and leave a gap for the thumb drawable.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25358,8 +26506,9 @@ public final class R {
      */
     public static final int SwitchCompat_splitTrack=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#switchMinWidth}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Minimum width for the switch component
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -25371,8 +26520,9 @@ public final class R {
      */
     public static final int SwitchCompat_switchMinWidth=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#switchPadding}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Minimum space between the switch and caption text
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -25384,8 +26534,9 @@ public final class R {
      */
     public static final int SwitchCompat_switchPadding=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#switchTextAppearance}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * TextAppearance style for text displayed on the switch thumb.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25396,8 +26547,9 @@ public final class R {
      */
     public static final int SwitchCompat_switchTextAppearance=7;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#thumbTextPadding}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Amount of padding on either side of text within the switch thumb.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -25409,8 +26561,9 @@ public final class R {
      */
     public static final int SwitchCompat_thumbTextPadding=8;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#thumbTint}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the thumb drawable.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -25420,8 +26573,9 @@ public final class R {
      */
     public static final int SwitchCompat_thumbTint=9;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#thumbTintMode}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the thumb tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -25429,20 +26583,26 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:thumbTintMode
      */
     public static final int SwitchCompat_thumbTintMode=10;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#track}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Drawable to use as the "track" that the switch thumb slides within.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25453,8 +26613,9 @@ public final class R {
      */
     public static final int SwitchCompat_track=11;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#trackTint}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the track.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -25464,8 +26625,9 @@ public final class R {
      */
     public static final int SwitchCompat_trackTint=12;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#trackTintMode}
-     * attribute's value can be found in the {@link #SwitchCompat} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the track tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -25473,12 +26635,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:trackTintMode
@@ -25596,13 +26763,13 @@ public final class R {
      * @see #TabLayout_tabUnboundedRipple
      */
     public static final int[] TabLayout={
-      0x7f04025f, 0x7f040260, 0x7f040261, 0x7f040262, 
-      0x7f040263, 0x7f040264, 0x7f040265, 0x7f040266, 
-      0x7f040267, 0x7f040268, 0x7f040269, 0x7f04026a, 
-      0x7f04026b, 0x7f04026c, 0x7f04026d, 0x7f04026e, 
-      0x7f04026f, 0x7f040270, 0x7f040271, 0x7f040272, 
-      0x7f040273, 0x7f040274, 0x7f040276, 0x7f040277, 
-      0x7f040278
+      0x7f040260, 0x7f040261, 0x7f040262, 0x7f040263, 
+      0x7f040264, 0x7f040265, 0x7f040266, 0x7f040267, 
+      0x7f040268, 0x7f040269, 0x7f04026a, 0x7f04026b, 
+      0x7f04026c, 0x7f04026d, 0x7f04026e, 0x7f04026f, 
+      0x7f040270, 0x7f040271, 0x7f040272, 0x7f040273, 
+      0x7f040274, 0x7f040275, 0x7f040277, 0x7f040278, 
+      0x7f040279
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#tabBackground}
@@ -25943,8 +27110,8 @@ public final class R {
      * <tr><td><code>{@link #TextAppearance_android_shadowDy android:shadowDy}</code></td><td></td></tr>
      * <tr><td><code>{@link #TextAppearance_android_shadowRadius android:shadowRadius}</code></td><td></td></tr>
      * <tr><td><code>{@link #TextAppearance_android_fontFamily android:fontFamily}</code></td><td></td></tr>
-     * <tr><td><code>{@link #TextAppearance_fontFamily com.socialbeat.influencer:fontFamily}</code></td><td></td></tr>
-     * <tr><td><code>{@link #TextAppearance_textAllCaps com.socialbeat.influencer:textAllCaps}</code></td><td></td></tr>
+     * <tr><td><code>{@link #TextAppearance_fontFamily com.socialbeat.influencer:fontFamily}</code></td><td>The attribute for the font family.</td></tr>
+     * <tr><td><code>{@link #TextAppearance_textAllCaps com.socialbeat.influencer:textAllCaps}</code></td><td>Present the text in ALL CAPS.</td></tr>
      * </table>
      * @see #TextAppearance_android_textSize
      * @see #TextAppearance_android_typeface
@@ -25964,7 +27131,7 @@ public final class R {
       0x01010095, 0x01010096, 0x01010097, 0x01010098, 
       0x0101009a, 0x0101009b, 0x01010161, 0x01010162, 
       0x01010163, 0x01010164, 0x010103ac, 0x7f04011f, 
-      0x7f04027a
+      0x7f04027b
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textSize}
@@ -26110,8 +27277,9 @@ public final class R {
      */
     public static final int TextAppearance_android_fontFamily=10;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#fontFamily}
-     * attribute's value can be found in the {@link #TextAppearance} array.
+     * <p>
+     * @attr description
+     * The attribute for the font family.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -26120,8 +27288,9 @@ public final class R {
      */
     public static final int TextAppearance_fontFamily=11;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#textAllCaps}
-     * attribute's value can be found in the {@link #TextAppearance} array.
+     * <p>
+     * @attr description
+     * Present the text in ALL CAPS. This may use a small-caps form when available.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26204,8 +27373,8 @@ public final class R {
       0x7f040053, 0x7f040054, 0x7f040055, 0x7f0400c8, 
       0x7f0400c9, 0x7f0400ca, 0x7f0400cb, 0x7f0400f2, 
       0x7f0400f3, 0x7f04012f, 0x7f040130, 0x7f040131, 
-      0x7f040135, 0x7f040136, 0x7f040137, 0x7f040202, 
-      0x7f040203, 0x7f040204, 0x7f040205, 0x7f040206
+      0x7f040135, 0x7f040136, 0x7f040137, 0x7f040203, 
+      0x7f040204, 0x7f040205, 0x7f040206, 0x7f040207
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textColorHint}
@@ -26602,32 +27771,39 @@ public final class R {
      * <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_buttonGravity com.socialbeat.influencer:buttonGravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_collapseContentDescription com.socialbeat.influencer:collapseContentDescription}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_collapseIcon com.socialbeat.influencer:collapseIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetEnd com.socialbeat.influencer:contentInsetEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetEndWithActions com.socialbeat.influencer:contentInsetEndWithActions}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetLeft com.socialbeat.influencer:contentInsetLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetRight com.socialbeat.influencer:contentInsetRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetStart com.socialbeat.influencer:contentInsetStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetStartWithNavigation com.socialbeat.influencer:contentInsetStartWithNavigation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_logo com.socialbeat.influencer:logo}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_logoDescription com.socialbeat.influencer:logoDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseContentDescription com.socialbeat.influencer:collapseContentDescription}</code></td><td>Text to set as the content description for the collapse button.</td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseIcon com.socialbeat.influencer:collapseIcon}</code></td><td>Icon drawable to use for the collapse button.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetEnd com.socialbeat.influencer:contentInsetEnd}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetEndWithActions com.socialbeat.influencer:contentInsetEndWithActions}</code></td><td>Minimum inset for content views within a bar when actions from a menu
+     * are present.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetLeft com.socialbeat.influencer:contentInsetLeft}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetRight com.socialbeat.influencer:contentInsetRight}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetStart com.socialbeat.influencer:contentInsetStart}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetStartWithNavigation com.socialbeat.influencer:contentInsetStartWithNavigation}</code></td><td>Minimum inset for content views within a bar when a navigation button
+     * is present, such as the Up button.</td></tr>
+     * <tr><td><code>{@link #Toolbar_logo com.socialbeat.influencer:logo}</code></td><td>Specifies the drawable used for the application logo.</td></tr>
+     * <tr><td><code>{@link #Toolbar_logoDescription com.socialbeat.influencer:logoDescription}</code></td><td>A content description string to describe the appearance of the
+     * associated logo image.</td></tr>
      * <tr><td><code>{@link #Toolbar_maxButtonHeight com.socialbeat.influencer:maxButtonHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_navigationContentDescription com.socialbeat.influencer:navigationContentDescription}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_navigationIcon com.socialbeat.influencer:navigationIcon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_popupTheme com.socialbeat.influencer:popupTheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitle com.socialbeat.influencer:subtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationContentDescription com.socialbeat.influencer:navigationContentDescription}</code></td><td>Text to set as the content description for the navigation button
+     * located at the start of the toolbar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationIcon com.socialbeat.influencer:navigationIcon}</code></td><td>Icon drawable to use for the navigation button located at
+     * the start of the toolbar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_popupTheme com.socialbeat.influencer:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
+     * shown by widgets in the action bar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitle com.socialbeat.influencer:subtitle}</code></td><td>Specifies subtitle text used for navigationMode="normal"</td></tr>
      * <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.socialbeat.influencer:subtitleTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitleTextColor com.socialbeat.influencer:subtitleTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitleTextColor com.socialbeat.influencer:subtitleTextColor}</code></td><td>A color to apply to the subtitle string.</td></tr>
      * <tr><td><code>{@link #Toolbar_title com.socialbeat.influencer:title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMargin com.socialbeat.influencer:titleMargin}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginBottom com.socialbeat.influencer:titleMarginBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginEnd com.socialbeat.influencer:titleMarginEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginStart com.socialbeat.influencer:titleMarginStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginTop com.socialbeat.influencer:titleMarginTop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMargins com.socialbeat.influencer:titleMargins}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMargin com.socialbeat.influencer:titleMargin}</code></td><td>Specifies extra space on the left, start, right and end sides
+     * of the toolbar's title.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginBottom com.socialbeat.influencer:titleMarginBottom}</code></td><td>Specifies extra space on the bottom side of the toolbar's title.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginEnd com.socialbeat.influencer:titleMarginEnd}</code></td><td>Specifies extra space on the end side of the toolbar's title.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginStart com.socialbeat.influencer:titleMarginStart}</code></td><td>Specifies extra space on the start side of the toolbar's title.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginTop com.socialbeat.influencer:titleMarginTop}</code></td><td>Specifies extra space on the top side of the toolbar's title.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMargins com.socialbeat.influencer:titleMargins}</code></td><td>{@deprecated Use titleMargin}</td></tr>
      * <tr><td><code>{@link #Toolbar_titleTextAppearance com.socialbeat.influencer:titleTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleTextColor com.socialbeat.influencer:titleTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleTextColor com.socialbeat.influencer:titleTextColor}</code></td><td>A color to apply to the title string.</td></tr>
      * </table>
      * @see #Toolbar_android_gravity
      * @see #Toolbar_android_minHeight
@@ -26659,15 +27835,16 @@ public final class R {
      * @see #Toolbar_titleTextAppearance
      * @see #Toolbar_titleTextColor
      */
+    @Deprecated
     public static final int[] Toolbar={
       0x010100af, 0x01010140, 0x7f04005c, 0x7f040093, 
       0x7f040094, 0x7f0400b8, 0x7f0400b9, 0x7f0400ba, 
       0x7f0400bb, 0x7f0400bc, 0x7f0400bd, 0x7f0401b1, 
-      0x7f0401b2, 0x7f0401b7, 0x7f0401ef, 0x7f0401f0, 
-      0x7f040212, 0x7f040256, 0x7f040257, 0x7f040258, 
-      0x7f04029f, 0x7f0402a1, 0x7f0402a2, 0x7f0402a3, 
-      0x7f0402a4, 0x7f0402a5, 0x7f0402a6, 0x7f0402a7, 
-      0x7f0402a8
+      0x7f0401b2, 0x7f0401b7, 0x7f0401f0, 0x7f0401f1, 
+      0x7f040213, 0x7f040257, 0x7f040258, 0x7f040259, 
+      0x7f0402a0, 0x7f0402a2, 0x7f0402a3, 0x7f0402a4, 
+      0x7f0402a5, 0x7f0402a6, 0x7f0402a7, 0x7f0402a8, 
+      0x7f0402a9
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#gravity}
@@ -26721,16 +27898,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:buttonGravity
      */
     public static final int Toolbar_buttonGravity=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#collapseContentDescription}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Text to set as the content description for the collapse button.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -26739,8 +27917,9 @@ public final class R {
      */
     public static final int Toolbar_collapseContentDescription=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#collapseIcon}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Icon drawable to use for the collapse button.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26751,8 +27930,10 @@ public final class R {
      */
     public static final int Toolbar_collapseIcon=4;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetEnd}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26764,8 +27945,10 @@ public final class R {
      */
     public static final int Toolbar_contentInsetEnd=5;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetEndWithActions}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar when actions from a menu
+     * are present. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26777,8 +27960,10 @@ public final class R {
      */
     public static final int Toolbar_contentInsetEndWithActions=6;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetLeft}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26790,8 +27975,10 @@ public final class R {
      */
     public static final int Toolbar_contentInsetLeft=7;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetRight}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26803,8 +27990,10 @@ public final class R {
      */
     public static final int Toolbar_contentInsetRight=8;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetStart}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar. Navigation buttons and
+     * menu views are excepted. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26816,8 +28005,10 @@ public final class R {
      */
     public static final int Toolbar_contentInsetStart=9;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#contentInsetStartWithNavigation}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Minimum inset for content views within a bar when a navigation button
+     * is present, such as the Up button. Only valid for some themes and configurations.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26829,8 +28020,10 @@ public final class R {
      */
     public static final int Toolbar_contentInsetStartWithNavigation=10;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#logo}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Drawable to set as the logo that appears at the starting side of
+     * the Toolbar, just after the navigation button.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26841,8 +28034,10 @@ public final class R {
      */
     public static final int Toolbar_logo=11;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#logoDescription}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * A content description string to describe the appearance of the
+     * associated logo image.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -26864,8 +28059,10 @@ public final class R {
      */
     public static final int Toolbar_maxButtonHeight=13;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#navigationContentDescription}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Text to set as the content description for the navigation button
+     * located at the start of the toolbar.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -26874,8 +28071,10 @@ public final class R {
      */
     public static final int Toolbar_navigationContentDescription=14;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#navigationIcon}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Icon drawable to use for the navigation button located at
+     * the start of the toolbar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26886,8 +28085,10 @@ public final class R {
      */
     public static final int Toolbar_navigationIcon=15;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#popupTheme}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Reference to a theme that should be used to inflate popups
+     * shown by widgets in the toolbar.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26898,8 +28099,9 @@ public final class R {
      */
     public static final int Toolbar_popupTheme=16;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#subtitle}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Specifies subtitle text used for navigationMode="normal"
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -26920,8 +28122,9 @@ public final class R {
      */
     public static final int Toolbar_subtitleTextAppearance=18;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#subtitleTextColor}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * A color to apply to the subtitle string.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -26941,8 +28144,10 @@ public final class R {
      */
     public static final int Toolbar_title=20;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#titleMargin}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Specifies extra space on the left, start, right and end sides
+     * of the toolbar's title. Margin values should be positive.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26954,8 +28159,11 @@ public final class R {
      */
     public static final int Toolbar_titleMargin=21;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#titleMarginBottom}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Specifies extra space on the bottom side of the toolbar's title.
+     * If both this attribute and titleMargin are specified, then this
+     * attribute takes precedence. Margin values should be positive.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26967,8 +28175,11 @@ public final class R {
      */
     public static final int Toolbar_titleMarginBottom=22;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#titleMarginEnd}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Specifies extra space on the end side of the toolbar's title.
+     * If both this attribute and titleMargin are specified, then this
+     * attribute takes precedence. Margin values should be positive.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26980,8 +28191,11 @@ public final class R {
      */
     public static final int Toolbar_titleMarginEnd=23;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#titleMarginStart}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Specifies extra space on the start side of the toolbar's title.
+     * If both this attribute and titleMargin are specified, then this
+     * attribute takes precedence. Margin values should be positive.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26993,8 +28207,11 @@ public final class R {
      */
     public static final int Toolbar_titleMarginStart=24;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#titleMarginTop}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * Specifies extra space on the top side of the toolbar's title.
+     * If both this attribute and titleMargin are specified, then this
+     * attribute takes precedence. Margin values should be positive.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -27006,8 +28223,9 @@ public final class R {
      */
     public static final int Toolbar_titleMarginTop=25;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#titleMargins}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * {@deprecated Use titleMargin}
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -27017,6 +28235,7 @@ public final class R {
      *
      * @attr name com.socialbeat.influencer:titleMargins
      */
+    @Deprecated
     public static final int Toolbar_titleMargins=26;
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#titleTextAppearance}
@@ -27031,8 +28250,9 @@ public final class R {
      */
     public static final int Toolbar_titleTextAppearance=27;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#titleTextColor}
-     * attribute's value can be found in the {@link #Toolbar} array.
+     * <p>
+     * @attr description
+     * A color to apply to the title string.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -27079,10 +28299,10 @@ public final class R {
      * @see #Transform_translationZ
      */
     public static final int[] Transform={
-      0x7f0400ee, 0x7f04020e, 0x7f04020f, 0x7f040210, 
-      0x7f040225, 0x7f040226, 0x7f040227, 0x7f04022b, 
-      0x7f04022c, 0x7f0402b5, 0x7f0402b6, 0x7f0402b9, 
-      0x7f0402ba, 0x7f0402bb
+      0x7f0400ee, 0x7f04020f, 0x7f040210, 0x7f040211, 
+      0x7f040226, 0x7f040227, 0x7f040228, 0x7f04022c, 
+      0x7f04022d, 0x7f0402b6, 0x7f0402b7, 0x7f0402ba, 
+      0x7f0402bb, 0x7f0402bc
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#elevation}
@@ -27276,7 +28496,7 @@ public final class R {
      */
     public static final int[] Transition={
       0x010100d0, 0x7f0400b2, 0x7f0400b3, 0x7f0400ea, 
-      0x7f04014a, 0x7f04024a
+      0x7f04014a, 0x7f04024b
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#id}
@@ -27379,8 +28599,8 @@ public final class R {
      * @see #Variant_region_widthMoreThan
      */
     public static final int[] Variant={
-      0x7f0400b5, 0x7f04021f, 0x7f040220, 0x7f040221, 
-      0x7f040222
+      0x7f0400b5, 0x7f040220, 0x7f040221, 0x7f040222, 
+      0x7f040223
     };
     /**
      * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#constraints}
@@ -27455,9 +28675,9 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
      * <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #View_paddingEnd com.socialbeat.influencer:paddingEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #View_paddingStart com.socialbeat.influencer:paddingStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #View_theme com.socialbeat.influencer:theme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_paddingEnd com.socialbeat.influencer:paddingEnd}</code></td><td>Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
+     * <tr><td><code>{@link #View_paddingStart com.socialbeat.influencer:paddingStart}</code></td><td>Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
+     * <tr><td><code>{@link #View_theme com.socialbeat.influencer:theme}</code></td><td>Deprecated.</td></tr>
      * </table>
      * @see #View_android_theme
      * @see #View_android_focusable
@@ -27466,12 +28686,15 @@ public final class R {
      * @see #View_theme
      */
     public static final int[] View={
-      0x01010000, 0x010100da, 0x7f0401fc, 0x7f0401fd, 
-      0x7f040295
+      0x01010000, 0x010100da, 0x7f0401fd, 0x7f0401fe, 
+      0x7f040296
     };
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#theme}
-     * attribute's value can be found in the {@link #View} array.
+     * <p>
+     * @attr description
+     * Specifies a theme override for a view. When a theme override is set, the
+     * view will be inflated using a {@link android.content.Context} themed with
+     * the specified resource.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27482,8 +28705,14 @@ public final class R {
      */
     public static final int View_android_theme=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#focusable}
-     * attribute's value can be found in the {@link #View} array.
+     * <p>
+     * @attr description
+     * Boolean that controls whether a view can take focus.  By default the user can not
+     * move focus to a view; by setting this attribute to true the view is
+     * allowed to take focus.  This value does not impact the behavior of
+     * directly calling {@link android.view.View#requestFocus}, which will
+     * always request focus regardless of this view.  It only impacts where
+     * focus navigation will try to move focus.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -27500,8 +28729,9 @@ public final class R {
      */
     public static final int View_android_focusable=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#paddingEnd}
-     * attribute's value can be found in the {@link #View} array.
+     * <p>
+     * @attr description
+     * Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -27513,8 +28743,9 @@ public final class R {
      */
     public static final int View_paddingEnd=2;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#paddingStart}
-     * attribute's value can be found in the {@link #View} array.
+     * <p>
+     * @attr description
+     * Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -27526,8 +28757,9 @@ public final class R {
      */
     public static final int View_paddingStart=3;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#theme}
-     * attribute's value can be found in the {@link #View} array.
+     * <p>
+     * @attr description
+     * Deprecated.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27545,8 +28777,8 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.socialbeat.influencer:backgroundTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.socialbeat.influencer:backgroundTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.socialbeat.influencer:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.socialbeat.influencer:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
      * </table>
      * @see #ViewBackgroundHelper_android_background
      * @see #ViewBackgroundHelper_backgroundTint
@@ -27571,8 +28803,9 @@ public final class R {
      */
     public static final int ViewBackgroundHelper_android_background=0;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#backgroundTint}
-     * attribute's value can be found in the {@link #ViewBackgroundHelper} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the background.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -27582,8 +28815,9 @@ public final class R {
      */
     public static final int ViewBackgroundHelper_backgroundTint=1;
     /**
-     * <p>This symbol is the offset where the {@link com.socialbeat.influencer.R.attr#backgroundTintMode}
-     * attribute's value can be found in the {@link #ViewBackgroundHelper} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the background tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -27591,12 +28825,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td></td></tr>
-     * <tr><td>multiply</td><td>e</td><td></td></tr>
-     * <tr><td>screen</td><td>f</td><td></td></tr>
-     * <tr><td>src_atop</td><td>9</td><td></td></tr>
-     * <tr><td>src_in</td><td>5</td><td></td></tr>
-     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
+     * result to valid color values. Saturate(S + D)</td></tr>
+     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
+     * the tint. [Sa * Da, Sc * Dc]</td></tr>
+     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
+     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
+     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
+     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
+     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
+     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
+     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
      * @attr name com.socialbeat.influencer:backgroundTintMode
@@ -27633,8 +28872,11 @@ public final class R {
      */
     public static final int ViewStubCompat_android_id=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout}
-     * attribute's value can be found in the {@link #ViewStubCompat} array.
+     * <p>
+     * @attr description
+     * Supply an identifier for the layout resource to inflate when the ViewStub
+     * becomes visible or when forced to do so. The layout resource must be a
+     * valid reference to a layout.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27645,8 +28887,9 @@ public final class R {
      */
     public static final int ViewStubCompat_android_layout=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#inflatedId}
-     * attribute's value can be found in the {@link #ViewStubCompat} array.
+     * <p>
+     * @attr description
+     * Overrides the id of the inflated View with this value.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme

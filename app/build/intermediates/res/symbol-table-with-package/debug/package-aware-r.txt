@@ -504,6 +504,7 @@ attr menu_labels_colorNormal
 attr menu_labels_colorPressed
 attr menu_labels_colorRipple
 attr menu_labels_cornerRadius
+attr menu_labels_customFont
 attr menu_labels_ellipsize
 attr menu_labels_hideAnimation
 attr menu_labels_margin
@@ -803,6 +804,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color bg_color
 color black
 color blue
 color bright_foreground_disabled_material_dark
@@ -1299,6 +1301,8 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable bordercolor
+drawable bottom_border_on_dark
+drawable bottom_border_on_light
 drawable com_facebook_auth_dialog_background
 drawable com_facebook_auth_dialog_cancel_background
 drawable com_facebook_auth_dialog_header_background
@@ -1352,6 +1356,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable fab_add
 drawable fab_label_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -1396,6 +1401,7 @@ drawable rounded_corner_button_mnus
 drawable rounded_corner_button_new
 drawable rounded_corner_button_new1
 drawable rounded_corner_button_newone
+drawable rounded_corner_button_newtwo
 drawable rounded_corner_button_orange
 drawable rounded_corner_new
 drawable side_nav_bar
@@ -1433,10 +1439,13 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_text
+id action_type
+id action_view
 id actions
 id activity_chooser_view_content
 id add
 id add_button
+id added_date
 id addinfo
 id address_profile
 id adjust_height
@@ -1482,6 +1491,7 @@ id beginning
 id blocking
 id blog_select
 id blog_text
+id blogger
 id blogger_clr
 id blogger_clr_icon
 id blogger_handle
@@ -1506,6 +1516,8 @@ id btn_verify_otp
 id button
 id buttonPanel
 id calender_icon
+id calender_icon1
+id calender_icon2
 id campApplyTill
 id campBacklink
 id campCat
@@ -1556,6 +1568,8 @@ id campshbrieftext
 id campstatus
 id cancel_action
 id cancel_button
+id captiontext
+id captiontext1
 id cardvienine
 id cardview
 id cardview0
@@ -1595,6 +1609,7 @@ id city_profile
 id city_profile0
 id city_profile1
 id city_spinner
+id clear
 id clip_horizontal
 id clip_vertical
 id close
@@ -1628,10 +1643,11 @@ id container
 id content
 id contentPanel
 id content_value
-id contentshared
-id contentsharedtext
+id contentid
 id contentstatus
 id contentstatustext
+id conversation_author
+id conversation_thumbnail_url
 id coordinator
 id coordinatorLayout
 id copyright
@@ -1678,12 +1694,29 @@ id email
 id emailid
 id end
 id end_padder
+id enddate
+id enddateTxt
+id engage_attach
+id engagefilename
+id engageimg
+id engagement
+id engagestatus
+id engagetext
+id engagevalue
 id enterAlways
 id enterAlwaysCollapsed
+id esm_type
+id estatus_type
+id estatustext
+id eusertypetext
 id exitUntilCollapsed
 id expand_activities_button
+id expandableView
 id expanded_menu
+id fab
+id fab1
 id fab_label
+id facebook
 id facebook_clr
 id facebook_clr_icon
 id facebook_handle
@@ -1692,6 +1725,11 @@ id facebooklink
 id facebooktext
 id femailid
 id fieldinterest
+id filefour
+id filename
+id fileone
+id filethree
+id filetwo
 id fill
 id fill_horizontal
 id fill_parent
@@ -1705,10 +1743,16 @@ id forgotpassword
 id fquoteamt
 id frame
 id framenew
+id from_date
 id gender_profile
 id gender_profile0
 id gender_spinner
 id ghost_view
+id go_icon
+id go_icon1
+id go_icon2
+id go_icon3
+id go_icon4
 id gone
 id group_divider
 id groups
@@ -1718,6 +1762,7 @@ id header_user_email
 id header_user_icon
 id header_user_mobile
 id header_user_name
+id headingTxt
 id home
 id homeAsUp
 id homeicon
@@ -1726,6 +1771,8 @@ id horizontal
 id icon
 id icon_group
 id icon_only
+id id_post_attach
+id id_post_conversation
 id ifRoom
 id image
 id imageView
@@ -1779,9 +1826,14 @@ id linear2
 id linear22
 id linear222
 id linearLayout
+id linearengage
 id linearfour
+id linearn
+id linearnew
+id linearnew1
 id linearone
 id linearonee
+id linearreach
 id linee
 id linee01
 id linefour
@@ -1848,6 +1900,8 @@ id navigation_header_container
 id never
 id never_display
 id newbrieftext
+id newframe
+id newframeid
 id newtoolbar
 id newuser
 id nme_profile
@@ -1908,6 +1962,9 @@ id policy_icon
 id policy_select
 id policy_text
 id position
+id posted_date
+id posted_link
+id posturl
 id profile_top
 id profileicon
 id profileimage
@@ -1924,6 +1981,15 @@ id rate_app_text
 id rate_select
 id rate_text
 id ratio
+id reach
+id reach_attach
+id reach_type
+id reach_value
+id reachfilename
+id reachimg
+id reachstatus
+id reachtext
+id reachvalue
 id rectangles
 id refreshcamp
 id register
@@ -1993,18 +2059,23 @@ id showHome
 id showTitle
 id show_button
 id show_file
+id show_file1
 id signin
 id signup
 id sin
 id skip_button
+id sm_type
+id sm_typetext
 id small
 id smallLabel
 id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id social_media
 id social_media_icon
 id social_media_text
+id socialmediatype
 id spacer
 id spline
 id split_action_bar
@@ -2018,10 +2089,15 @@ id standard
 id start
 id startHorizontal
 id startVertical
+id startdate
+id startdateTxt
 id status
 id status_bar_latest_event_content
+id status_type
+id statustext
 id stretch
 id submenuarrow
+id submit
 id submit_area
 id summernote
 id swiperefresh
@@ -2052,7 +2128,10 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id to_date
 id toggle
+id toggleIcon
+id toggleView
 id toolbar
 id top
 id topPanel
@@ -2095,13 +2174,21 @@ id up
 id update_button
 id updatebutton
 id urlContainer
+id urllinkTxt
+id urllink_valuetext
 id useLogo
+id userengage
+id userengageTxt
 id userimg_text
+id userreach
+id userreachTxt
+id usertypetext
 id vertical
 id viewContainer
 id viewPagerVertical
 id view_conversation
 id view_offset_helper
+id viewconversationlist
 id viewpager
 id visible
 id walletamount
@@ -2116,6 +2203,7 @@ id wide
 id withText
 id wrap
 id wrap_content
+id youtube
 id youtube_clr
 id youtube_clr_icon
 id youtube_handle
@@ -2210,6 +2298,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout drawer_list_item
+layout feed_heading
+layout feed_item
 layout firstscreen_new
 layout forgotpassword_new
 layout fragment_layout
@@ -2229,6 +2319,7 @@ layout mycampdetails
 layout myprofilenew
 layout mywallet
 layout nav_header_new_home
+layout newreport
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -2251,12 +2342,15 @@ layout paymentview
 layout profile_dummy
 layout quoteamount
 layout quoteamounts
+layout reachview
 layout registration_screen1_new
 layout registration_screen1_new1
 layout registration_screen2_new
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout smdetaillist
+layout smreportsupdate
 layout socialmedia
 layout socialmediaauth
 layout spinner_item
@@ -2268,6 +2362,8 @@ layout transactionlist
 layout transactionlist1
 layout txnhistory
 layout user_settings
+layout viewconversation
+layout viewconversationlist
 layout walletold
 layout webview
 menu activity_home_new_drawer
@@ -2278,6 +2374,7 @@ menu notification
 menu share
 mipmap ac_icon
 mipmap add_icon
+mipmap addnewreport
 mipmap auto_icon
 mipmap background
 mipmap bank_pay
@@ -2300,6 +2397,7 @@ mipmap calendar_icon
 mipmap callicon
 mipmap cat_sleeping
 mipmap category_icon
+mipmap chatusericon
 mipmap clap_hands
 mipmap closebutton
 mipmap ecommerce_icon
@@ -2364,6 +2462,8 @@ mipmap myprofile_icon
 mipmap new_background
 mipmap newicon80
 mipmap next_btn
+mipmap noimage
+mipmap noimagenew
 mipmap notification_icon
 mipmap notification_icon_label
 mipmap notification_icon_label1
@@ -2381,6 +2481,7 @@ mipmap profile_background
 mipmap profile_icon
 mipmap profile_icon_bl
 mipmap profile_icon_clr
+mipmap rarrow
 mipmap rating
 mipmap realestate_icon
 mipmap refresh_icon
@@ -2418,6 +2519,7 @@ mipmap whiteimg
 mipmap whiteimg1
 mipmap whitelogo
 mipmap youtube_r_icon
+mipmap youtube_r_icon_w
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2570,6 +2672,7 @@ string path_password_strike_through
 string paytm_recharge_url
 string profile_url
 string push_url
+string reachengage
 string register_terms
 string regsitration_one_url
 string rs
@@ -3183,7 +3286,7 @@ styleable DesignTheme bottomSheetDialogTheme bottomSheetStyle
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize fab_colorDisabled fab_colorNormal fab_colorPressed fab_colorRipple fab_elevationCompat fab_hideAnimation fab_label fab_progress fab_progress_backgroundColor fab_progress_color fab_progress_indeterminate fab_progress_max fab_progress_showBackground fab_shadowColor fab_shadowRadius fab_shadowXOffset fab_shadowYOffset fab_showAnimation fab_showShadow fab_size hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
-styleable FloatingActionMenu menu_animationDelayPerItem menu_backgroundColor menu_buttonSpacing menu_buttonToggleAnimation menu_colorNormal menu_colorPressed menu_colorRipple menu_fab_hide_animation menu_fab_label menu_fab_show_animation menu_fab_size menu_icon menu_labels_colorNormal menu_labels_colorPressed menu_labels_colorRipple menu_labels_cornerRadius menu_labels_ellipsize menu_labels_hideAnimation menu_labels_margin menu_labels_maxLines menu_labels_padding menu_labels_paddingBottom menu_labels_paddingLeft menu_labels_paddingRight menu_labels_paddingTop menu_labels_position menu_labels_showAnimation menu_labels_showShadow menu_labels_singleLine menu_labels_style menu_labels_textColor menu_labels_textSize menu_openDirection menu_shadowColor menu_shadowRadius menu_shadowXOffset menu_shadowYOffset menu_showShadow
+styleable FloatingActionMenu menu_animationDelayPerItem menu_backgroundColor menu_buttonSpacing menu_buttonToggleAnimation menu_colorNormal menu_colorPressed menu_colorRipple menu_fab_hide_animation menu_fab_label menu_fab_show_animation menu_fab_size menu_icon menu_labels_colorNormal menu_labels_colorPressed menu_labels_colorRipple menu_labels_cornerRadius menu_labels_customFont menu_labels_ellipsize menu_labels_hideAnimation menu_labels_margin menu_labels_maxLines menu_labels_padding menu_labels_paddingBottom menu_labels_paddingLeft menu_labels_paddingRight menu_labels_paddingTop menu_labels_position menu_labels_showAnimation menu_labels_showShadow menu_labels_singleLine menu_labels_style menu_labels_textColor menu_labels_textSize menu_openDirection menu_shadowColor menu_shadowRadius menu_shadowXOffset menu_shadowYOffset menu_showShadow
 styleable FlowLayout itemSpacing lineSpacing
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex

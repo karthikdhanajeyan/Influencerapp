@@ -28,6 +28,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class AllCampaignFragmentLive extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
 
@@ -54,8 +55,8 @@ public class AllCampaignFragmentLive extends Fragment implements SwipeRefreshLay
         SharedPreferences prfs = this.getActivity().getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
         Log.v("Cid Value : ",cid);
-        swipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swiperefresh);
-        swipeRefreshLayout.setOnRefreshListener(this);
+//        swipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swiperefresh);
+//        swipeRefreshLayout.setOnRefreshListener(this);
 
         if (isInternetPresent) {
 
@@ -225,7 +226,7 @@ public class AllCampaignFragmentLive extends Fragment implements SwipeRefreshLay
     public void onRefresh() {
         swipeRefreshLayout.setRefreshing(true);
         AllCampaignFragmentLive fragment = new AllCampaignFragmentLive();
-        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        FragmentTransaction fragmentTransaction = Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
         swipeRefreshLayout.setRefreshing(false);

@@ -9,7 +9,6 @@
         android:targetSdkVersion="28" />
 
     <!-- GCM connects to Internet Services. -->
-
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -19,8 +18,7 @@
 
     <permission
         android:name="com.socialbeat.influencer.gcm.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
-    <!-- This app has permission to register and receive data message. -->
+        android:protectionLevel="signature" /> <!-- This app has permission to register and receive data message. -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <uses-feature
@@ -33,7 +31,6 @@
     <application
         android:name="com.socialbeat.influencer.MyApplication"
         android:allowBackup="true"
-        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -43,6 +40,11 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.actions" -->
+        <!-- android:resource="@xml/bottom_border_on_dark" /> -->
+
         <activity
             android:name="com.socialbeat.influencer.SplashScreenActivity"
             android:screenOrientation="portrait"
@@ -224,7 +226,46 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
-
+        <activity
+            android:name="com.socialbeat.influencer.DummyData"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.socialbeat.influencer.SMReportsUpdate"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.socialbeat.influencer.SocialMediaReport"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.socialbeat.influencer.FacbookReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.socialbeat.influencer.TwitterReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.socialbeat.influencer.InstagramReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.socialbeat.influencer.BloggerReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.socialbeat.influencer.YoutubeReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
         <!--
     Optionally, register AnalyticsReceiver and AnalyticsService to support background
     dispatching on non-Google Play devices
@@ -242,8 +283,7 @@
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/app_name"
-            android:theme="@style/com_facebook_activity_theme" />
+            android:label="@string/app_name" />
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true" >
@@ -259,8 +299,7 @@
 
         <receiver
             android:name="com.google.android.gms.analytics.AnalyticsReceiver"
-            android:enabled="true"
-            android:exported="false" >
+            android:enabled="true" >
             <intent-filter>
                 <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
             </intent-filter>
@@ -291,10 +330,7 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="com.socialbeat.influencer.GCMIntentService" />
-
-        <!-- [END instanceId_listener] -->
-
+        <service android:name="com.socialbeat.influencer.GCMIntentService" /> <!-- [END instanceId_listener] -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.socialbeat.influencer.provider"
@@ -309,105 +345,6 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity
-            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <!--
-            Service handling Google Sign-In user revocation. For apps that do not integrate with
-            Google Sign-In, this service will never be started.
-        -->
-        <service
-            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-            android:exported="true"
-            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-        <!--
-             FirebaseMessagingService performs security checks at runtime,
-             no need for explicit permissions despite exported="true"
-        -->
-        <service
-            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-            android:exported="true" >
-            <intent-filter android:priority="-500" >
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
-        <activity android:name="com.facebook.CustomTabMainActivity" />
-
-        <service
-            android:name="com.google.android.gms.analytics.AnalyticsJobService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.1.0" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
-        <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent" />
-
-        <provider
-            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
-            android:authorities="com.socialbeat.influencer.mobileadsinitprovider"
-            android:exported="false"
-            android:initOrder="100" />
-
-        <service
-            android:name="com.google.firebase.components.ComponentDiscoveryService"
-            android:exported="false" >
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-        </service>
-
-        <receiver
-            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </receiver>
-        <!--
-             FirebaseInstanceIdService performs security checks at runtime,
-             no need for explicit permissions despite exported="true"
-        -->
-        <service
-            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
-            android:exported="true" >
-            <intent-filter android:priority="-500" >
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <provider
-            android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.socialbeat.influencer.firebaseinitprovider"
-            android:exported="false"
-            android:initOrder="100" />
-        <!--
-         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
-         with the application context. This config is merged in with the host app's manifest,
-         but there can only be one provider with the same authority activated at any given
-         point; so if the end user has two or more different apps that use Facebook SDK, only the
-         first one will be able to use the provider. To work around this problem, we use the
-         following placeholder in the authority to identify each host application as if it was
-         a completely different provider.
-        -->
-        <provider
-            android:name="com.facebook.internal.FacebookInitProvider"
-            android:authorities="com.socialbeat.influencer.FacebookInitProvider"
-            android:exported="false" />
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.socialbeat.influencer.com.android.tools.ir.server.InstantRunContentProvider"

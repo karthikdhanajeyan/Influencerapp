@@ -3,11 +3,17 @@ package com.socialbeat.influencer;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -21,10 +27,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
-
 import java.io.InputStream;
 import java.util.List;
 
@@ -33,9 +37,10 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 	private LayoutInflater inflater;
 	private List<ApprovedCamp> approvedCampItem;
 	private ImageLoader imageLoader = MyApplication.getInstance().getImageLoader();
-	String cbrief;
+	String cbrief,ccampid,ccampname;
 	ImageView cancel;
 	TextView campbriefvalue;
+	FragmentManager fragmentManager;
 
 	ApproveCustomListAdapter(Activity activity, List<ApprovedCamp> approvedCampItem) {
 		this.activity = activity;
@@ -93,8 +98,9 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 		status.setText(cc.getStatus());
 		approveddate.setText(cc.getApproveddate());
 		campbrief.setText(cc.getCampbrief());
-
 		cbrief = cc.getCampbrief();
+		ccampid = cc.getCampid();
+		ccampname = cc.getCampname();
 
 		camp_brief.setOnClickListener(new View.OnClickListener() {
 
@@ -110,7 +116,6 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 				Spanned sp1 = Html.fromHtml( cbrief );
 				campbriefvalue.setText(sp1);
 				campbriefvalue.setMovementMethod(LinkMovementMethod.getInstance());
-
 				dialog.show();
 				cancel.setOnClickListener(new View.OnClickListener() {
 					@Override
@@ -124,25 +129,53 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 		content_value.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//Toast.makeText(activity,"Content clicked", Toast.LENGTH_LONG).show();
+
+				SharedPreferences preferences1 = activity.getSharedPreferences("COMPLETE_CAMP_CONTENT", Context.MODE_PRIVATE);
+				SharedPreferences.Editor editor1 = preferences1.edit();
+				editor1.putString("campid",ccampid);
+				editor1.putString("campname",ccampname);
+				System.out.println("value of campid Complete Approved List: "+ccampid);
+				System.out.println("value of campname Complete Approved List: "+ccampname);
+				editor1.apply();
 
 				Intent intent = new Intent(activity, Conversations.class);
+				Bundle bund = new Bundle();
+				//Inserts a String value into the mapping of this Bundle
+				bund.putString("campid", ccampid);
+				bund.putString("campname", ccampname);
+				Log.v("Approve CCampid : ",ccampid);
+				Log.v("Approve CCampname : ",ccampname);
+				//Add the bundle to the intent.
+				intent.putExtras(bund);
 				activity.startActivity(intent);
-
-//				AppliedCampaignFragment fragment = new AppliedCampaignFragment();
-//				FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-//				fragmentTransaction.replace(R.id.frame, fragment);
-//				fragmentTransaction.addToBackStack(null);
-//				fragmentTransaction.commit();
 			}
 		});
 		analtyics_value.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(activity,"Analtyics Report clicked", Toast.LENGTH_LONG).show();
+
+				SharedPreferences preferences1 = activity.getSharedPreferences("COMPLETE_CAMP_CONTENT", Context.MODE_PRIVATE);
+				SharedPreferences.Editor editor1 = preferences1.edit();
+				editor1.putString("campid",ccampid);
+				editor1.putString("campname",ccampname);
+				System.out.println("value of campid Complete Approved List: "+ccampid);
+				System.out.println("value of campname Complete Approved List: "+ccampname);
+				editor1.apply();
+
+				Fragment fragment = new AnalyticsReportFragment();
+				Bundle bundle = new Bundle();
+				bundle.putString("campid", ccampid);
+				bundle.putString("campname", ccampname);
+				Log.v("Approve ACampid : ",ccampid);
+				Log.v("Approve ACampname : ",ccampname);
+				FragmentTransaction fragmentTransaction = activity.getFragmentManager().beginTransaction();
+				fragmentTransaction.replace(R.id.newframe, fragment );
+				fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+				fragmentTransaction.addToBackStack(null);
+				fragmentTransaction.commit();
+
 			}
 		});
-
 		return convertView;
 	}
 }

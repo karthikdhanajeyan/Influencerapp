@@ -19,7 +19,7 @@
     <color name="list_divider">#272727</color>
     <color name="counter_text_bg">#626262</color>
     <color name="counter_text_color">#b6b6b6</color>
-    <color name="blue">#81DAF5</color>
+    <color name="blue">#36CDFA</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="ashe">#D8D8D8</color>
@@ -43,6 +43,7 @@
     <color name="darkblue">#1e9cb2</color>
     <color name="yellow">#f7eb02</color>
     <color name="sandal">#ffc684</color>
+    <color name="bg_color">#e8edf3</color>
 
 
 </resources>

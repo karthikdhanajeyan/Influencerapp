@@ -104,8 +104,9 @@ public class AppliedCampaignFragment extends Fragment {
                     if (response != null) {
 
                         String responstatus = object.getString("success").toString();
-                        Log.d("response status : ",responstatus);
                         String responsemessage = object.getString("message").toString();
+                        Log.d("response status : ",responstatus);
+                        Log.d("response message : ",responsemessage);
 
 
                         if (responstatus == "true") {
@@ -140,11 +141,36 @@ public class AppliedCampaignFragment extends Fragment {
                             }
                         } else {
                             Log.d("success : ", "False");
+                            Snackbar snackbar = Snackbar
+                                    .make(coordinatorLayout, "No Campaigns in Applied List.", Snackbar.LENGTH_INDEFINITE)
+                                    .setAction("Live Campaigns", new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            Intent intent = new Intent(getActivity(), NewHomeActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
+                            // Changing message text color
+                            snackbar.setActionTextColor(Color.YELLOW);
+                            // Changing action button text color
+                            View sbView = snackbar.getView();
+                            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                            textView.setTextColor(Color.WHITE);
+                            snackbar.show();
+
                         }
                         adapter = new AppliedCustomListAdapter(getActivity(), appliedList);
                         listView.setAdapter(adapter);
                     } else {
                         Log.e("ServiceHandler", "Couldn't get any data from the url");
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "Could not get any data from the server", Snackbar.LENGTH_INDEFINITE);
+                        // Changing message text color
+                        snackbar.setActionTextColor(Color.RED);
+                        // Changing action button text color
+                        View sbView = snackbar.getView();
+                        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.RED);
+                        snackbar.show();
                     }
 
                 } catch (JSONException e) {

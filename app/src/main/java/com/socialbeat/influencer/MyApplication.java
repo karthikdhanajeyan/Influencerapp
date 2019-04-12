@@ -15,7 +15,7 @@ import com.google.android.gms.analytics.Tracker;
 /**
  * Created by Socialbeat on 13/08/15.
  */
-public class MyApplication extends Application {
+public class  MyApplication extends Application {
     public static final String TAG = MyApplication.class.getSimpleName();
     private RequestQueue mRequestQueue;
     private ImageLoader mImageLoader;

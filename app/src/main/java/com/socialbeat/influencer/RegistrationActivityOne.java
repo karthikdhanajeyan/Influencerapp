@@ -113,19 +113,19 @@ public class RegistrationActivityOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration_screen1_new);
 
-        register = (Button) findViewById(R.id.register_button);
-        login = (TextView) findViewById(R.id.login);
-        terms = (TextView) findViewById(R.id.terms);
-        profileimage = (ImageView) findViewById(R.id.profileimage);
-        pass_visible = (ImageView) findViewById(R.id.pass_visible);
-        pass_invisible = (ImageView) findViewById(R.id.pass_invisible);
-        name = (EditText) findViewById(R.id.name);
-        emailid = (EditText) findViewById(R.id.email);
-        password = (EditText) findViewById(R.id.password);
-        mobileno = (EditText) findViewById(R.id.mobile);
-        city = (EditText) findViewById(R.id.city);
+        register = findViewById(R.id.register_button);
+        login = findViewById(R.id.login);
+        terms = findViewById(R.id.terms);
+        profileimage = findViewById(R.id.profileimage);
+        pass_visible = findViewById(R.id.pass_visible);
+        pass_invisible = findViewById(R.id.pass_invisible);
+        name = findViewById(R.id.name);
+        emailid = findViewById(R.id.email);
+        password = findViewById(R.id.password);
+        mobileno = findViewById(R.id.mobile);
+        city = findViewById(R.id.city);
         currentapiVersion = android.os.Build.VERSION.SDK_INT;
-        coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
         Typeface myFont = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
         name.setTypeface(myFont);
         Typeface myFont1 = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
@@ -301,7 +301,7 @@ public class RegistrationActivityOne extends AppCompatActivity {
                     snackbar.setActionTextColor(Color.RED);
                     // Changing action button text color
                     View sbView = snackbar.getView();
-                    TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
                     textView.setTextColor(Color.YELLOW);
                     snackbar.show();
                 }
@@ -371,14 +371,10 @@ public class RegistrationActivityOne extends AppCompatActivity {
      * Checking device has camera hardware or not
      * */
     private boolean isDeviceSupportCamera() {
-        if (getApplicationContext().getPackageManager().hasSystemFeature(
-                PackageManager.FEATURE_CAMERA)) {
-            // this device has a camera
-            return true;
-        } else {
-            // no camera on this device
-            return false;
-        }
+        // this device has a camera
+// no camera on this device
+        return getApplicationContext().getPackageManager().hasSystemFeature(
+                PackageManager.FEATURE_CAMERA);
     }
 
     private File createImageFile() throws IOException {
@@ -507,7 +503,6 @@ public class RegistrationActivityOne extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Sorry! Failed to capture image", Toast.LENGTH_SHORT).show();
             }
         }
-//
     }
 
     private void onSelectFromGalleryResult(Intent data) {
@@ -841,10 +836,7 @@ public class RegistrationActivityOne extends AppCompatActivity {
     }
     // validating password
     private boolean isValidPassword(String pass) {
-        if (pass != null && pass.length() >= 6) {
-            return true;
-        }
-        return false;
+        return pass != null && pass.length() >= 6;
     }
     // validating email id
     private boolean isValidEmailid1(String emailid1) {

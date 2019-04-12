@@ -4,277 +4,339 @@
     package="com.socialbeat.influencer">
 
     <!-- GCM connects to Internet Services. -->
-
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"  />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
 
     <permission
         android:name="com.socialbeat.influencer.gcm.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
-    <!-- This app has permission to register and receive data message. -->
+        android:protectionLevel="signature" /> <!-- This app has permission to register and receive data message. -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
-
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:screenOrientation="portrait"
-        android:theme="@style/AppTheme" >
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:node="replace"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="n">
+        <!--<meta-data-->
+            <!--android:name="com.google.android.actions"-->
+            <!--android:resource="@xml/bottom_border_on_dark" />-->
+
         <activity
             android:name=".SplashScreenActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
-            >
+            android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <meta-data android:name="android.app.shortcuts"
+
+            <meta-data
+                android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-
         <activity
             android:name=".FirstActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+
         </activity>
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
         </activity>
         <activity
             android:name=".RegistrationActivityOne"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".NewHomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".MyProfileDummy"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".SocialMedia"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".SocialMediaAuth"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
-            <activity
+        </activity>
+        <activity
             android:name=".MyProfileNew"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".Socialmediahandle"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".Socialmediadetails"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
+
         </activity>
         <activity
             android:name=".MoreSettings"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".UserSettings"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".MyCampDetails"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppThemed" >
-        </activity>
+            android:theme="@style/AppThemed"
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".MyCampaignsFragment"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".WalletOld"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".OurBlogPage"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".TermsCondition"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".TwitterPage"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".InstagramPage"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".BloggerPage"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".FacebookPage"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden">
+
         </activity>
-
-
         <activity
             android:name=".YoutubePage"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".NotificationManager"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".PrivatePolicy"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden">
+
         </activity>
-
-
         <activity
             android:name=".AllCampDetailsLive"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".AllCampDetailsPast"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".MyCampaigns"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/MyMaterialTheme.Base">
-        </activity>
+            android:theme="@style/MyMaterialTheme.Base"
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".TransactionHistory"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".MyWallet"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".LoginSmsActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden">
 
+        </activity>
         <activity
             android:name=".ContactUs"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
 
+        </activity>
         <activity
             android:name=".Conversations"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
+
         </activity>
 
+        <activity
+            android:name=".DummyData"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
+
+        <activity
+            android:name=".SMReportsUpdate"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
+
+
+        <activity
+            android:name=".SocialMediaReport"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
+
+        <activity
+            android:name=".FacbookReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
+
+        <activity
+            android:name=".TwitterReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
+        <activity
+            android:name=".InstagramReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
+        <activity
+            android:name=".BloggerReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
+        <activity
+            android:name=".YoutubeReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
         <!--
     Optionally, register AnalyticsReceiver and AnalyticsService to support background
     dispatching on non-Google Play devices
--->     <meta-data
-        android:name="com.google.android.gms.version"
-        android:value="@integer/google_play_services_version" />
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
 
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/app_id"/>
-
-        <activity android:name="com.facebook.FacebookActivity"
-            android:configChanges=
-                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
 
-
         <receiver
             android:name="com.google.android.gms.analytics.AnalyticsReceiver"
-            android:enabled="true" >
+            android:enabled="true">
             <intent-filter>
                 <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
             </intent-filter>
@@ -287,7 +349,7 @@
 
         <receiver
             android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
@@ -295,8 +357,7 @@
 
         <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
 
-        <receiver
-            android:name=".GcmBroadcastReceiver">
+        <receiver android:name=".GcmBroadcastReceiver">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.SEND" />
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -306,11 +367,7 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".GCMIntentService" />
-
-
-        <!-- [END instanceId_listener] -->
-
+        <service android:name=".GCMIntentService" /> <!-- [END instanceId_listener] -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -318,9 +375,12 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:resource="@xml/provider_paths" />
         </provider>
-        <uses-library android:name ="org.apache.http.legacy" android:required ="false"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
 
 </manifest>

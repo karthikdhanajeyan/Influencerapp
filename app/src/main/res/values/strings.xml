@@ -36,6 +36,7 @@
     <string name="hello">Hello, </string>
     <string name="login_instructions">Login to twiter</string>
     <string name="share_instructions">Enter share message</string>
+    <string name="reachengage">Reach \u0026 Engage</string>
     <!-- End Configurations -->
 
     <string name="title_activity_sms">SmsActivity</string>

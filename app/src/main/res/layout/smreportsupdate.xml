@@ -1,0 +1,414 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lite_ashe">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:context=".RegistrationScreen1"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/relativeLayout"
+            android:scaleType="fitXY">
+
+            <!--<TextView-->
+                <!--android:id="@+id/dopTxt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/orange"-->
+                <!--android:textSize="18sp"-->
+                <!--android:typeface="sans"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="Date of Posting: "-->
+                <!--android:textStyle="normal"/>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/dop"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/darkblue"-->
+                <!--android:textSize="16sp"-->
+                <!--android:typeface="sans"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:hint="Date of Posting"-->
+                <!--android:ems="18"-->
+                <!--android:background="@drawable/rounded_corner_new"-->
+                <!--android:layout_below="@+id/dopTxt"-->
+                <!--android:textStyle="normal"/>-->
+
+            <TextView
+                android:id="@+id/urllinkTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/orange"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:layout_marginLeft="10dp"
+                android:text="Link to Post : "
+                android:textStyle="normal"/>
+            <TextView
+                android:id="@+id/posturl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textColor="@color/darkblue"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/urllinkTxt"
+                android:layout_marginTop="5dp"
+                android:hint="(i.e : www.influencer.in/username)"
+                android:singleLine="true"
+                android:background="@drawable/rounded_corner_new"
+                android:textSize="16sp"
+                android:ems="18"
+                android:typeface="sans"
+                android:selectAllOnFocus="true"
+                android:textStyle="normal"/>
+            <!--<TextView-->
+                <!--android:id="@+id/sampleTxt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:layout_below="@+id/posturl"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:gravity="left"-->
+                <!--android:textSize="12sp"-->
+                <!--android:typeface="sans"-->
+                <!--android:text="( i.e : http://www.facebook.com/username )"-->
+                <!--android:textStyle="normal"/>-->
+
+            <TextView
+                android:id="@+id/startdateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/orange"
+                android:layout_below="@+id/posturl"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:text="Start Date Range for Analytics : "
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/startdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner_new"
+                android:layout_below="@+id/startdateTxt"
+                android:ems="15"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:hint="(DD-MM-YYYY)"
+                android:inputType="date"
+                android:singleLine="true"
+                android:textColor="@color/darkblue"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/calender_icon1"
+                android:layout_width="55sp"
+                android:layout_height="60sp"
+                android:layout_alignTop="@+id/enddateTxt"
+                android:layout_alignEnd="@+id/startdate"
+                android:layout_alignRight="@+id/startdate"
+                android:layout_marginTop="-69dp"
+                android:layout_marginEnd="-58dp"
+                android:layout_marginRight="-58dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="setDate"
+                app:srcCompat="@mipmap/calendar_icon" />
+
+            <TextView
+                android:id="@+id/enddateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/orange"
+                android:layout_below="@+id/startdate"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:layout_marginLeft="10dp"
+                android:text="End Date Range for Analytics : "
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/enddate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner_new"
+                android:layout_below="@+id/enddateTxt"
+                android:ems="15"
+                android:gravity="left"
+                android:hint="(DD-MM-YYYY)"
+                android:layout_marginLeft="10dp"
+                android:inputType="date"
+                android:singleLine="true"
+                android:textColor="@color/darkblue"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/calender_icon2"
+                android:layout_width="55sp"
+                android:layout_height="60sp"
+                android:layout_alignTop="@+id/userreachTxt"
+                android:layout_alignEnd="@+id/enddate"
+                android:layout_alignRight="@+id/enddate"
+                android:layout_marginTop="-66dp"
+                android:layout_marginEnd="-58dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="-58dp"
+                android:onClick="setDate"
+                app:srcCompat="@mipmap/calendar_icon" />
+
+            <TextView
+                android:id="@+id/userreachTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/orange"
+                android:layout_below="@+id/enddate"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:typeface="sans"
+                android:text="No of Users Reached : "
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/userreach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textColor="@color/darkblue"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/userreachTxt"
+                android:hint="User Reach Count"
+                android:ems="18"
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/rounded_corner_new"
+                android:textSize="16sp"
+                android:typeface="sans"
+                android:textStyle="normal"/>
+
+            <Button
+                android:id="@+id/show_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userreach"
+                android:layout_marginTop="5dp"
+                android:text="Add Screenshot"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/orange"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/captiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_below="@+id/show_file"
+                android:textSize="12sp"
+                android:typeface="sans"
+                android:layout_marginLeft="10dp"
+                android:text="( File Type: jpg, jpeg, png. Max file size: 2MB )"
+                android:textStyle="normal"/>
+
+            <TextView
+                android:id="@+id/reachfilename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:layout_below="@+id/captiontext"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:typeface="sans"
+                android:visibility="visible"
+                android:textStyle="normal"/>
+
+            <TextView
+                android:id="@+id/userengageTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/reachfilename"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:text="No of Users Engaged : "
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/userengage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/darkblue"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:layout_below="@+id/userengageTxt"
+                android:hint="User Engaged Count"
+                android:ems="18"
+                android:inputType="number"
+                android:background="@drawable/rounded_corner_new"
+                android:textSize="16sp"
+                android:typeface="sans"
+                android:textStyle="normal"/>
+
+
+            <Button
+                android:id="@+id/show_file1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userengage"
+                android:layout_marginTop="5dp"
+                android:text="Add Screenshot"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/orange"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/captiontext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_below="@+id/show_file1"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:typeface="sans"
+                android:text="( File Type: jpg, jpeg, png. Max file size: 2MB )"
+                android:textStyle="normal"/>
+
+            <TextView
+                android:id="@+id/engagefilename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:layout_below="@+id/captiontext1"
+                android:textSize="12sp"
+                android:typeface="sans"
+                android:visibility="visible"
+                android:layout_marginLeft="10dp"
+                android:textStyle="normal"/>
+
+            <LinearLayout
+                android:id="@+id/linearnew1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/engagefilename"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/reach_type"
+                    android:layout_width="200sp"
+                    android:layout_height="50sp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/clear"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:typeface="sans"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:layout_below="@+id/bottomline"
+                        android:text="Clear"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="20dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/rounded_corner_button_mnus"
+                        android:layout_centerHorizontal="true" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/action_type"
+                    android:layout_width="200sp"
+                    android:layout_height="50sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:typeface="sans"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:layout_below="@+id/bottomline"
+                        android:text="Submit"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="30dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/rounded_corner_button_newtwo"
+                        android:layout_centerHorizontal="true" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/campid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/engageimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/reachimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/socialmediatype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

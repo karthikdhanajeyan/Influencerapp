@@ -69,21 +69,20 @@ public class MyProfileDummy extends AppCompatActivity {
         SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
 
-        coordinatorLayout = (CoordinatorLayout)findViewById(R.id.coordinatorLayout);
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
-        pfacebookhandle = (TextView)findViewById(R.id.facebook_handle);
-        pinstagramhandle = (TextView)findViewById(R.id.instagram_handle);
-        ptwitterhandle = (TextView)findViewById(R.id.twitter_handle);
-        pbloggerlink = (TextView)findViewById(R.id.blogger_handle);
-        pyoutubehandle = (TextView)findViewById(R.id.youtube_handle);
+        pfacebookhandle = findViewById(R.id.facebook_handle);
+        pinstagramhandle = findViewById(R.id.instagram_handle);
+        ptwitterhandle = findViewById(R.id.twitter_handle);
+        pbloggerlink = findViewById(R.id.blogger_handle);
+        pyoutubehandle = findViewById(R.id.youtube_handle);
 
-        facebook_clr = (LinearLayout) findViewById(R.id.scmenu);
-        instagram_clr = (LinearLayout) findViewById(R.id.scmenu2);
-        twitter_clr = (LinearLayout) findViewById(R.id.scmenu1);
-        blogger_clr = (LinearLayout) findViewById(R.id.scmenu3);
-        youtube_clr = (LinearLayout) findViewById(R.id.scmenu4);
+        facebook_clr = findViewById(R.id.scmenu);
+        instagram_clr = findViewById(R.id.scmenu2);
+        twitter_clr = findViewById(R.id.scmenu1);
+        blogger_clr = findViewById(R.id.scmenu3);
+        youtube_clr = findViewById(R.id.scmenu4);
 
-        addhandle = (Button) findViewById(R.id.add_button);
 
 
         cd = new ConnectionDetector(this);
@@ -108,7 +107,7 @@ public class MyProfileDummy extends AppCompatActivity {
                 snackbar.setActionTextColor(Color.RED);
                 // Changing action button text color
                 View sbView = snackbar.getView();
-                TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
                 textView.setTextColor(Color.YELLOW);
                 snackbar.show();
             }

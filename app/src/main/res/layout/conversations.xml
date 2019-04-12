@@ -1,3 +1,5 @@
+
+
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/coordinatorLayout"
@@ -5,168 +7,206 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <ScrollView
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/newframeid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/scrollView"
-        android:background="@color/lite_ashe">
+        android:orientation="vertical">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/lite_ashe">
 
 
-        <TextView
-            android:id="@+id/campName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/orange"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:textStyle="bold|normal"
-            android:text="Campaign Name"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:fontFamily="sans-serif-condensed"
-            android:textSize="25sp" />
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/scrollView"-->
+        <!--android:background="@color/lite_ashe">-->
 
-        <TextView
-            android:id="@+id/contentstatustext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="left"
-            android:text="Content Status : "
-            android:layout_below="@+id/campName"
-            android:layout_marginLeft="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/orange"
-            android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/contentstatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/contentstatustext"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="left"
-            android:layout_marginTop="5dp"
-            android:text="Executive summary pending"
-            android:layout_marginLeft="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/actionbarcolour"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/contentsharedtext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/contentstatus"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="left"
-            android:text="Transaction Status : "
-            android:layout_marginLeft="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/orange"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/contentshared"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/contentsharedtext"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="left"
-            android:layout_marginTop="5dp"
-            android:text="Transaction Status "
-            android:layout_marginLeft="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/actionbarcolour"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/commentstext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/contentshared"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="left"
-            android:text="Comments : "
-            android:layout_marginLeft="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/orange"
-            android:textSize="25sp" />
-
-        <in.nashapp.androidsummernote.Summernote
-            android:id="@+id/summernote"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="250sp"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="300sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
-
-        <Button
-            android:id="@+id/show_file"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/summernote"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="15dp"
-            android:text="+ Add Files"
-            android:layout_marginLeft="20dp"
-            android:backgroundTint="@color/orange"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:layout_height="match_parent"
+            android:background="@color/lite_ashe">
 
 
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            <TextView
+                android:id="@+id/campName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textStyle="bold|normal"
+
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/contentstatustext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="left"
+                android:text="Content Status : "
+                android:layout_below="@+id/campName"
+                android:layout_marginLeft="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/orange"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/contentstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contentstatustext"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="left"
+                android:layout_marginTop="5dp"
+                android:text="Executive summary pending"
+                android:layout_marginLeft="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/contentsharedtext"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/contentstatus"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_marginTop="11dp"-->
+                <!--android:fontFamily="sans-serif-condensed"-->
+                <!--android:gravity="left"-->
+                <!--android:text="Content Shared"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:textColor="@color/orange"-->
+                <!--android:textSize="25dp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/contentshared"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/contentsharedtext"-->
+                <!--android:fontFamily="sans-serif-condensed"-->
+                <!--android:gravity="left"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:text="No approved file."-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="22sp" />-->
+
+            <TextView
+                android:id="@+id/commentstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contentstatus"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="left"
+                android:text="Comments : "
+                android:layout_marginLeft="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/orange"
+                android:textSize="25sp" />
+
+            <in.nashapp.androidsummernote.Summernote
+                android:id="@+id/summernote"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="170sp"
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <Button
+                android:id="@+id/show_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/summernote"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="+ Add Files"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/orange"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/captiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_below="@+id/show_file"
+                android:textSize="12sp"
+                android:typeface="sans"
+                android:layout_marginLeft="20dp"
+                android:text="( File Type: All. Max file size: 2MB )"
+                android:textStyle="normal"/>
+
+            <TextView
+                android:id="@+id/filename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:layout_below="@+id/captiontext"
+                android:textSize="12sp"
+                android:layout_marginLeft="20dp"
+                android:typeface="sans"
+                android:visibility="visible"
+                android:textStyle="normal"/>
+
+
+            <Button
+                android:id="@+id/show_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filename"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_corner_button"
+                android:text="Add Comments"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/view_conversation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/show_button"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="view chat conversations"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:textSize="25sp" />
+
+            <ImageView
             android:id="@+id/ivImage"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/show_file"
-            />
-
-        <Button
-            android:id="@+id/show_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ivImage"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/rounded_corner_button"
-            android:text="Add Comments"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:visibility="invisible" />
+            <TextView
+                android:id="@+id/campid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
 
-        <TextView
-            android:id="@+id/view_conversation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/show_button"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="center"
-            android:text="view chat conversations"
-            android:textAllCaps="true"
-            android:layout_centerHorizontal="true"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/orange"
-            android:textStyle="bold"
-            android:textSize="25sp" />
-
-    </RelativeLayout>
-    </ScrollView>
+        </RelativeLayout>
+    </FrameLayout>
+    <!--</ScrollView>-->
 </android.support.design.widget.CoordinatorLayout>
