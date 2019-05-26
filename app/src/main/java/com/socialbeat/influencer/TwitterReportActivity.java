@@ -169,7 +169,6 @@ public class TwitterReportActivity extends AppCompatActivity {
             Log.v("SM CCampnme: ", campname);
         }
 
-
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);

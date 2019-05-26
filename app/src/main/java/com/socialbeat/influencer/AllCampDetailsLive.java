@@ -24,11 +24,22 @@ import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -37,6 +48,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -104,56 +116,56 @@ public class AllCampDetailsLive extends AppCompatActivity {
 
         // Displaying all values on the screen
 
-        campName = (TextView) findViewById(R.id.campName);
-        campShortNote = (TextView) findViewById(R.id.campShortNote);
-        campCat = (TextView) findViewById(R.id.campCat);
-        campLongNote = (TextView) findViewById(R.id.campLongNote);
-        campGoal = (TextView) findViewById(R.id.campGoal);
-        campDos = (TextView) findViewById(R.id.campDos);
-        campDont = (TextView) findViewById(R.id.campDont);
-        campBacklink = (TextView) findViewById(R.id.campBacklink);
-        campTag = (TextView) findViewById(R.id.campTag);
-        campid = (TextView) findViewById(R.id.campid);
-        campApplyTill = (TextView) findViewById(R.id.campApplyTill);
-        campRewards = (TextView) findViewById(R.id.campRewards);
-        campRewardType = (TextView) findViewById(R.id.campRewardType);
-        fixedamount = (TextView) findViewById(R.id.fixedamount);
-        campEligibility = (TextView) findViewById(R.id.campEligibility);
-        campDeliverables = (TextView) findViewById(R.id.campDeliverables);
+        campName = findViewById(R.id.campName);
+        campShortNote = findViewById(R.id.campShortNote);
+        campCat = findViewById(R.id.campCat);
+        campLongNote = findViewById(R.id.campLongNote);
+        campGoal = findViewById(R.id.campGoal);
+        campDos = findViewById(R.id.campDos);
+        campDont = findViewById(R.id.campDont);
+        campBacklink = findViewById(R.id.campBacklink);
+        campTag = findViewById(R.id.campTag);
+        campid = findViewById(R.id.campid);
+        campApplyTill = findViewById(R.id.campApplyTill);
+        campRewards = findViewById(R.id.campRewards);
+        campRewardType = findViewById(R.id.campRewardType);
+        fixedamount = findViewById(R.id.fixedamount);
+        campEligibility = findViewById(R.id.campEligibility);
+        campDeliverables = findViewById(R.id.campDeliverables);
 
-        coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
-        campImg = (ImageView) findViewById(R.id.campImg);
-        campaignclosed = (Button) findViewById(R.id.campaignclosed);
-        alreadyapplied = (Button) findViewById(R.id.alreadyapplied);
-        applynow =(Button) findViewById(R.id.applynow);
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
+        campImg = findViewById(R.id.campImg);
+        campaignclosed = findViewById(R.id.campaignclosed);
+        alreadyapplied = findViewById(R.id.alreadyapplied);
+        applynow = findViewById(R.id.applynow);
         campImg.setImageResource(R.mipmap.influencerlistimg);
         new DownloadImageTask(campImg).execute(cdcampImg);
         campName.setText(cdcampName);
-        Spanned sp = Html.fromHtml( cdcampShortNote );
+        Spanned sp = Html.fromHtml(cdcampShortNote);
         campShortNote.setText(sp);
         campShortNote.setMovementMethod(LinkMovementMethod.getInstance());
         campCat.setText(cdcampCat);
 
-        Spanned sp1 = Html.fromHtml( cdcampLongNote );
+        Spanned sp1 = Html.fromHtml(cdcampLongNote);
         campLongNote.setText(sp1);
         campLongNote.setMovementMethod(LinkMovementMethod.getInstance());
 
         campGoal.setText(cdcampGoal);
 
-        Spanned sp2 = Html.fromHtml( cdcampDos );
+        Spanned sp2 = Html.fromHtml(cdcampDos);
         campDos.setText(sp2);
         campDos.setMovementMethod(LinkMovementMethod.getInstance());
 
-        Spanned sp3 = Html.fromHtml( cdcampDont );
+        Spanned sp3 = Html.fromHtml(cdcampDont);
         campDont.setText(sp3);
         campDont.setMovementMethod(LinkMovementMethod.getInstance());
 
-        String link ="<a href="+cdcampBacklink+">"+ cdcampBacklink +" </a>" ;
-        Spanned spd = Html.fromHtml( link );
+        String link = "<a href=" + cdcampBacklink + ">" + cdcampBacklink + " </a>";
+        Spanned spd = Html.fromHtml(link);
         campBacklink.setText(spd);
         campBacklink.setMovementMethod(LinkMovementMethod.getInstance());
 
-        Spanned sp4 = Html.fromHtml( cdcampTag );
+        Spanned sp4 = Html.fromHtml(cdcampTag);
         campTag.setText(sp4);
         campTag.setMovementMethod(LinkMovementMethod.getInstance());
 
@@ -163,34 +175,34 @@ public class AllCampDetailsLive extends AppCompatActivity {
         campRewardType.setText(cdcampRewardType);
         fixedamount.setText(cdfixedamount);
 
-        Spanned sp5 = Html.fromHtml( cdcampEligibility );
+        Spanned sp5 = Html.fromHtml(cdcampEligibility);
         campEligibility.setText(sp5);
         campEligibility.setMovementMethod(LinkMovementMethod.getInstance());
 
-        Spanned sp6 = Html.fromHtml( cdcampDeliverables );
+        Spanned sp6 = Html.fromHtml(cdcampDeliverables);
         campDeliverables.setText(sp6);
         campDeliverables.setMovementMethod(LinkMovementMethod.getInstance());
 
-        System.out.println("cfixedamount value  :"+ cdfixedamount);
-        if(cdfixedamount!=null){
-            if (cdfixedamount.length()>0) {
+        System.out.println("cfixedamount value  :" + cdfixedamount);
+        if (cdfixedamount != null) {
+            if (cdfixedamount.length() > 0) {
                 fixedamount.setText("Maximum amount Rs : " + cdfixedamount);
-                System.out.println("Fixed Amount value is :"+ cdfixedamount);
-            }else{
+                System.out.println("Fixed Amount value is :" + cdfixedamount);
+            } else {
                 fixedamount.setText("Quote Amount is less than 0 for this Campaign.");
             }
-        }else{
+        } else {
             fixedamount.setText("No Quote Amount Condition for this Campaign.");
             System.out.println("Fixed Amount value is Null");
         }
 
 
-        campaignid =campid.getText().toString();
-        campaignname =campName.getText().toString();
+        campaignid = campid.getText().toString();
+        campaignname = campName.getText().toString();
 
-        if(cid.length() != 0) {
-            String APPLY_URL = getResources().getString(R.string.base_url)+getResources().getString(R.string.applied_list_url)+"?cid=" + cid + "&campid=" + cdcampid + "";
-            Log.v("APPLY URL :",APPLY_URL);
+        if (cid.length() != 0) {
+            String APPLY_URL = getResources().getString(R.string.base_url) + getResources().getString(R.string.applied_list_url) + "?cid=" + cid + "&campid=" + cdcampid + "";
+            Log.v("APPLY URL :", APPLY_URL);
             new JSONAsyncTask1(APPLY_URL).execute();
         }
 
@@ -213,184 +225,249 @@ public class AllCampDetailsLive extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (isInternetPresent) {
-                    if (cid.length() != 0) {
-                        MyApplication.getInstance().trackEvent("Campaign Apply Button Clicked Event", "OnClick", "Track Campaign Apply button Event");
-                        if (cdcampRewardType.equalsIgnoreCase("probono")) {
-                            Log.v("Campaign Type : ", "Probono");
-                            MyApplication.getInstance().trackEvent("Probono Campaign Applied Clicked Event", "OnClick", "Probono Campaign Clicked Event");
-                            String reqYesUrl = getResources().getString(R.string.base_url) + getResources().getString(R.string.apply_camp_without_quote_url) + "?cid=" + cid + "&campid=" + campaignid + "&os=Android";
-                            new JSONAsyncTaskNew(reqYesUrl).execute();
+                CampaignTheresold();
 
-                        } else if (cdcampRewardType.equalsIgnoreCase("barter")) {
-                            Log.v("Campaign Type : ", "Barter");
-                            MyApplication.getInstance().trackEvent("Barter Campaign Applied Clicked Event", "OnClick", "Barter Campaign Clicked Event");
-                            String reqYesUrl = getResources().getString(R.string.base_url) + getResources().getString(R.string.apply_camp_without_quote_url) + "?cid=" + cid + "&campid=" + campaignid + "&os=Android";
-                            new JSONAsyncTaskNew(reqYesUrl).execute();
-                        } else if (cdcampRewardType.equalsIgnoreCase("quote")) {
-                            Log.v("Campaign Type : ", "Quote");
-                            final Dialog dialog = new Dialog(AllCampDetailsLive.this);
-                            dialog.setContentView(R.layout.quoteamount);
-                            dialog.setCancelable(false);
-                            dialog.setTitle("Quote Amount");
 
-                            submit = (Button) dialog.findViewById(R.id.okbutton);
-                            famtval = (EditText) dialog.findViewById(R.id.fquoteamt);
-                            cancel = (TextView) dialog.findViewById(R.id.cancel_button);
-                            infotext = (TextView) dialog.findViewById(R.id.infotext);
-
-                            Typeface myFont = Typeface.createFromAsset(getAssets(), "font/rock.ttf");
-                            infotext.setTypeface(myFont);
-                            isInternetPresent = cd.isConnectingToInternet();
-
-                            submit.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    flg = true;
-                                    if (isInternetPresent) {
-                                        famt = famtval.getText().toString();
-                                        Log.v("Quoted Amount Value : ",famt);
-                                        MyApplication.getInstance().trackEvent("Quote Campaign Applied Clicked Event", "OnClick", "Quote Campaign Clicked Event");
-                                        String reqUrl = getResources().getString(R.string.base_url) + getResources().getString(R.string.apply_camp_with_quote_url) + "?cid=" + cid + "&campid=" + campaignid + "&quote=" + famt + "";
-                                        new JSONAsyncTaskSubmit(reqUrl).execute();
-                                        Log.v("Quote URL : ", reqUrl);
-
-                                    } else {
-                                        Snackbar snackbar = Snackbar
-                                                .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
-                                                .setAction("SETTINGS", new View.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(View view) {
-                                                        startActivity(new Intent(Settings.ACTION_SETTINGS));
-                                                    }
-                                                });
-                                        // Changing message text color
-                                        snackbar.setActionTextColor(Color.RED);
-                                        // Changing action button text color
-                                        View sbView = snackbar.getView();
-                                        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-                                        textView.setTextColor(Color.YELLOW);
-                                        snackbar.show();
-                                    }
-                                }
-                            });
-                            cancel.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    dialog.dismiss();
-                                }
-                            });
-                            dialog.show();
-                        } else if(cdcampRewardType.equalsIgnoreCase("fixedamount") ){
-                            Log.v("Campaign Type : ","Fixed Amount");
-                            final Dialog dialog = new Dialog(AllCampDetailsLive.this);
-                            dialog.setContentView(R.layout.quoteamounts);
-                            dialog.setCancelable(false);
-                            dialog.setTitle("Quote Amount");
-
-                            submit = (Button) dialog.findViewById(R.id.okbutton);
-                            famtval = (EditText) dialog.findViewById(R.id.femailid);
-                            cancel = (TextView) dialog.findViewById(R.id.cancel_button);
-                            infotext = (TextView) dialog.findViewById(R.id.infotext);
-                            conditiontext = (TextView) dialog.findViewById(R.id.conditiontext);
-                            Typeface myFont = Typeface.createFromAsset(getAssets(), "font/rock.ttf");
-                            infotext.setTypeface(myFont);
-                            Typeface myFont1 = Typeface.createFromAsset(getAssets(), "font/rock.ttf");
-                            conditiontext.setTypeface(myFont1);
-
-                            isInternetPresent = cd.isConnectingToInternet();
-
-                            if (cdfixedamount.length()>0) {
-                                conditiontext.setText("(Maximum Quote amount for this campaign is RS : " + cdfixedamount.toString()+" ,so give your quote lessthan maximum amount.)");
-                            }else{
-                                conditiontext.setText("(No Quote Amount Condition for this Campaign.)");
-                            }
-
-                            submit.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    flg = true;
-                                    if (isInternetPresent) {
-                                        famt = famtval.getText().toString();
-                                        Log.v("quotevalue : ",famt);
-                                        if (cdfixedamount != null && cdfixedamount.trim().length() != 0) {
-
-                                            if (famt != null && famt.trim().length() != 0){
-
-                                                first = Integer.parseInt(cdfixedamount);
-                                                second = Integer.parseInt(famt);
-                                                System.out.println("Fixed Amount value : "+ first);
-                                                System.out.println("Quoted Amount value :"+ second);
-                                                if (first >= second) {
-                                                    String reqUrl = getResources().getString(R.string.base_url)+getResources().getString(R.string.apply_camp_with_quote_url)+"?cid=" + cid + "&campid=" + campaignid + "&quote=" + famt + "";
-                                                    new JSONAsyncTaskSubmit(reqUrl).execute();
-                                                    Log.v("Responsce execution : ",reqUrl);
-                                                }else{
-                                                    Toast.makeText(AllCampDetailsLive.this, "Your quote amount is greater than Maximum Amount,so give your quote lessthan maximum amount. ", Toast.LENGTH_LONG).show();
-                                                }
-                                            }else{
-                                                Toast.makeText(AllCampDetailsLive.this, "Please enter the amount you would like to charge for this campaign.", Toast.LENGTH_LONG).show();
-                                            }
-
-                                        }else{
-                                            //Toast.makeText(AllCampDetailsLive.this, "No minimum Value ", Toast.LENGTH_LONG).show();
-                                        Log.v("Message : ","No minimum Value");
-                                        }
-
-                                    } else {
-                                        Snackbar snackbar = Snackbar
-                                                .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
-                                                .setAction("SETTINGS", new View.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(View view) {
-                                                        startActivity(new Intent(Settings.ACTION_SETTINGS));
-                                                    }
-                                                });
-                                        // Changing message text color
-                                        snackbar.setActionTextColor(Color.RED);
-                                        // Changing action button text color
-                                        View sbView = snackbar.getView();
-                                        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-                                        textView.setTextColor(Color.YELLOW);
-                                        snackbar.show();
-                                    }
-                                }
-                            });
-                            cancel.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    dialog.dismiss();
-                                }
-                            });
-
-                            dialog.show();
-                        } else {
-                            Toast.makeText(AllCampDetailsLive.this, "Campaign Categeory could not mention.", Toast.LENGTH_LONG).show();
-                        }
-                    } else {
-                        Toast.makeText(AllCampDetailsLive.this, "CID value is Empty", Toast.LENGTH_LONG).show();
-                    }
-                }else {
-                        Snackbar snackbar = Snackbar
-                                .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
-                                .setAction("SETTINGS", new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        startActivity(new Intent(Settings.ACTION_SETTINGS));
-                                    }
-                                });
-                        // Changing message text color
-                        snackbar.setActionTextColor(Color.RED);
-                        // Changing action button text color
-                        View sbView = snackbar.getView();
-                        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-                        textView.setTextColor(Color.YELLOW);
-                        snackbar.show();
-                    }
-                }
+            }
         });
 
+    }
+
+    private void CampaignTheresold() {
+        RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
+        String CONDITION_URL = "https://www.influencer.in/API/v6/api_v6.php/checkCampEligibility?cid="+cid+"&campid="+campaignid;
+        System.out.println("City url : "+CONDITION_URL);
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, CONDITION_URL, new Response.Listener<String>() {
+
+            @Override
+
+            public void onResponse(String response) {
+
+                try{
+
+                    JSONObject jsonObject=new JSONObject(response);
+
+                    String responstatus = jsonObject.getString("success");
+                    Log.d("response status : ", responstatus);
+                    String responsemessage = jsonObject.getString("message");
+                    Log.d("response message : ", responsemessage);
+                    String eligibility = jsonObject.getString("eligibility");
+                    Log.d("eligibility status : ", eligibility);
+                    String reason = jsonObject.getString("reason");
+                    Log.d("reason message : ", responsemessage);
+
+
+                    if(eligibility.equalsIgnoreCase("true")){
+
+                    Toast.makeText(AllCampDetailsLive.this, reason, Toast.LENGTH_LONG).show();
+                    ApplyCampaign();
+
+                    } else if(eligibility.equalsIgnoreCase("false")){
+
+                    Toast.makeText(AllCampDetailsLive.this, reason, Toast.LENGTH_LONG).show();
+                    }
+
+                }catch (JSONException e){e.printStackTrace();}
+
+            }
+
+        }, new Response.ErrorListener() {
+
+            @Override
+
+            public void onErrorResponse(VolleyError error) {
+
+                error.printStackTrace();
+
+            }
+
+        });
+
+        int socketTimeout = 30000;
+
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+
+        stringRequest.setRetryPolicy(policy);
+
+        requestQueue.add(stringRequest);
+    }
+
+    private void ApplyCampaign() {
+        if (isInternetPresent) {
+            if (cid.length() != 0) {
+                MyApplication.getInstance().trackEvent("Campaign Apply Button Clicked Event", "OnClick", "Track Campaign Apply button Event");
+                if (cdcampRewardType.equalsIgnoreCase("probono")) {
+                    Log.v("Campaign Type : ", "Probono");
+                    MyApplication.getInstance().trackEvent("Probono Campaign Applied Clicked Event", "OnClick", "Probono Campaign Clicked Event");
+                    String reqYesUrl = getResources().getString(R.string.base_url) + getResources().getString(R.string.apply_camp_without_quote_url) + "?cid=" + cid + "&campid=" + campaignid + "&os=Android";
+                    new JSONAsyncTaskNew(reqYesUrl).execute();
+
+                } else if (cdcampRewardType.equalsIgnoreCase("barter")) {
+                    Log.v("Campaign Type : ", "Barter");
+                    MyApplication.getInstance().trackEvent("Barter Campaign Applied Clicked Event", "OnClick", "Barter Campaign Clicked Event");
+                    String reqYesUrl = getResources().getString(R.string.base_url) + getResources().getString(R.string.apply_camp_without_quote_url) + "?cid=" + cid + "&campid=" + campaignid + "&os=Android";
+                    new JSONAsyncTaskNew(reqYesUrl).execute();
+                } else if (cdcampRewardType.equalsIgnoreCase("quote")) {
+                    Log.v("Campaign Type : ", "Quote");
+                    final Dialog dialog = new Dialog(AllCampDetailsLive.this);
+                    dialog.setContentView(R.layout.quoteamount);
+                    dialog.setCancelable(false);
+                    dialog.setTitle("Quote Amount");
+
+                    submit = dialog.findViewById(R.id.okbutton);
+                    famtval = dialog.findViewById(R.id.fquoteamt);
+                    cancel = dialog.findViewById(R.id.cancel_button);
+                    infotext = dialog.findViewById(R.id.infotext);
+
+                    Typeface myFont = Typeface.createFromAsset(getAssets(), "font/rock.ttf");
+                    infotext.setTypeface(myFont);
+                    isInternetPresent = cd.isConnectingToInternet();
+
+                    submit.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            flg = true;
+                            if (isInternetPresent) {
+                                famt = famtval.getText().toString();
+                                Log.v("Quoted Amount Value : ", famt);
+                                MyApplication.getInstance().trackEvent("Quote Campaign Applied Clicked Event", "OnClick", "Quote Campaign Clicked Event");
+                                String reqUrl = getResources().getString(R.string.base_url) + getResources().getString(R.string.apply_camp_with_quote_url) + "?cid=" + cid + "&campid=" + campaignid + "&quote=" + famt + "";
+                                new JSONAsyncTaskSubmit(reqUrl).execute();
+                                Log.v("Quote URL : ", reqUrl);
+
+                            } else {
+                                Snackbar snackbar = Snackbar
+                                        .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
+                                        .setAction("SETTINGS", new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                startActivity(new Intent(Settings.ACTION_SETTINGS));
+                                            }
+                                        });
+                                // Changing message text color
+                                snackbar.setActionTextColor(Color.RED);
+                                // Changing action button text color
+                                View sbView = snackbar.getView();
+                                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                                textView.setTextColor(Color.YELLOW);
+                                snackbar.show();
+                            }
+                        }
+                    });
+                    cancel.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
+                        }
+                    });
+                    dialog.show();
+                } else if (cdcampRewardType.equalsIgnoreCase("fixedamount")) {
+                    Log.v("Campaign Type : ", "Fixed Amount");
+                    final Dialog dialog = new Dialog(AllCampDetailsLive.this);
+                    dialog.setContentView(R.layout.quoteamounts);
+                    dialog.setCancelable(false);
+                    dialog.setTitle("Quote Amount");
+
+                    submit = dialog.findViewById(R.id.okbutton);
+                    famtval = dialog.findViewById(R.id.femailid);
+                    cancel = dialog.findViewById(R.id.cancel_button);
+                    infotext = dialog.findViewById(R.id.infotext);
+                    conditiontext = dialog.findViewById(R.id.conditiontext);
+                    Typeface myFont = Typeface.createFromAsset(getAssets(), "font/rock.ttf");
+                    infotext.setTypeface(myFont);
+                    Typeface myFont1 = Typeface.createFromAsset(getAssets(), "font/rock.ttf");
+                    conditiontext.setTypeface(myFont1);
+
+                    isInternetPresent = cd.isConnectingToInternet();
+
+                    if (cdfixedamount.length() > 0) {
+                        conditiontext.setText("(Maximum Quote amount for this campaign is RS : " + cdfixedamount + " ,so give your quote lessthan maximum amount.)");
+                    } else {
+                        conditiontext.setText("(No Quote Amount Condition for this Campaign.)");
+                    }
+
+                    submit.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            flg = true;
+                            if (isInternetPresent) {
+                                famt = famtval.getText().toString();
+                                Log.v("quotevalue : ", famt);
+                                if (cdfixedamount != null && cdfixedamount.trim().length() != 0) {
+
+                                    if (famt != null && famt.trim().length() != 0) {
+
+                                        first = Integer.parseInt(cdfixedamount);
+                                        second = Integer.parseInt(famt);
+                                        System.out.println("Fixed Amount value : " + first);
+                                        System.out.println("Quoted Amount value :" + second);
+                                        if (first >= second) {
+                                            String reqUrl = getResources().getString(R.string.base_url) + getResources().getString(R.string.apply_camp_with_quote_url) + "?cid=" + cid + "&campid=" + campaignid + "&quote=" + famt + "";
+                                            new JSONAsyncTaskSubmit(reqUrl).execute();
+                                            Log.v("Responsce execution : ", reqUrl);
+                                        } else {
+                                            Toast.makeText(AllCampDetailsLive.this, "Your quote amount is greater than Maximum Amount,so give your quote lessthan maximum amount. ", Toast.LENGTH_LONG).show();
+                                        }
+                                    } else {
+                                        Toast.makeText(AllCampDetailsLive.this, "Please enter the amount you would like to charge for this campaign.", Toast.LENGTH_LONG).show();
+                                    }
+
+                                } else {
+                                    //Toast.makeText(AllCampDetailsLive.this, "No minimum Value ", Toast.LENGTH_LONG).show();
+                                    Log.v("Message : ", "No minimum Value");
+                                }
+
+                            } else {
+                                Snackbar snackbar = Snackbar
+                                        .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
+                                        .setAction("SETTINGS", new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                startActivity(new Intent(Settings.ACTION_SETTINGS));
+                                            }
+                                        });
+                                // Changing message text color
+                                snackbar.setActionTextColor(Color.RED);
+                                // Changing action button text color
+                                View sbView = snackbar.getView();
+                                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                                textView.setTextColor(Color.YELLOW);
+                                snackbar.show();
+                            }
+                        }
+                    });
+                    cancel.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
+                        }
+                    });
+
+                    dialog.show();
+                } else {
+                    Toast.makeText(AllCampDetailsLive.this, "Campaign Categeory could not mention.", Toast.LENGTH_LONG).show();
+                }
+            } else {
+                Toast.makeText(AllCampDetailsLive.this, "CID value is Empty", Toast.LENGTH_LONG).show();
+            }
+        } else {
+            Snackbar snackbar = Snackbar
+                    .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
+                    .setAction("SETTINGS", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            startActivity(new Intent(Settings.ACTION_SETTINGS));
+                        }
+                    });
+            // Changing message text color
+            snackbar.setActionTextColor(Color.RED);
+            // Changing action button text color
+            View sbView = snackbar.getView();
+            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+            textView.setTextColor(Color.YELLOW);
+            snackbar.show();
         }
+    }
 
 
     class JSONAsyncTask1 extends AsyncTask<String, Void, String> {
@@ -457,7 +534,7 @@ public class AllCampDetailsLive extends AppCompatActivity {
             pdia.dismiss();
             try {
                 JSONObject json = new JSONObject(result);
-                String responsemessage = json.getString("message").toString();
+                String responsemessage = json.getString("message");
                 //Toast.makeText(AllCampDetailsLive.this, responsemessage, Toast.LENGTH_LONG).show();
                 System.out.println(responsemessage);
                 if(responsemessage.equalsIgnoreCase("Not applied")){
@@ -557,9 +634,9 @@ public class AllCampDetailsLive extends AppCompatActivity {
             pdia.dismiss();
             try {
                 JSONObject json = new JSONObject(result);
-                String response = json.getString("success").toString();
-                String responsemessage = json.getString("message").toString();
-                String responstatus = json.getString("status").toString();
+                String response = json.getString("success");
+                String responsemessage = json.getString("message");
+                String responstatus = json.getString("status");
 
                 System.out.println(response);
                 System.out.println(responsemessage);
@@ -696,7 +773,7 @@ private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
             pdia.dismiss();
             try {
                 JSONObject json = new JSONObject(result);
-                String responsemessage = json.getString("message").toString();
+                String responsemessage = json.getString("message");
                 Toast.makeText(AllCampDetailsLive.this, responsemessage, Toast.LENGTH_LONG).show();
                 finish();
             } catch (JSONException e) {

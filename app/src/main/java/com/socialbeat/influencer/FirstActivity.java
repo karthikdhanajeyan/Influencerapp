@@ -100,7 +100,7 @@ public class FirstActivity extends AppCompatActivity {
                 if (isInternetPresent) {
                     editor.putBoolean(open, true);
                     editor.commit();
-                    Intent in = new Intent(FirstActivity.this, RegistrationActivityOne.class);
+                    Intent in = new Intent(FirstActivity.this, RegisterationActivity.class);
                     startActivity(in);
                 } else {
                     Snackbar snackbar = Snackbar

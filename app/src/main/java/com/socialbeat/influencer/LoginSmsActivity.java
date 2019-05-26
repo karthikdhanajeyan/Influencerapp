@@ -42,16 +42,12 @@ public class LoginSmsActivity extends AppCompatActivity implements View.OnClickL
 
 
     private ViewPager viewPager;
-    private ViewPagerAdapter adapter;
-    private Button btnRequestSms, btnVerifyOtp;
     private EditText  inputMobile, inputOtp;
     private ProgressBar progressBar;
     private PrefManager pref;
-    private ImageButton btnEditMobile;
     private TextView txtEditMobile;
     private LinearLayout layoutEditMobile;
     String cid,mobileno;
-
     TextView create;
 
     @Override
@@ -64,10 +60,10 @@ public class LoginSmsActivity extends AppCompatActivity implements View.OnClickL
         viewPager = (ViewPager) findViewById(R.id.viewPagerVertical);
         inputMobile = (EditText) findViewById(R.id.inputMobile);
         inputOtp = (EditText) findViewById(R.id.inputOtp);
-        btnRequestSms = (Button) findViewById(R.id.btn_request_sms);
-        btnVerifyOtp = (Button) findViewById(R.id.btn_verify_otp);
+        Button btnRequestSms = (Button) findViewById(R.id.btn_request_sms);
+        Button btnVerifyOtp = (Button) findViewById(R.id.btn_verify_otp);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        btnEditMobile = (ImageButton) findViewById(R.id.btn_edit_mobile);
+        ImageButton btnEditMobile = (ImageButton) findViewById(R.id.btn_edit_mobile);
         txtEditMobile = (TextView) findViewById(R.id.txt_edit_mobile);
         layoutEditMobile = (LinearLayout) findViewById(R.id.layout_edit_mobile);
 
@@ -99,7 +95,7 @@ public class LoginSmsActivity extends AppCompatActivity implements View.OnClickL
             finish();
         }
 
-        adapter = new ViewPagerAdapter();
+        ViewPagerAdapter adapter = new ViewPagerAdapter();
         viewPager.setAdapter(adapter);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

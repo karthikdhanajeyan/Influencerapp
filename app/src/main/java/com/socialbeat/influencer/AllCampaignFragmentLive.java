@@ -152,6 +152,9 @@ public class AllCampaignFragmentLive extends Fragment implements SwipeRefreshLay
                 Log.d(TAG, response.toString());
                 hidePDialog();
                 // Parsing json
+                Log.v("Response : ",response.toString());
+                if(response.toString() != null && !response.toString().isEmpty()){
+                    Log.v("Condition : ","Working");
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject obj = response.getJSONObject(i);
@@ -187,6 +190,23 @@ public class AllCampaignFragmentLive extends Fragment implements SwipeRefreshLay
                 // notifying list adapter about data changes
                 // so that it renders the list view with updated data
                 adapter.notifyDataSetChanged();
+            }else {
+                    Snackbar snackbar = Snackbar
+                            .make(coordinatorLayout, "No Live Camapigns!", Snackbar.LENGTH_INDEFINITE)
+                            .setAction("Close", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+
+                                }
+                            });
+                    // Changing message text color
+                    snackbar.setActionTextColor(Color.WHITE);
+                    // Changing action button text color
+                    View sbView = snackbar.getView();
+                    TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
+                }
             }
         }, new Response.ErrorListener() {
             @Override

@@ -72,8 +72,10 @@
     <string name="textforhead">Enter your quote in Rs. for all the deliverables mentioned in the brief for this campaign</string>
 
     <!-- API Configurations -->
-    <string name="base_url">https://www.influencer.in/API/v4/</string>
+    <string name="base_url">https://www.influencer.in/API/v6/</string>
     <string name="stage_base_url">http://stage.influencer.in/API/v4/</string>
+    <string name="final_base_url">https://www.influencer.in/API/v6/api_v6.php/</string>
+
 
     <string name="device_details_url">androidRegistration1.php</string>
     <string name="regsitration_one_url">androidUserRegister.php</string>
@@ -96,7 +98,33 @@
     <string name="userInfo_url">updateCustomerDetails.php</string>
     <string name="add">ADD</string>
 
-    <string name="app_id">113468599289511</string>
+   <!-- <string name="facebook_app_id">113468599289511</string>-->
+
+    <string name="facebook_app_id">263816117756583</string>
     <string name="fb_login_protocol_scheme">fb113468599289511</string>
+
+    <string-array name="foi_array">
+    <item>Auto</item>
+    <item>Beauty</item>
+    <item>Book</item>
+    <item>Comedians/Humour</item>
+    <item>Entertainment</item>
+    <item>Fashion</item>
+    <item>Food</item>
+    <item>Health \u0026 Fitness</item>
+
+    <item>Inspiration \u0026 Motivation</item>
+    <item>Investment</item>
+    <item>Lifestyle</item>
+    <item>News \u0026 Politics</item>
+    <item>Parenting</item>
+    <item>Photography</item>
+    <item>Real Estate</item>
+    <item>Sports/Gaming</item>
+    <item>Technology</item>
+    <item>Travel</item>
+    <item>YouTube</item>
+    </string-array>
+
 
 </resources>

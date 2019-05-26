@@ -4,7 +4,7 @@
             "outputFile": "F:\\Influencerapp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-iw\\values-iw.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\3722a8ad72e7e3ead16ec81403d1d899\\res\\values-iw\\values.xml",
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\values-iw\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.0.1.aar\\2a66ec20cfd8853717ba681ce05b26e3\\res\\values-iw\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "176",
-                        "endOffsets": "423"
-                    },
-                    "to": {
-                        "startLines": "60",
-                        "startColumns": "4",
-                        "startOffsets": "6322",
-                        "endColumns": "176",
-                        "endOffsets": "6494"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-17.5.0.aar\\cb18e34e77af4604aaef283e7ed8846d\\res\\values-iw\\values.xml",
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\e41d28bc5ed3d8a584b788450cb52a7e\\res\\values-iw\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -55,41 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-17.2.0.aar\\7e87d016a69cf94d63e40d06db81c72c\\res\\values-iw\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10",
-                        "startColumns": "0,0,0,0,0,0,0",
-                        "startOffsets": "199,270,373,434,495,568,661",
-                        "endColumns": "70,102,60,60,72,92,68",
-                        "endOffsets": "269,372,433,494,567,660,729"
-                    },
-                    "to": {
-                        "startLines": "72,73,74,75,76,77,78",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "7963,8038,8145,8210,8275,8352,8449",
-                        "endColumns": "74,106,64,64,76,96,72",
-                        "endOffsets": "8033,8140,8205,8270,8347,8444,8517"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\7b93cd94f1369cb5e70953bb0a76c77f\\res\\values-iw\\values-iw.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "80",
-                        "startColumns": "4",
-                        "startOffsets": "8603",
-                        "endColumns": "100",
-                        "endOffsets": "8699"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-gcm-16.1.0.aar\\3debab31ef1e8a3d9de0bcf35e428f53\\res\\values-iw\\values.xml",
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\e44da63a4e19dbdb3cee39eb5c37248c\\res\\values-iw\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -106,7 +55,58 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\ca9c2298a6f6551377717fae22b8b04a\\res\\values-iw\\values-iw.xml",
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\d5c8e2368f84d5c8ae415e21ba23d7a4\\res\\values-iw\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "199,270,373,434,495,568,661",
+                        "endColumns": "70,102,60,60,72,92,68",
+                        "endOffsets": "269,372,433,494,567,660,729"
+                    },
+                    "to": {
+                        "startLines": "72,73,74,75,76,77,78",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "7963,8038,8145,8210,8275,8352,8449",
+                        "endColumns": "74,106,64,64,76,96,72",
+                        "endOffsets": "8033,8140,8205,8270,8347,8444,8517"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\f3ef79c9a79e7b65314fe20d8763d342\\res\\values-iw\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "176",
+                        "endOffsets": "423"
+                    },
+                    "to": {
+                        "startLines": "60",
+                        "startColumns": "4",
+                        "startOffsets": "6322",
+                        "endColumns": "176",
+                        "endOffsets": "6494"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\values-iw\\values-iw.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "80",
+                        "startColumns": "4",
+                        "startOffsets": "8603",
+                        "endColumns": "100",
+                        "endOffsets": "8699"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\values-iw\\values-iw.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -123,7 +123,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.28.0.aar\\cdb01062bfe787ff46d295f4265873d0\\res\\values-iw\\values-iw.xml",
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\values-iw\\values-iw.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

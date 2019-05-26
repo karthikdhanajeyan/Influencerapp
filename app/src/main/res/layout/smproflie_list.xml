@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:background="@color/darkg_ashe">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            style="@style/Widget.CardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/profile_image"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:background="@mipmap/user_color_icon" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/sm_image"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="342dp"
+                android:layout_marginLeft="342dp"
+                android:layout_marginTop="8dp"
+                android:padding="3dp"
+                android:background="@mipmap/facebook_clr_icon" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="Name"
+                android:textColor="@color/orange"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearonee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="20sp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5sp"
+                    android:layout_below="@+id/profile_image"
+                    android:background="@color/ashe"/>
+
+                <LinearLayout
+                    android:id="@+id/linearone"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!--<ListView-->
+                        <!--android:id="@+id/smdetails"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:dividerHeight="1dp"/>-->
+
+                    <LinearLayout
+                        android:id="@+id/key1_layout"
+                        android:layout_width="110sp"
+                        android:layout_height="60sp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true">
+
+                        <TextView
+                            android:id="@+id/key1_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Followers"
+                            android:singleLine="false"
+                            android:typeface="sans"
+                            android:fontFamily="sans-serif"
+                            android:layout_marginTop="5sp"
+                            android:visibility="visible"
+                            android:textColor="@color/actionbarcolour"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+
+
+                        <TextView
+                            android:id="@+id/key1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:text="56563"
+                            android:visibility="visible"
+                            android:textColor="@color/orange"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="60sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_gravity="center"
+                        android:visibility="invisible"
+                        android:background="@color/ashe"/>
+
+                    <LinearLayout
+                        android:id="@+id/key2_layout"
+                        android:layout_width="110sp"
+                        android:layout_height="60sp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true">
+
+                        <TextView
+                            android:id="@+id/key2_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Likes"
+                            android:singleLine="false"
+                            android:fontFamily="sans-serif"
+                            android:layout_marginTop="5sp"
+                            android:textColor="@color/actionbarcolour"
+                            android:textSize="20sp"
+                            android:typeface="sans"
+                            android:visibility="visible"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+
+
+
+                        <TextView
+                            android:id="@+id/key2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:text="432"
+                            android:textColor="@color/orange"
+                            android:textSize="18sp"
+                            android:visibility="visible"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="60sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_gravity="center"
+                        android:visibility="invisible"
+                        android:background="@color/ashe"/>
+
+                    <LinearLayout
+                        android:id="@+id/key3_layout"
+                        android:layout_width="110sp"
+                        android:layout_height="60sp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true">
+
+                        <TextView
+                            android:id="@+id/key3_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Subcribers"
+                            android:singleLine="false"
+                            android:fontFamily="sans-serif"
+                            android:layout_marginTop="5sp"
+                            android:textColor="@color/actionbarcolour"
+                            android:textSize="20sp"
+                            android:typeface="sans"
+                            android:visibility="invisible"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+
+
+
+                        <TextView
+                            android:id="@+id/key3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:text="222"
+                            android:textColor="@color/orange"
+                            android:textSize="18sp"
+                            android:visibility="invisible"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/socialmedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

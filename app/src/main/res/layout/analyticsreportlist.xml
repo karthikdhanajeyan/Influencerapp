@@ -1,52 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="5dp"
-    android:paddingLeft="5dp"
-    android:background="@color/ashe"
-    android:paddingRight="5dp">
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:background="@color/ashe">
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
+        android:layout_alignParentTop="true"
         android:layout_margin="@dimen/card_margin1"
+        android:layout_marginTop="2dp"
         android:layout_centerHorizontal="true">
 
         <RelativeLayout
-            android:id="@+id/topone"
-            android:layout_width="wrap_content"
+            style="@style/Widget.CardContent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <!--<View-->
-                <!--android:id="@+id/bottomlin"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="1sp"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:layout_marginTop="5sp"-->
-                <!--android:layout_marginBottom="5sp"-->
-                <!--android:background="@color/ashe"/>-->
-
-            <LinearLayout
-                android:id="@+id/linearone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginTop="5sp"
-                android:orientation="horizontal">
-
 
                 <LinearLayout
                     android:id="@+id/linearnew"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/bottomline1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:gravity="center">
 
                     <LinearLayout
                         android:id="@+id/sm_type"
@@ -59,7 +41,6 @@
                             android:id="@+id/sm_typetext"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
                             android:fontFamily="sans-serif"
                             android:singleLine="false"
                             android:text="Socialmedia Type"
@@ -122,7 +103,6 @@
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
             <View
                 android:id="@+id/bottomline"
                 android:layout_width="match_parent"
@@ -130,7 +110,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="5sp"
                 android:layout_marginBottom="5sp"
-                android:layout_below="@+id/linearone"
+                android:layout_below="@+id/linearnew"
                 android:background="@color/ashe"/>
 
             <LinearLayout
@@ -152,7 +132,6 @@
                     android:gravity="center"
                     android:layout_marginTop="5sp"
                     android:textColor="@color/actionbarcolour"
-                    android:layout_below="@+id/bottomline"
                     android:textSize="16sp"
                     android:typeface="sans"
                     android:layout_centerHorizontal="true" />
@@ -197,6 +176,7 @@
                 android:layout_width="220sp"
                 android:layout_height="50sp"
                 android:gravity="center"
+                android:layout_below="@+id/bottomline"
                 android:layout_centerHorizontal="true"
                 android:orientation="vertical">
 
@@ -211,12 +191,11 @@
                     android:textSize="15sp"
                     android:gravity="center"
                     android:textAllCaps="true"
-                    android:layout_below="@+id/bottomline"
                     android:text="@string/reachengage"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
                     android:textAlignment="center"
-                    android:background="@drawable/rounded_corner_button_newone"
+                    android:background="@drawable/rounded_corner_button_new"
                     android:layout_centerHorizontal="true" />
 
             </LinearLayout>
@@ -234,6 +213,7 @@
                 android:layout_width="220sp"
                 android:layout_height="50sp"
                 android:gravity="center"
+                android:layout_below="@+id/bottomline"
                 android:orientation="vertical">
 
                 <Button
@@ -247,7 +227,6 @@
                     android:textSize="15sp"
                     android:gravity="center"
                     android:textAllCaps="true"
-                    android:layout_below="@+id/bottomline"
                     android:text="Edit Action"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="30dp"
@@ -255,76 +234,72 @@
                     android:background="@drawable/rounded_corner_button_newone"
                     android:layout_centerHorizontal="true" />
 
-
             </LinearLayout>
             </LinearLayout>
-
 
         </RelativeLayout>
-
-        <TextView
-            android:id="@+id/campid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:id="@+id/campname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:id="@+id/contentid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:id="@+id/posted_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:id="@+id/from_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:id="@+id/to_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:id="@+id/reach"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:id="@+id/reach_attach"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:id="@+id/engagement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:id="@+id/engage_attach"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerHorizontal="true" />
-
     </android.support.v7.widget.CardView>
 
+    <TextView
+        android:id="@+id/campid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/campname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/contentid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/posted_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/from_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/to_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/reach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/reach_attach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/engagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/engage_attach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

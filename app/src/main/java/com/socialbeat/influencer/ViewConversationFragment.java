@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -110,7 +111,7 @@ public class ViewConversationFragment extends Fragment {
         pDialog.show();
         String CONVERSATION_URL = "https://www.influencer.in/API/v6/api_v6.php/getAllConversations?cid=" + cid + "&campid="+campid+"";
         System.out.println("conversation url : "+CONVERSATION_URL);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, CONVERSATION_URL, new Response.Listener<String>() {
+        final StringRequest stringRequest = new StringRequest(Request.Method.GET, CONVERSATION_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 // Do something with response string
@@ -137,19 +138,28 @@ public class ViewConversationFragment extends Fragment {
                             viewconversation.setId_post_conversation(obj.getString("id_post_conversation"));
                             viewconversation.setMessage(obj.getString("message"));
                             viewconversation.setConversation_author(obj.getString("conversation_author"));
+                            viewconversation.setConversation_thumbnail_url(obj.getString("conversation_thumbnail_url"));
                             viewconversation.setAdded_date(obj.getString("added_date"));
 
                             JSONArray obj2 = obj.getJSONArray("files");
 
                             for (int j = 0; j < obj2.length(); j++) {
+                               // Log.v("J value : ", String.valueOf(j));
 
                                 JSONObject obj3 = obj2.getJSONObject(j);
+
+                                //System.out.println(String.valueOf(obj3[j]));
+                                 Log.v("J value result : ", String.valueOf(obj3.getString("file_name")));
+
                                 viewconversation.setId_post_attach(obj3.getString("id_post_attach"));
                                 viewconversation.setFile_name(obj3.getString("file_name"));
                                 viewconversation.setFile_location(obj3.getString("file_location"));
+                                viewconversation.setThumbnail_url(obj3.getString("thumbnail_url"));
                                 viewconversation.setApproved_status(obj3.getString("approved_status"));
+
+                                //viewConversationList.add(viewconversation);
+                                // adding contentofCampaigns to movies array
                             }
-                            // adding contentofCampaigns to movies array
                             viewConversationList.add(viewconversation);
                         } catch (JSONException e) {
                             e.printStackTrace();

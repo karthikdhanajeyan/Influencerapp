@@ -49,9 +49,9 @@ repositories {
 dependencies {
     implementation 'com.google.android.gms:play-services-ads:17.2.0'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
-    implementation 'com.google.firebase:firebase-messaging:17.5.0'
+    implementation 'com.google.firebase:firebase-messaging:18.0.0'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.facebook.android:facebook-login:4.28.0'
+    implementation 'com.facebook.android:facebook-login:4.42.0'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -66,7 +66,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-gcm:16.1.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
     //facebook
-    implementation 'com.facebook.android:facebook-android-sdk:4.28.0'
+    implementation 'com.facebook.android:facebook-android-sdk:4.42.0'
     implementation files('libs/apache-httpcomponents-httpclient.jar')
     implementation files('libs/apache-httpcomponents-httpclient-cache.jar')
     implementation files('libs/apache-httpcomponents-httpcore.jar')
@@ -74,14 +74,14 @@ dependencies {
     implementation files('libs/volley.jar')
     implementation files('libs/twitter4j-core-4.0.1.jar')
     implementation 'com.github.bumptech.glide:glide:3.7.0'
-    implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha3'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta1'
     testImplementation 'junit:junit:4.12'
     implementation 'org.jsoup:jsoup:1.10.2'
     //conversations
     implementation 'in.nashapp.androidsummernote:androidsummernote:1.0.5'
-
     implementation 'com.mindorks:placeholderview:0.7.1'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.github.pratikbutani:MultiSelectSpinner:08d324c98'
 }

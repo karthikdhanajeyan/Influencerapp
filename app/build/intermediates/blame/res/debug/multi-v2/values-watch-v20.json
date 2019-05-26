@@ -4,7 +4,7 @@
             "outputFile": "F:\\Influencerapp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-16.0.1.aar\\5ef3ce62b5a2a7a14fdacd817bf2bf25\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\1763b5102a70e54637efb8fc2079fede\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\ca9c2298a6f6551377717fae22b8b04a\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

@@ -4,7 +4,7 @@
             "outputFile": "F:\\Influencerapp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1b035568e0acabf2cff19ceccc470401\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\ca9c2298a6f6551377717fae22b8b04a\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

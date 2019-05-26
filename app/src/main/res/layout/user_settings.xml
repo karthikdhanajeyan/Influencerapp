@@ -6,6 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <FrameLayout
+        android:id="@+id/framewindow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -110,158 +116,13 @@
 
                         </android.support.v7.widget.CardView>
 
-                        <android.support.v7.widget.CardView
-                            android:id="@+id/cardviewsecond"
-                            android:layout_width="match_parent"
-                            android:layout_height="60sp"
-                            android:layout_below="@+id/cardviewone"
-                            android:layout_margin="@dimen/card_margin2">
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="60sp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_alignParentRight="true"
-                                android:layout_alignParentStart="true"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:id="@+id/overallreach_social"
-                                    android:layout_width="110sp"
-                                    android:layout_height="60sp"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_centerHorizontal="true"
-                                    android:gravity="center"
-                                    android:textSize="16sp"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:id="@+id/overallreachtext"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignParentTop="true"
-                                        android:layout_centerHorizontal="true"
-                                        android:layout_marginTop="5sp"
-                                        android:fontFamily="sans-serif-condensed"
-                                        android:text="Overall Reach"
-                                        android:textColor="@color/orangenew"
-                                        android:textSize="15dp"
-                                        android:textStyle="bold" />
-
-                                    <TextView
-                                        android:id="@+id/overallreachstatus"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="5sp"
-                                        android:layout_weight="1"
-                                        android:fontFamily="sans-serif-condensed"
-                                        android:textColor="@color/transperent"
-                                        android:textSize="16sp"
-                                        android:textStyle="bold" />
-
-                                </LinearLayout>
-
-                                <View
-                                    android:layout_width="2dp"
-                                    android:layout_height="45sp"
-                                    android:layout_gravity="center"
-                                    android:layout_marginLeft="5sp"
-                                    android:layout_marginRight="5sp"
-                                    android:background="@android:color/black" />
-
-                                <LinearLayout
-                                    android:id="@+id/mozrank_social"
-                                    android:layout_width="110sp"
-                                    android:layout_height="60sp"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_centerHorizontal="true"
-                                    android:gravity="center"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:id="@+id/mozranktext"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignParentTop="true"
-                                        android:layout_centerHorizontal="true"
-                                        android:layout_marginTop="5sp"
-                                        android:fontFamily="sans-serif-condensed"
-                                        android:text="Moz Rank"
-                                        android:textColor="@color/orangenew"
-                                        android:textSize="15dp"
-                                        android:textStyle="bold" />
-
-                                    <TextView
-                                        android:id="@+id/mozrankstatus"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="5sp"
-                                        android:layout_weight="1"
-                                        android:fontFamily="sans-serif-condensed"
-                                        android:textColor="@color/transperent"
-                                        android:textSize="16sp"
-                                        android:textStyle="bold" />
-                                </LinearLayout>
-
-                                <View
-                                    android:layout_width="2dp"
-                                    android:layout_height="45sp"
-                                    android:layout_gravity="center"
-                                    android:layout_marginLeft="5sp"
-                                    android:layout_marginRight="5sp"
-                                    android:background="@android:color/black" />
-
-                                <LinearLayout
-                                    android:id="@+id/overallscore_social"
-                                    android:layout_width="110sp"
-                                    android:layout_height="60sp"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_centerHorizontal="true"
-                                    android:gravity="center"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:id="@+id/overallscoretext"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignParentTop="true"
-                                        android:layout_centerHorizontal="true"
-                                        android:layout_marginTop="5sp"
-                                        android:fontFamily="sans-serif-condensed"
-                                        android:text="Overall Score"
-                                        android:textColor="@color/orangenew"
-                                        android:textSize="15dp"
-                                        android:textStyle="bold" />
-
-                                    <TextView
-                                        android:id="@+id/overallscorestatus"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="5sp"
-                                        android:layout_weight="1"
-                                        android:fontFamily="sans-serif-condensed"
-                                        android:textColor="@color/transperent"
-                                        android:textSize="16sp"
-                                        android:textStyle="bold" />
-                                </LinearLayout>
-                            </LinearLayout>
-
-                        </android.support.v7.widget.CardView>
 
                         <TextView
                             android:id="@+id/profiletext"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/cardviewsecond"
+                            android:layout_below="@+id/cardviewone"
                             android:layout_marginLeft="5sp"
                             android:layout_marginTop="5sp"
                             android:fontFamily="sans-serif-condensed"
@@ -277,7 +138,7 @@
                             android:layout_height="50sp"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
-                            android:layout_below="@+id/cardviewsecond"
+                            android:layout_below="@+id/cardviewone"
                             android:layout_marginTop="30dp">
 
                             <RelativeLayout
@@ -311,7 +172,7 @@
                                     android:layout_toEndOf="@+id/edit_profile_icon"
                                     android:layout_toRightOf="@+id/edit_profile_icon"
                                     android:fontFamily="sans-serif-condensed"
-                                    android:text="Edit Profile Details"
+                                    android:text="Profile Details"
                                     android:textColor="@color/transperent"
                                     android:textSize="18sp" />
 
@@ -327,15 +188,73 @@
                             </RelativeLayout>
                         </android.support.v7.widget.CardView>
 
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cardviewfive"
+                            android:layout_width="match_parent"
+                            android:layout_height="50sp"
+                            android:visibility="visible"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/cardviewthird"
+                            android:layout_marginTop="1dp">
+
+                            <RelativeLayout
+                                android:id="@+id/settings_foi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="5sp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/foi_icon"
+                                    android:layout_width="25sp"
+                                    android:layout_height="25sp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@mipmap/edit"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:id="@+id/foi_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/foi_icon"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_toEndOf="@+id/foi_icon"
+                                    android:layout_toRightOf="@+id/foi_icon"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Field Of Interest"
+                                    android:textColor="@color/transperent"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:id="@+id/foi_select"
+                                    android:layout_width="35sp"
+                                    android:layout_height="35sp"
+                                    android:layout_alignBottom="@+id/foi_text"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    app:srcCompat="@mipmap/rightarrow2" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
 
                         <android.support.v7.widget.CardView
                             android:id="@+id/cardviewfour"
                             android:layout_width="match_parent"
                             android:layout_height="50sp"
-                            android:visibility="invisible"
+                            android:visibility="visible"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
-                            android:layout_below="@+id/cardviewthird"
+                            android:layout_below="@+id/cardviewfive"
                             android:layout_marginTop="1dp">
 
                             <RelativeLayout
@@ -370,7 +289,7 @@
                                     android:layout_toEndOf="@+id/social_media_icon"
                                     android:layout_toRightOf="@+id/social_media_icon"
                                     android:fontFamily="sans-serif-condensed"
-                                    android:text="Connected SocialMedia Accounts"
+                                    android:text="SocialMedia Accounts"
                                     android:textColor="@color/transperent"
                                     android:textSize="18sp" />
 
@@ -387,136 +306,12 @@
                         </android.support.v7.widget.CardView>
 
 
-                        <TextView
-                            android:id="@+id/paymenttext"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/cardviewfour"
-                            android:layout_marginLeft="5sp"
-                            android:layout_marginTop="5sp"
-                            android:fontFamily="sans-serif-condensed"
-                            android:gravity="left"
-                            android:text="PAYMENTS"
-                            android:textColor="@color/orangenew"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-
-                        <android.support.v7.widget.CardView
-                            android:id="@+id/cardviewfive"
-                            android:layout_width="match_parent"
-                            android:layout_height="50sp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_below="@+id/paymenttext"
-                            android:layout_marginTop="5dp">
-
-                            <RelativeLayout
-                                android:id="@+id/settings_payment_method"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_margin="5sp">
-
-                                <ImageView
-                                    android:id="@+id/payment_method_icon"
-                                    android:layout_width="25sp"
-                                    android:layout_height="25sp"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_alignParentTop="true"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_marginTop="2dp"
-                                    android:background="@mipmap/wallet_clr"
-                                    android:textSize="20sp" />
-
-                                <TextView
-                                    android:id="@+id/payment_method_text"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@+id/payment_method_icon"
-                                    android:layout_marginLeft="15dp"
-                                    android:layout_marginStart="15dp"
-                                    android:layout_toEndOf="@+id/payment_method_icon"
-                                    android:layout_toRightOf="@+id/payment_method_icon"
-                                    android:fontFamily="sans-serif-condensed"
-                                    android:text="Wallet &amp; Payment Methods"
-                                    android:textColor="@color/transperent"
-                                    android:textSize="18sp" />
-
-                                <ImageView
-                                    android:id="@+id/payment_method_select"
-                                    android:layout_width="35sp"
-                                    android:layout_height="35sp"
-                                    android:layout_alignBottom="@+id/payment_method_text"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_alignParentRight="true"
-                                    app:srcCompat="@mipmap/rightarrow2" />
-
-                            </RelativeLayout>
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:id="@+id/cardviewsix"
-                            android:layout_width="match_parent"
-                            android:layout_height="50sp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_below="@+id/cardviewfive"
-                            android:layout_marginTop="1dp">
-                            <RelativeLayout
-                                android:id="@+id/settings_payment_history"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_margin="5sp">
-
-                                <ImageView
-
-                                    android:id="@+id/payment_history_icon"
-                                    android:layout_width="25sp"
-                                    android:layout_height="25sp"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_alignParentTop="true"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_marginTop="2dp"
-                                    android:background="@mipmap/edit"
-                                    android:textSize="20sp" />
-
-                                <TextView
-                                    android:id="@+id/payment_history_text"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@+id/payment_history_icon"
-                                    android:layout_marginLeft="15dp"
-                                    android:layout_marginStart="15dp"
-                                    android:layout_toEndOf="@+id/payment_history_icon"
-                                    android:layout_toRightOf="@+id/payment_history_icon"
-                                    android:fontFamily="sans-serif-condensed"
-                                    android:text="Transactation History"
-                                    android:textColor="@color/transperent"
-                                    android:textSize="18sp" />
-
-                                <ImageView
-                                    android:id="@+id/payment_history_select"
-                                    android:layout_width="35sp"
-                                    android:layout_height="35sp"
-                                    android:layout_alignBottom="@+id/payment_history_text"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_alignParentRight="true"
-                                    app:srcCompat="@mipmap/rightarrow2" />
-
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
 
                         <TextView
                             android:id="@+id/otherstext"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/cardviewsix"
+                            android:layout_below="@+id/cardviewfour"
                             android:layout_marginLeft="5sp"
                             android:layout_marginTop="5sp"
                             android:fontFamily="sans-serif-condensed"
@@ -790,18 +585,22 @@
                                     android:layout_toEndOf="@+id/check_update_icon"
                                     android:layout_toRightOf="@+id/check_update_icon"
                                     android:fontFamily="sans-serif-condensed"
-                                    android:text="Check Update"
+                                    android:text="App Version"
                                     android:textColor="@color/transperent"
                                     android:textSize="18sp" />
 
-                                <ImageView
-                                    android:id="@+id/check_update_select"
-                                    android:layout_width="35sp"
+                                <TextView
+                                    android:id="@+id/app_version"
+                                    android:layout_width="125sp"
                                     android:layout_height="35sp"
+                                    android:visibility="visible"
+                                    android:layout_marginTop="5sp"
+                                    android:gravity="right"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
                                     android:layout_alignBottom="@+id/check_update_text"
                                     android:layout_alignParentEnd="true"
-                                    android:layout_alignParentRight="true"
-                                    app:srcCompat="@mipmap/rightarrow2" />
+                                    android:layout_alignParentRight="true"/>
 
                             </RelativeLayout>
                         </android.support.v7.widget.CardView>
@@ -810,5 +609,5 @@
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>
-
+    </FrameLayout>
 </android.support.design.widget.CoordinatorLayout>

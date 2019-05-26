@@ -23,7 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
+
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -123,33 +123,40 @@ public class AnalyticsReportFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isFabOpen){
-
-                    fab.startAnimation(rotate_backward);
-                    fab1.startAnimation(fab_close);
-                    fab1.setClickable(false);
-                    isFabOpen = false;
-                    Log.d("Button", "close");
-
-                } else {
-
-                    fab.startAnimation(rotate_forward);
-                    fab1.startAnimation(fab_open);
-                    fab1.setClickable(true);
-                    isFabOpen = true;
-                    Log.d("Button","open");
-
-                }
+                Intent intent = new Intent(getActivity(), SocialMediaReport.class);
+                Bundle bund = new Bundle();
+                bund.putString("campid", campid);
+                bund.putString("campname", campnamee);
+                intent.putExtras(bund);
+                startActivity(intent);
+                startActivity(intent);
+//                if(isFabOpen){
+//
+//                    fab.startAnimation(rotate_backward);
+//                    fab1.startAnimation(fab_close);
+//                    fab1.setClickable(false);
+//                    isFabOpen = false;
+//                    Log.d("Button", "close");
+//
+//                } else {
+//
+//                    fab.startAnimation(rotate_forward);
+//                    fab1.startAnimation(fab_open);
+//                    fab1.setClickable(true);
+//                    isFabOpen = true;
+//                    Log.d("Button","open");
+//
+//                }
             }
         });
 //
-        fab1.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SocialMediaReport.class);
-                startActivity(intent);
-            }
-        });
+//        fab1.setOnClickListener(new View.OnClickListener() {
+//
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getActivity(), SocialMediaReport.class);
+//                startActivity(intent);
+//            }
+//        });
 //
         return v;
     }

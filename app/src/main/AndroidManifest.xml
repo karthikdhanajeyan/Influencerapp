@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
     <permission
         android:name="com.socialbeat.influencer.gcm.permission.C2D_MESSAGE"
@@ -51,10 +52,18 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
+
         <activity
             android:name=".FirstActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+
+        </activity>
+        <activity
+            android:name=".RegisterationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="stateAlwaysHidden">
 
         </activity>
         <activity
@@ -65,7 +74,7 @@
 
         </activity>
         <activity
-            android:name=".RegistrationActivityOne"
+            android:name=".PasswordActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:windowSoftInputMode="stateAlwaysHidden">
@@ -91,7 +100,7 @@
 
         </activity>
         <activity
-            android:name=".SocialMediaAuth"
+            android:name=".SocialMediaAuthentication"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
 
@@ -301,8 +310,70 @@
             android:name=".YoutubeReportActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        <activity
+            android:name="com.socialbeat.influencer.FacebookAuthentication"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
 
         </activity>
+
+        <activity
+            android:name=".MyProfileActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+
+        </activity>
+        <activity
+            android:name=".FoiActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <activity
+            android:name=".SMProfile"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <activity
+            android:name=".DummyActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <activity
+            android:name=".SMDataReportActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <activity
+            android:name=".FacebookPostActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <activity
+            android:name=".FacebookPostSumbitActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <activity
+            android:name=".FacebookPageSumbitActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+
+        </activity>
+
         <!--
     Optionally, register AnalyticsReceiver and AnalyticsService to support background
     dispatching on non-Google Play devices
@@ -315,14 +386,14 @@
             android:value="true" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/app_id" />
+            android:value="@string/facebook_app_id" />
 
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
         <activity
-            android:name="com.facebook.CustomTabActivity"
+            android:name="com.facebook.CustomTabMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

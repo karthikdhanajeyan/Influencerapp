@@ -150,6 +150,7 @@ public class MyProfileNew extends AppCompatActivity {
         setContentView(R.layout.myprofilenew);
 
         ActionBar bar = getSupportActionBar();
+        assert bar != null;
         bar.setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("Edit Profile");

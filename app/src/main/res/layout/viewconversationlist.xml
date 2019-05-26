@@ -78,37 +78,40 @@
                     android:layout_marginTop="5sp"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <com.android.volley.toolbox.NetworkImageView
                         android:id="@+id/fileone"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="24dp"
+                        android:layout_height="32dp"
                         android:layout_gravity="top"
-                        android:background="@mipmap/iconfinal"
                         android:scaleType="centerCrop"/>
 
-                    <ImageView
+                    <com.android.volley.toolbox.NetworkImageView
                         android:id="@+id/filetwo"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="24dp"
+                        android:layout_height="32dp"
                         android:layout_gravity="top"
                         android:layout_marginLeft="5sp"
-                        android:background="@mipmap/iconfinal"
                         android:scaleType="centerCrop"/>
-                    <ImageView
+                    <com.android.volley.toolbox.NetworkImageView
                         android:id="@+id/filethree"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="24dp"
+                        android:layout_height="32dp"
                         android:layout_gravity="top"
                         android:layout_marginLeft="5sp"
-                        android:background="@mipmap/iconfinal"
                         android:scaleType="centerCrop"/>
-                    <ImageView
+                    <com.android.volley.toolbox.NetworkImageView
                         android:id="@+id/filefour"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="24dp"
+                        android:layout_height="32dp"
                         android:layout_gravity="top"
                         android:layout_marginLeft="5sp"
-                        android:background="@mipmap/iconfinal"
+                        android:scaleType="centerCrop"/>
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/filefive"
+                        android:layout_width="24dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="5sp"
                         android:scaleType="centerCrop"/>
                 </LinearLayout>
 

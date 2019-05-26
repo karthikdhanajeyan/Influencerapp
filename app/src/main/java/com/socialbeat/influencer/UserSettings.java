@@ -1,16 +1,17 @@
 package com.socialbeat.influencer;
 
-import android.app.AlertDialog;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.CoordinatorLayout;
@@ -43,10 +44,11 @@ import java.util.Map;
 
 public class UserSettings extends AppCompatActivity {
 
-    RelativeLayout editprofile,socialmedia,paymenthistory,paymentmethods,shareapp,rateapp,terms,policy,checkupdate;
+    RelativeLayout editprofile,socialmedia,fieldofinterest,shareapp,rateapp,terms,policy;
     String cid,success,message,profileprogress,name,emailid,mobileno,twitter,twitterFollowers,bloglink,blogTraffic,
             instagram,instaFollowers,foi,city,mozrank,overallscore,userimage,overallreach,response,playstoreversion;
-    TextView pname, pemailid, pcity, poverallreach,pmozrank,poverallscore;
+    String devicenamenew,deviceserialnew,devicemodelnew,deviceGCMServerkeynew,appversionnew;
+    TextView pname, pemailid, pcity,app_version;
     ImageView puserimage;
     private CoordinatorLayout coordinatorLayout;
     Boolean isInternetPresent = false;
@@ -78,20 +80,18 @@ public class UserSettings extends AppCompatActivity {
         pname = findViewById(R.id.pusername);
         pemailid = findViewById(R.id.pemail);
         pcity = findViewById(R.id.pcity);
-        poverallreach = findViewById(R.id.overallreachstatus);
-        pmozrank = findViewById(R.id.mozrankstatus);
-        poverallscore = findViewById(R.id.overallscorestatus);
+        app_version = findViewById(R.id.app_version);
         puserimage = findViewById(R.id.profileimage);
 
         editprofile = findViewById(R.id.settings_edit_profile);
+        fieldofinterest = findViewById(R.id.settings_foi);
         socialmedia = findViewById(R.id.settings_social_media);
-        paymenthistory = findViewById(R.id.settings_payment_history);
-        paymentmethods = findViewById(R.id.settings_payment_method);
+
         policy = findViewById(R.id.setting_policy);
         terms = findViewById(R.id.settings_terms);
         shareapp = findViewById(R.id.settings_share_app);
         rateapp = findViewById(R.id.settings_rate_app);
-        checkupdate = findViewById(R.id.settings_check_update);
+
 
         cd = new ConnectionDetector(this);
         isInternetPresent = cd.isConnectingToInternet();
@@ -123,7 +123,15 @@ public class UserSettings extends AppCompatActivity {
         editprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserSettings.this, MyProfileNew.class);
+                Intent intent = new Intent(UserSettings.this, MyProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        fieldofinterest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UserSettings.this, FoiActivity.class);
                 startActivity(intent);
             }
         });
@@ -131,24 +139,15 @@ public class UserSettings extends AppCompatActivity {
         socialmedia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserSettings.this, MyProfileDummy.class);
-                startActivity(intent);
-            }
-        });
+//                Intent intent = new Intent(UserSettings.this, SocialMediaAuthentication.class);
+//                startActivity(intent);
 
-        paymentmethods.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(UserSettings.this, WalletOld.class);
-                startActivity(intent);
-            }
-        });
-
-        paymenthistory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(UserSettings.this, TransactionHistory.class);
-                startActivity(intent);
+                Fragment fragment = new SMProfileFragment();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.framewindow, fragment );
+                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
@@ -202,79 +201,32 @@ public class UserSettings extends AppCompatActivity {
                 }
             }
         });
-        checkupdate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.v("Result : ", playstoreversion);
-                PackageInfo pInfo = null;
-                try {
-                    pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-                } catch (PackageManager.NameNotFoundException e) {
-                    e.printStackTrace();
-                }
-                final String appversion = pInfo.versionName;
-                Log.v("Value for App version",playstoreversion +" --- "+appversion);
-                if (playstoreversion.equals(appversion)){
-                    Log.v("Version Result","GPV is Equal AV");
-                    AlertDialog alertDialog = new AlertDialog.Builder(
-                            UserSettings.this).create();
-                    // Setting Dialog Title
-                    alertDialog.setTitle("Check Update");
-                    // Setting Dialog Message
-                    alertDialog.setMessage("Your are on the latest version.");
-                    // Setting OK Button
-                    alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // Write your code here to execute after dialog closed
-                            dialog.cancel();
-                        }
-                    });
 
-                    // Showing Alert Message
-                    alertDialog.show();
-                }else{
-                    Log.v("Version Result","GPV is Greater than AV");
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(UserSettings.this);
-                    // Setting Dialog Title
-                    alertDialog.setTitle("Check Update");
-                    // Setting Dialog Message
-                    alertDialog.setMessage("You are using the old version of this App. Please update your App to the latest version.");
-                    // Setting Icon to Dialog
-                    //alertDialog.setIcon(R.drawable.delete);
-                    // Setting Positive "Yes" Button
-                    alertDialog.setPositiveButton("UPDATE", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog,int which) {
-                            // Write your code here to invoke YES event
-                            // Toast.makeText(getApplicationContext(), "You clicked on YES", Toast.LENGTH_SHORT).show();
-                            Uri uri = Uri.parse("market://details?id=com.socialbeat.influencer");
-                            Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-                            // To count with Play market backstack, After pressing back button,
-                            // to taken back to our application, we need to add following flags to intent.
-                            goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-                            try {
-                                startActivity(goToMarket);
-                            } catch (ActivityNotFoundException e) {
-                                startActivity(new Intent(Intent.ACTION_VIEW,
-                                        Uri.parse("http://play.google.com/store/apps/details?id=com.socialbeat.influencer")));
-                            }
-                        }
 
-                    });
-                    // Setting Negative "NO" Button
-                    alertDialog.setNegativeButton("NOT NOW", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // Write your code here to invoke NO event
-                            // Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-                            dialog.cancel();
-                        }
-                    });
-
-                    // Showing Alert Message
-                    alertDialog.show();
-                }
-
+            devicenamenew = Build.BRAND;
+            devicemodelnew = Build.MODEL;
+            deviceserialnew = Build.SERIAL;
+            Log.v("DeviceDetails : ","Working");
+            if(deviceserialnew==null || deviceserialnew.length()==0) deviceserialnew = ""+System.currentTimeMillis();
+            PackageInfo pInfonew = null;
+            try {
+                pInfonew = getPackageManager().getPackageInfo(getPackageName(), 0);
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
             }
-        });
+            assert pInfonew != null;
+            appversionnew = pInfonew.versionName;
+            deviceGCMServerkeynew =  PreferenceManager.getPushCatID(UserSettings.this);
+
+            app_version.setText(appversionnew);
+
+//            System.out.println("Customer ID :  "+cid);
+//            System.out.println("Device Name :  "+devicenamenew);
+//            System.out.println("Device Model :  "+devicemodelnew);
+//            System.out.println("Device Serial :  "+deviceserialnew);
+//            System.out.println("App Version : "+appversionnew);
+//            System.out.println("Device Service Key :  "+deviceGCMServerkeynew);
+//
     }
 
     private void profileShownFunction() {
@@ -315,9 +267,6 @@ public class UserSettings extends AppCompatActivity {
                     pname.setText(name);
                     pemailid.setText(emailid);
                     pcity.setText(city);
-                    poverallreach.setText(overallreach);
-                    pmozrank.setText(mozrank);
-                    poverallscore.setText(overallscore);
                     Glide.with(getApplicationContext()).load(userimage)
                             .thumbnail(0.5f)
                             .crossFade()
@@ -349,11 +298,11 @@ public class UserSettings extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // code here to show dialog
-        // super.onBackPressed();  // optional depending on your needs
-        Intent intent  = new Intent(this, NewHomeActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
+         super.onBackPressed();  // optional depending on your needs
+//        Intent intent  = new Intent(this, NewHomeActivity.class);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        startActivity(intent);
     }
 
     @Override
@@ -361,10 +310,11 @@ public class UserSettings extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 // app icon in action bar clicked; goto parent activity.
-                Intent intent  = new Intent(this, NewHomeActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+//                Intent intent  = new Intent(this, NewHomeActivity.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                startActivity(intent);
+                super.onBackPressed();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

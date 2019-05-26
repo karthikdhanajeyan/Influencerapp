@@ -70,7 +70,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_below="@+id/urllinkTxt"
                 android:layout_marginTop="5dp"
-                android:hint="(i.e : www.influencer.in/username)"
+                android:hint="(i.e : http://www.influencer.in/username)"
                 android:singleLine="true"
                 android:background="@drawable/rounded_corner_new"
                 android:textSize="16sp"

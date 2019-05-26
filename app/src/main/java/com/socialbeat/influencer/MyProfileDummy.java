@@ -333,7 +333,7 @@ public class MyProfileDummy extends AppCompatActivity {
 
         switch (item.getItemId()) {
 //            case R.id.nav_add:
-//                Intent intentgo = new Intent(SocialMedia.this, SocialMediaAuth.class);
+//                Intent intentgo = new Intent(SocialMedia.this, SocialMediaAuthentication.class);
 //                startActivity(intentgo);
 ////                Toast.makeText(MainActivity.this, "Notification Clicked", Toast.LENGTH_LONG).show();
 //                return true;

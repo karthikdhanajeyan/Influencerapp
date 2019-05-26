@@ -17,11 +17,11 @@
 
 
 
-    <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:id="@+id/scrollView"-->
-        <!--android:background="@color/lite_ashe">-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:background="@color/lite_ashe">
 
 
         <RelativeLayout
@@ -109,7 +109,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="left"
-                android:text="Comments : "
+                android:text="Message : "
                 android:layout_marginLeft="20dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/orange"
@@ -172,7 +172,8 @@
                 android:layout_marginTop="15dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/rounded_corner_button"
-                android:text="Add Comments"
+                android:text="Send"
+                android:ems="8"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
@@ -207,6 +208,7 @@
                 android:visibility="invisible" />
 
         </RelativeLayout>
+    </ScrollView>
     </FrameLayout>
-    <!--</ScrollView>-->
+
 </android.support.design.widget.CoordinatorLayout>

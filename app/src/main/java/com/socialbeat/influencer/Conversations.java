@@ -115,7 +115,7 @@ public class Conversations extends AppCompatActivity {
 
         contentstatus = findViewById(R.id.contentstatus);
        // contentshared = findViewById(R.id.contentshared);
-        view_conversation = findViewById(R.id.view_conversation);
+       // view_conversation = findViewById(R.id.view_conversation);
         campaignname = findViewById(R.id.campName);
         show_file = findViewById(R.id.show_file);
         summernote = findViewById(R.id.summernote);

@@ -8,6 +8,8 @@ public class Config {
     public static final String baseurl = "http://www.influencer.in/API/v3/";
     public static final String URL_REQUEST_SMS_LOG = baseurl+"updatemobile.php";
     public static final String URL_VERIFY_OTP = baseurl+"verify_otp.php";
+    public static final String URL_SMS_OTP = "https://www.influencer.in/API/v6/api_v6.php/doSendOTP";
+    public static final String URL_REGISTER = "https://www.influencer.in/API/v6/api_v6.php/registerNewUser";
     // SMS provider identification
     // It should match with your SMS gateway origin
     // You can use  MSGIND, TESTER and ALERTS as sender ID

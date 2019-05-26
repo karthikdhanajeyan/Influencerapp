@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class CompCustomListAdapter extends BaseAdapter {
@@ -31,6 +32,8 @@ public class CompCustomListAdapter extends BaseAdapter {
 	private LayoutInflater inflater;
 	private List<CompletedCamp> completedCampItem;
 	private ImageLoader imageLoader = MyApplication.getInstance().getImageLoader();
+	private HashMap<String,String> myBrief = new HashMap<String,String>();
+	private HashMap<String,String> paymentStatus = new HashMap<String,String>();
 	String cbrief,cpaystatus,ctransstatus,ctransid,camount,cdate;
     ImageView cancel;
     TextView campbriefvalue,paymentstatus1,transactionstatus1,transactionid1,transactionamount1,transactiondate1;
@@ -97,6 +100,8 @@ public class CompCustomListAdapter extends BaseAdapter {
 		transactionid.setText(cc.getTransactionid());
 		amount.setText(cc.getAmount());
 		date.setText(cc.getDate());
+		myBrief.put(cc.getCampid(),cc.getCampbrief());
+
 
 		cbrief = cc.getCampbrief();
 		cpaystatus = cc.getPaymentstatus();
@@ -104,6 +109,8 @@ public class CompCustomListAdapter extends BaseAdapter {
 		ctransid = cc.getTransactionid();
 		camount = cc.getAmount();
 		cdate = cc.getDate();
+
+		final String testid = cc.getCampid();
 
 		Log.d("cbrief : ",cbrief);
 		Log.d("cpaystatus : ",cpaystatus);
@@ -124,8 +131,8 @@ public class CompCustomListAdapter extends BaseAdapter {
                 dialog.setCancelable(false);
                 cancel = dialog.findViewById(R.id.close_img);
                 campbriefvalue = dialog.findViewById(R.id.campbrief);
-                Log.d("value1 : ",cbrief);
-                Spanned sp1 = Html.fromHtml( cbrief );
+                Log.d("value1 : ",myBrief.get(testid));
+                Spanned sp1 = Html.fromHtml( myBrief.get(testid) );
                 campbriefvalue.setText(sp1);
                 campbriefvalue.setMovementMethod(LinkMovementMethod.getInstance());
 

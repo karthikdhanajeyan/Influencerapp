@@ -1,8 +1,10 @@
 package com.socialbeat.influencer;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -15,7 +17,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.Html;
-import android.text.InputType;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -23,7 +24,6 @@ import android.text.method.LinkMovementMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,22 +37,26 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
+    private static String TAG = LoginActivity.class.getSimpleName();
 
-    Button login,send;
-    TextView register, forgotpwd,terms;
-    EditText emails, pwords,femailid;
+    Button next,send;
+    TextView register,terms;
+    EditText emails,femailid;
     boolean flg = true;
     String email, password,femail;
     Boolean isInternetPresent = false;
-    ImageView pass_visible,pass_invisible;
     ConnectionDetector cd;
-    private ProgressDialog pdialog;
+    private ProgressDialog pDialog;
     final Context context = this;
     private CoordinatorLayout coordinatorLayout;
 
@@ -61,34 +65,27 @@ public class LoginActivity extends AppCompatActivity {
 
     public static final String KEY_EMAIL = "email";
     public static final String KEY_PASSWORD = "password";
-    private String message, cid, username, emailid, mobileno, city, playstoreversion, userimage;
+    private String cid,status,nextPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_screen_new);
-        login = findViewById(R.id.login_button);
+        setContentView(R.layout.login_screen);
+        next = findViewById(R.id.next_button);
         register = findViewById(R.id.register);
         terms = findViewById(R.id.terms);
-        forgotpwd = findViewById(R.id.forgotpassword);
         emails = findViewById(R.id.emailid);
-        pwords = findViewById(R.id.password);
-        pass_visible = findViewById(R.id.pass_visible);
-        pass_invisible = findViewById(R.id.pass_invisible);
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
         Typeface myFont = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
         emails.setTypeface(myFont);
-        Typeface myFont1 = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
-        pwords.setTypeface(myFont1);
-        Spanned sp = Html.fromHtml("By Signing with us, you agree to the Influencer " +
+        Spanned sp = Html.fromHtml("Bterms.setText(sp);y Signing with us, you agree to the Influencer " +
                 "<a href=\"http://www.influencer.in/terms-and-conditions/\"> Terms &amp; Conditions.</a>" );
-        terms.setText(sp);
+
         terms.setMovementMethod(LinkMovementMethod.getInstance());
         Typeface myFont6 = Typeface.createFromAsset(getAssets(), "font/gothic.ttf");
         terms.setTypeface(myFont6);
         register.setPaintFlags(register.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        forgotpwd.setPaintFlags(forgotpwd.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         cd = new ConnectionDetector(getApplicationContext());
         isInternetPresent = cd.isConnectingToInternet();
@@ -97,113 +94,18 @@ public class LoginActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in =new Intent(LoginActivity.this,RegistrationActivityOne.class);
+                Intent in =new Intent(LoginActivity.this,RegisterationActivity.class);
                 startActivity(in);
             }
         });
-        pwords.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                pass_visible.setVisibility(s.length() > 0 ? View.VISIBLE : View.GONE);
-            }
-        });
-
-
-        pass_visible.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pwords.setTransformationMethod(new PasswordTransformationMethod());
-                pass_visible.setVisibility(View.INVISIBLE);
-                pass_invisible.setVisibility(View.VISIBLE);
-            }
-        });
-
-        pass_invisible.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pwords.setTransformationMethod(null);
-                pass_invisible.setVisibility(View.INVISIBLE);
-                pass_visible.setVisibility(View.VISIBLE);
-            }
-        });
-
-        forgotpwd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                        // custom dialog
-                        final Dialog dialog = new Dialog(context);
-                        dialog.setContentView(R.layout.forgotpassword_new);
-                        // Custom Android Allert Dialog Title
-                        //dialog.setCancelable(false);
-                         send = dialog.findViewById(R.id.sendbutton);
-                         femailid = dialog.findViewById(R.id.femailid);
-                         Typeface myFont2 = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
-                        femailid.setTypeface(myFont2);
-                        femailid.setTextColor(getResources().getColor(R.color.white));
-                        isInternetPresent = cd.isConnectingToInternet();
-                        SharedPreferences prefernce = getSharedPreferences(LOGIN_NAME, MODE_PRIVATE);
-                        editor = prefernce.edit();
-                        editor.clear();
-                        editor.commit();
-                        send.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                flg = true;
-                                if (isInternetPresent) {
-                                    MyApplication.getInstance().trackEvent("Forgot Password Button Clicked Event", "OnClick", "Track Forgot Password Event");
-                                    femail = femailid.getText().toString();
-                                    if (femail.length() > 0) {
-                                        if (!isValidEmailid1(femail)) {
-                                            flg = false;
-                                            femailid.setError("Please Enter Valid Email Id");
-                                        }
-                                            forgetPassword();
-                                            dialog.dismiss();
-                                    } else {
-                                        femailid.setError("Please Enter Valid Email id");
-                                    }
-
-                                } else {
-                                    Snackbar snackbar = Snackbar
-                                            .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
-                                            .setAction("SETTINGS", new View.OnClickListener() {
-                                                @Override
-                                                public void onClick(View view) {
-                                                    startActivity(new Intent(Settings.ACTION_SETTINGS));
-                                                }
-                                            });
-                                    // Changing message text color
-                                    snackbar.setActionTextColor(Color.RED);
-                                    // Changing action button text color
-                                    View sbView = snackbar.getView();
-                                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
-                                    textView.setTextColor(Color.YELLOW);
-                                    snackbar.show();
-                                }
-                            }
-                        });
-
-            dialog.show();
-            }
-        }
-    );
 
         //onclick method for login button
-        login.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 flg = true;
                 //getting value from database
                 email = emails.getText().toString();
-                password = pwords.getText().toString();
 
                 if ((TextUtils.isEmpty(email))) {
                     flg = false;
@@ -214,18 +116,10 @@ public class LoginActivity extends AppCompatActivity {
                     emails.setError("Enter Valid Email id");
                     return;
                 }
-                if ((TextUtils.isEmpty(password))) {
-                    flg = false;
-                    pwords.setError("Password field is empty");
-                    return;
-                } else if (!isValidPassword(password)) {
-                    flg = false;
-                    pwords.setError("Minimum required value is 6");
-                }
 
                 if (flg) {
-                    MyApplication.getInstance().trackEvent("User Login Button Clicked Event", "OnClick", "Track Login Event");
-                    loginFunction();
+                    //MyApplication.getInstance().trackEvent("User Login Button Clicked Event", "OnClick", "Track Login Event");
+                    EmailValidationFunction();
                 } else {
                     Snackbar snackbar = Snackbar
                             .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
@@ -248,112 +142,107 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void forgetPassword() {
-        pdialog = new ProgressDialog(LoginActivity.this);
-        pdialog.setMessage("Loading...");
-        pdialog.setCancelable(false);
-        pdialog.show();
-        String LOGIN_URL = getResources().getString(R.string.base_url)+getResources().getString(R.string.forgotpassword_url);
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
+    private void EmailValidationFunction() {
+        pDialog = new ProgressDialog(LoginActivity.this);
+        // Showing progress dialog before making http request
+        pDialog.setMessage("Loading...");
+        pDialog.setCancelable(false);
+        pDialog.show();
+        String Email_Validation_URL = "https://www.influencer.in/API/v6/api_v6.php/login?email=" + email ;
+        System.out.println("conversation url : "+Email_Validation_URL);
+        final StringRequest stringRequest = new StringRequest(Request.Method.GET, Email_Validation_URL, new Response.Listener<String>() {
             @Override
-            public void onResponse(String success) {
+            public void onResponse(String response) {
+                // Do something with response string
+                Log.d(TAG, response.toString());
+                hidePDialog();
                 try {
-                    org.json.JSONObject json = new org.json.JSONObject(success);
-                    success = json.getString("success");
-                    message = json.getString("message");
+                    JSONObject object = new JSONObject(response);
+                    if (response != null) {
 
-                    pdialog.dismiss();
+                        String responstatus = object.getString("success").toString();
+                        Log.d("response status : ", responstatus);
+                        String responsemessage = object.getString("message").toString();
+                        Log.d("response message : ", responsemessage);
 
-                    if (success =="true"){
-                        Toast.makeText(LoginActivity.this,message, Toast.LENGTH_SHORT).show();
-                    }else if (success =="false") {
-                        Toast.makeText(LoginActivity.this,message, Toast.LENGTH_SHORT).show();
-                    }
-                } catch (org.json.JSONException e) {
+                        JSONObject resobj = object.getJSONObject("data");
+
+                        cid = resobj.getString("cid");
+                        status = resobj.getString("status");
+                        nextPage = resobj.getString("nextPage");
+//
+                        Log.v(" Cid value :", cid);
+                        Log.v("status value :", status);
+                        Log.v("NextPage value :", nextPage);
+
+                        SharedPreferences preferences = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("valueofcid",cid);
+                        editor.apply();
+
+
+                        if (nextPage.equalsIgnoreCase("profile")) {
+                            Log.v("Result : ", "profile working");
+                            //Toast.makeText(getApplicationContext(), nextPage, Toast.LENGTH_LONG).show();
+                            Intent in =new Intent(LoginActivity.this,MyProfileActivity.class);
+                            startActivity(in);
+
+                        } else if (nextPage.equalsIgnoreCase("password")) {
+                            Log.v("Result : ", "password working");
+                            //Toast.makeText(getApplicationContext(), nextPage, Toast.LENGTH_LONG).show();
+                            Intent in =new Intent(LoginActivity.this,PasswordActivity.class);
+
+                            // Creating Bundle object
+                            Bundle b = new Bundle();
+                            // Storing data into bundle
+                            b.putString("email", email);
+                            b.putString("cid", cid);
+                            // Storing bundle object into intent
+                            in.putExtras(b);
+
+                            startActivity(in);
+
+                        } else if (nextPage.equalsIgnoreCase("verify_account")) {
+                            Log.v("Result : ", "Verify Account working");
+                            //Toast.makeText(getApplicationContext(), nextPage, Toast.LENGTH_LONG).show();
+//                            Intent in =new Intent(LoginActivity.this,ValidateActivity.class);
+//                            startActivity(in);
+
+                        }
+                    }else {
+                            Log.e("ServiceHandler", "Couldn't get any data from the url");
+                        }
+
+                } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
             }
         },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(LoginActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+                        // Do something when get error
+
                     }
-                }) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<String, String>();
-                params.put(KEY_EMAIL, femail);
-                return params;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+                }
+        );
+
+        MyApplication.getInstance().addToRequestQueue(stringRequest);
+
     }
 
-    private void loginFunction() {
-        pdialog = new ProgressDialog(LoginActivity.this);
-        pdialog.setMessage("Loading...");
-        pdialog.setCancelable(false);
-        pdialog.show();
-        String LOGIN_URL = getResources().getString(R.string.base_url)+getResources().getString(R.string.login_url);
-        Log.v("URL",LOGIN_URL);
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String success) {
-                try {
-                    org.json.JSONObject json = new org.json.JSONObject(success);
-                    success = json.getString("success");
-                    message = json.getString("message");
-                    cid = json.getString("cid");
-                    emailid = json.getString("email");
-                    username = json.getString("name");
-                    userimage = json.getString("userimage");
-                    mobileno = json.getString("mobileno");
-                    city = json.getString("city");
-                    playstoreversion = json.getString("playstoreversion");
-                    pdialog.dismiss();
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        hidePDialog();
+    }
 
-                    SharedPreferences preferences = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("valueofcid",cid);
-                    editor.putString("username1",username);
-                    editor.putString("emailid1",emailid);
-                    editor.putString("mobileno1",mobileno);
-                    editor.putString("city1",city);
-                    editor.putString("userimage1",userimage);
-                    editor.putString("playstoreversion1",playstoreversion);
-                    editor.apply();
-
-                    if (success =="true"){
-                        Toast.makeText(LoginActivity.this,message, Toast.LENGTH_SHORT).show();
-                        Intent in = new Intent(LoginActivity.this, NewHomeActivity.class);
-                        startActivity(in);
-
-                    }else if (success =="false") {
-                        Toast.makeText(LoginActivity.this,message, Toast.LENGTH_SHORT).show();
-                    }
-                } catch (org.json.JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(LoginActivity.this, error.toString(), Toast.LENGTH_LONG).show();
-                    }
-                }) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<String, String>();
-                params.put(KEY_EMAIL, email);
-                params.put(KEY_PASSWORD, password);
-                return params;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+    private void hidePDialog() {
+        if (pDialog != null) {
+            pDialog.dismiss();
+            pDialog = null;
+        }
     }
 
     @Override
