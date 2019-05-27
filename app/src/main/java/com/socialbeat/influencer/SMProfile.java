@@ -23,6 +23,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -39,6 +40,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -91,18 +93,29 @@ public class SMProfile extends AppCompatActivity {
     Boolean isInternetPresent = false;
     ConnectionDetector cd;
     String cid;
+    ListView list;
     ProgressDialog pDialog;
+    ArrayList<HashMap<String, String>> pageList;
+    SMLazyAdapter adapter;
+    private FloatingActionButton fab;
+
+    public static final String TAG_SOCIALMEDIA = "socialmedia";
+    public static final String TAG_UNAME = "uname";
+    public static final String TAG_LINK = "link";
+    public static final String TAG_PIMAGE = "profile_image";
+    public static final String TAG_FOLLOWERS= "followers";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.smproflie);
-//
-//        ActionBar bar = getSupportActionBar();
-//        assert bar != null;
-//        bar.setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setTitle("My Profile");
+        pageList = new ArrayList<HashMap<String, String>>();
+
+        ActionBar bar = getSupportActionBar();
+        assert bar != null;
+        bar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Connected Socialmedia");
 
 //        SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
 //        cid = prfs.getString("valueofcid", "");
@@ -112,13 +125,22 @@ public class SMProfile extends AppCompatActivity {
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
         cd = new ConnectionDetector(this);
         isInternetPresent = cd.isConnectingToInternet();
+        fab = findViewById(R.id.fab);
+         list = findViewById(R.id.smlist);
 
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SMProfile.this, SocialMediaAuthentication.class);
+                startActivity(intent);
+            }
+        });
 
         SharedPreferences settings1 = getSharedPreferences(PREFS_NAME, 0);
         boolean firstStart = settings1.getBoolean("firstStart", true);
         if (cid.length() != 0) {
             if (isInternetPresent) {
-                MyApplication.getInstance().trackEvent("Myprofile Screen", "OnClick", "Track MyProfileDummy Event");
                 profileFunction();
             } else {
                 Snackbar snackbar = Snackbar
@@ -148,7 +170,7 @@ public class SMProfile extends AppCompatActivity {
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        String CONVERSATION_URL = "https://www.influencer.in/API/v6/api_v6.php/getSMConnectionDetails?cid="+cid;
+        String CONVERSATION_URL = "http://stage.influencer.in/API/v6/api_v6.php/getSMConnectionDetails?cid="+cid;
         System.out.println("conversation url : "+CONVERSATION_URL);
         final StringRequest stringRequest = new StringRequest(Request.Method.GET, CONVERSATION_URL, new Response.Listener<String>() {
             @Override
@@ -179,32 +201,48 @@ public class SMProfile extends AppCompatActivity {
 
                                 String socialmedia = object3.getString("socialmedia");
 
-                                String metrics = object3.getString("metrics");
-                                JSONObject objectvalue = new JSONObject(metrics);
 
-                                Iterator<String> iter = objectvalue.keys();
-                                while (iter.hasNext()) {
-                                    String value = null;
-                                    String key = iter.next();
-                                    try {
-                                        //Object value = objectvalue.get(key);
-                                         value = objectvalue.getString(key);
-                                    } catch (JSONException e) {
-                                        // Something went wrong!
-                                    }
-                                    Log.v("key : ",key);
-                                    Log.v("value : ",value);
-                                }
+                                JSONObject metrics= object3.getJSONObject("metrics");
+                                String followers= metrics.getString("Followers");
+//                                if(metrics.getString("Followers")!= null && !metrics.getString("Followers").isEmpty()) {
+//                                    String followers= metrics.getString("Followers");
+//                                    Log.v("followers : ",followers);
+//                                }
+//                                Log.v("val : : ",metrics.getString("Likes"));
+//                                if(metrics.getString("Likes")!= null && !metrics.getString("Likes").isEmpty()) {
+//                                    String likes= metrics.getString("Likes");
+//                                    Log.v("likes : ",likes);
+//                                }
 
                                 JSONObject userDetails= object3.getJSONObject("userDetails");
                                 String uname= userDetails.getString("name");
                                 String link= userDetails.getString("link");
                                 String profile_image= userDetails.getString("profile_image");
+//                                String page_id= userDetails.getString("page_id");
+//                                String access_token= userDetails.getString("access_token");
 
                                 Log.v("Social Media : ",socialmedia);
+
+
                                 Log.v("name : ",uname);
                                 Log.v("link : ",link);
                                 Log.v("profile_image : ",profile_image);
+//                                Log.v("page_id : ",page_id);
+//                                Log.v("access_token : ",access_token);
+                                Log.v("followers : ",followers);
+
+                                // tmp hashmap for single contact
+                                HashMap<String, String> page = new HashMap<String, String>();
+                                // adding each child node to HashMap key => value
+                                page.put(TAG_SOCIALMEDIA,socialmedia);
+                                page.put(TAG_UNAME,uname);
+                                page.put(TAG_LINK,link);
+                                page.put(TAG_PIMAGE,profile_image);
+                                page.put(TAG_FOLLOWERS,followers);
+
+
+                                // adding contact to contact list
+                                pageList.add(page);
                             }
 
                             JSONArray jArray2 = object2.getJSONArray("notConnected");
@@ -240,7 +278,18 @@ public class SMProfile extends AppCompatActivity {
                     }else {
                         Log.e("ServiceHandler", "Couldn't get any data from the url");
                     }
+                    adapter = new SMLazyAdapter(SMProfile.this, pageList);
+                    list.setAdapter(adapter);
 
+//                    // Click event for single list row
+//                    list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//
+//                        @Override
+//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                            Toast.makeText(getApplicationContext(), "ID : " + id, Toast.LENGTH_LONG).show();
+//                        }
+//
+//                    });
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -275,13 +324,19 @@ public class SMProfile extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // code here to show dialog
-        // super.onBackPressed();  // optional depending on your needs
-        Intent intent = new Intent(this, UserSettings.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
+         super.onBackPressed();  // optional depending on your needs
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                super.onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 
 }

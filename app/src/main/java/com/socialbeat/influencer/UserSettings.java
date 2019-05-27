@@ -139,15 +139,15 @@ public class UserSettings extends AppCompatActivity {
         socialmedia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(UserSettings.this, SocialMediaAuthentication.class);
-//                startActivity(intent);
+                Intent intent = new Intent(UserSettings.this, SMProfile.class);
+                startActivity(intent);
 
-                Fragment fragment = new SMProfileFragment();
-                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.framewindow, fragment );
-                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+//                Fragment fragment = new SMProfileFragment();
+//                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.framewindow, fragment );
+//                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
             }
         });
 
@@ -298,11 +298,11 @@ public class UserSettings extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // code here to show dialog
-         super.onBackPressed();  // optional depending on your needs
-//        Intent intent  = new Intent(this, NewHomeActivity.class);
-//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//        startActivity(intent);
+         //super.onBackPressed();  // optional depending on your needs
+        Intent intent  = new Intent(this, NewHomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
     @Override
@@ -310,11 +310,11 @@ public class UserSettings extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 // app icon in action bar clicked; goto parent activity.
-//                Intent intent  = new Intent(this, NewHomeActivity.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                startActivity(intent);
-                super.onBackPressed();
+                Intent intent  = new Intent(this, NewHomeActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                //super.onBackPressed();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

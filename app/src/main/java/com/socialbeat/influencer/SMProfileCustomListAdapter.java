@@ -86,6 +86,8 @@ public class SMProfileCustomListAdapter extends BaseAdapter {
 //		TextView key3 = convertView.findViewById(R.id.key3);
 		TextView socialmedia = convertView.findViewById(R.id.socialmedia);
 		TextView link = convertView.findViewById(R.id.link);
+		TextView access_token = convertView.findViewById(R.id.access_token);
+		TextView page_id = convertView.findViewById(R.id.page_id);
 
 
 		//		// getting campaign data for the row
@@ -104,6 +106,8 @@ public class SMProfileCustomListAdapter extends BaseAdapter {
 //		key3.setText(cc.getKey3());
 		socialmedia.setText(cc.getSocialmedia());
 		link.setText(cc.getLink());
+		access_token.setText(cc.getAccess_token());
+		page_id.setText(cc.getPage_id());
 
 		return convertView;
 	}

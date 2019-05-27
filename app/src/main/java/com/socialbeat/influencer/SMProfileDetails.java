@@ -6,6 +6,8 @@ public class SMProfileDetails {
     private String name;
     private String link;
     private String profile_image;
+    private String page_id;
+    private String access_token;
     private String key1;
     private String key2;
     private String key3;
@@ -22,6 +24,8 @@ public class SMProfileDetails {
         this.name=name;
         this.link=link;
         this.profile_image=profile_image;
+        this.page_id=page_id;
+        this.access_token=access_token;
         this.key1=key1;
         this.key2=key2;
         this.key3=key3;
@@ -43,6 +47,16 @@ public class SMProfileDetails {
     public String getLink() { return link; }
 
     public void setLink(String link) {this.link = link;}
+
+
+    public String getAccess_token() { return access_token; }
+
+    public void setAccess_token(String access_token) {this.access_token = access_token;}
+
+
+    public String getPage_id() { return page_id; }
+
+    public void setPage_id(String page_id) {this.page_id = page_id;}
 
 
     public String getProfile_image() {
@@ -71,7 +85,7 @@ public class SMProfileDetails {
         this.key2 = key2;
     }
 
-//
+    //
 //    public String getKey3() {
 //        return key3;
 //    }

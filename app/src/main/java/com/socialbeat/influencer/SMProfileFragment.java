@@ -75,7 +75,6 @@ public class SMProfileFragment extends Fragment {
         });
 
         if (isInternetPresent) {
-
             listView = v.findViewById(R.id.smlist);
             SMDetailsFunction();
 
@@ -174,6 +173,8 @@ public class SMProfileFragment extends Fragment {
                                 Smprofiledetails.setLink(userDetails.getString("link"));
                                 Smprofiledetails.setProfile_image(userDetails.getString("profile_image"));
 
+                                Smprofiledetails.setPage_id(userDetails.getString("page_id"));
+                                Smprofiledetails.setAccess_token(userDetails.getString("access_token"));
 
                                 //Log.v("Social Media : ",socialmedia);
 //                                Log.v("name : ",uname);

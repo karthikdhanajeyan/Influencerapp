@@ -1,5 +1,7 @@
 package com.socialbeat.influencer;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -42,10 +44,9 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
     String cid,campid,campname,full_picture,caption,message,is_published,permalink_url,status_type,type,id,postid;
     Boolean isInternetPresent = false;
     long totalSize = 0;
+    String fid,fname,femail,fimage,fuatoken,pname,pid,fpatoken,pfcount,plink,pnlc,ptac,fpimage;
 
-    String fbPageId ="789049217844776";
-    String fbPageToken ="EAABnMveNxqcBAIiwwF4sNU7ssCPJ2WpnCAju6CL3vnTlVTgcBfBlbBkcaZCCivajwz90xRK2YXOnbi4dWETgZAcsYgAwyp1WZBtclq1ZCoOYoR9h7OIwaCH0D6zuxt406TeuDm4ZB8YnWXbCD9oP1mACIzawDSJgdxrEtL3lZBy3nzZBtZB4ykZCk";
-    String source = "app";
+
     // Connection detector class
     ConnectionDetector cd;
     // URL to get contacts JSON
@@ -53,15 +54,24 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
     LazyAdapter adapter;
 
     // JSON node keys
-    public static final String KEY_FULLPICTURE = "full_picture";
-    public static final String KEY_CAPTION = "caption";
-    public static final String KEY_MESSAGE= "message";
-    public static final String KEY_ISPUBLISHED = "is_published";
-    public static final String KEY_PERMALINKURL = "permalink_url";
-    public static final String KEY_STATUSTYPE = "status_type";
-    public static final String KEY_TYPE = "type";
-    public static final String KEY_ID = "id";
-    public static final String KEY_CAMPDATA = "data";
+    public static final String TAG_CID = "cid";
+    public static final String TAG_FID = "fb_id";
+    public static final String TAG_FNAME = "fb_name";
+    public static final String TAG_FEMAIL = "fb_email";
+    public static final String TAG_FIMAGE = "fb_profile_picture_url";
+    public static final String TAG_FUATOKEN = "fb_profile_access_token";
+
+    public static final String TAG_PID = "fb_page_id";
+    public static final String TAG_PNAME = "fb_page_name";
+    public static final String TAG_PFCOUNT = "fb_page_fan_count";
+    public static final String TAG_PLINK = "fb_page_link";
+    public static final String TAG_FPATOKEN = "fb_page_access_token";
+
+    //public static final String TAG_PABOUT = "fb_page_about";
+    public static final String TAG_PNLC = "fb_page_new_like_count";
+    //public static final String TAG_PRC = "fb_page_rating_count";
+    public static final String TAG_PTAC = "fb_page_talking_about_count";
+    public static final String TAG_FPIMAGE = "fb_page_picture";
 
     // contacts JSONArray
     JSONArray posts = null;
@@ -79,14 +89,7 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
 //        getSupportActionBar().setTitle("My Campaigns");
 
 
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            postid = extras.getString("postid");
-        }
 
-        String fbPageId ="789049217844776";
-        String fbPageToken ="EAABnMveNxqcBAIiwwF4sNU7ssCPJ2WpnCAju6CL3vnTlVTgcBfBlbBkcaZCCivajwz90xRK2YXOnbi4dWETgZAcsYgAwyp1WZBtclq1ZCoOYoR9h7OIwaCH0D6zuxt406TeuDm4ZB8YnWXbCD9oP1mACIzawDSJgdxrEtL3lZBy3nzZBtZB4ykZCk";
-        String source = "app";
 
         SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
@@ -96,8 +99,23 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
         campname = prefernce1.getString("campname", "");
 
 
+        SharedPreferences prefernce2 = getSharedPreferences("FB_DETAILS_LIST", Context.MODE_PRIVATE);
 
+        fid = prefernce2.getString("fid", "");
+        fname = prefernce2.getString("fname", "");
+        femail = prefernce2.getString("femail", "");
+        fimage = prefernce2.getString("fimage", "");
+        fuatoken = prefernce2.getString("fuatoken", "");
 
+        pname = prefernce2.getString("pname", "");
+        pid = prefernce2.getString("pid", "");
+        fpatoken = prefernce2.getString("fpatoken", "");
+        pfcount = prefernce2.getString("pfcount", "");
+        plink = prefernce2.getString("plink", "");
+
+        pnlc = prefernce2.getString("pnlc", "");
+        ptac = prefernce2.getString("ptac", "");
+        fpimage = prefernce2.getString("fpimage", "");
 
         cd = new ConnectionDetector(FacebookPageSumbitActivity.this);
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
@@ -107,7 +125,7 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
         if (cid.length() != 0) {
             if (isInternetPresent) {
                 cid = prfs.getString("valueofcid", "");
-                FacebookPost();
+                FacebookPage();
             } else {
                 Snackbar snackbar = Snackbar
                         .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
@@ -162,14 +180,14 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
         }
     }
 
-    private void FacebookPost() {
+    private void FacebookPage() {
 
         pDialog = new ProgressDialog(FacebookPageSumbitActivity.this);
         // Showing progress dialog before making http request
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        url = "http://stage.influencer.in/API/v6/api_v6.php/addNewFBAnalyticsPost";
+        url = "http://stage.influencer.in/API/v6/api_v6.php/updateFBConnectionDetails";
         System.out.println(url);
         StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
 
@@ -190,11 +208,11 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
 
                         if (responstatus == "true") {
                             Toast.makeText(getApplicationContext(), responsemessage, Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(FacebookPageSumbitActivity.this, NewHomeActivity.class);
+                            Intent intent = new Intent(FacebookPageSumbitActivity.this, SMProfile.class);
                             startActivity(intent);
                         }else if (responstatus == "false") {
                             Toast.makeText(getApplicationContext(), responsemessage, Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(FacebookPageSumbitActivity.this, FacebookPostActivity.class);
+                            Intent intent = new Intent(FacebookPageSumbitActivity.this, SocialMediaAuthentication.class);
                             startActivity(intent);
                         }
                     }
@@ -221,19 +239,35 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
 
-                Log.v("cid : ",cid);
-                Log.v("campid : ",campid);
-                Log.v("fbPostId : ", postid);
-                Log.v("fbPageToken: ", fbPageToken);
-                Log.v("fbPageId: ", fbPageId);
-                Log.v("source: ", source);
+//                Log.v("fid-2",fid);
+//                Log.v("fname-2",fname);
+//                Log.v("femail-2",femail);
+//                Log.v("fimage-2",fimage);
+//                Log.v("fuatoken-2",fuatoken);
+//                Log.v("pname-2",pname);
+//                Log.v("pid-2",pid);
+//                Log.v("fpatoken-2",fpatoken);
+//                Log.v("pfcount-2",pfcount);
+//                Log.v("plink-2",plink);
+//                Log.v("pnlc-2",pnlc);
+//                Log.v("ptac-2",ptac);
+//                Log.v("fpimage-2",fpimage);
 
-                params.put("cid", cid);
-                params.put("campid", campid);
-                params.put("fbPostId", postid);
-                params.put("fbPageToken", fbPageToken);
-                params.put("fbPageId", fbPageId);
-                params.put("source", source);
+                params.put(TAG_CID, cid);
+                params.put(TAG_FID, fid);
+                params.put(TAG_FNAME, fname);
+                params.put(TAG_FEMAIL, femail);
+                params.put(TAG_FIMAGE, fimage);
+                params.put(TAG_FUATOKEN, fuatoken);
+                params.put(TAG_PID, pid);
+                params.put(TAG_PNAME, pname);
+                params.put(TAG_PFCOUNT, pfcount);
+                params.put(TAG_PLINK, plink);
+                params.put(TAG_FPATOKEN, fpatoken);
+                params.put(TAG_PNLC, pnlc);
+                params.put(TAG_PTAC, ptac);
+                params.put(TAG_FPIMAGE, fpimage);
+
                 return params;
             }
         };

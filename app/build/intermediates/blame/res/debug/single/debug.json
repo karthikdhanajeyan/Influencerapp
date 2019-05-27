@@ -4,12 +4,12 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\mailicon.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_facebookpostlist.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\facebookpostlist.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_notification_icon_label1.png.flat",
@@ -1048,12 +1048,12 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_dummyactivity.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\dummyactivity.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_dummyactivity.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\dummyactivity.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",

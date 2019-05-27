@@ -73,13 +73,15 @@
 
     <!-- API Configurations -->
     <string name="base_url">https://www.influencer.in/API/v6/</string>
-    <string name="stage_base_url">http://stage.influencer.in/API/v4/</string>
     <string name="final_base_url">https://www.influencer.in/API/v6/api_v6.php/</string>
-
+    <!--http://stage.influencer.in/API/v6/api_v6.php/-->
 
     <string name="device_details_url">androidRegistration1.php</string>
     <string name="regsitration_one_url">androidUserRegister.php</string>
     <!--<string name="regsitration_two_url">updateCustomer.php</string>-->
+
+    <string name="userexistence_register">checkUserExistence?email=</string>
+
     <string name="login_url">login.php</string>
     <string name="forgotpassword_url">forgotPassword.php</string>
     <string name="live_campaign_url">getnewlivecampaign.php</string>
@@ -88,6 +90,8 @@
     <string name="applied_list_url">checkAppliedList.php</string>
     <string name="apply_camp_with_quote_url">applyCampaign.php</string>
     <string name="apply_camp_without_quote_url">applyCampaignwithoutquote.php</string>
+
+
 
     <string name="transaction_history_url">transactionhistory.php</string>
     <string name="paytm_recharge_url">gratification.php</string>

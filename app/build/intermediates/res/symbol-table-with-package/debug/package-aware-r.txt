@@ -1774,8 +1774,10 @@ id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
 id Social_media_select
+id about
 id about_profile
 id accelerate
+id access_token
 id action0
 id action_bar
 id action_bar_activity_content
@@ -2174,6 +2176,7 @@ id id_post_conversation
 id ifRoom
 id ignore
 id image
+id imageURL
 id imageView
 id imageView3
 id indeterminate
@@ -2318,6 +2321,7 @@ id nav_view
 id navigation_header_container
 id never
 id never_display
+id new_like_count
 id newbrieftext
 id newframe
 id newframeid
@@ -2350,6 +2354,7 @@ id overallscorestatus
 id overallscoretext
 id packed
 id page
+id page_id
 id pagevalues
 id parallax
 id parent
@@ -2401,6 +2406,7 @@ id posturl
 id primary_profile
 id primary_profile0
 id primary_spinner
+id profile_access_token
 id profile_image
 id profile_top
 id profileicon
@@ -2420,6 +2426,7 @@ id rate_app_select
 id rate_app_text
 id rate_select
 id rate_text
+id rating_count
 id ratio
 id reach
 id reach_attach
@@ -2569,6 +2576,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tagtext
+id talking_about_count
 id terms
 id terms_icon
 id terms_select
@@ -2642,6 +2650,7 @@ id urllink_valuetext
 id useLogo
 id userengage
 id userengageTxt
+id userid
 id userimg_text
 id userreach
 id userreachTxt
@@ -3174,7 +3183,6 @@ string settings
 string share_instructions
 string skip
 string spam_string
-string stage_base_url
 string starred_string
 string status_bar_notification_info_overflow
 string subheader
@@ -3189,6 +3197,7 @@ string twitter_oauth_verifier
 string type_to_search
 string updateprofile_url
 string userInfo_url
+string userexistence_register
 string wallet_balance_url
 style ActionBarTheme
 style AlertDialog_AppCompat

@@ -117,10 +117,8 @@ public class RegisterationActivity extends AppCompatActivity implements View.OnC
 
         cd = new ConnectionDetector(getApplicationContext());
         isInternetPresent = cd.isConnectingToInternet();
-        //getting customer cid & mobileno
         SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
-        Log.v("CID Value : ",cid);
 
         // view click listeners
         btnEditMobile.setOnClickListener(this);
@@ -243,10 +241,6 @@ public class RegisterationActivity extends AppCompatActivity implements View.OnC
                 rname = inputName.getText().toString();
                 remail = inputEmail.getText().toString();
                 rmobile = inputMobile.getText().toString();
-                // MyApplication.getInstance().trackEvent("Send OTP Button Clicked Event", "OnClick", "Track Registration Event");
-                // request for sms
-                //progressBar.setVisibility(View.VISIBLE);
-                // requesting for email & sms Validation
                 CheckEmailFunction();
             }
         } else {
@@ -262,7 +256,7 @@ public class RegisterationActivity extends AppCompatActivity implements View.OnC
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        String CONVERSATION_URL = "https://www.influencer.in/API/v6/api_v6.php/checkUserExistence?email=" + remail ;
+        String CONVERSATION_URL = R.string.base_url+R.string.userexistence_register + remail ;
         System.out.println("conversation url : "+CONVERSATION_URL);
         final StringRequest stringRequest = new StringRequest(Request.Method.GET, CONVERSATION_URL, new Response.Listener<String>() {
             @Override
@@ -280,20 +274,6 @@ public class RegisterationActivity extends AppCompatActivity implements View.OnC
                         Log.d("response message : ",responsemessage);
 
                         if (responstatus.equalsIgnoreCase("true")){
-                            //Toast.makeText(getApplicationContext(), responsemessage, Toast.LENGTH_SHORT).show();
-
-//                              snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE)
-//                                      .setAction("OK", new View.OnClickListener() {
-//                                        @Override
-//                                        public void onClick(View view) {
-//                                            snackbar.dismiss();
-//                                        }
-//                                    });
-//                            snackbar.setActionTextColor(Color.WHITE);
-//                            View sbView = snackbar.getView();
-//                            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
-//                            textView.setTextColor(Color.RED);
-//                            snackbar.show();
 
                             AlertDialog alertDialog = new AlertDialog.Builder(RegisterationActivity.this).create();
                             alertDialog.setMessage(responsemessage);
@@ -441,9 +421,6 @@ public class RegisterationActivity extends AppCompatActivity implements View.OnC
         String otp = inputOtp.getText().toString().trim();
         Log.v("GETTING OTP VALUE:",otp);
         if (!otp.isEmpty()) {
-//            Intent intent = new Intent(getApplicationContext(), HttpService.class);
-//            intent.putExtra("otp", otp);
-//            startService(intent);
             verifyOtp(otp);
         } else {
             Toast.makeText(getApplicationContext(), "Please enter the OTP", Toast.LENGTH_SHORT).show();
@@ -469,9 +446,6 @@ public class RegisterationActivity extends AppCompatActivity implements View.OnC
 
                     nmessage = resobj.getString("message");
                     type = resobj.getString("type");
-//
-                    Log.v("Final message value :",nmessage);
-                    Log.v("Type value :",type);
 
                     if (type.equalsIgnoreCase("success")){
                                  Log.v("Result : ","Register working");
@@ -528,15 +502,14 @@ public class RegisterationActivity extends AppCompatActivity implements View.OnC
                     // response will be a json object
                     String success = responseObj.getString("success");
                     String message = responseObj.getString("message");
-                    //final String cid = responseObj.getString("cid");
+
 
                     SharedPreferences preferences = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("valueofcid",cid);
                     editor.apply();
 
-
-                                        // checking for error, if not error SMS is initiated
+                    // checking for error, if not error SMS is initiated
                     // device should receive it shortly
                     if (type.equalsIgnoreCase("success")) {
 
@@ -582,7 +555,6 @@ public class RegisterationActivity extends AppCompatActivity implements View.OnC
                         // Showing Alert Message
                         alertDialog.show();
                     }
-
 
 
                 } catch (JSONException e) {

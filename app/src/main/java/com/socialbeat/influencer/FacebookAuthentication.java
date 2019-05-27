@@ -45,18 +45,30 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class FacebookAuthentication extends AppCompatActivity {
-    String cid,pageid,pagename,pagefancount,pagetoken,usertoken,userid,url;
+    String cid,pageid,pagename,pagefancount,pagetoken,usertoken,userid,url,link,new_like_count,rating_count,talking_about_count,name,email,imageURL,about,accessToken;
 
     private LoginButton loginButton;
     ListView list;
     private CallbackManager callbackManager;
     // Hashmap for ListView
     ArrayList<HashMap<String, String>> pageList;
-    public static final String TAG_PID = "id";
-    public static final String TAG_PNAME = "name";
-    public static final String TAG_PFANCOUNT = "fan_count";
-    public static final String TAG_PTOKEN = "access_token";
-    public static final String TAG_URL = "url";
+    public static final String TAG_FID = "fb_id";
+    public static final String TAG_FNAME = "fb_name";
+    public static final String TAG_FEMAIL = "fb_email";
+    public static final String TAG_FIMAGE = "fb_profile_picture_url";
+    public static final String TAG_FUATOKEN = "fb_profile_access_token";
+
+    public static final String TAG_PID = "fb_page_id";
+    public static final String TAG_PNAME = "fb_page_name";
+    public static final String TAG_PFCOUNT = "fb_page_fan_count";
+    public static final String TAG_PLINK = "fb_page_link";
+    public static final String TAG_FPATOKEN = "fb_page_access_token";
+
+    public static final String TAG_PABOUT = "fb_page_about";
+    public static final String TAG_PNLC = "fb_page_new_like_count";
+    public static final String TAG_PRC = "fb_page_rating_count";
+    public static final String TAG_PTAC = "fb_page_talking_about_count";
+    public static final String TAG_FPIMAGE = "fb_page_picture";
     FBLazyAdapter adapter;
 
     @Override
@@ -82,35 +94,19 @@ public class FacebookAuthentication extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
         //loginButton.setReadPermissions(Arrays.asList("public_profile", "email", "user_birthday", "user_location"));
         loginButton.setReadPermissions(Arrays.asList("public_profile", "email"));
+
         //loginButton.setReadPermissions("accounts");
 
         list = findViewById(R.id.pagevalues);
-        // Listview on item click listener
+
 //        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //
 //            @Override
-//            public void onItemClick(AdapterView<?> parent, View view,
-//                                    int position, long id) {
-//                // getting values from selected ListItem
-//                String pgname = ((TextView) view.findViewById(R.id.pgname)).getText().toString();
-//                String pgid = ((TextView) view.findViewById(R.id.pgid)).getText().toString();
-//                String pgabout = ((TextView) view.findViewById(R.id.pgabout)).getText().toString();
-//                String pgfancount = ((TextView) view.findViewById(R.id.pgfancount)).getText().toString();
-//                String pgtoken = ((TextView) view.findViewById(R.id.pgtoken)).getText().toString();
-//                //String url_value = ((TextView) view.findViewById(R.id.pgtoken)).getText().toString();
-//                Toast.makeText(FacebookAuthentication.this,pgname+"---"+pgtoken, Toast.LENGTH_LONG).show();
+//            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
+//
+//                Toast.makeText(FacebookAuthentication.this,"HAi..!", Toast.LENGTH_LONG).show();
 //            }
 //        });
-
-
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
-
-                Toast.makeText(FacebookAuthentication.this,"HAi..!", Toast.LENGTH_LONG).show();
-            }
-        });
 
 
 
@@ -124,60 +120,70 @@ public class FacebookAuthentication extends AppCompatActivity {
                             @Override
                             public void onCompleted(JSONObject object, GraphResponse response) {
                                 Log.v("SocialMedia ", response.toString());
-                                String accessToken = AccessToken.getCurrentAccessToken().getToken();
+                                 accessToken = AccessToken.getCurrentAccessToken().getToken();
                                 //session.getAccessToken().getToken()
                                 System.out.println("Access Token :"+accessToken);
+
                                 try {
                                     Log.d("Facebook", "Graph Response: " + response);
+
+                                     userid = response.getJSONObject().getString("id");
+                                     name = response.getJSONObject().getString("name");
+                                     email = response.getJSONObject().getString("email");
+                                     imageURL = "http://graph.facebook.com/"+userid+"/picture?type=large";
 
                                     if (object.has("accounts")) {
                                         JSONObject accounts = object.getJSONObject("accounts");
                                         JSONArray data = accounts.getJSONArray("data");
                                         for (int i=0;i<data.length();i++){
                                             JSONObject legObject = (JSONObject) data.get(i);
+
                                             pageid = legObject.getString("id");
                                             pagename = legObject.getString("name");
                                             pagefancount = legObject.getString("fan_count");
                                             pagetoken = legObject.getString("access_token");
-
+                                            link = legObject.getString("link");
+                                            //about = legObject.getString("about");
+                                            new_like_count = legObject.getString("new_like_count");
+                                            //rating_count = legObject.getString("rating_count");
+                                            talking_about_count = legObject.getString("talking_about_count");
                                             JSONObject picturevalue = legObject.getJSONObject("picture");
                                             JSONObject datavalue = picturevalue.getJSONObject("data");
                                             Log.v("data : ",datavalue.toString());
-                                            //JSONObject urlvalue = datavalue.getJSONObject("url");
                                             url = datavalue.getString("url");
 
 
-                                            Log.v("value of page Id : ",data.getJSONObject(i).getString("id"));
-                                            Log.v("value of Name : ",data.getJSONObject(i).getString("name"));
-                                            Log.v("value of Fan Count : ",data.getJSONObject(i).getString("fan_count"));
-                                            Log.v("value of Token : ",data.getJSONObject(i).getString("access_token"));
-                                            Log.v("value of url : ",url);
 
                                             // tmp hashmap for single contact
                                             HashMap<String, String> page = new HashMap<String, String>();
                                             // adding each child node to HashMap key => value
+
+                                            page.put(TAG_FID,userid);
+                                            page.put(TAG_FNAME,name);
+                                            page.put(TAG_FEMAIL,email);
+                                            page.put(TAG_FIMAGE,imageURL);
+                                            page.put(TAG_FUATOKEN,accessToken);
+
                                             page.put(TAG_PID,pageid);
                                             page.put(TAG_PNAME,pagename);
-                                            page.put(TAG_PFANCOUNT,pagefancount);
-                                            page.put(TAG_URL,url);
-                                            page.put(TAG_PTOKEN,pagetoken);
+                                            page.put(TAG_PFCOUNT,pagefancount);
+                                            page.put(TAG_PLINK,link);
+                                            page.put(TAG_FPATOKEN,pagetoken);
+
+//                                            if(about!= null && !about.isEmpty()){
+//                                                page.put(TAG_PABOUT,about);
+//                                            }
+                                            page.put(TAG_PNLC,new_like_count);
+//                                            if(rating_count!= null && !rating_count.isEmpty()){
+//                                                page.put(TAG_PRC,rating_count);
+//                                            }
+                                            page.put(TAG_PTAC,talking_about_count);
+                                            page.put(TAG_FPIMAGE,url);
 
                                             // adding contact to contact list
                                             pageList.add(page);
                                         }
                                     }
-
-//                                    //Image
-//                                    Glide.with(getApplicationContext()).load(image_url)
-//                                            .thumbnail(0.5f)
-//                                            .crossFade()
-//                                            .diskCacheStrategy(DiskCacheStrategy.ALL)
-//                                            .into(fb_profileimage);
-
-//                                    ListAdapter adapter = new SimpleAdapter(FacebookAuthentication.this, pageList,
-//                                            R.layout.fbpagelist, new String[]{TAG_PID,TAG_PNAME,TAG_PFANCOUNT,TAG_PTOKEN},
-//                                            new int[]{R.id.pgid,R.id.pgname,R.id.pgfancount,R.id.pgtoken});
-//                                    list.setAdapter(adapter);
 
 
                                     adapter = new FBLazyAdapter(FacebookAuthentication.this, pageList);
@@ -199,7 +205,7 @@ public class FacebookAuthentication extends AppCompatActivity {
                             }
                         });
                 Bundle parameters = new Bundle();
-                parameters.putString("fields", "id,name,accounts{name,app_id,fan_count,access_token,about,picture{url}}");
+                parameters.putString("fields", "id,name,email,picture{url},accounts{name,fan_count,access_token,app_id,about,picture{url},link,new_like_count,rating_count,talking_about_count}");
                 request.setParameters(parameters);
                 request.executeAsync();
 
@@ -218,20 +224,15 @@ public class FacebookAuthentication extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent  = new Intent(this, UserSettings.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
+        // code here to show dialog
+        super.onBackPressed();  // optional depending on your needs
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent  = new Intent(this, NewHomeActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                super.onBackPressed();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

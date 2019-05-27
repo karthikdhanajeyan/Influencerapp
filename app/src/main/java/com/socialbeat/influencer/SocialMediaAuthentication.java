@@ -85,10 +85,11 @@ public class SocialMediaAuthentication extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(SocialMediaAuthentication.this, UserSettings.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                super.onBackPressed();
+//                Intent intent = new Intent(SocialMediaAuthentication.this, UserSettings.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
