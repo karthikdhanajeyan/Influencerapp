@@ -1,0 +1,205 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Influencer_Login">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@mipmap/login_background"
+        android:scaleType="fitXY"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:context=".RegistrationScreen1"
+            android:layout_marginTop="80sp"
+            android:id="@+id/relativeLayout"
+            android:scaleType="fitXY">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="VERIFICATION"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:id="@+id/login_title"
+                android:layout_marginTop="40sp"
+                android:layout_marginBottom="20sp"
+                android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/login_title"
+            android:id="@+id/relativeLayout1"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transperent"
+            android:scaleType="fitXY">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Mobile Number : "
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/white"
+                android:layout_alignLeft="@+id/mobileno"
+                android:layout_alignStart="@+id/mobileno"
+                android:layout_alignRight="@+id/mobileno"
+                android:layout_alignEnd="@+id/mobileno"
+                android:gravity="left"
+                android:id="@+id/info_text1"
+                android:textSize="25sp"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:id="@+id/mobile_correct_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignRight="@+id/info_text1"
+                android:src="@mipmap/correct"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/mobile_wrong_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignRight="@+id/info_text1"
+                android:src="@mipmap/wrong"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mobileno"
+                android:ems="18"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:paddingLeft="15dp"
+                android:textSize="18dp"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_corner"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mo_verifynow_button"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/mobileno"
+                android:text="Verify Now"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="invisible"
+                android:textAlignment="center"
+                android:background="@color/orange"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_alignLeft="@+id/mobileno"
+                android:layout_alignStart="@+id/mobileno"
+                android:layout_alignRight="@+id/mobileno"
+                android:layout_alignEnd="@+id/mobileno" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Email-Id : "
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/white"
+                android:gravity="left"
+                android:id="@+id/info_text2"
+                android:layout_alignLeft="@+id/mobileno"
+                android:layout_alignStart="@+id/mobileno"
+                android:layout_alignRight="@+id/mobileno"
+                android:layout_alignEnd="@+id/mobileno"
+                android:layout_below="@+id/mo_verifynow_button"
+                android:textSize="25sp"
+                android:layout_marginTop="30sp" />
+
+            <ImageView
+                android:id="@+id/email_correct_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignRight="@+id/info_text2"
+                android:layout_below="@+id/mo_verifynow_button"
+                android:src="@mipmap/correct"
+                android:layout_marginTop="30sp"
+                android:visibility="invisible" />
+            <ImageView
+                android:id="@+id/email_wrong_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignRight="@+id/info_text2"
+                android:layout_below="@+id/mo_verifynow_button"
+                android:src="@mipmap/wrong"
+                android:layout_marginTop="30sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailid"
+                android:inputType="textEmailAddress"
+                android:ems="18"
+                android:gravity="left"
+                android:textSize="18dp"
+                android:singleLine="true"
+                android:textColorHint="@color/white"
+                android:layout_below="@+id/info_text2"
+                android:textColor="@color/white"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_corner"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/em_verifynow_button"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/emailid"
+                android:text="Verify Now"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginBottom="20sp"
+                android:visibility="invisible"
+                android:textAlignment="center"
+                android:background="@color/orange"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_alignLeft="@+id/mobileno"
+                android:layout_alignStart="@+id/mobileno"
+                android:layout_alignRight="@+id/mobileno"
+                android:layout_alignEnd="@+id/mobileno" />
+
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>
+
+

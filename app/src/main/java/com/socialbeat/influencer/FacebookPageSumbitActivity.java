@@ -1,7 +1,5 @@
 package com.socialbeat.influencer;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -146,7 +144,7 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
             // return v;
         } else {
             Toast.makeText(getApplicationContext(), "User Could not login properly,Please Login", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(FacebookPageSumbitActivity.this, LoginActivity.class);
+            Intent intent = new Intent(FacebookPageSumbitActivity.this, Influencer_Login.class);
             startActivity(intent);
         }
     }
@@ -187,7 +185,8 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        url = "http://stage.influencer.in/API/v6/api_v6.php/updateFBConnectionDetails";
+        //url = "http://stage.influencer.in/API/v6/api_v6.php/updateFBConnectionDetails";
+        url = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.fbconnection_details_url);
         System.out.println(url);
         StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
 
@@ -238,20 +237,6 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-
-//                Log.v("fid-2",fid);
-//                Log.v("fname-2",fname);
-//                Log.v("femail-2",femail);
-//                Log.v("fimage-2",fimage);
-//                Log.v("fuatoken-2",fuatoken);
-//                Log.v("pname-2",pname);
-//                Log.v("pid-2",pid);
-//                Log.v("fpatoken-2",fpatoken);
-//                Log.v("pfcount-2",pfcount);
-//                Log.v("plink-2",plink);
-//                Log.v("pnlc-2",pnlc);
-//                Log.v("ptac-2",ptac);
-//                Log.v("fpimage-2",fpimage);
 
                 params.put(TAG_CID, cid);
                 params.put(TAG_FID, fid);

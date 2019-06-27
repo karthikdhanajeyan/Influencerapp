@@ -80,7 +80,8 @@ public class MyCampaignsFragment extends AppCompatActivity {
         if (cid.length() != 0) {
             if (isInternetPresent) {
                 cid = prfs.getString("valueofcid", "");
-                url = "https://influencer.in/API/v4/appliedList.php?cid=" + cid + "";
+                //url = "https://influencer.in/API/v4/appliedList.php?cid=" + cid + "";
+                url = getResources().getString(R.string.base_url) + getResources().getString(R.string.appliedlist_url)+"?cid=" + cid + "";
                 System.out.println(url);
                 lv = (ListView) findViewById(R.id.appliedcampvalues);
                 // Listview on item click listener
@@ -131,7 +132,7 @@ public class MyCampaignsFragment extends AppCompatActivity {
             // return v;
         } else {
             Toast.makeText(getApplicationContext(), "User Could not login properly,Please Login", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(MyCampaignsFragment.this, LoginActivity.class);
+            Intent intent = new Intent(MyCampaignsFragment.this, Influencer_Login.class);
             startActivity(intent);
         }
     }

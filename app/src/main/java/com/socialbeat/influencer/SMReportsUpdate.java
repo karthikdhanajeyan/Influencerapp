@@ -454,7 +454,8 @@ public class SMReportsUpdate extends AppCompatActivity {
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        String Applied_URL = "https://www.influencer.in/API/v6/api_v6.php/getCampaignReports?reportid=" + contentid + "";
+        //String Applied_URL = "https://www.influencer.in/API/v6/api_v6.php/getCampaignReports?reportid=" + contentid + "";
+        String Applied_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.singlecamp_report_url)+"?reportid=" + contentid + "";
         System.out.println(Applied_URL);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Applied_URL, new Response.Listener<String>() {
             @Override
@@ -798,7 +799,8 @@ public class SMReportsUpdate extends AppCompatActivity {
         @SuppressWarnings("deprecation")
         private String uploadFile() {
             String responseString = null;
-            String REGISTER_URL = "https://www.influencer.in/API/v6/api_v6.php/editCampaignReport";
+            //String REGISTER_URL = "https://www.influencer.in/API/v6/api_v6.php/editCampaignReport";
+            String REGISTER_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.editcamp_report_url);
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(REGISTER_URL);
             try {

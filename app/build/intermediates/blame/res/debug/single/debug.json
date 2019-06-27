@@ -32,6 +32,14 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-xxhdpi\\logo.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00016.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00016.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00030.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00030.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_color_selector.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\color\\mtrl_btn_text_color_selector.xml"
     },
@@ -46,6 +54,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_tweet_photo_error_light.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_tweet_photo_error_light.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_up_container.xml.flat",
@@ -68,6 +80,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_tweet_verified.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_tweet_verified.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_chaticon.jpg.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\chaticon.jpg"
     },
@@ -76,12 +92,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_inline_share.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_inline_share.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_infoicon1.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\infoicon1.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_button_icon.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable\\com_facebook_button_icon.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable\\com_facebook_button_icon.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -96,6 +116,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_retweet_dark.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_retweet_dark.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
@@ -104,8 +128,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_tw__action_bar.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\layout\\tw__action_bar.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_button_send_background.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\2112a9411a502b4ec048800d26527ced\\res\\drawable\\com_facebook_button_send_background.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_video_pause_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_video_pause_pressed.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_activity_chooser_view_list_item.xml.flat",
@@ -120,8 +152,12 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_video_play.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_video_play.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_button_login_silver_background.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable\\com_facebook_button_login_silver_background.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable\\com_facebook_button_login_silver_background.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -134,6 +170,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bottom_border_on_light.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\drawable\\bottom_border_on_light.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00059.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00059.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_corner_button_ash.xml.flat",
@@ -173,7 +213,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_close.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-xhdpi-v4\\com_facebook_close.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-xhdpi-v4\\com_facebook_close.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -184,12 +224,20 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\influencerlistimg.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_logo_white.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_logo_white.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_lifestyle_icon.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\lifestyle_icon.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__action_heart_on_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__action_heart_on_default.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_registration_screen2_new.xml.flat",
@@ -236,6 +284,14 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\food_icon1.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__call_to_action.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__call_to_action.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00012.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00012.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
@@ -260,8 +316,8 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_cat_sleeping.png.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\cat_sleeping.png"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_tw__tweet.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\layout\\tw__tweet.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -292,20 +348,12 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\layout\\messenger_button_send_blue_round.xml"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_mywallet.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\mywallet.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_updatecheck.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\updatecheck.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_button_login_background.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable\\com_facebook_button_login_background.xml"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_user_settingsold.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\user_settingsold.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable\\com_facebook_button_login_background.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_thumb_material.xml.flat",
@@ -314,6 +362,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_check_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__action_heart_on_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__action_heart_on_default.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_activity_chooser_view.xml.flat",
@@ -332,6 +384,10 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\schedule.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00025.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00025.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
@@ -348,10 +404,6 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_firstscreen_new.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\firstscreen_new.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_messenger_bubble_large_blue.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable-xxhdpi-v4\\messenger_bubble_large_blue.png"
     },
@@ -360,8 +412,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_video_replay_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_video_replay_pressed.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_home_icon_bw.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\home_icon_bw.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_livecamp_details_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_livecamp_details_screen.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -374,10 +434,6 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_food_icon.png.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\food_icon.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_full_open_on_phone.png.flat",
@@ -394,6 +450,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00052.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00052.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_item1.xml.flat",
@@ -440,6 +500,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\select_dialog_item_material.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_play_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_play_default.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_messenger_button_send_round_shadow.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable-mdpi-v4\\messenger_button_send_round_shadow.png"
     },
@@ -484,6 +548,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable-mdpi-v4\\messenger_bubble_large_blue.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_seekbar_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_seekbar_bg.9.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20_common_google_signin_btn_text_light_normal.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\1763b5102a70e54637efb8fc2079fede\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
     },
@@ -496,6 +564,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00046.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00046.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png"
     },
@@ -506,6 +578,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\menu_activity_home_new_drawer_test.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\menu\\activity_home_new_drawer_test.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00037.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00037.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_dialog_material_background.xml.flat",
@@ -540,20 +616,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_button_send_icon_blue.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\2112a9411a502b4ec048800d26527ced\\res\\drawable-hdpi-v4\\com_facebook_button_send_icon_blue.png"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_googleg_standard_color_18.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_registration_screen.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\registration_screen.xml"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_button_send_icon_blue.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\2112a9411a502b4ec048800d26527ced\\res\\drawable-hdpi-v4\\com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00047.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00047.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_logo_white.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_logo_white.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_rarrow.png.flat",
@@ -572,12 +652,20 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_newuserprofile_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_newuserprofile_screen.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_youtube_r_icon_w.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\youtube_r_icon_w.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_tile_bg.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_wrong.png.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\wrong.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
@@ -590,6 +678,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_popup_menu_header_item_layout.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_instagramauthentication.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\instagramauthentication.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_fab_background.xml.flat",
@@ -606,6 +698,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_item.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\spinner_item.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00051.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00051.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item.xml.flat",
@@ -664,6 +760,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_login_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_login_screen.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -720,6 +820,10 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\facebook_clr_icon.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00019.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00019.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_snackbar_in.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\anim\\design_snackbar_in.xml"
     },
@@ -737,11 +841,15 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_topnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_tw__accelerate_cubic.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\anim\\tw__accelerate_cubic.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -752,12 +860,16 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\splash_screen_name.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-h420dp_alllivecamplist.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout-h420dp\\alllivecamplist.xml"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_video_replay.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_video_replay.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_custom_big.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_video_replay.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_video_replay.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -780,8 +892,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00021.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00021.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00034.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00034.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_button_send_icon_white.png.flat",
@@ -793,7 +913,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_tab_indicator_material.xml.flat",
@@ -817,7 +937,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_topnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_smproflie_list_one.xml.flat",
@@ -828,24 +948,28 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable-hdpi-v4\\messenger_bubble_small_white.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_conversations.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\conversations.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_paymentview.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\paymentview.xml"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_allcampdetails.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\allcampdetails.xml"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_conversations.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\conversations.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_corner_button_newone.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\drawable\\rounded_corner_button_newone.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_myprofile_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_myprofile_screen.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00022.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00022.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -880,12 +1004,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\anim\\abc_slide_out_top.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_video_play_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_video_play_pressed.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_video_pause.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_video_pause.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_messenger_bubble_small_white.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable-xhdpi-v4\\messenger_bubble_small_white.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_disabled.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00007.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00007.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logo.png.flat",
@@ -901,7 +1037,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_tick_mark_material.xml.flat",
@@ -910,6 +1046,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00031.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00031.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -944,10 +1084,6 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\xml-v25\\shortcuts.xml"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_notificationwindowmsg.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\notificationwindowmsg.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_close.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\drawable\\ic_close.png"
     },
@@ -958,6 +1094,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00024.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00024.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
@@ -972,6 +1112,10 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\drawable\\fab_label_background.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_video_replay.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_video_replay.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
@@ -981,7 +1125,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_auth_dialog_cancel_background.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_hide_motion_spec.xml.flat",
@@ -1008,8 +1152,20 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\ac_icon.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__seekbar_thumb.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__seekbar_thumb.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00006.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00006.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_twitterauthentication.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\twitterauthentication.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_hand_shake.png.flat",
@@ -1028,12 +1184,20 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_logo_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\92b9b0d9a3429ad9d74f467f44030a43\\res\\drawable-xhdpi-v4\\tw__ic_logo_default.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_twitter_icon_glass.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\twitter_icon_glass.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_transformation_sheet_expand_spec.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\animator\\mtrl_fab_transformation_sheet_expand_spec.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_tweet_photo_error_dark.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_tweet_photo_error_dark.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
@@ -1044,8 +1208,16 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\more_settings.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00033.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00033.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__action_heart_on_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__action_heart_on_default.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -1076,6 +1248,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_tweet_verified.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_tweet_verified.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_viewconversation.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\viewconversation.xml"
     },
@@ -1104,8 +1280,20 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_gif_badge.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_gif_badge.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_spinner_textfield_background_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__action_heart_on_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__action_heart_on_default.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_tw__video_control.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\layout\\tw__video_control.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_default.xml.flat",
@@ -1116,12 +1304,24 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\hands_globe.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00026.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00026.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_target_icon.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\target_icon.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_tweet_photo_error_dark.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_tweet_photo_error_dark.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_video_play_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_video_play_pressed.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -1136,12 +1336,12 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\mails.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_password_screen.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\password_screen.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_forgotpassword_new.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\forgotpassword_new.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00004.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00004.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_bulb.png.flat",
@@ -1164,12 +1364,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_play_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_play_pressed.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_video_pause.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_video_pause.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_focused.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_eye_icon_blue.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\eye_icon_blue.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_splash_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_splash_screen.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1188,12 +1400,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable\\messenger_button_white_bg_selector.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_otpdialouge_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_otpdialouge_screen.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_vine_badge.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_vine_badge.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_edit_text_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__login_btn_disabled.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\92b9b0d9a3429ad9d74f467f44030a43\\res\\drawable\\tw__login_btn_disabled.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_dark.xml.flat",
@@ -1206,10 +1430,6 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_instagram_r_icon.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\instagram_r_icon.png"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_auto_icon.png.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\auto_icon.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_background_transition_holo_dark.xml.flat",
@@ -1236,6 +1456,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_video_replay_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_video_replay_pressed.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -1244,8 +1468,8 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-ldrtl-xxhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_splashscreen.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\splashscreen.xml"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_tw__tweet_compact.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\layout\\tw__tweet_compact.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_profile_icon_clr.png.flat",
@@ -1256,12 +1480,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3b76edb8be11e5981eddadac5f701ab0\\res\\drawable-xxhdpi-v4\\fab_add.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_gif_badge.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_gif_badge.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_topnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_button_send_icon_blue.png.flat",
@@ -1280,16 +1508,20 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable-hdpi-v4\\messenger_bubble_large_white.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_tw__slide_out.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\anim\\tw__slide_out.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_fab_slide_in_from_left.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\anim\\fab_slide_in_from_left.xml"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_login_screen.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\login_screen.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00058.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00058.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_bloggerprofile_bg.png.flat",
@@ -1308,12 +1540,20 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\smproflie_list.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_tweet_photo_error_dark.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_tweet_photo_error_dark.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-h560dp_influencer_livecamp_list.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout-h560dp\\influencer_livecamp_list.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_smdetaillist.xml.flat",
@@ -1344,12 +1584,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_seekbar_secondary_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_seekbar_secondary_bg.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_retweet_dark.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_retweet_dark.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_video_replay.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_video_replay.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_whitelogo.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\whitelogo.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_white.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_white.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_socialmediaauthentication.xml.flat",
@@ -1358,6 +1610,18 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00001.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00001.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_tw__activity_oauth.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\92b9b0d9a3429ad9d74f467f44030a43\\res\\layout\\tw__activity_oauth.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00054.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00054.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -1378,6 +1642,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_parent_icon.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\parent_icon.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_retweet_light.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_retweet_light.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_dark.xml.flat",
@@ -1404,6 +1672,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\drawable\\mtrl_snackbar_background.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00053.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00053.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
@@ -1421,11 +1693,15 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_profile_picture_blank_portrait.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_portrait.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_portrait.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00002.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00002.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_show_from_bottom.xml.flat",
@@ -1436,6 +1712,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v18_tw__quote_tweet_border.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-v18\\tw__quote_tweet_border.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
@@ -1444,28 +1724,40 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\wallet_blr.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_logo_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\92b9b0d9a3429ad9d74f467f44030a43\\res\\drawable-hdpi-v4\\tw__ic_logo_default.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_sampleimgview.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\sampleimgview.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00029.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00029.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_video_replay_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_video_replay_pressed.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sms_login.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\activity_sms_login.xml"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\drawable\\notification_bg_low.xml"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00003.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00003.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_listview_multiple.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\85570e9a77b44b91a412c04e2f463b3e\\res\\layout\\item_listview_multiple.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\drawable\\notification_bg_low.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_bottom_nav_item_tint.xml.flat",
@@ -1478,6 +1770,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00000.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00000.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_seek_thumb.xml.flat",
@@ -1528,6 +1824,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00027.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00027.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_analyticsreport.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\analyticsreport.xml"
     },
@@ -1536,12 +1836,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__action_heart_off_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__action_heart_off_default.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_indicator_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_com_facebook_activity_layout.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\layout\\com_facebook_activity_layout.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\layout\\com_facebook_activity_layout.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -1550,6 +1854,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__login_btn_default.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\92b9b0d9a3429ad9d74f467f44030a43\\res\\drawable\\tw__login_btn_default.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_approvedcampaign.xml.flat",
@@ -1576,24 +1884,44 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00056.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00056.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_tab_icon.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_play_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_play_default.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_btn_checkable.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\color\\abc_tint_btn_checkable.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_play_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_play_pressed.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_paytm_wallet_transfer_small.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\paytm_wallet_transfer_small.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-h560dp_alllivecamplist.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout-h560dp\\alllivecamplist.xml"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00028.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00028.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__share_action.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__share_action.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_video_pause.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_video_pause.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -1616,6 +1944,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\color\\mtrl_tabs_colored_ripple_color.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00055.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00055.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_more_icon_clr.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\more_icon_clr.png"
     },
@@ -1628,12 +1960,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_seekbar_secondary_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_seekbar_secondary_bg.9.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_layout_snackbar.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\layout\\mtrl_layout_snackbar.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_fab_open.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\anim\\fab_open.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__video_replay_btn.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__video_replay_btn.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_play_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_play_default.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -1656,8 +2000,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_seekbar_progress_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_seekbar_progress_bg.9.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_inline_share.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_inline_share.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_content_include.xml.flat",
@@ -1666,10 +2018,6 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_txnhistory.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\txnhistory.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_listview_single.xml.flat",
@@ -1688,24 +2036,64 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\color\\mtrl_chip_ripple_color.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__action_heart_off_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__action_heart_off_default.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__video_pause_btn.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__video_pause_btn.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_in.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__player_overlay.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__player_overlay.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-h420dp_influencer_livecamp_list.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout-h420dp\\influencer_livecamp_list.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_logo_blue.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_logo_blue.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_design_ic_visibility.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\drawable-xxhdpi-v4\\design_ic_visibility.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_seekbar_progress_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_seekbar_progress_bg.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_correct.png.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\correct.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_splashscreen_influencer.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\splashscreen_influencer.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00023.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00023.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_transactionlist.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\transactionlist.xml"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_video_play.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_video_play.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_home_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_home_screen.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_tweet_verified.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_tweet_verified.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_spinner.xml.flat",
@@ -1714,6 +2102,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_retweet_light.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_retweet_light.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -1741,7 +2133,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_background.9.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_icon_group.xml.flat",
@@ -1750,6 +2142,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\xml_nav_states.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\c57159d9bc108e5642ba8a3b0c7c3103\\res\\xml\\nav_states.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00009.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00009.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
@@ -1761,7 +2157,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_background.9.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
@@ -1776,12 +2172,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\61858942f0ba414d5a60e44f7be415c4\\res\\layout\\notification_template_media_custom.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_retweet_dark.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_retweet_dark.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_tweet_photo_error_light.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_tweet_photo_error_light.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_splashscreen_mobile.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\splashscreen_mobile.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_approvedcamplist.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\approvedcamplist.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_uservalidation_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_uservalidation_screen.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_btn_ripple_color.xml.flat",
@@ -1805,23 +2213,27 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_favicon_blue.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable\\com_facebook_favicon_blue.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable\\com_facebook_favicon_blue.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_mobile_camp_icon.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\mobile_camp_icon.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_registration_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_registration_screen.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_messenger_bubble_small_blue.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable-mdpi-v4\\messenger_bubble_small_blue.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_screen_simple.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_screen_simple.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_default.xml.flat",
@@ -1884,6 +2296,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\color\\common_google_signin_btn_text_light.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_vine_badge.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_vine_badge.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_voice_search_api_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
@@ -1900,20 +2316,20 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\notificationflaticon40.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_seekbar_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_seekbar_bg.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00057.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00057.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_messenger_bubble_large_white.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable-xhdpi-v4\\messenger_bubble_large_white.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_login_screen_old.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\login_screen_old.xml"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_transactionlist1.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\transactionlist1.xml"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_alllivecamp.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\alllivecamp.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_singlechoice_material.xml.flat",
@@ -1945,7 +2361,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-xhdpi-v4\\com_facebook_button_like_icon_selected.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-xhdpi-v4\\com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_material.xml.flat",
@@ -1954,6 +2370,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_text_input_password_icon.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\layout\\design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_tw__tweet_quote.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\layout\\tw__tweet_quote.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_clap_hands.png.flat",
@@ -1970,6 +2390,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_background_cache_hint_selector_material_dark.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00018.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00018.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -1993,7 +2417,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_xout.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_messenger_button_send_round_shadow.png.flat",
@@ -2004,8 +2428,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00005.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00005.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_logo_blue.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_logo_blue.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_background.9.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -2024,6 +2456,10 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\hraicon.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__video_play_btn.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__video_play_btn.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_reachview.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\reachview.xml"
     },
@@ -2032,8 +2468,20 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\drawable-v21\\design_password_eye.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_inline_share.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_inline_share.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout-watch-v20\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_seekbar_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_seekbar_bg.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_video_replay_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_video_replay_pressed.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_frontbg.png.flat",
@@ -2046,10 +2494,6 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_switch_thumb_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable\\abc_switch_thumb_material.xml"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_walletold.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\walletold.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_dialog_listview_search.xml.flat",
@@ -2085,7 +2529,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_corner_button_newtwo.xml.flat",
@@ -2093,11 +2537,11 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_xout.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_com_facebook_device_auth_dialog_fragment.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_edittext.xml.flat",
@@ -2116,12 +2560,20 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00045.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00045.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\color\\mtrl_tabs_icon_color_selector.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00032.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00032.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_menu_item_action_area.xml.flat",
@@ -2157,7 +2609,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_xout.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -2192,6 +2644,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_seekbar_secondary_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_seekbar_secondary_bg.9.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_design_ic_visibility_off.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
     },
@@ -2201,15 +2657,15 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_topnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_com_facebook_button_text_color.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\color\\com_facebook_button_text_color.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\color\\com_facebook_button_text_color.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple_overlay_action_mode.xml.flat",
@@ -2226,6 +2682,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_tweet_verified.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_tweet_verified.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_com_facebook_button_send_icon_white.png.flat",
@@ -2249,11 +2709,15 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_auth_dialog_header_background.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_snackbar_background.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_video_pause_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_video_pause_pressed.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -2261,11 +2725,15 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_button_like_background.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable\\com_facebook_button_like_background.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable\\com_facebook_button_like_background.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00010.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00010.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -2276,12 +2744,16 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\profile_background.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00036.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00036.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-xhdpi-v4\\com_facebook_button_icon_blue.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-xhdpi-v4\\com_facebook_button_icon_blue.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
@@ -2300,20 +2772,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_livecamp_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_livecamp_screen.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_influencerprofile.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\influencerprofile.png"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_myprofilenew.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\myprofilenew.xml"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_book_icon.png.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\book_icon.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
@@ -2340,6 +2808,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__login_btn.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\92b9b0d9a3429ad9d74f467f44030a43\\res\\drawable\\tw__login_btn.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_small_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
@@ -2356,12 +2828,16 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\quoteamounts.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_livecamp_list.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_livecamp_list.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_auth_dialog_background.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable\\com_facebook_auth_dialog_background.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable\\com_facebook_auth_dialog_background.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_newicon80.png.flat",
@@ -2369,11 +2845,15 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-hdpi-v4\\com_facebook_button_like_icon_selected.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-hdpi-v4\\com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_eye_icon_white.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\eye_icon_white.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00049.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00049.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_normal.xml.flat",
@@ -2404,12 +2884,20 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_search_view.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_tw__player_activity.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\layout\\tw__player_activity.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00035.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00035.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_influencerlogo.png.flat",
@@ -2422,6 +2910,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_logo_temp.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\logo_temp.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__vine_badge.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__vine_badge.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_checkbox.xml.flat",
@@ -2441,7 +2933,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_whiteimg.png.flat",
@@ -2449,15 +2941,11 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-hdpi-v4\\com_facebook_button_icon_blue.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-hdpi-v4\\com_facebook_button_icon_blue.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_alllivecamplist.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\alllivecamplist.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_marketing_icon.png.flat",
@@ -2468,12 +2956,16 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\influencerheader300.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00050.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00050.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_mycampdetails.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\mycampdetails.xml"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_logo_white.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_logo_white.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_chip_background_color.xml.flat",
@@ -2516,6 +3008,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_tweet_photo_error_light.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_tweet_photo_error_light.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\61858942f0ba414d5a60e44f7be415c4\\res\\layout\\notification_media_cancel_action.xml"
     },
@@ -2524,12 +3020,24 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\facebookauthentication.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_tw__gallery_activity.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\layout\\tw__gallery_activity.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_video_pause_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_video_pause_pressed.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_quoteamount.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\quoteamount.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_text_btn_text_color_selector.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\color\\mtrl_text_btn_text_color_selector.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00048.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00048.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mtrl_tabs_default_indicator.xml.flat",
@@ -2542,6 +3050,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_seekbar_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_seekbar_bg.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_enter.xml.flat",
@@ -2561,7 +3073,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_background.9.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -2597,7 +3109,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-mdpi-v4\\com_facebook_button_like_icon_selected.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-mdpi-v4\\com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -2632,8 +3144,12 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\new_background.jpg"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_video_play_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_video_play_pressed.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_com_facebook_tooltip_bubble.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\layout\\com_facebook_tooltip_bubble.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\layout\\com_facebook_tooltip_bubble.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -2644,8 +3160,8 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_beauty_icon.png.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\beauty_icon.png"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_tw__like_action.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-v21\\tw__like_action.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_messenger_bubble_small_white.png.flat",
@@ -2682,6 +3198,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00008.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00008.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -2740,12 +3260,20 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\drawable\\rounded_corner_new.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00015.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00015.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_hide_motion_spec.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\animator\\design_fab_hide_motion_spec.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_retweet_light.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_retweet_light.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_close.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-hdpi-v4\\com_facebook_close.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-hdpi-v4\\com_facebook_close.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -2764,6 +3292,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\layout\\design_layout_snackbar.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00040.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00040.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_list_divider_material.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-v21\\abc_list_divider_material.xml"
     },
@@ -2776,12 +3308,12 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\61858942f0ba414d5a60e44f7be415c4\\res\\layout\\notification_template_big_media.xml"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_dialog_title_material.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_dialog_title_material.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_calendar_icon.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\calendar_icon.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_dialog_title_material.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_profile_icon.png.flat",
@@ -2797,7 +3329,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_com_facebook_login_fragment.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\layout\\com_facebook_login_fragment.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\layout\\com_facebook_login_fragment.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -2816,12 +3348,24 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\contactus.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_play_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_play_pressed.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_video_play.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_video_play.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_googleg_disabled_color_18.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-xhdpi-v4\\googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_video_play_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_video_play_pressed.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_facebookpost.xml.flat",
@@ -2836,6 +3380,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00013.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00013.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_navigation_item.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\layout\\design_bottom_navigation_item.xml"
     },
@@ -2844,12 +3392,20 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_logo_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\92b9b0d9a3429ad9d74f467f44030a43\\res\\drawable-mdpi-v4\\tw__ic_logo_default.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_out_bottom.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_retweet_light.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_retweet_light.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-hdpi-v4\\com_facebook_button_icon_white.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-hdpi-v4\\com_facebook_button_icon_white.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
@@ -2880,12 +3436,24 @@
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\splash_screen_logo.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_password_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_password_screen.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_fast_out_linear_in.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\interpolator-v21\\mtrl_fast_out_linear_in.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_close.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-mdpi-v4\\com_facebook_close.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-mdpi-v4\\com_facebook_close.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00020.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00020.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_logo_white.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_logo_white.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -2908,12 +3476,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\interpolator-v21\\mtrl_linear_out_slow_in.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_seekbar_progress_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_seekbar_progress_bg.9.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-xxhdpi-v4\\com_facebook_button_like_icon_selected.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-xxhdpi-v4\\com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_blue.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_blue.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_list.png.flat",
@@ -2921,7 +3493,15 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_background.9.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_background.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__action_heart_off_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__action_heart_off_default.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00011.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00011.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_fab_scale_down.xml.flat",
@@ -2944,6 +3524,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__bg_media_badge.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__bg_media_badge.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
@@ -2954,6 +3538,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_investment_icon.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\investment_icon.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_tweet_photo_error_light.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_tweet_photo_error_light.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark_normal.xml.flat",
@@ -2988,8 +3576,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_video_pause.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_video_pause.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_tw__media_badge.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\layout\\tw__media_badge.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00017.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00017.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_tweet_photo_error_dark.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_tweet_photo_error_dark.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_notification_icon_label.png.flat",
@@ -2998,6 +3602,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__action_heart_off_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__action_heart_off_default.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
@@ -3010,6 +3618,14 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_snackbar_include.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_logo_blue.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_logo_blue.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_retweet_dark.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_retweet_dark.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap_splash_screen_name.png.flat",
@@ -3048,6 +3664,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable-hdpi-v4\\messenger_bubble_large_blue.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_inline_share.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_inline_share.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_fade_out.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\anim\\abc_fade_out.xml"
     },
@@ -3084,8 +3704,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3b76edb8be11e5981eddadac5f701ab0\\res\\drawable-hdpi-v4\\fab_add.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_vine_badge.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_vine_badge.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__gif_badge.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__gif_badge.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_twitter_r_icon.png.flat",
@@ -3094,6 +3722,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00038.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00038.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_shareapp.png.flat",
@@ -3109,7 +3741,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_com_facebook_smart_device_dialog_fragment.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\layout\\com_facebook_smart_device_dialog_fragment.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\layout\\com_facebook_smart_device_dialog_fragment.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
@@ -3118,6 +3750,14 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_popup_menu_item_layout.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_play_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_play_default.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_seekbar_progress_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_seekbar_progress_bg.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_legacy_text_color_selector.xml.flat",
@@ -3169,15 +3809,15 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_button_login_logo.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable\\com_facebook_button_login_logo.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable\\com_facebook_button_login_logo.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_play_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xxhdpi-v4\\tw__ic_play_pressed.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_user_settings.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\user_settings.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
@@ -3186,6 +3826,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_seekbar_secondary_bg.9.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_seekbar_secondary_bg.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_background.png.flat",
@@ -3221,7 +3865,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-mdpi-v4\\com_facebook_button_icon_white.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-mdpi-v4\\com_facebook_button_icon_white.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -3237,7 +3881,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_button_background.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable\\com_facebook_button_background.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable\\com_facebook_button_background.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_cab_background_internal_bg.xml.flat",
@@ -3248,10 +3892,6 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_fashion_icon.png.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\fashion_icon.png"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_messenger_button_white_bg_round.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable\\messenger_button_white_bg_round.xml"
     },
@@ -3260,8 +3900,16 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00044.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00044.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_logo_default.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\92b9b0d9a3429ad9d74f467f44030a43\\res\\drawable-xxhdpi-v4\\tw__ic_logo_default.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_smreportsupdate.xml.flat",
@@ -3280,20 +3928,20 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_cascading_menu_item_layout.xml"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_realestate_icon.png.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\realestate_icon.png"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_subheader.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__login_btn_pressed.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\92b9b0d9a3429ad9d74f467f44030a43\\res\\drawable\\tw__login_btn_pressed.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_design_ic_visibility.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\menu_share.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\menu\\share.xml"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_gif_badge.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_gif_badge.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_button_send_icon_white.png.flat",
@@ -3301,7 +3949,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_xout.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_btn_checkable.xml.flat",
@@ -3309,15 +3957,15 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_xout.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_xout.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_topnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -3344,6 +3992,10 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\animator-v21\\design_appbar_state_list_animator.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_logo_blue.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_logo_blue.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_disable_only_material_dark.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
@@ -3360,16 +4012,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00039.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00039.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_chip_state_list_anim.xml.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\animator\\mtrl_chip_state_list_anim.xml"
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00042.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00042.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_chip_state_list_anim.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\animator\\mtrl_chip_state_list_anim.xml"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
@@ -3378,6 +4038,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_video_play.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-mdpi-v4\\tw__ic_video_play.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_blog_icon_clr.png.flat",
@@ -3400,10 +4064,6 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_myprofile.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\myprofile.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector_colored.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\color\\mtrl_tabs_icon_color_selector_colored.xml"
     },
@@ -3420,24 +4080,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\anim\\abc_tooltip_exit.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00041.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00041.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00043.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00043.png"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_messenger_bubble_small_blue.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\9a2eb0e998c9c679fe98779996cbc0b0\\res\\drawable-hdpi-v4\\messenger_bubble_small_blue.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_profile_picture_blank_square.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_square.png"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_profile_dummy.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\profile_dummy.xml"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_square.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_register_background.png.flat",
         "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\register_background.png"
-    },
-    {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ecommerce_icon.png.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\mipmap-hdpi\\ecommerce_icon.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\anim_fab_slide_out_to_right.xml.flat",
@@ -3449,7 +4109,15 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_background.9.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_background.9.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_influencer_usersettings_screen.xml.flat",
+        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\influencer_usersettings_screen.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_video_pause_pressed.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_video_pause_pressed.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_home.png.flat",
@@ -3462,6 +4130,10 @@
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\28e8d743c33b28f7ffd951cc17eaf310\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_vine_badge.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-hdpi-v4\\tw__ic_vine_badge.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_title_material.xml.flat",
@@ -3505,7 +4177,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b65b053c9dbf3d58340a8f3f31740673\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\b8caf5fe609841c9f27dc9cd1adfd732\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_sheet_dialog.xml.flat",
@@ -3524,12 +4196,24 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-watch-v20\\abc_dialog_material_background.xml"
     },
     {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__video_seekbar.xml.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable\\tw__video_seekbar.xml"
+    },
+    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\03d9d9b06592fa42bf49cfe55ff465de\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_gif_badge.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__ic_gif_badge.png"
+    },
+    {
+        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00014.png.flat",
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\bf929bf5c81a7461eed737795ef09aa1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00014.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_twitter_clr_icon.png.flat",
@@ -3548,10 +4232,6 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_socialmedia.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\socialmedia.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_mtrl_chip_checked_black.xml.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\4acec0360eb12bca874b389856edc914\\res\\drawable\\ic_mtrl_chip_checked_black.xml"
     },
@@ -3568,10 +4248,6 @@
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
-        "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_notificationwindownomsg.xml.flat",
-        "source": "F:\\Influencerapp\\app\\src\\main\\res\\layout\\notificationwindownomsg.xml"
-    },
-    {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\38573fdfa2fd94d1d673de0a9c7efa56\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
@@ -3581,7 +4257,7 @@
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\3cd156a08b3a6d5a850120d8e3170230\\res\\drawable-xhdpi-v4\\com_facebook_button_icon_white.png"
+        "source": "C:\\Users\\Social Beat\\.gradle\\caches\\transforms-2\\files-2.1\\400868af28a37f72a49ca138df33f5d5\\res\\drawable-xhdpi-v4\\com_facebook_button_icon_white.png"
     },
     {
         "merged": "F:\\Influencerapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_more_icon1.png.flat",

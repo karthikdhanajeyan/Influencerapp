@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.4.1"
-    timestamp="1558983154747"
+    timestamp="1561612992476"
     token="-954718789196935177"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,49 +23,45 @@
         name="verifier"
         duration="0" />
 
-    <artifact
-        location="F:\Influencerapp\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-        type="SPLIT" />
-
     <build
         build-mode="FULL"
-        timestamp="1558978550508"
+        timestamp="1561612169531"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="F:\Influencerapp\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="F:\Influencerapp\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="F:\Influencerapp\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="F:\Influencerapp\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -74,7 +70,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1558982918688"
+        timestamp="1561612578036"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="F:\Influencerapp\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
@@ -82,11 +78,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1558983154747"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="F:\Influencerapp\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
-    </build>
+        timestamp="1561612992476"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

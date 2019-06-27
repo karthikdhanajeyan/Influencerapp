@@ -95,7 +95,8 @@ public class CompletedCampaignFragment extends Fragment implements SwipeRefreshL
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        String Completed_URL = "https://www.influencer.in/API/v6/getCompletedCampaigns.php?cid=" + cid + "";
+        //String Completed_URL = "https://www.influencer.in/API/v6/getCompletedCampaigns.php?cid=" + cid + "";
+        String Completed_URL = getResources().getString(R.string.base_url) + getResources().getString(R.string.completed_camp_url) + "?cid=" + cid + "";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Completed_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

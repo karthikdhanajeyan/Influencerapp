@@ -1,34 +1,21 @@
 package com.socialbeat.influencer;
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.Typeface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-import org.w3c.dom.Element;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -36,23 +23,11 @@ import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.socialbeat.influencer.app.Config;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.mime.content.StringBody;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -68,9 +43,10 @@ public class FacebookPostActivity extends AppCompatActivity {
     Boolean isInternetPresent = false;
     long totalSize = 0;
 
-    String fbPageId ="789049217844776";
-    String fbPageToken ="EAABnMveNxqcBAIiwwF4sNU7ssCPJ2WpnCAju6CL3vnTlVTgcBfBlbBkcaZCCivajwz90xRK2YXOnbi4dWETgZAcsYgAwyp1WZBtclq1ZCoOYoR9h7OIwaCH0D6zuxt406TeuDm4ZB8YnWXbCD9oP1mACIzawDSJgdxrEtL3lZBy3nzZBtZB4ykZCk";
+    String fbPageId;
+    String fbPageToken;
     String source = "app";
+
     // Connection detector class
     ConnectionDetector cd;
     // URL to get contacts JSON
@@ -98,20 +74,24 @@ public class FacebookPostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.facebookpost);
 
-
-
 //        ActionBar bar = getSupportActionBar();
 //        bar.setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(tru
-//
-//        e);
-//        getSupportActionBar().setTitle("My Campaigns");
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setTitle("List of Facebook Post");
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             campid = extras.getString("campid");
             campname = extras.getString("campname");
         }
+
+        SharedPreferences prefernce2 = getSharedPreferences("FB_DETAILS_LIST", Context.MODE_PRIVATE);
+        fbPageId = prefernce2.getString("pid", "");
+        fbPageToken = prefernce2.getString("fpatoken", "");
+
+//        fbPageId ="789049217844776";
+//        fbPageToken ="EAADv8Hn8IqcBAO538hVDdZBYqOQh9ZA8m6lFOFfjSySWCaNLrBM3xAfmt3d72A9ziZBcvkOyhNTLGg1bMWxajVlzYZCEDZCHHSTntorCINZBNrfcH0OFST0a08StZBxJtBwtx2XJDRS7zl6WdWWc9LFyrwqmXKdULRogKJvREBC9HPZCo6NN90ZBcKdplWCM8Y0TqRWHRkvCGJB2y41MeLqIrRQXq6BNJUDQZD";
+
 
         SharedPreferences preferences = getSharedPreferences("SM_FB_VALUE", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
@@ -172,7 +152,7 @@ public class FacebookPostActivity extends AppCompatActivity {
             // return v;
         } else {
             Toast.makeText(getApplicationContext(), "User Could not login properly,Please Login", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(FacebookPostActivity.this, LoginActivity.class);
+            Intent intent = new Intent(FacebookPostActivity.this, Influencer_Login.class);
             startActivity(intent);
         }
     }
@@ -183,8 +163,8 @@ public class FacebookPostActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // code here to show dialog
-        // super.onBackPressed();  // optional depending on your needs
-        Intent intent  = new Intent(this, NewHomeActivity.class);
+        //super.onBackPressed();  // optional depending on your needs
+        Intent intent  = new Intent(this, SocialMediaReport.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
@@ -196,7 +176,8 @@ public class FacebookPostActivity extends AppCompatActivity {
             case android.R.id.home:
                 // app icon in action bar clicked; goto parent activity.
                 // this.finish();
-                Intent intent  = new Intent(this, NewHomeActivity.class);
+                //super.onBackPressed();
+                Intent intent  = new Intent(this, SocialMediaReport.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
@@ -213,7 +194,8 @@ public class FacebookPostActivity extends AppCompatActivity {
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        url = "http://stage.influencer.in/API/v6/api_v6.php/getFBPosts";
+        //url = "http://stage.influencer.in/API/v6/api_v6.php/getFBPosts";
+        url = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.fbpost_url);
         System.out.println(url);
         StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
 

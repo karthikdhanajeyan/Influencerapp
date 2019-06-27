@@ -34,7 +34,7 @@
     <color name="orangenew">#1baf99</color>
     <color name="actionbarcolourdark1">#178f7e</color>
     <color name="transperent">#80000000</color>
-    <color name="orange">#ff6017</color>
+    <color name="orange">#f26522</color>
     <color name="violet">#1e9cb2</color>
     <color name="violet1">#8717ff</color>
     <color name="darkpink">#ff17c5</color>
@@ -44,6 +44,7 @@
     <color name="yellow">#f7eb02</color>
     <color name="sandal">#ffc684</color>
     <color name="bg_color">#e8edf3</color>
+    <color name="blue_dark">#134a9b</color>
 
 
 </resources>

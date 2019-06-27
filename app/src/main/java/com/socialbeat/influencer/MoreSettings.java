@@ -30,7 +30,7 @@ public class MoreSettings extends AppCompatActivity {
         ActionBar bar = getSupportActionBar();
         bar.setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("UserSettings");
+        getSupportActionBar().setTitle("Influencer_UserSettings");
 
         ourblog.setOnClickListener(new View.OnClickListener() {
             @Override

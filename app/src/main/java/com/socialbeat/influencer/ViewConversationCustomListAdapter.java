@@ -98,7 +98,8 @@ public class ViewConversationCustomListAdapter extends BaseAdapter {
 		final String conversationid = cc.getId_post_conversation();
 
 
-		Log.v("post id : ",cc.getId_post_attach());
+//
+//		Log.v("post id : ",cc.getId_post_attach());
 
 		if (fileone!=null){
 			fileone.setOnClickListener(new View.OnClickListener() {

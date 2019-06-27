@@ -62,7 +62,7 @@ public class GCMIntentService extends IntentService {
 			mBuilder.setContentText(message);
 			mBuilder.setStyle(bigStyle);
 
-			Intent newsIntent = new Intent(this, SplashScreenActivity.class);
+			Intent newsIntent = new Intent(this, Influencer_SplashScreen.class);
 			PendingIntent notificationIntent = PendingIntent.getActivity(this, 0,newsIntent,PendingIntent.FLAG_UPDATE_CURRENT);
 
 			mBuilder.setContentIntent(notificationIntent);

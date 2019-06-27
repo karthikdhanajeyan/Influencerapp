@@ -1,5 +1,5 @@
-<resources>
-
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- String values -->
     <string name="app_name">Influencer</string>
     <string name="hello_world">Hello world!</string>
     <string name="city">Select City</string>
@@ -22,23 +22,6 @@
     <string name="drawer_close">Close Drawer</string>
     <string name="sender_id">908044313447</string>
     <string name="rs">\u20B9</string>
-
-    <string-array name="delivery_status">
-        <item>Completed</item>
-        <item>Pending</item>
-    </string-array>
-
-    <!-- twitter_icon_glass Configurations -->
-    <string name="twitter_callback">http://influencer.in</string>
-    <string name="twitter_consumer_key">QH2Cs7MEtUYgywKyrakBbhngQ</string>
-    <string name="twitter_consumer_secret">azzcpCNzx44Jaf1LMWerKMRdkmfFdSbhN8kmC4vHwuojIQe9m9</string>
-    <string name="twitter_oauth_verifier">oauth_verifier</string>
-    <string name="hello">Hello, </string>
-    <string name="login_instructions">Login to twiter</string>
-    <string name="share_instructions">Enter share message</string>
-    <string name="reachengage">Reach \u0026 Engage</string>
-    <!-- End Configurations -->
-
     <string name="title_activity_sms">SmsActivity</string>
     <string name="action_logout">Logout</string>
     <string name="msg_enter_mobile">Enter your information to get started!</string>
@@ -62,73 +45,115 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="copywrite">\u00a9 2019 SOCIAL BEAT DIGITAL MARKETING LLP</string>
     <string name="sbproduct">A Product of Social Beat</string>
-
-    <string name="chennai_address">No:338 6th Floor,\n Fountain Plaza, Pantheon Rd,\n Egmore, Chennai,\n  Tamil Nadu 600008,India</string>
-    <string name="bangalore_address">No:22, 15th Cross Rd,\n Sector 4, HSR layout,\n Bengaluru,\n Karnataka 560102, India</string>
-    <string name="mumbai_address">B Wing, 5th floor,\n Ackruti Trade Centre, MIDC,\n Andheri (E),Mumbai,\n Maharashtra 400093, India</string>
-
     <string name="compose_shortcut_short_label">DashBoard</string>
     <string name="compose_shortcut_short_label1">Contact Us</string>
     <string name="textforhead">Enter your quote in Rs. for all the deliverables mentioned in the brief for this campaign</string>
+    <string name="chennai_address">No:338 6th Floor,\n Fountain Plaza, Pantheon Rd,\n Egmore, Chennai,\n  Tamil Nadu 600008,India</string>
+    <string name="bangalore_address">No:22, 15th Cross Rd,\n Sector 4, HSR layout,\n Bengaluru,\n Karnataka 560102, India</string>
+    <string name="mumbai_address">B Wing, 5th floor,\n Ackruti Trade Centre, MIDC,\n Andheri (E),Mumbai,\n Maharashtra 400093, India</string>
+    <string name="add">ADD</string>
+    <string name="reachengage">Reach \u0026 Engage</string>
+    <!-- End -->
+
+    <!-- Array String Values -->
+
+    <string-array name="delivery_status">
+        <item>Completed</item>
+        <item>Pending</item>
+    </string-array>
+
+    <string-array name="foi_array">
+        <item>Auto</item>
+        <item>Beauty</item>
+        <item>Book</item>
+        <item>Comedians/Humour</item>
+        <item>Entertainment</item>
+        <item>Fashion</item>
+        <item>Food</item>
+        <item>Health \u0026 Fitness</item>
+        <item>Inspiration \u0026 Motivation</item>
+        <item>Investment</item>
+        <item>Lifestyle</item>
+        <item>News \u0026 Politics</item>
+        <item>Parenting</item>
+        <item>Photography</item>
+        <item>Real Estate</item>
+        <item>Sports/Gaming</item>
+        <item>Technology</item>
+        <item>Travel</item>
+        <item>YouTube</item>
+    </string-array>
+    <!-- End -->
+
+    <!-- twitter_icon_glass Configurations -->
+    <string name="twitter_callback">http://influencer.in</string>
+    <string name="twitter_consumer_key">QH2Cs7MEtUYgywKyrakBbhngQ</string>
+    <string name="twitter_consumer_secret">azzcpCNzx44Jaf1LMWerKMRdkmfFdSbhN8kmC4vHwuojIQe9m9</string>
+    <string name="twitter_oauth_verifier">oauth_verifier</string>
+    <string name="hello">Hello, </string>
+    <string name="login_instructions">Login to twiter</string>
+    <string name="share_instructions">Enter share message</string>
+
+    <!-- End Configurations -->
+
+    <!-- facebook Configurations -->
+    <!-- <string name="facebook_app_id">113468599289511</string>-->
+    <string name="facebook_app_id">263816117756583</string>
+    <string name="fb_login_protocol_scheme">fb113468599289511</string>
+    <!-- End Configurations -->
+
 
     <!-- API Configurations -->
     <string name="base_url">https://www.influencer.in/API/v6/</string>
-    <string name="final_base_url">https://www.influencer.in/API/v6/api_v6.php/</string>
-    <!--http://stage.influencer.in/API/v6/api_v6.php/-->
+    <string name="base_url_v6">http://stage.influencer.in/API/v6/influencer/api_v6.php/</string>
+    <!--API with v6/-->
 
+    <string name="appliedlist_url">appliedList.php</string>
+    <string name="approved_camp_url">getApprovedCampaigns.php</string>
+    <string name="completed_camp_url">getCompletedCampaigns.php</string>
+    <string name="profile_url">profileview.php</string>//wanto close soon
     <string name="device_details_url">androidRegistration1.php</string>
-    <string name="regsitration_one_url">androidUserRegister.php</string>
-    <!--<string name="regsitration_two_url">updateCustomer.php</string>-->
+    <!--<string name="live_campaign_url">getnewlivecampaign.php</string>-->
+    <!--<string name="past_campaign_url">getnewpastcampaign.php</string>-->
+    <!--<string name="notification_manager_url">notificationmanager.php</string>-->//notinuse
+    <!--<string name="apply_camp_with_quote_url">applyCampaign.php</string>-->
+    <!--<string name="apply_camp_without_quote_url">applyCampaignwithoutquote.php</string>-->
 
-    <string name="userexistence_register">checkUserExistence?email=</string>
+    <!--API with v6/api_v6/-->
+    <string name="check_camp_eligible_url">checkCampEligibility</string>
+    <string name="camp_report_url">getAllCampaignReports</string>
+    <string name="new_conversation_sample_url">addNewConversationSample</string>
+    <string name="fbconnection_details_url">updateFBConnectionDetails</string>
+    <string name="fbpost_url">getFBPosts</string>
+    <string name="fbanalytics_url">addNewFBAnalyticsPost</string>
+    <string name="foi_url">getFOI</string>
+    <string name="user_details_url">getUserDetails</string>
+    <string name="user_login_url">login</string>
+    <string name="verifypassword_url">verifyPassword</string>
+    <string name="userexit_register_url">checkUserExistence</string>
+    <string name="smconnection_details_url">getSMConnectionDetails</string>
+    <string name="singlecamp_report_url">getCampaignReports</string>
+    <string name="newcamp_report_url">addNewCampaignReport</string>
+    <string name="editcamp_report_url">editCampaignReport</string>
+    <string name="smconnection_sample_url">SMConnectionDetailsSample</string>
+    <string name="allcoversation_url">getAllConversations</string>
+    <string name="getstates_url">getStates</string>
+    <string name="getcity_url">getCitiesInState</string>
+    <string name="update_userdetails_url">updateUserDetails</string>
+    <string name="send_verificationmail_url">doSendVerificationMail</string>
+    <string name="sendotp_url">doSendOTP</string>
+    <string name="register_newuser_url">registerNewUser</string>
+    <string name="update_foi_url">updateFOI</string>
 
-    <string name="login_url">login.php</string>
-    <string name="forgotpassword_url">forgotPassword.php</string>
-    <string name="live_campaign_url">getnewlivecampaign.php</string>
-    <string name="past_campaign_url">getnewpastcampaign.php</string>
-    <string name="notification_manager_url">notificationmanager.php</string>
-    <string name="applied_list_url">checkAppliedList.php</string>
-    <string name="apply_camp_with_quote_url">applyCampaign.php</string>
-    <string name="apply_camp_without_quote_url">applyCampaignwithoutquote.php</string>
-
-
-
-    <string name="transaction_history_url">transactionhistory.php</string>
-    <string name="paytm_recharge_url">gratification.php</string>
-    <string name="wallet_balance_url">checkwalletbalance.php</string>
-    <string name="profile_url">profileview.php</string>
-    <string name="updateprofile_url">updateCustomer.php</string>
-    <string name="push_url">androidRegistration.php</string>
-    <string name="userInfo_url">updateCustomerDetails.php</string>
-    <string name="add">ADD</string>
-
-   <!-- <string name="facebook_app_id">113468599289511</string>-->
-
-    <string name="facebook_app_id">263816117756583</string>
-    <string name="fb_login_protocol_scheme">fb113468599289511</string>
-
-    <string-array name="foi_array">
-    <item>Auto</item>
-    <item>Beauty</item>
-    <item>Book</item>
-    <item>Comedians/Humour</item>
-    <item>Entertainment</item>
-    <item>Fashion</item>
-    <item>Food</item>
-    <item>Health \u0026 Fitness</item>
-
-    <item>Inspiration \u0026 Motivation</item>
-    <item>Investment</item>
-    <item>Lifestyle</item>
-    <item>News \u0026 Politics</item>
-    <item>Parenting</item>
-    <item>Photography</item>
-    <item>Real Estate</item>
-    <item>Sports/Gaming</item>
-    <item>Technology</item>
-    <item>Travel</item>
-    <item>YouTube</item>
-    </string-array>
-
+    <string name="live_campaign_url">getLiveCampaigns</string>
+    <string name="past_campaign_url">getPastCampaigns</string>
+    <string name="applied_list_url">checkAppliedList</string>
+    <string name="apply_camp_with_quote_url">applyCampaign</string>
+    <string name="apply_camp_without_quote_url">applyCampaignWithoutQuote</string>
+    <!--Twitter-->
+    <string name="com.twitter.sdk.android.CONSUMER_KEY" tools:ignore="ExtraTranslation">PZ5IoWlTiDQ7iItZWyTFSczuB</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET" tools:ignore="ExtraTranslation">fbjKSoudqYUJ2ZG2ENYq6fR94YtxTPAt2gzfdTB48Eagj4hARs</string>
+    <string name="custom_log_in_with_twitter">Custom Log in with Twitter</string>
+    <string name="get_profile_image">Fetch Profile Image</string>
 
 </resources>

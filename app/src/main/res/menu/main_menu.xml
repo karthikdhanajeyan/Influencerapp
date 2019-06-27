@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".HomeActivity">
 
-    <item
-        android:id="@+id/notification"
-        android:title="Notification"
-        android:orderInCategory="10"
-        android:icon="@mipmap/notification_icon"
-        app:showAsAction="ifRoom" />
+    <!--<item-->
+        <!--android:id="@+id/notification"-->
+        <!--android:title="Notification"-->
+        <!--android:orderInCategory="10"-->
+        <!--android:icon="@mipmap/notification_icon"-->
+        <!--app:showAsAction="ifRoom" />-->
 
 </menu>

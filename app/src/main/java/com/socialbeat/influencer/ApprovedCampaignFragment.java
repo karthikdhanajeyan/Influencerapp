@@ -90,7 +90,8 @@ public class ApprovedCampaignFragment extends Fragment {
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        String Applied_URL = "https://www.influencer.in/API/v6/getApprovedCampaigns.php?cid=" + cid + "";
+        //String Applied_URL = "https://www.influencer.in/API/v6/getApprovedCampaigns.php?cid=" + cid + "";
+        String Applied_URL = getResources().getString(R.string.base_url) + getResources().getString(R.string.approved_camp_url) +"?cid=" + cid + "";
         System.out.println(url);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Applied_URL, new Response.Listener<String>() {
             @Override

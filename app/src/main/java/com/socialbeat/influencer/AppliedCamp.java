@@ -16,7 +16,6 @@ public class AppliedCamp {
 
 
     public AppliedCamp() {
-
         this.cid=cid;
         this.campid=campid;
         this.campImg=campImg;

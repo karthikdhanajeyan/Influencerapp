@@ -63,12 +63,12 @@ public class SocialMediaReport extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newreport);
 
-//        ActionBar bar = getSupportActionBar();
-//        assert bar != null;
-//        bar.setDisplayHomeAsUpEnabled(true);
-//        Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setTitle("Socialmedia Reports");
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        ActionBar bar = getSupportActionBar();
+        assert bar != null;
+        bar.setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Socialmedia Reports");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         facebook = findViewById(R.id.facebook);
         twitter = findViewById(R.id.twitter);
@@ -174,7 +174,8 @@ public class SocialMediaReport extends AppCompatActivity {
 
     private void ScreenVisible() {
 
-        String SCREEN_URL = "http://stage.influencer.in/API/v6/api_v6.php/SMConnectionDetailsSample?cid="+cid;
+        //String SCREEN_URL = "http://stage.influencer.in/API/v6/api_v6.php/SMConnectionDetailsSample?cid="+cid;
+        String SCREEN_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.smconnection_sample_url)+"?cid="+cid;
         System.out.println("conversation url : "+SCREEN_URL);
         final StringRequest stringRequest = new StringRequest(Request.Method.GET, SCREEN_URL, new Response.Listener<String>() {
             @Override
@@ -224,7 +225,7 @@ public class SocialMediaReport extends AppCompatActivity {
                                     .setAction("Click Here", new View.OnClickListener() {
                                         @Override
                                         public void onClick(View view) {
-                                            Intent intent = new Intent(SocialMediaReport.this, SocialMediaReport.class);
+                                            Intent intent = new Intent(SocialMediaReport.this, NewHomeActivity.class);
                                             startActivity(intent);
                                         }
                                     });

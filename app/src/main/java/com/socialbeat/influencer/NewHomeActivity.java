@@ -4,21 +4,13 @@ package com.socialbeat.influencer;
  * Created by SocialBeat on 21-08-2017.
  */
 import android.annotation.SuppressLint;
-import android.app.PendingIntent;
 import android.app.ProgressDialog;
-import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
-import android.content.DialogInterface;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.ShortcutInfo;
-import android.content.pm.ShortcutManager;
 import android.graphics.Color;
-import android.graphics.drawable.Icon;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -27,7 +19,6 @@ import android.support.annotation.RequiresApi;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -57,8 +48,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -184,7 +173,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
             }
         } else {
             Toast.makeText(getApplicationContext(), "User Could not login properly,Please Login", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(NewHomeActivity.this, LoginActivity.class);
+            Intent intent = new Intent(NewHomeActivity.this, Influencer_Login.class);
             startActivity(intent);
         }
         @SuppressLint("CutPasteId") android.support.design.widget.NavigationView navigationView1 = findViewById(R.id.nav_view);
@@ -335,8 +324,8 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new AllCampaignFragmentLive(), "Live Campaigns");
-        adapter.addFragment(new AllCampaignFragmentPast(), "Past Campaigns");
+        adapter.addFragment(new Influencer_Livecamp_List(), "Live Campaigns");
+        adapter.addFragment(new Influencer_Pastcamp_List(), "Past Campaigns");
         // set the default tab to the second tab
         viewPager.setAdapter(adapter);
     }
@@ -375,11 +364,11 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
       //  noinspection SimplifiableIfStatement
-        if (id == R.id.notification) {
-            Intent intent = new Intent(NewHomeActivity.this, NotificationManager.class);
-            startActivity(intent);
-            return true;
-        }
+//        if (id == R.id.notification) {
+//            Intent intent = new Intent(NewHomeActivity.this, NotificationManager.class);
+//            startActivity(intent);
+//            return true;
+//        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -400,41 +389,46 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
             Intent intent = new Intent(NewHomeActivity.this, OurBlogPage.class);
             startActivity(intent);
          } else if (id == R.id.nav_settings) {
-            Intent intent = new Intent(NewHomeActivity.this, UserSettings.class);
+            Intent intent = new Intent(NewHomeActivity.this, Influencer_UserSettings.class);
             startActivity(intent);
         } else if (id == R.id.nav_contactus) {
             Intent intent = new Intent(NewHomeActivity.this, ContactUs.class);
             startActivity(intent);
         } else if (id == R.id.nav_logout) {
-            SharedPreferences prefernce = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
-            editor = prefernce.edit();
-            editor.clear();
-            editor.apply();
-            SharedPreferences prefernce1 = getSharedPreferences(LOGIN_NAME, MODE_PRIVATE);
-            editor1 = prefernce1.edit();
-            editor1.clear();
-            editor1.apply();
-            SharedPreferences prefernce2 = getSharedPreferences("USER_DEVICE_VALUE", Context.MODE_PRIVATE);
-            editor2 = prefernce2.edit();
-            editor2.clear();
-            editor2.apply();
-            SharedPreferences prefernce3 = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-            editor3 = prefernce3.edit();
-            editor3.clear();
-            editor3.apply();
-            SharedPreferences prefernce4 = getSharedPreferences("USER_ADD_VALUE", MODE_PRIVATE);
-            editor4 = prefernce4.edit();
-            editor4.clear();
-            editor4.apply();
-
-            Intent intent = new Intent(NewHomeActivity.this, FirstActivity.class);
-            startActivity(intent);
+           logout();
        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void logout() {
+        SharedPreferences prefernce = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
+        editor = prefernce.edit();
+        editor.clear();
+        editor.apply();
+        SharedPreferences prefernce1 = getSharedPreferences(LOGIN_NAME, MODE_PRIVATE);
+        editor1 = prefernce1.edit();
+        editor1.clear();
+        editor1.apply();
+        SharedPreferences prefernce2 = getSharedPreferences("USER_DEVICE_VALUE", Context.MODE_PRIVATE);
+        editor2 = prefernce2.edit();
+        editor2.clear();
+        editor2.apply();
+        SharedPreferences prefernce3 = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        editor3 = prefernce3.edit();
+        editor3.clear();
+        editor3.apply();
+        SharedPreferences prefernce4 = getSharedPreferences("USER_ADD_VALUE", MODE_PRIVATE);
+        editor4 = prefernce4.edit();
+        editor4.clear();
+        editor4.apply();
+
+        Intent intent = new Intent(NewHomeActivity.this, Influencer_Home.class);
+        startActivity(intent);
+    }
+
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();

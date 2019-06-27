@@ -109,7 +109,8 @@ public class ViewConversationFragment extends Fragment {
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        String CONVERSATION_URL = "https://www.influencer.in/API/v6/api_v6.php/getAllConversations?cid=" + cid + "&campid="+campid+"";
+        //String CONVERSATION_URL = "https://www.influencer.in/API/v6/api_v6.php/getAllConversations?cid=" + cid + "&campid="+campid+"";
+        String CONVERSATION_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.allcoversation_url)+"?cid=" + cid + "&campid="+campid+"";
         System.out.println("conversation url : "+CONVERSATION_URL);
         final StringRequest stringRequest = new StringRequest(Request.Method.GET, CONVERSATION_URL, new Response.Listener<String>() {
             @Override

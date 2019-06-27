@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 public class PrivatePolicy extends AppCompatActivity {
 
-    private static final String TAG = AllCampaignFragmentLive.class.getSimpleName();
+    private static final String TAG = Influencer_Livecamp_List.class.getSimpleName();
     private CoordinatorLayout coordinatorLayout;
     Boolean isInternetPresent = false;
     // Connection detector class
@@ -117,7 +117,7 @@ public class PrivatePolicy extends AppCompatActivity {
     public void onBackPressed() {
         // code here to show dialog
         // super.onBackPressed();  // optional depending on your needs
-        Intent intent  = new Intent(this, UserSettings.class);
+        Intent intent  = new Intent(this, Influencer_UserSettings.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
@@ -127,7 +127,7 @@ public class PrivatePolicy extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 // app icon in action bar clicked; goto parent activity.
-                Intent intent  = new Intent(this, UserSettings.class);
+                Intent intent  = new Intent(this, Influencer_UserSettings.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

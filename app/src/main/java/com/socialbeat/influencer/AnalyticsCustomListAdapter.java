@@ -159,19 +159,19 @@ public class AnalyticsCustomListAdapter extends BaseAdapter {
 		});
 
 		urlvalue = cc.getPosted_link();
-		linearn.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if (urlvalue != null) {
-					Intent i = new Intent(Intent.ACTION_VIEW);
-					i.setData(Uri.parse(urlvalue));
-					activity.startActivity(i);
-				} else {
-					Toast.makeText(activity, "URL Link is Empty", Toast.LENGTH_SHORT).show();
-					Log.v("Result : ", "URL Link is Empty");
-				}
-			}
-		});
+//		linearn.setOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				if (urlvalue != null) {
+//					Intent i = new Intent(Intent.ACTION_VIEW);
+//					i.setData(Uri.parse(urlvalue));
+//					activity.startActivity(i);
+//				} else {
+//					Toast.makeText(activity, "URL Link is Empty", Toast.LENGTH_SHORT).show();
+//					Log.v("Result : ", "URL Link is Empty");
+//				}
+//			}
+//		});
 
 		reach_value.setOnClickListener(new View.OnClickListener() {
 

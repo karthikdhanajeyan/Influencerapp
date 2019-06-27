@@ -117,16 +117,14 @@ public class SMProfile extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("Connected Socialmedia");
 
-//        SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
-//        cid = prfs.getString("valueofcid", "");
-        cid = "1";
-
+        SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
+        cid = prfs.getString("valueofcid", "");
 
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
         cd = new ConnectionDetector(this);
         isInternetPresent = cd.isConnectingToInternet();
         fab = findViewById(R.id.fab);
-         list = findViewById(R.id.smlist);
+        list = findViewById(R.id.smlist);
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -170,7 +168,8 @@ public class SMProfile extends AppCompatActivity {
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        String CONVERSATION_URL = "http://stage.influencer.in/API/v6/api_v6.php/getSMConnectionDetails?cid="+cid;
+        //String CONVERSATION_URL = "http://stage.influencer.in/API/v6/api_v6.php/getSMConnectionDetails?cid="+cid;
+        String CONVERSATION_URL = getResources().getString(R.string.base_url_v6)+getResources().getString(R.string.smconnection_details_url)+"?cid="+cid;
         System.out.println("conversation url : "+CONVERSATION_URL);
         final StringRequest stringRequest = new StringRequest(Request.Method.GET, CONVERSATION_URL, new Response.Listener<String>() {
             @Override

@@ -14,11 +14,11 @@
     <bool name="ga_reportUncaughtExceptions">true</bool>
 
     <screenName name="com.socialbeat.influencer.RegistrationActivityOne">Registration Screen</screenName>
-    <screenName name="com.socialbeat.influencer.LoginActivity">Login Screen</screenName>
-    <screenName name="com.socialbeat.influencer.AllCampaignFragmentLive">Livecampaign List Screen</screenName>
-    <screenName name="com.socialbeat.influencer.AllCampaignFragmentPast">Pastcampaign List Screen</screenName>
-    <screenName name="com.socialbeat.influencer.AllCampDetailsLive">Livecampaign Details Screen</screenName>
-    <screenName name="com.socialbeat.influencer.AllCampDetailsPast">Pastcampaign Details Screen</screenName>
+    <screenName name="com.socialbeat.influencer.Influencer_Login">Login Screen</screenName>
+    <screenName name="com.socialbeat.influencer.Influencer_Livecamp_List">Livecampaign List Screen</screenName>
+    <screenName name="com.socialbeat.influencer.Influencer_Pastcamp_List">Pastcampaign List Screen</screenName>
+    <screenName name="com.socialbeat.influencer.Influencer_Livecamp_Details">Livecampaign Details Screen</screenName>
+    <screenName name="com.socialbeat.influencer.Influencer_Pastcamp_Details">Pastcampaign Details Screen</screenName>
     <screenName name="com.socialbeat.influencer.MyCampaignsFragment">Mycampaigns Screen</screenName>
     <screenName name="com.socialbeat.influencer.OurBlogPage">Ourblog Screen</screenName>
     <screenName name="com.socialbeat.influencer.MyProfileNew">Myprofile Screen</screenName>

@@ -13,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,9 +43,10 @@ public class FacebookPostSumbitActivity extends AppCompatActivity {
     Boolean isInternetPresent = false;
     long totalSize = 0;
 
-    String fbPageId ="789049217844776";
-    String fbPageToken ="EAABnMveNxqcBAIiwwF4sNU7ssCPJ2WpnCAju6CL3vnTlVTgcBfBlbBkcaZCCivajwz90xRK2YXOnbi4dWETgZAcsYgAwyp1WZBtclq1ZCoOYoR9h7OIwaCH0D6zuxt406TeuDm4ZB8YnWXbCD9oP1mACIzawDSJgdxrEtL3lZBy3nzZBtZB4ykZCk";
+    String fbPageId;
+    String fbPageToken;
     String source = "app";
+
     // Connection detector class
     ConnectionDetector cd;
     // URL to get contacts JSON
@@ -75,9 +75,10 @@ public class FacebookPostSumbitActivity extends AppCompatActivity {
         setContentView(R.layout.dummyactivity);
 
 //        ActionBar bar = getSupportActionBar();
+//        assert bar != null;
 //        bar.setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setTitle("My Campaigns");
+//        getSupportActionBar().setTitle("List of Facebook Post");
 
 
         Bundle extras = getIntent().getExtras();
@@ -85,9 +86,13 @@ public class FacebookPostSumbitActivity extends AppCompatActivity {
             postid = extras.getString("postid");
         }
 
-        String fbPageId ="789049217844776";
-        String fbPageToken ="EAABnMveNxqcBAIiwwF4sNU7ssCPJ2WpnCAju6CL3vnTlVTgcBfBlbBkcaZCCivajwz90xRK2YXOnbi4dWETgZAcsYgAwyp1WZBtclq1ZCoOYoR9h7OIwaCH0D6zuxt406TeuDm4ZB8YnWXbCD9oP1mACIzawDSJgdxrEtL3lZBy3nzZBtZB4ykZCk";
-        String source = "app";
+        SharedPreferences prefernce2 = getSharedPreferences("FB_DETAILS_LIST", Context.MODE_PRIVATE);
+        fbPageId = prefernce2.getString("pid", "");
+        fbPageToken = prefernce2.getString("fpatoken", "");
+
+//        fbPageId ="789049217844776";
+//        fbPageToken ="EAADv8Hn8IqcBAO538hVDdZBYqOQh9ZA8m6lFOFfjSySWCaNLrBM3xAfmt3d72A9ziZBcvkOyhNTLGg1bMWxajVlzYZCEDZCHHSTntorCINZBNrfcH0OFST0a08StZBxJtBwtx2XJDRS7zl6WdWWc9LFyrwqmXKdULRogKJvREBC9HPZCo6NN90ZBcKdplWCM8Y0TqRWHRkvCGJB2y41MeLqIrRQXq6BNJUDQZD";
+
 
         SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
@@ -95,10 +100,6 @@ public class FacebookPostSumbitActivity extends AppCompatActivity {
         SharedPreferences prefernce1 = getSharedPreferences("SM_FB_VALUE", Context.MODE_PRIVATE);
         campid = prefernce1.getString("campid", "");
         campname = prefernce1.getString("campname", "");
-
-
-
-
 
         cd = new ConnectionDetector(FacebookPostSumbitActivity.this);
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
@@ -129,7 +130,7 @@ public class FacebookPostSumbitActivity extends AppCompatActivity {
             // return v;
         } else {
             Toast.makeText(getApplicationContext(), "User Could not login properly,Please Login", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(FacebookPostSumbitActivity.this, LoginActivity.class);
+            Intent intent = new Intent(FacebookPostSumbitActivity.this, Influencer_Login.class);
             startActivity(intent);
         }
     }
@@ -140,8 +141,8 @@ public class FacebookPostSumbitActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // code here to show dialog
-        // super.onBackPressed();  // optional depending on your needs
-        Intent intent  = new Intent(this, NewHomeActivity.class);
+        //super.onBackPressed();  // optional depending on your needs
+        Intent intent  = new Intent(this, SocialMediaReport.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
@@ -153,7 +154,8 @@ public class FacebookPostSumbitActivity extends AppCompatActivity {
             case android.R.id.home:
                 // app icon in action bar clicked; goto parent activity.
                 // this.finish();
-                Intent intent  = new Intent(this, NewHomeActivity.class);
+                //super.onBackPressed();
+                Intent intent  = new Intent(this, SocialMediaReport.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
@@ -170,7 +172,8 @@ public class FacebookPostSumbitActivity extends AppCompatActivity {
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        url = "http://stage.influencer.in/API/v6/api_v6.php/addNewFBAnalyticsPost";
+       // url = "http://stage.influencer.in/API/v6/api_v6.php/addNewFBAnalyticsPost";
+        url = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.fbanalytics_url);
         System.out.println(url);
         StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
 

@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 public class OurBlogPage extends AppCompatActivity {
 
-    private static final String TAG = AllCampaignFragmentLive.class.getSimpleName();
+    private static final String TAG = Influencer_Livecamp_List.class.getSimpleName();
     private CoordinatorLayout coordinatorLayout;
     Boolean isInternetPresent = false;
     // Connection detector class
@@ -29,8 +29,6 @@ public class OurBlogPage extends AppCompatActivity {
     TextView campheading;
     Context context;
     WebView browser;
-    // Movies json url
-    private static final String url = "http://www.influencer.in/API/campaign1.php?catid=9";
     private ProgressDialog pDialog;
     @Nullable
     public void onCreate(Bundle savedInstanceState) {
@@ -68,24 +66,6 @@ public class OurBlogPage extends AppCompatActivity {
                     hidePDialog();
                 }
             }.start();
-//            swipeView.setColorSchemeResources(R.color.actionbarcolour);
-//            swipeView.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener()
-//            {
-//                @Override
-//                public void onRefresh()
-//                {
-//                    swipeView.setRefreshing(true);
-//                    ( new Handler()).postDelayed(new Runnable()
-//                    {
-//                        @Override
-//                        public void run()
-//                        {
-//                            swipeView.setRefreshing(false);
-//                            browser.loadUrl("http://www.influencer.in/blog/");
-//                        }
-//                    }, 4000);
-//                }
-//            });
         }
         else {
             Snackbar snackbar = Snackbar

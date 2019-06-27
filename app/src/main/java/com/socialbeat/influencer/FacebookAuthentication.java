@@ -99,14 +99,6 @@ public class FacebookAuthentication extends AppCompatActivity {
 
         list = findViewById(R.id.pagevalues);
 
-//        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//
-//            @Override
-//            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
-//
-//                Toast.makeText(FacebookAuthentication.this,"HAi..!", Toast.LENGTH_LONG).show();
-//            }
-//        });
 
 
 
@@ -114,8 +106,7 @@ public class FacebookAuthentication extends AppCompatActivity {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(),
-                        new GraphRequest.GraphJSONObjectCallback() {
+                GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
                             @SuppressLint("SetTextI18n")
                             @Override
                             public void onCompleted(JSONObject object, GraphResponse response) {

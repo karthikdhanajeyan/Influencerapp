@@ -72,7 +72,8 @@ public class Conversations extends AppCompatActivity {
     //Pdf request code
     private int PICK_PDF_REQUEST = 1;
     private ProgressDialog pdialog;
-    private String imagepath=null;
+    private String imag
+         ,epath=null;
     private String filePath=null;
 
     public static final String KEY_APPNAME = "Influencer";
@@ -115,7 +116,7 @@ public class Conversations extends AppCompatActivity {
 
         contentstatus = findViewById(R.id.contentstatus);
        // contentshared = findViewById(R.id.contentshared);
-       // view_conversation = findViewById(R.id.view_conversation);
+        view_conversation = findViewById(R.id.view_conversation);
         campaignname = findViewById(R.id.campName);
         show_file = findViewById(R.id.show_file);
         summernote = findViewById(R.id.summernote);
@@ -320,7 +321,8 @@ public class Conversations extends AppCompatActivity {
         @SuppressWarnings("deprecation")
         private String uploadFile() {
             String responseString = null;
-            String REGISTER_URL = "https://www.influencer.in/API/v6/api_v6.php/addNewConversationSample";
+            //String REGISTER_URL = "https://www.influencer.in/API/v6/api_v6.php/addNewConversationSample";
+            String REGISTER_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.new_conversation_sample_url);
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(REGISTER_URL);
             try {

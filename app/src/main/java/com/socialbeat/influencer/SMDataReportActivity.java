@@ -652,7 +652,8 @@ public class SMDataReportActivity extends AppCompatActivity {
         @SuppressWarnings("deprecation")
         private String uploadFile() {
             String responseString = null;
-            String REGISTER_URL = "https://www.influencer.in/API/v6/api_v6.php/addNewCampaignReport";
+            //String REGISTER_URL = "https://www.influencer.in/API/v6/api_v6.php/addNewCampaignReport";
+            String REGISTER_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.newcamp_report_url);
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(REGISTER_URL);
             try {

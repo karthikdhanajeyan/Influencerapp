@@ -46,7 +46,7 @@ public class CustomListAdapter extends BaseAdapter {
 
 		if (convertView == null) {
 
-			convertView = inflater.inflate(R.layout.alllivecamplist, null);
+			convertView = inflater.inflate(R.layout.influencer_livecamp_list, null);
 		}
 
 		if (imageLoader == null)

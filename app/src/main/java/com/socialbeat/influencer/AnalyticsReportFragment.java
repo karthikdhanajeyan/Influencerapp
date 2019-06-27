@@ -130,34 +130,9 @@ public class AnalyticsReportFragment extends Fragment {
                 intent.putExtras(bund);
                 startActivity(intent);
                 startActivity(intent);
-//                if(isFabOpen){
-//
-//                    fab.startAnimation(rotate_backward);
-//                    fab1.startAnimation(fab_close);
-//                    fab1.setClickable(false);
-//                    isFabOpen = false;
-//                    Log.d("Button", "close");
-//
-//                } else {
-//
-//                    fab.startAnimation(rotate_forward);
-//                    fab1.startAnimation(fab_open);
-//                    fab1.setClickable(true);
-//                    isFabOpen = true;
-//                    Log.d("Button","open");
-//
-//                }
             }
         });
-//
-//        fab1.setOnClickListener(new View.OnClickListener() {
-//
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getActivity(), SocialMediaReport.class);
-//                startActivity(intent);
-//            }
-//        });
-//
+
         return v;
     }
 
@@ -168,7 +143,8 @@ public class AnalyticsReportFragment extends Fragment {
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
         pDialog.show();
-        String Applied_URL = "https://www.influencer.in/API/v6/api_v6.php/getAllCampaignReports?cid=" + cid +"&campid="+campid;
+        //String Applied_URL = "https://www.influencer.in/API/v6/api_v6.php/getAllCampaignReports?cid=" + cid +"&campid="+campid;
+        String Applied_URL = getResources().getString(R.string.base_url_v6)+getResources().getString(R.string.camp_report_url)+"?cid=" + cid +"&campid="+campid;
         System.out.println("Applied_URL : "+Applied_URL);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Applied_URL, new Response.Listener<String>() {
             @Override
