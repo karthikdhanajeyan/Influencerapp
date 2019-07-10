@@ -82,11 +82,11 @@ public class ViewConversationCustomListAdapter extends BaseAdapter {
 
 		conversation_author.setText(cc.getConversation_author());
 
-		//fileone.setImageUrl(cc.getThumbnail_url(), imageLoader);
+		fileone.setImageUrl(cc.getThumbnail_url(), imageLoader);
 
 		added_date.setText(cc.getAdded_date());
 
-		//id_post_attach.setText(cc.getId_post_attach());
+		id_post_attach.setText(cc.getId_post_attach());
 
 		approved_status.setText(cc.getApproved_status());
 
@@ -99,7 +99,7 @@ public class ViewConversationCustomListAdapter extends BaseAdapter {
 
 
 //
-//		Log.v("post id : ",cc.getId_post_attach());
+		Log.v("post id : ",cc.getId_post_attach());
 
 		if (fileone!=null){
 			fileone.setOnClickListener(new View.OnClickListener() {

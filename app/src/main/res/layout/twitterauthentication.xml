@@ -16,61 +16,102 @@
         <!-- custom login button -->
         <Button
             android:id="@+id/custom_twitter_login_button"
-            android:layout_width="300sp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:background="@color/blue"
-            android:onClick="customLoginTwitter"
-            android:text="@string/custom_log_in_with_twitter"
-            android:textColor="@color/white" />
-
-        <!-- fetch profile image button -->
-        <Button
-            android:id="@+id/profile_image_button"
-            android:layout_width="80sp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12sp"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@+id/custom_twitter_login_button"
-            android:background="@color/orange"
-            android:onClick="fetchTwitterImage"
-            android:text="Select"
-            android:textColor="@color/white" />
-
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardview0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_image_button"
-            android:layout_margin="@dimen/card_margin1"
-            app:cardBackgroundColor="@color/ashe1">
+            android:layout_marginTop="25dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:onClick="customLoginTwitter"
+            android:text="LOGIN WITH TWITTER"
+            android:textColor="@color/white" />
 
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            app:cardBackgroundColor="@color/lite_ashe"
+            android:visibility="invisible"
+            android:layout_below="@+id/custom_twitter_login_button"
+            android:layout_marginTop="30dp">
 
-            <!-- image view to show user profile image -->
-            <ImageView
-                android:id="@+id/user_profile_image_view"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_below="@+id/profile_image_button"
-                android:layout_alignTop="@+id/cardview0"
-                android:layout_alignEnd="@+id/cardview0"
-                android:layout_gravity="right" />
-
-            <!-- text view to show user details -->
-            <TextView
-                android:id="@+id/user_details_label"
+            <RelativeLayout
+                android:id="@+id/settings_edit_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/user_profile_image_view"
-                android:textColor="@color/blue"
-                android:fontFamily="sans-serif-condensed"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:gravity="center">
 
-                android:textSize="18sp" />
+                <ImageView
+                    android:id="@+id/user_icon"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"/>
 
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/user_icon"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toEndOf="@+id/user_icon"
+                    android:layout_toRightOf="@+id/user_icon"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/user_icon"
+                    android:layout_marginLeft="225dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toEndOf="@+id/user_icon"
+                    android:layout_toRightOf="@+id/user_icon"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/select"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/uname"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/white"
+                    android:background="@color/orange"
+                    android:visibility="visible"
+                    android:text="Select"
+                    android:layout_alignParentRight="true" />
+
+                <Button
+                    android:id="@+id/selected"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/uname"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/white"
+                    android:visibility="invisible"
+                    android:background="@color/colorAccentnew"
+                    android:text="Selected"
+                    android:layout_alignParentRight="true" />
+
+
+
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
-
 
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

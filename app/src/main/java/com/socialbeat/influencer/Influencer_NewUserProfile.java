@@ -1,6 +1,7 @@
 package com.socialbeat.influencer;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -133,19 +134,13 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.influencer_newuserprofile);
 
-//        ActionBar bar = getSupportActionBar();
-//        assert bar != null;
-//        bar.setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setTitle("My Profile");
-
         currentapiVersion = Build.VERSION.SDK_INT;
         SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
-        cid="1";
 
         SharedPreferences prfs1 = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
         token = prfs1.getString("token", "");
+
         pname = findViewById(R.id.nme_profile);
         pemail = findViewById(R.id.email_profile);
         ppassword = findViewById(R.id.password_profile);
@@ -171,9 +166,7 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
 
         if(cid.length()!=0){
             if (isInternetPresent) {
-                MyApplication.getInstance().trackEvent("Myprofile Screen", "OnClick", "Track MyProfileDummy Event");
-                //getUserDetails();
-                loadSpinnerStateData();
+                getUserDetails();
             } else {
                 Snackbar snackbar = Snackbar
                         .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
@@ -193,7 +186,27 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "CID value is Empty", Toast.LENGTH_SHORT).show();
         }
 
-
+        if(cid.length()!=0){
+            if (isInternetPresent) {
+                loadSpinnerStateData();
+            } else {
+                Snackbar snackbar = Snackbar
+                        .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
+                        .setAction("SETTINGS", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(new Intent(Settings.ACTION_SETTINGS));
+                            }
+                        });
+                snackbar.setActionTextColor(Color.RED);
+                View sbView = snackbar.getView();
+                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                textView.setTextColor(Color.YELLOW);
+                snackbar.show();
+            }
+        }else{
+            Toast.makeText(getApplicationContext(), "CID value is Empty", Toast.LENGTH_SHORT).show();
+        }
 
         state_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -294,7 +307,6 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
 
                     } else {
                         Log.v("Image", "NO");
-                        //new UploadFileToServer().execute();
                         uploadDetails();
                     }
                 } else {
@@ -454,11 +466,9 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                 Map<String, Integer> perms = new HashMap<>();
                 // Initialize the map with both permissions
 
-
                 perms.put(Manifest.permission.CAMERA, PackageManager.PERMISSION_GRANTED);
                 perms.put(Manifest.permission.READ_EXTERNAL_STORAGE, PackageManager.PERMISSION_GRANTED);
                 perms.put(Manifest.permission.WRITE_EXTERNAL_STORAGE, PackageManager.PERMISSION_GRANTED);
-
 
                 // Fill with actual results from user
                 if (grantResults.length > 0) {
@@ -545,11 +555,10 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
 
     }
 
-
     private void loadSpinnerStateData() {
         if (isInternetPresent) {
             pDialog = new ProgressDialog(Influencer_NewUserProfile.this);
-            pDialog.setMessage("Loading...");
+            pDialog.setMessage("State list Loading...");
             pDialog.setCancelable(false);
             pDialog.show();
             String state_list = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.getstates_url);
@@ -561,64 +570,46 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                     Log.d(TAG, response);
                     hidePDialog();
 
-                    if (response != "null" && !response.isEmpty()){
+                    try {
+                        JSONObject responseObj = new JSONObject(response);
+                        StateName.clear();
+                        String responstatus = responseObj.getString("success").toString();
+                        Log.d("response status : ", responstatus);
+                        String responsemessage = responseObj.getString("message").toString();
+                        Log.d("response message : ", responsemessage);
 
-                        try {
-                            JSONObject responseObj = new JSONObject(response);
+                        if (responstatus.equalsIgnoreCase("true")) {
 
-                            String responstatus = responseObj.getString("success").toString();
-                            Log.d("response status : ", responstatus);
-                            String responsemessage = responseObj.getString("message").toString();
-                            Log.d("response message : ", responsemessage);
-
-
-                            if (responstatus.equalsIgnoreCase("true")) {
-
-                                JSONArray jsonArray=responseObj.getJSONArray("data");
-                                for(int i=0;i<jsonArray.length();i++){
+                            responseObj.getJSONArray("data");
+                            JSONArray jsonArray=responseObj.getJSONArray("data");
+                            for(int i=0;i<jsonArray.length();i++){
                                 JSONObject jsonObject1=jsonArray.getJSONObject(i);
                                 statename=jsonObject1.getString("state");
                                 StateName.add(statename);
-                                }
-
-                            }else if (responstatus.equalsIgnoreCase("false")){
-                                if(responsemessage.equalsIgnoreCase("Expired token")){
-
-                                    Snackbar snackbar = Snackbar.make(coordinatorLayout, "User Session Expired.", Snackbar.LENGTH_INDEFINITE).setAction("Login", new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View view) {
-                                            Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_Login.class);
-                                            startActivity(intent);
-                                        }
-                                    });
-                                    snackbar.setActionTextColor(Color.RED);
-                                    View sbView = snackbar.getView();
-                                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
-                                    textView.setTextColor(Color.YELLOW);
-                                    snackbar.show();
-                                }
                             }
                             state_spinner.setAdapter(new ArrayAdapter<String>(Influencer_NewUserProfile.this, android.R.layout.simple_spinner_dropdown_item, StateName));
-                        }
-                        catch(JSONException e){
-                            Log.e(TAG, "Error Value : " + e.getMessage());
+                        }else if (responstatus.equalsIgnoreCase("false")){
+                            if(responsemessage.equalsIgnoreCase("Expired token")){
 
-                            Snackbar snackbar = Snackbar.make(coordinatorLayout, "No data from server. Please try again later.", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                    Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_Home.class);
-                                    startActivity(intent);
-                                }
-                            });
-                            snackbar.setActionTextColor(Color.RED);
-                            View sbView = snackbar.getView();
-                            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
-                            textView.setTextColor(Color.YELLOW);
-                            snackbar.show();
+                                Snackbar snackbar = Snackbar.make(coordinatorLayout, "User Session Expired.", Snackbar.LENGTH_INDEFINITE).setAction("Login", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_Login.class);
+                                        startActivity(intent);
+                                    }
+                                });
+                                snackbar.setActionTextColor(Color.RED);
+                                View sbView = snackbar.getView();
+                                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                                textView.setTextColor(Color.YELLOW);
+                                snackbar.show();
+                            }
+                            //  state_spinner.setAdapter(new ArrayAdapter<String>(Influencer_MyProfile.this, android.R.layout.simple_spinner_dropdown_item, StateName));
                         }
-                    } else {
-                        hidePDialog();
-                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "No Data from Server.Please try some time later..!", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+
+                    } catch(JSONException e){
+                        Log.e(TAG, "Error Value : " + e.getMessage());
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "No data from server. Please try again later.", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_Home.class);
@@ -633,9 +624,11 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                     }
                 }
             }, new Response.ErrorListener() {
+
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Log.e(TAG, "Listener ErrorResponse : " + error.getMessage());
+                    Log.e(TAG, "Error : " + error.getMessage());
+                    //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
                     NetworkResponse networkResponse = error.networkResponse;
                     if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {
                         // HTTP Status Code: 401 Unauthorized
@@ -659,9 +652,17 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                 @Override
                 public Map<String, String> getHeaders() throws AuthFailureError {
                     Map<String, String> headers = new HashMap<>();
-                    Log.v("Token Value : ",token);
+                    // Basic Authentication
+                    //String auth = "Basic " + Base64.encodeToString(CONSUMER_KEY_AND_SECRET.getBytes(), Base64.NO_WRAP);
                     headers.put("Authorization", "Bearer " + token);
                     return headers;
+                }
+
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("cid", cid);
+                    return params;
                 }
             };
 
@@ -684,6 +685,7 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
             textView.setTextColor(Color.YELLOW);
             snackbar.show();
         }
+
     }
 
     private void loadSpinnerCityData() {
@@ -702,7 +704,7 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                     hidePDialog();
                         try {
                             JSONObject responseObj = new JSONObject(response);
-
+                            CityName.clear();
                             String responstatus = responseObj.getString("success").toString();
                             Log.d("response status : ", responstatus);
                             String responsemessage = responseObj.getString("message").toString();
@@ -720,7 +722,7 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                                     System.out.println("City Name : "+jsonObject2.getString("city"));
                                     CityName.add(cityname);
                                 }
-                                city_spinner.setAdapter(null);
+
                                 city_spinner.setAdapter(new ArrayAdapter<String>(Influencer_NewUserProfile.this, android.R.layout.simple_spinner_dropdown_item, CityName));
                             }
                            // city_spinner.setAdapter(new ArrayAdapter<String>(Influencer_NewUserProfile.this, android.R.layout.simple_spinner_dropdown_item, CityName));
@@ -807,14 +809,12 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
     }
 
 
-
-
     private void getUserDetails() {
         if (isInternetPresent) {
-            pDialog = new ProgressDialog(Influencer_NewUserProfile.this);
-            pDialog.setMessage("Loadingggggg...");
-            pDialog.setCancelable(false);
-            pDialog.show();
+//            pDialog = new ProgressDialog(Influencer_MyProfile.this);
+//            pDialog.setMessage("User Details Loading...");
+//            pDialog.setCancelable(false);
+//            pDialog.show();
             String check_email = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.user_details_url);
             StringRequest checkEmail = new StringRequest(Request.Method.POST,check_email , new Response.Listener<String>() {
 
@@ -822,78 +822,83 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     Log.d(TAG, response);
-                    hidePDialog();
-                        try {
-                            JSONObject responseObj = new JSONObject(response);
+//                    hidePDialog();
 
-                            String responstatus = responseObj.getString("success").toString();
-                            Log.d("response status : ", responstatus);
-                            String responsemessage = responseObj.getString("message").toString();
-                            Log.d("response message : ", responsemessage);
+                    try {
+                        JSONObject responseObj = new JSONObject(response);
 
-                            if (responstatus.equalsIgnoreCase("true")) {
+                        String responstatus = responseObj.getString("success").toString();
+                        Log.d("response status : ", responstatus);
+                        String responsemessage = responseObj.getString("message").toString();
+                        Log.d("response message : ", responsemessage);
 
-                                responseObj.getJSONArray("data");
-                                JSONArray obj1 = responseObj.getJSONArray("data");
+                        if (responstatus.equalsIgnoreCase("true")) {
 
-                                for (int i = 0; i < obj1.length(); i++) {
-                                    try {
-                                        JSONObject resobj = obj1.getJSONObject(i);
+                            responseObj.getJSONArray("data");
+                            JSONArray obj1 = responseObj.getJSONArray("data");
 
-                                        cid = resobj.getString("cid");
-                                        name = resobj.getString("name");
-                                        email = resobj.getString("email");
-                                        mobile_no = resobj.getString("mobile_no");
+                            for (int i = 0; i < obj1.length(); i++) {
+                                try {
+                                    JSONObject resobj = obj1.getJSONObject(i);
 
-                                        pname.setText(name);
-                                        pemail.setText(email);
-                                        pmobileno.setText(mobile_no);
+                                    cid = resobj.getString("cid");
+                                    name = resobj.getString("name");
+                                    email = resobj.getString("email");
+                                    mobile_no = resobj.getString("mobile_no");
 
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
-                                        MyApplication.getInstance().trackException(e);
-                                        Log.e(TAG, "Exception: " + e.getMessage());
-                                    }
-                                }
-                            }else if (responstatus.equalsIgnoreCase("false")){
-                                if(responsemessage.equalsIgnoreCase("Expired token")){
+                                    Log.v(" Name value :", name);
+                                    Log.v("Email value :", email);
+                                    Log.v("Mobileno value :", mobile_no);
 
-                                    Snackbar snackbar = Snackbar.make(coordinatorLayout, "User Session Expired.", Snackbar.LENGTH_INDEFINITE).setAction("Login", new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View view) {
-                                            Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_Login.class);
-                                            startActivity(intent);
-                                        }
-                                    });
-                                    snackbar.setActionTextColor(Color.RED);
-                                    View sbView = snackbar.getView();
-                                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
-                                    textView.setTextColor(Color.YELLOW);
-                                    snackbar.show();
+                                    pname.setText(name);
+                                    pemail.setText(email);
+                                    pmobileno.setText(mobile_no);
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                    MyApplication.getInstance().trackException(e);
+                                    Log.e(TAG, "Exception: " + e.getMessage());
                                 }
                             }
-                        } catch(JSONException e){
-                            Log.e(TAG, "Error Value : " + e.getMessage());
+                        }else if (responstatus.equalsIgnoreCase("false")){
+                            if(responsemessage.equalsIgnoreCase("Expired token")){
 
-                            Snackbar snackbar = Snackbar.make(coordinatorLayout, "No data from server. Please try again later.", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                    Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_Home.class);
-                                    startActivity(intent);
-                                }
-                            });
-                            snackbar.setActionTextColor(Color.RED);
-                            View sbView = snackbar.getView();
-                            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
-                            textView.setTextColor(Color.YELLOW);
-                            snackbar.show();
+                                Snackbar snackbar = Snackbar.make(coordinatorLayout, "User Session Expired.", Snackbar.LENGTH_INDEFINITE).setAction("Login", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_Login.class);
+                                        startActivity(intent);
+                                    }
+                                });
+                                snackbar.setActionTextColor(Color.RED);
+                                View sbView = snackbar.getView();
+                                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                                textView.setTextColor(Color.YELLOW);
+                                snackbar.show();
+                            }
                         }
+                    } catch(JSONException e){
+                        Log.e(TAG, "Error Value : " + e.getMessage());
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "No data from server. Please try again later.", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_Home.class);
+                                startActivity(intent);
+                            }
+                        });
+                        snackbar.setActionTextColor(Color.RED);
+                        View sbView = snackbar.getView();
+                        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.YELLOW);
+                        snackbar.show();
+                    }
                 }
             }, new Response.ErrorListener() {
 
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     Log.e(TAG, "Error : " + error.getMessage());
+                    //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
                     NetworkResponse networkResponse = error.networkResponse;
                     if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {
                         // HTTP Status Code: 401 Unauthorized
@@ -1229,17 +1234,11 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
         return mediaFile;
     }
 
-
-
-
     @Override
     public void onResume() {
         super.onResume();
     }
-
-
-
-
+    @SuppressLint("StaticFieldLeak")
     class UploadFileToServerImage extends AsyncTask<Void, Integer, String> {
         @Override
         protected void onPreExecute() {
@@ -1264,6 +1263,8 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
 
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(REGISTER_URL);
+            httppost.addHeader("Authorization","Bearer " + token);
+
             try {
                 AndroidMultiPartEntity entity = new AndroidMultiPartEntity(new AndroidMultiPartEntity.ProgressListener() {
                     @Override
@@ -1281,6 +1282,7 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
 
                 entity.addPart(KEY_CID, new StringBody(cid));
                 entity.addPart(KEY_USERNAME, new StringBody(ename));
+                entity.addPart(KEY_PASSWORD, new StringBody(epassword));
                 entity.addPart(KEY_GENDER, new StringBody(egender));
                 entity.addPart(KEY_STATE, new StringBody(estate));
                 entity.addPart(KEY_CITY, new StringBody(ecity));
@@ -1309,33 +1311,54 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
         @Override
         public void onPostExecute(String success) {
             try {
-                JSONObject json = new JSONObject(success);
-                success = json.getString("success");
-                message = json.getString("message");
-                Log.v("success", success);
-                Log.v("message", message);
-//                Log.v("userimage", userimage);
+                JSONObject responseObj = new JSONObject(success);
+                String responstatus = responseObj.getString("success").toString();
+                Log.d("response status : ", responstatus);
+                String responsemessage = responseObj.getString("message").toString();
+                Log.d("response message : ", responsemessage);
+
                 pdialog.dismiss();
 
-                if (success == "true") {
-                    if (fileDesPath.isDirectory()) {
-                        String[] children = fileDesPath.list();
-                        for (int i = 0; i < children.length; i++) {
-                            new File(fileDesPath, children[i]).delete();
+                if (responseObj.getString("token") != null && !responseObj.getString("token").isEmpty()) {
+                    token = responseObj.getString("token");
+                    Log.v("Token value :", token);
+
+                    SharedPreferences preferences = Influencer_NewUserProfile.this.getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editors = preferences.edit();
+                    editors.putString("token",token);
+                    editors.apply();
+                } else {
+                    token = "novalue";
+                    Log.v("Token value :",token);
+                }
+
+                if (responstatus.equalsIgnoreCase("true")) {
+                    Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_Login.class);
+                            startActivity(intent);
                         }
-                        fileDesPath.delete();
-                    }
-                    Toast.makeText(Influencer_NewUserProfile.this, message, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_UserSettings.class);
-                    Bundle bund = new Bundle();
-                    //Inserts a String value into the mapping of this Bundle
-                    bund.putString("CID",cid);
-                    //Add the bundle to the intent.
-                    intent.putExtras(bund);
-                    startActivity(intent);
-                    Toast.makeText(Influencer_NewUserProfile.this, message, Toast.LENGTH_SHORT).show();
-                } else if (success == "false") {
-                    Toast.makeText(Influencer_NewUserProfile.this, message, Toast.LENGTH_SHORT).show();
+                    });
+                    snackbar.setActionTextColor(Color.RED);
+                    View sbView = snackbar.getView();
+                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
+
+                }else if (responstatus.equalsIgnoreCase("false")){
+                    Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("Try Again", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_NewUserProfile.class);
+                            startActivity(intent);
+                        }
+                    });
+                    snackbar.setActionTextColor(Color.RED);
+                    View sbView = snackbar.getView();
+                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

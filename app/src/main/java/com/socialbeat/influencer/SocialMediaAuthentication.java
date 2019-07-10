@@ -22,17 +22,17 @@ public class SocialMediaAuthentication extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.socialmediaauthentication);
 
-//        ActionBar bar = getSupportActionBar();
-//        assert bar != null;
-//        bar.setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setTitle("SocialMedia Authentication");
+        ActionBar bar = getSupportActionBar();
+        assert bar != null;
+        bar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("SocialMedia Authentication");
 
         connectfacebook = findViewById(R.id.connectfacebook);
         connecttwitter = findViewById(R.id.connecttwitter);
-        connectinstagram = findViewById(R.id.connectinstagram);
-        connectblog = findViewById(R.id.connectblog);
-        connectyoutube = findViewById(R.id.connectyoutube);
+ //       connectinstagram = findViewById(R.id.connectinstagram);
+//        connectblog = findViewById(R.id.connectblog);
+//        connectyoutube = findViewById(R.id.connectyoutube);
 
         connectfacebook.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,31 +50,28 @@ public class SocialMediaAuthentication extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        connectinstagram.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Toast.makeText(getApplicationContext(),"Please check our website to connect your Social Media Authentication",Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(SocialMediaAuthentication.this, InstagramAuthentication.class);
-                startActivity(intent);
-            }
-        });
-        connectblog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Please check our website to connect your Social Media Authentication",Toast.LENGTH_LONG).show();
-            }
-        });
-        connectyoutube.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Please check our website to connect your Social Media Authentication",Toast.LENGTH_LONG).show();
-            }
-        });
-
+//        connectinstagram.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Toast.makeText(getApplicationContext(),"Please check our website to connect your Social Media Authentication",Toast.LENGTH_LONG).show();
+//                Intent intent = new Intent(SocialMediaAuthentication.this, InstagramAuthentication.class);
+//                startActivity(intent);
+//            }
+//        });
+//        connectblog.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getApplicationContext(),"Please check our website to connect your Social Media Authentication",Toast.LENGTH_LONG).show();
+//            }
+//        });
+//        connectyoutube.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getApplicationContext(),"Please check our website to connect your Social Media Authentication",Toast.LENGTH_LONG).show();
+//            }
+//        });
 
     }
-
-
 
     @Override
     public void onBackPressed() {
@@ -82,18 +79,12 @@ public class SocialMediaAuthentication extends AppCompatActivity {
         super.onBackPressed();  // optional depending on your needs
     }
 
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
             case android.R.id.home:
                 super.onBackPressed();
-//                Intent intent = new Intent(SocialMediaAuthentication.this, Influencer_UserSettings.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

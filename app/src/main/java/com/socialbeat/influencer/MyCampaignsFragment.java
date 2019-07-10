@@ -264,7 +264,7 @@ public class MyCampaignsFragment extends AppCompatActivity {
              * Updating parsed JSON data into ListView
              * */
             ListAdapter adapter = new SimpleAdapter(MyCampaignsFragment.this, contactList,
-                    R.layout.appliedcamplist, new String[]{TAG_CAMPNAME, TAG_CAMPAPPLIEDSTATUS,TAG_CAMPAPPLIEDDATE, TAG_CAMPDELIVERYSTATUS, TAG_CAMPPAYMENTSTATUS,TAG_CID,TAG_CAMPID,TAG_CAMPQUOTE},
+                    R.layout.influencer_appliedcamp_list, new String[]{TAG_CAMPNAME, TAG_CAMPAPPLIEDSTATUS,TAG_CAMPAPPLIEDDATE, TAG_CAMPDELIVERYSTATUS, TAG_CAMPPAYMENTSTATUS,TAG_CID,TAG_CAMPID,TAG_CAMPQUOTE},
                     new int[]{R.id.campname,R.id.campappliedstatus,R.id.campapplieddate,R.id.campdeliverystatus,R.id.camppaymentstatus,R.id.cid,R.id.campid,R.id.campaignquote});
             lv.setAdapter(adapter);
         }

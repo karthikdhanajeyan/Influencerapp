@@ -14,14 +14,14 @@ import com.android.volley.toolbox.NetworkImageView;
 
 import java.util.List;
 
-public class AppliedCustomListAdapter extends BaseAdapter {
+public class Influencer_Applied_ListAdapter extends BaseAdapter {
 	private Activity activity;
 	private LayoutInflater inflater;
-	private List<AppliedCamp> appliedCampItem;
+	private List<Influencer_AppliedCamp_Declare> appliedCampItem;
 	private ImageLoader imageLoader = MyApplication.getInstance().getImageLoader();
 	ImageView cancel;
 
-	AppliedCustomListAdapter(Activity activity, List<AppliedCamp> appliedCampItem) {
+	Influencer_Applied_ListAdapter(Activity activity, List<Influencer_AppliedCamp_Declare> appliedCampItem) {
 		this.activity = activity;
 		this.appliedCampItem = appliedCampItem;
 	}
@@ -49,7 +49,7 @@ public class AppliedCustomListAdapter extends BaseAdapter {
 
 		if (convertView == null) {
 
-			convertView = inflater.inflate(R.layout.appliedcamplist, null);
+			convertView = inflater.inflate(R.layout.influencer_appliedcamp_list, null);
 		}
 
 		if (imageLoader == null)
@@ -65,7 +65,7 @@ public class AppliedCustomListAdapter extends BaseAdapter {
 		TextView camppaymentstatus = convertView.findViewById(R.id.camppaymentstatus);
 
 //		// getting campaign data for the row
-		AppliedCamp cc = appliedCampItem.get(position);
+		Influencer_AppliedCamp_Declare cc = appliedCampItem.get(position);
 //		// thumbnail image
 		// getting campaign data for the row
 		campImg.setImageUrl(cc.getCampImg(), imageLoader);

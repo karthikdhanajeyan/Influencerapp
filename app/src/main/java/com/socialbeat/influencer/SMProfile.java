@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -47,7 +48,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -60,6 +63,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -92,18 +96,27 @@ public class SMProfile extends AppCompatActivity {
     private static final String TAG = SMProfile.class.getSimpleName();
     Boolean isInternetPresent = false;
     ConnectionDetector cd;
-    String cid;
+    String cid,token;
     ListView list;
     ProgressDialog pDialog;
     ArrayList<HashMap<String, String>> pageList;
     SMLazyAdapter adapter;
     private FloatingActionButton fab;
+    String key1_text = null,key1 = null,key2_text = null,key2 = null,key3_text = null,key3 = null;
+    String value = null;
+    String key = null;
 
     public static final String TAG_SOCIALMEDIA = "socialmedia";
     public static final String TAG_UNAME = "uname";
     public static final String TAG_LINK = "link";
     public static final String TAG_PIMAGE = "profile_image";
     public static final String TAG_FOLLOWERS= "followers";
+    public static final String TAG_KEY1= "key1_lab";
+    public static final String TAG_VALUE1= "key1_val";
+    public static final String TAG_KEY2= "key2_lab";
+    public static final String TAG_VALUE2= "key2_val";
+    public static final String TAG_KEY3= "key3_lab";
+    public static final String TAG_VALUE3= "key3_val";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -120,11 +133,15 @@ public class SMProfile extends AppCompatActivity {
         SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
 
+        SharedPreferences prfs1 = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+        token = prfs1.getString("token", "");
+
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
         cd = new ConnectionDetector(this);
         isInternetPresent = cd.isConnectingToInternet();
         fab = findViewById(R.id.fab);
         list = findViewById(R.id.smlist);
+
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -135,11 +152,11 @@ public class SMProfile extends AppCompatActivity {
             }
         });
 
-        SharedPreferences settings1 = getSharedPreferences(PREFS_NAME, 0);
-        boolean firstStart = settings1.getBoolean("firstStart", true);
+//        SharedPreferences settings1 = getSharedPreferences(PREFS_NAME, 0);
+//        boolean firstStart = settings1.getBoolean("firstStart", true);
         if (cid.length() != 0) {
             if (isInternetPresent) {
-                profileFunction();
+                smConnectAccount();
             } else {
                 Snackbar snackbar = Snackbar
                         .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
@@ -162,73 +179,91 @@ public class SMProfile extends AppCompatActivity {
         }
     }
 
-    private void profileFunction() {
-        pDialog = new ProgressDialog(SMProfile.this);
-        // Showing progress dialog before making http request
-        pDialog.setMessage("Loading...");
-        pDialog.setCancelable(false);
-        pDialog.show();
-        //String CONVERSATION_URL = "http://stage.influencer.in/API/v6/api_v6.php/getSMConnectionDetails?cid="+cid;
-        String CONVERSATION_URL = getResources().getString(R.string.base_url_v6)+getResources().getString(R.string.smconnection_details_url)+"?cid="+cid;
-        System.out.println("conversation url : "+CONVERSATION_URL);
-        final StringRequest stringRequest = new StringRequest(Request.Method.GET, CONVERSATION_URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                // Do something with response string
-                Log.d(TAG, response);
-                hidePDialog();
-                try {
-                    JSONObject object = new JSONObject(response);
-                    if (response != null) {
+    private void smConnectAccount() {
+        if (isInternetPresent) {
+            pDialog = new ProgressDialog(SMProfile.this);
+            pDialog.setMessage("Loading...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+            String smConnectlist = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.smconnection_details_url);
+            StringRequest smConnectedList = new StringRequest(Request.Method.POST,smConnectlist , new Response.Listener<String>() {
 
-                        String responstatus = object.getString("success");
+                @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
+                @Override
+                public void onResponse(String response) {
+                    Log.d(TAG, response);
+                    hidePDialog();
+
+                    try {
+                        JSONObject responseObj = new JSONObject(response);
+                        pageList.clear();
+                        String responstatus = responseObj.getString("success").toString();
                         Log.d("response status : ", responstatus);
-                        String responsemessage = object.getString("message");
+                        String responsemessage = responseObj.getString("message").toString();
                         Log.d("response message : ", responsemessage);
 
-                        if (responstatus == "true") {
+                        if (responseObj.getString("token") != null && !responseObj.getString("token").isEmpty()) {
+                            token = responseObj.getString("token");
+                            Log.v("Token value :", token);
 
-                            String data = object.getString("data");
+                            SharedPreferences preferences = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editors = preferences.edit();
+                            editors.putString("token",token);
+                            editors.apply();
+
+                        } else {
+                            token = "novalue";
+                        }
+
+                        if (responstatus.equalsIgnoreCase("true")) {
+                            String data = responseObj.getString("data");
                             JSONObject object2 = new JSONObject(data);
-
                             JSONArray jArray1 = object2.getJSONArray("connected");
                             //JSONArray jArray2 = object2.getJSONArray("notConnected");
 
                             for(int i = 0; i < jArray1 .length(); i++)
                             {
                                 JSONObject object3 = jArray1.getJSONObject(i);
-
                                 String socialmedia = object3.getString("socialmedia");
 
+                                JSONObject objectvalue= object3.getJSONObject("metrics");
+                                Iterator<String> iter = objectvalue.keys();
+                                while (iter.hasNext()) {
+                                     value = null;
+                                     key = iter.next();
+                                    try {
+                                        value = objectvalue.getString(key);
+                                    } catch (JSONException e) {
+                                        // Something went wrong!
+                                    }
+                                    Log.v("key : ",key);
+                                    Log.v("value : ",value);
+                                    if(key.equalsIgnoreCase("Followers")){
+                                      key1_text = key;
+                                      key1 = value;
+                                    }
+                                    if(key.equalsIgnoreCase("Likes")){
+                                        key2_text = key;
+                                        key2 = value;
+                                    }
+                                    if(key.equalsIgnoreCase(" Subcribers")){
+                                        key3_text = key;
+                                        key3 = value;
+                                    }
+                                }
 
-                                JSONObject metrics= object3.getJSONObject("metrics");
-                                String followers= metrics.getString("Followers");
-//                                if(metrics.getString("Followers")!= null && !metrics.getString("Followers").isEmpty()) {
-//                                    String followers= metrics.getString("Followers");
-//                                    Log.v("followers : ",followers);
-//                                }
-//                                Log.v("val : : ",metrics.getString("Likes"));
-//                                if(metrics.getString("Likes")!= null && !metrics.getString("Likes").isEmpty()) {
-//                                    String likes= metrics.getString("Likes");
-//                                    Log.v("likes : ",likes);
-//                                }
 
                                 JSONObject userDetails= object3.getJSONObject("userDetails");
                                 String uname= userDetails.getString("name");
                                 String link= userDetails.getString("link");
                                 String profile_image= userDetails.getString("profile_image");
-//                                String page_id= userDetails.getString("page_id");
-//                                String access_token= userDetails.getString("access_token");
 
                                 Log.v("Social Media : ",socialmedia);
-
-
                                 Log.v("name : ",uname);
                                 Log.v("link : ",link);
                                 Log.v("profile_image : ",profile_image);
-//                                Log.v("page_id : ",page_id);
-//                                Log.v("access_token : ",access_token);
-                                Log.v("followers : ",followers);
+                                Log.v("key : ",key);
+                                Log.v("value : ",value);
 
                                 // tmp hashmap for single contact
                                 HashMap<String, String> page = new HashMap<String, String>();
@@ -237,10 +272,21 @@ public class SMProfile extends AppCompatActivity {
                                 page.put(TAG_UNAME,uname);
                                 page.put(TAG_LINK,link);
                                 page.put(TAG_PIMAGE,profile_image);
-                                page.put(TAG_FOLLOWERS,followers);
+                                if(key1_text!=null && key1!=null){
+                                    page.put(TAG_KEY1,key1_text);
+                                    page.put(TAG_VALUE1,key1);
+                                }
+                                if(key2_text!=null && key2!=null){
+                                    page.put(TAG_KEY2,key2_text);
+                                    page.put(TAG_VALUE2,key2);
+                                }
+                                if(key3_text!=null && key3!=null){
+                                    page.put(TAG_KEY3,key3_text);
+                                    page.put(TAG_VALUE3,key3);
+                                }
+//                                page.put(TAG_KEY,key);
+//                                page.put(TAG_VALUE,value);
 
-
-                                // adding contact to contact list
                                 pageList.add(page);
                             }
 
@@ -248,19 +294,18 @@ public class SMProfile extends AppCompatActivity {
                             for(int i = 0; i < jArray2 .length(); i++)
                             {
                                 JSONObject object4 = jArray2.getJSONObject(i);
-
                                 String socialmedia = object4.getString("socialmedia");
                                 Log.v("New Social Media : ",socialmedia);
                             }
 
-                        } else {
+                        }else if (responstatus.equalsIgnoreCase("false")){
                             Log.d("success : ", "False");
                             Snackbar snackbar = Snackbar
-                                    .make(coordinatorLayout, "No Data", Snackbar.LENGTH_INDEFINITE)
-                                    .setAction("Click Here", new View.OnClickListener() {
+                                    .make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE)
+                                    .setAction("Live Campaigns", new View.OnClickListener() {
                                         @Override
                                         public void onClick(View view) {
-                                            Intent intent = new Intent(SMProfile.this, SocialMediaReport.class);
+                                            Intent intent = new Intent(SMProfile.this, Influencer_UserSettings.class);
                                             startActivity(intent);
                                         }
                                     });
@@ -271,40 +316,88 @@ public class SMProfile extends AppCompatActivity {
                             TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
                             textView.setTextColor(Color.WHITE);
                             snackbar.show();
-
                         }
+                        adapter = new SMLazyAdapter(SMProfile.this, pageList);
+                        list.setAdapter(adapter);
+                    } catch(JSONException e){
+                        Log.e(TAG, "Error Value : " + e.getMessage());
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "No Socialmedia Connected.", Snackbar.LENGTH_INDEFINITE).setAction("Connect", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
 
-                    }else {
-                        Log.e("ServiceHandler", "Couldn't get any data from the url");
-                    }
-                    adapter = new SMLazyAdapter(SMProfile.this, pageList);
-                    list.setAdapter(adapter);
-
-//                    // Click event for single list row
-//                    list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//
-//                        @Override
-//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                            Toast.makeText(getApplicationContext(), "ID : " + id, Toast.LENGTH_LONG).show();
-//                        }
-//
-//                    });
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // Do something when get error
-
+                                Intent intent = new Intent(SMProfile.this, SocialMediaAuthentication.class);
+                                startActivity(intent);
+                            }
+                        });
+                        snackbar.setActionTextColor(Color.RED);
+                        View sbView = snackbar.getView();
+                        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.YELLOW);
+                        snackbar.show();
                     }
                 }
-        );
+            }, new Response.ErrorListener() {
 
-        MyApplication.getInstance().addToRequestQueue(stringRequest);
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.e(TAG, "Error : " + error.getMessage());
+                    //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                    NetworkResponse networkResponse = error.networkResponse;
+                    if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {
+                        // HTTP Status Code: 401 Unauthorized
+                        Log.e(TAG, "Failure Error: " + " HTTP Status Code: 401 Unauthorized");
+                        hidePDialog();
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "Session Expired.", Snackbar.LENGTH_INDEFINITE).setAction("Login", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(SMProfile.this, Influencer_Login.class);
+                                startActivity(intent);
+                            }
+                        });
+                        snackbar.setActionTextColor(Color.RED);
+                        View sbView = snackbar.getView();
+                        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.YELLOW);
+                        snackbar.show();
+                    }
+                }
+            }) {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> headers = new HashMap<>();
+                    // Basic Authentication
+                    //String auth = "Basic " + Base64.encodeToString(CONSUMER_KEY_AND_SECRET.getBytes(), Base64.NO_WRAP);
+                    headers.put("Authorization", "Bearer " + token);
+                    return headers;
+                }
+
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("cid", cid);
+                    return params;
+                }
+            };
+
+            int socketTimeout = 60000;
+            RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+            smConnectedList.setRetryPolicy(policy);
+            MyApplication.getInstance().addToRequestQueue(smConnectedList);
+
+        } else {
+
+            Snackbar snackbar = Snackbar.make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE).setAction("SETTINGS", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) { startActivity(new Intent(Settings.ACTION_SETTINGS)); }
+            });
+            snackbar.setActionTextColor(Color.RED);
+            View sbView = snackbar.getView();
+            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+            textView.setTextColor(Color.YELLOW);
+            snackbar.show();
+        }
     }
 
     @Override

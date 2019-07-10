@@ -60,25 +60,26 @@ public class Influencer_FOI extends AppCompatActivity {
     private static final String TAG = Influencer_FOI.class.getSimpleName();
     TextView primary_profile,secondary_profile;
     Button psave;
-    String location,primaryname=null,secondaryname=null,primaryfinal=null;
+    String location,primaryname=null,secondaryname=null,primaryfinal=null,secondaryfinal=null;
     Boolean isInternetPresent = false;
     ConnectionDetector cd;
     String cid, field_of_interest,primaryvalue,secondaryvalue,token;
     Spinner primary_spinner;
     MultiSpinnerSearch secondary_spinner;
     ProgressDialog pdialog;
-    String newDataArray;
+    String newDataString,svalue1,svalue2;
 
     int currentapiVersion;
     int a = 0;
     int k=0,l=0;
-    String[] values;
+    String[] values,result;
     Snackbar snackbar;
     String eprimary,esecondary;
     String message,response,name,email,termID,slug;
     private ProgressDialog pDialog;
 
     ArrayList<String> PrimaryName,SecondaryName;
+    List<String> dataString = new ArrayList<String>();
 
     public List<KeyPairBoolData> listArray = new ArrayList<>();
 
@@ -124,13 +125,12 @@ public class Influencer_FOI extends AppCompatActivity {
             listArray.add(h);
         }
 
-        Gson gson=new Gson();
-
-        newDataArray=gson.toJson(listArray); // dataarray is list aaray
+//        Gson gson=new Gson();
+//        newDataArray=gson.toJson(listArray); // dataarray is list aaray
 
         if(cid.length()!=0){
             if (isInternetPresent) {
-                //getUserDetails();
+                getUserDetails();
             } else {
                 Snackbar snackbar = Snackbar
                         .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
@@ -177,41 +177,19 @@ public class Influencer_FOI extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "CID value is Empty", Toast.LENGTH_SHORT).show();
         }
 
-//        primary_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-//                //Toast.makeText(getApplicationContext(),statefinal,Toast.LENGTH_LONG).show();
-//                Log.v("Test","onclick working");
-//                if (primaryfinal != null && !primaryfinal.isEmpty()) {
-//                    primaryfinal= primaryvalue;
-//                    Log.v("State Value : ",primaryvalue);
-//                    if(k>0) {
-//                        primary_profile.setVisibility(View.INVISIBLE);
-//                        primaryfinal= primary_spinner.getItemAtPosition(primary_spinner.getSelectedItemPosition()).toString();
-//                    }
-//                    k++;
-//                }else {
-//                    //primary_profile.setVisibility(View.INVISIBLE);
-//                }
-//            }
-//            @Override
-//            public void onNothingSelected(AdapterView<?> adapterView) {
-//                // DO Nothing here
-//                //Toast.makeText(getApplicationContext(),"Select your Current State",Toast.LENGTH_LONG).show();
-//            }
-//        });
-
         primary_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 Log.v("Test","onclick working");
-
-                if(k>0) {
+                primaryfinal = primaryvalue;
+                secondaryfinal = secondaryvalue;
+                Log.v("primary Value : ", primaryfinal);
+                Log.v("Secondary Value : ", secondaryfinal);
+                if (k > 0) {
                     primary_profile.setVisibility(View.INVISIBLE);
-                    primaryfinal= primary_spinner.getItemAtPosition(primary_spinner.getSelectedItemPosition()).toString();
+                    primaryfinal = primary_spinner.getItemAtPosition(primary_spinner.getSelectedItemPosition()).toString();
                 }
                 k++;
-                //cityList();
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -222,12 +200,16 @@ public class Influencer_FOI extends AppCompatActivity {
         secondary_spinner.setItems(listArray, -1, new SpinnerListener() {
             @Override
             public void onItemsSelected(List<KeyPairBoolData> items) {
-                if(l>=0) {
+
+                secondaryfinal = secondaryvalue;
+                Log.v("Secondary Value : ", secondaryvalue);
+                if(l >=0) {
                     secondary_profile.setVisibility(View.INVISIBLE);
                     for (int i = 0; i < items.size(); i++) {
                         if (items.get(i).isSelected()) {
                             Log.i(TAG, i + " : " + items.get(i).getName() + " : " + items.get(i).isSelected());
                         }
+                        secondaryfinal = secondary_spinner.getItemAtPosition(secondary_spinner.getSelectedItemPosition()).toString();
                     }
                 }
                 l++;
@@ -243,7 +225,7 @@ public class Influencer_FOI extends AppCompatActivity {
                 alertDialog.setCancelable(false);
                 alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                    alertDialog.cancel();
+                        alertDialog.cancel();
                     }
                 });
                 alertDialog.show();
@@ -255,16 +237,31 @@ public class Influencer_FOI extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isInternetPresent) {
-                    eprimary = primary_spinner.getSelectedItem().toString();
-                    esecondary = secondary_spinner.getSelectedItem().toString();
+                    eprimary = primaryfinal;
+                    esecondary = secondaryfinal;
 
-                    Log.v("Primary Value : ",eprimary);
-                    Log.v("Secondary Value : ",esecondary);
-                   // secondary_value = new String[esecondary.length()]; // 10 is the length of the array.
+                    result = esecondary.split(",");
+
+
+
+                    if (result != null && result.length>0) {
+                        int k = result.length;
+                        List<Object> dString = new ArrayList<Object>();
+                        System.out.println("length size : "+k);
+                        for (int i=0;i<result.length;i++){
+                            dString.add(result[i]);
+                        }
+
+                       // dString = dString.substring(0,dString.length()-1);
+                       // Gson gson=new Gson();
+                        //newDataString=gson.toJson(dString);
+                    }
+
+
+
+
                     UpdateFOI();
-//                    Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_LONG).show();
-//                    Intent intent = new Intent(Influencer_FOI.this, Influencer_UserSettings.class);
-//                    startActivity(intent);
+
                 } else {
                     Snackbar snackbar = Snackbar
                             .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE).setAction("SETTINGS", new View.OnClickListener() {
@@ -305,7 +302,7 @@ public class Influencer_FOI extends AppCompatActivity {
                         Log.d("response message : ", responsemessage);
 
                         if(responstatus.equalsIgnoreCase("true")){
-                             snackbar = Snackbar.make(coordinatorLayout, "FOI updated Successfully", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                            snackbar = Snackbar.make(coordinatorLayout, "FOI updated Successfully", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
                                     Intent intent = new Intent(Influencer_FOI.this, Influencer_UserSettings.class);
@@ -318,18 +315,18 @@ public class Influencer_FOI extends AppCompatActivity {
                             textView.setTextColor(Color.YELLOW);
                             snackbar.show();
                         }else if(responstatus.equalsIgnoreCase("false")){
-                            final Snackbar snackbar1 = snackbar;
-                            final Snackbar snackbar = Snackbar.make(coordinatorLayout, "FOI not Updated", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                            snackbar = Snackbar.make(coordinatorLayout, "Not Updated, Select Values from List", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                snackbar1.dismiss();
+                                    Intent intent = new Intent(Influencer_FOI.this, Influencer_FOI.class);
+                                    startActivity(intent);
                                 }
                             });
-                            snackbar1.setActionTextColor(Color.RED);
-                            View sbView = snackbar1.getView();
+                            snackbar.setActionTextColor(Color.RED);
+                            View sbView = snackbar.getView();
                             TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
                             textView.setTextColor(Color.YELLOW);
-                            snackbar1.show();
+                            snackbar.show();
                         }
 
                     } catch(JSONException e){
@@ -385,7 +382,21 @@ public class Influencer_FOI extends AppCompatActivity {
                     Map<String, String> params = new HashMap<String, String>();
                     params.put("cid", cid);
                     params.put("primFOI", eprimary);
-                    params.put("secFOI[]", newDataArray);
+                   // params.put("secFOI[]", newDataString);
+
+
+                    if (result != null && result.length>0) {
+                        int k = result.length;
+                       // List<Object> dString = new ArrayList<Object>();
+                        String data ="";
+                        System.out.println("length size : "+k);
+                        for (int i=0;i<result.length;i++){
+                            data += result[i]+",";
+
+                        }
+                        params.put("secFOI[]", data.substring(0,data.length()-1));
+
+                    }
                     return params;
                 }
             };
@@ -428,7 +439,7 @@ public class Influencer_FOI extends AppCompatActivity {
 
                     try {
                         JSONObject responseObj = new JSONObject(response);
-                        //PrimaryName.clear();
+                        PrimaryName.clear();
                         String responstatus = responseObj.getString("success").toString();
                         Log.d("response status : ", responstatus);
                         String responsemessage = responseObj.getString("message").toString();
@@ -445,6 +456,7 @@ public class Influencer_FOI extends AppCompatActivity {
                                 PrimaryName.add(primaryname);
                             }
                             primary_spinner.setAdapter(new ArrayAdapter<String>(Influencer_FOI.this, android.R.layout.simple_spinner_dropdown_item, PrimaryName));
+
                         }else if (responstatus.equalsIgnoreCase("false")){
                             if(responsemessage.equalsIgnoreCase("Expired token")){
 
@@ -593,19 +605,25 @@ public class Influencer_FOI extends AppCompatActivity {
                                     if(field_of_interest != null && !field_of_interest.isEmpty()) {
                                         Log.v(" FOI value :", field_of_interest);
                                         values = field_of_interest.split(",");
+                                        if (values != null && values.length > 0) {
+                                            int s = values.length;
+                                            System.out.println("length size : "+s);
+                                            if(s == 1) {
+                                                primaryvalue = values[0];
+                                                System.out.println("First values : " + values[0]);
+                                            }else if(s == 2) {
+                                                primaryvalue = values[0];
+                                                System.out.println("First values : " + values[0]);
+                                                secondaryvalue = values[1];
+                                                System.out.println("Second values : " + values[1]);
+                                            }else if(s == 3) {
+                                                primaryvalue = values[0];
+                                                System.out.println("First values : " + values[0]);
+                                                secondaryvalue = values[1] + "," + values[2];
+                                                System.out.println("Third values : " + values[2]);
+                                            }
+                                        }
 
-                                        if (values[0] != null && !values[0].isEmpty()) {
-                                            primaryvalue = values[0];
-                                            System.out.println("first values : " + values[0]);
-                                        }
-                                        if (values[1] != null && !values[1].isEmpty()) {
-                                            secondaryvalue = values[1];
-                                            System.out.println("second values : " + values[1]);
-                                        }
-                                        if (values[2] != null && !values[2].isEmpty()) {
-                                            secondaryvalue = values[1] + "," + values[2];
-                                            System.out.println("Third values : " + values[2]);
-                                        }
 
                                         //set value to edittext box
                                         primary_profile.setText(primaryvalue);

@@ -53,7 +53,7 @@ public class Influencer_UserValidation extends AppCompatActivity {
     Button mo_verifynow_button,em_verifynow_button,okbutton;
     ImageView mobile_correct_icon,mobile_wrong_icon,email_correct_icon,email_wrong_icon;
     TextView mobileno,emailid,resend_button;
-    String email,status,cid,name,mobile,message,type,token,mobile_no,mobileValidation,mailValidation,nmessage;
+    String email,status,cid,name,mobile,message,type,token,mobile_no,mobileValidation,mailValidation,nmessage,username;
     EditText otp;
 
 
@@ -100,7 +100,6 @@ public class Influencer_UserValidation extends AppCompatActivity {
         }else{
             Toast.makeText(getApplicationContext(), "CID value is Empty", Toast.LENGTH_SHORT).show();
         }
-
 
         mo_verifynow_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -226,9 +225,12 @@ public class Influencer_UserValidation extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<String, String>();
+                    Log.v("CID Value : ",cid);
+                    Log.v("userID Value : ",email);
+                    Log.v("username Value : ",username);
                     params.put("userID", cid);
                     params.put("email", email);
-                    params.put("username", name);
+                    params.put("userName", username);
                     return params;
                 }
             };
@@ -286,11 +288,18 @@ public class Influencer_UserValidation extends AppCompatActivity {
                                         JSONObject resobj = obj1.getJSONObject(i);
 
                                         cid = resobj.getString("cid");
-                                        name = resobj.getString("name");
+                                        username = resobj.getString("name");
                                         email = resobj.getString("email");
                                         mobile_no = resobj.getString("mobile_no");
                                         mobileValidation = resobj.getString("mobileValidation");
                                         mailValidation = resobj.getString("mailValidation");
+
+                                        Log.v("CID Value : ",cid);
+                                        Log.v("username Value : ",username);
+                                        Log.v("email Value : ",email);
+                                        Log.v("mobile_no Value : ",mobile_no);
+                                        Log.v("mobileVal Value : ",mobileValidation);
+                                        Log.v("mailVal Value : ",mailValidation);
 
                                          mobileno.setText(mobile_no);
                                          emailid.setText(email);

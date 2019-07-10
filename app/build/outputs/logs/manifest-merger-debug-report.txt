@@ -25,7 +25,7 @@ MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\Social Beat\.g
 MERGED from [in.nashapp.androidsummernote:androidsummernote:1.0.5] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\7ff7813dc80941640abeca63753ef4f9\AndroidManifest.xml:2:1-17:12
 MERGED from [com.github.pratikbutani:MultiSelectSpinner:08d324c98] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\85570e9a77b44b91a412c04e2f463b3e\AndroidManifest.xml:2:1-14:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\4acec0360eb12bca874b389856edc914\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta1] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\ba70f18fb067e666b516cb6ec6b4053f\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta2] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\caa9d848cd26ce6e96c9e20c55397c8f\AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.android:facebook-share:4.42.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\2112a9411a502b4ec048800d26527ced\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-common:5.0.3] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\400868af28a37f72a49ca138df33f5d5\AndroidManifest.xml:21:1-37:12
 MERGED from [com.github.rey5137:material:1.2.2] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\c57159d9bc108e5642ba8a3b0c7c3103\AndroidManifest.xml:2:1-11:12
@@ -196,7 +196,7 @@ REJECTED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\Social Beat\
 REJECTED from [in.nashapp.androidsummernote:androidsummernote:1.0.5] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\7ff7813dc80941640abeca63753ef4f9\AndroidManifest.xml:11:5-15:19
 REJECTED from [com.github.pratikbutani:MultiSelectSpinner:08d324c98] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\85570e9a77b44b91a412c04e2f463b3e\AndroidManifest.xml:11:5-12:19
 REJECTED from [com.android.support:design:28.0.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\4acec0360eb12bca874b389856edc914\AndroidManifest.xml:22:5-20
-REJECTED from [com.android.support.constraint:constraint-layout:2.0.0-beta1] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\ba70f18fb067e666b516cb6ec6b4053f\AndroidManifest.xml:9:5-20
+REJECTED from [com.android.support.constraint:constraint-layout:2.0.0-beta2] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\caa9d848cd26ce6e96c9e20c55397c8f\AndroidManifest.xml:9:5-20
 REJECTED from [com.facebook.android:facebook-share:4.42.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\2112a9411a502b4ec048800d26527ced\AndroidManifest.xml:28:5-29:19
 REJECTED from [com.facebook.android:facebook-common:5.0.3] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\400868af28a37f72a49ca138df33f5d5\AndroidManifest.xml:28:5-35:19
 REJECTED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\13674b201221ff4f2d8dc667d29a7553\AndroidManifest.xml:9:5-20
@@ -250,7 +250,7 @@ REJECTED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Social B
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:34:9-44
 	android:name
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:25:9-38
-activity#com.socialbeat.influencer.Influencer_SplashScreenActivity
+activity#com.socialbeat.influencer.Influencer_SplashScreen
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:37:9-50:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:39:13-49
@@ -259,7 +259,7 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:37:9-50:20
 	android:theme
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:40:13-80
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:38:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:38:13-52
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:42:13-45:29
 action#android.intent.action.MAIN
@@ -276,15 +276,15 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:47:13-49:53
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:49:17-50
 	android:name
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:48:17-53
-activity#com.socialbeat.influencer.Influencer_HomeActivity
+activity#com.socialbeat.influencer.Influencer_Home
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:51:9-55:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:53:13-49
 	android:theme
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:54:13-80
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:52:13-52
-activity#com.socialbeat.influencer.Influencer_RegisterationActivity
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:52:13-44
+activity#com.socialbeat.influencer.Influencer_Registeration
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:56:9-61:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:58:13-49
@@ -293,8 +293,8 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:56:9-61:20
 	android:theme
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:59:13-80
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:57:13-61
-activity#com.socialbeat.influencer.Influencer_LoginActivity
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:57:13-53
+activity#com.socialbeat.influencer.Influencer_Login
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:62:9-67:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:64:13-49
@@ -303,7 +303,7 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:62:9-67:20
 	android:theme
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:65:13-80
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:63:13-53
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:63:13-45
 activity#com.socialbeat.influencer.Influencer_UserValidation
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:68:9-73:20
 	android:screenOrientation
@@ -314,7 +314,7 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:68:9-73:20
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:71:13-80
 	android:name
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:69:13-54
-activity#com.socialbeat.influencer.Influencer_PasswordActivity
+activity#com.socialbeat.influencer.Influencer_Password
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:74:9-79:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:76:13-49
@@ -323,7 +323,7 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:74:9-79:20
 	android:theme
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:77:13-80
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:75:13-56
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:75:13-48
 activity#com.socialbeat.influencer.NewHomeActivity
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:80:9-85:20
 	android:screenOrientation
@@ -464,14 +464,14 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:163:9-167:20
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:166:13-45
 	android:name
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:164:13-49
-activity#com.socialbeat.influencer.FoiActivity
+activity#com.socialbeat.influencer.Influencer_FOI
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:168:9-172:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:170:13-49
 	android:label
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:171:13-45
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:169:13-40
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:169:13-43
 activity#com.socialbeat.influencer.SMProfile
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:174:9-178:20
 	android:screenOrientation
@@ -480,15 +480,15 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:174:9-178:20
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:177:13-45
 	android:name
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:175:13-38
-activity#com.socialbeat.influencer.DummyActivity
+activity#com.socialbeat.influencer.SMDataReportActivity
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:180:9-184:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:182:13-49
 	android:label
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:183:13-45
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:181:13-42
-activity#com.socialbeat.influencer.SMDataReportActivity
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:181:13-49
+activity#com.socialbeat.influencer.FacebookPostActivity
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:186:9-190:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:188:13-49
@@ -496,15 +496,15 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:186:9-190:20
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:189:13-45
 	android:name
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:187:13-49
-activity#com.socialbeat.influencer.FacebookPostActivity
+activity#com.socialbeat.influencer.FacebookPostSumbitActivity
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:192:9-196:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:194:13-49
 	android:label
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:195:13-45
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:193:13-49
-activity#com.socialbeat.influencer.FacebookPostSumbitActivity
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:193:13-55
+activity#com.socialbeat.influencer.FacebookPageSumbitActivity
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:198:9-202:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:200:13-49
@@ -512,31 +512,31 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:198:9-202:20
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:201:13-45
 	android:name
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:199:13-55
-activity#com.socialbeat.influencer.FacebookPageSumbitActivity
+activity#com.socialbeat.influencer.Influencer_NewUserProfile
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:204:9-208:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:206:13-49
 	android:label
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:207:13-45
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:205:13-55
-activity#com.socialbeat.influencer.Influencer_NewUserProfileActivity
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:205:13-54
+activity#com.socialbeat.influencer.TwitterAuthentication
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:210:9-214:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:212:13-49
 	android:label
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:213:13-45
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:211:13-62
-activity#com.socialbeat.influencer.TwitterAuthentication
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:211:13-50
+activity#com.socialbeat.influencer.InstagramAuthentication
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:216:9-220:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:218:13-49
 	android:label
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:219:13-45
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:217:13-50
-activity#com.socialbeat.influencer.InstagramAuthentication
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:217:13-52
+activity#com.socialbeat.influencer.AnalyticsReportActivity
 ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:222:9-226:20
 	android:screenOrientation
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:224:13-49
@@ -686,8 +686,8 @@ MERGED from [com.github.pratikbutani:MultiSelectSpinner:08d324c98] C:\Users\Soci
 MERGED from [com.github.pratikbutani:MultiSelectSpinner:08d324c98] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\85570e9a77b44b91a412c04e2f463b3e\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:design:28.0.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\4acec0360eb12bca874b389856edc914\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:28.0.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\4acec0360eb12bca874b389856edc914\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta1] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\ba70f18fb067e666b516cb6ec6b4053f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta1] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\ba70f18fb067e666b516cb6ec6b4053f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta2] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\caa9d848cd26ce6e96c9e20c55397c8f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta2] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\caa9d848cd26ce6e96c9e20c55397c8f\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.android:facebook-share:4.42.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\2112a9411a502b4ec048800d26527ced\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-share:4.42.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\2112a9411a502b4ec048800d26527ced\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-common:5.0.3] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\400868af28a37f72a49ca138df33f5d5\AndroidManifest.xml:24:5-26:41

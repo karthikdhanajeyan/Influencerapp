@@ -8,7 +8,6 @@ package com.socialbeat.influencer;
         import android.support.v4.app.FragmentPagerAdapter;
         import android.support.v4.view.ViewPager;
         import android.support.v7.app.AppCompatActivity;
-        import android.support.v7.app.AppCompatDialogFragment;
         import android.support.v7.widget.Toolbar;
         import android.view.Menu;
         import android.view.MenuItem;
@@ -44,9 +43,9 @@ public class MyCampaigns extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new AppliedCampaignFragment(), "Applied");
-        adapter.addFragment(new ApprovedCampaignFragment(), "Approved");
-        adapter.addFragment(new CompletedCampaignFragment(), "Completed");
+        adapter.addFragment(new Influencer_AppliedCamp(), "Applied");
+        adapter.addFragment(new Influencer_ApprovedCamp(), "Approved");
+        adapter.addFragment(new Influencer_CompletedCamp(), "Completed");
 // set the default tab to the second tab
         viewPager.setAdapter(adapter);
     }

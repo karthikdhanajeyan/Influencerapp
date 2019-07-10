@@ -37,14 +37,22 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
+import org.apache.http.HttpStatus;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
@@ -58,14 +66,14 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
     ImageView user_icon;
     TextView user_name, user_email,user_mobile;
     String devicenamenew,deviceserialnew,devicemodelnew,deviceGCMServerkeynew,appversionnew;
-    String username1, emailid1, playstoreversion, mobileno, city, blog, blogtraffic, twitterhandle, message, profileprogress, mozrank,twitter_followers, instagram, instagram_followers, overallreach, foi, userimage, overallscore, response;
+    String username1, emailid1, playstoreversion, mobileno, message,userimage, response,token;
     Boolean isInternetPresent = false;
-    SharedPreferences.Editor editor,editor1,editor2,editor3,editor4;
+    SharedPreferences.Editor editor,editor1,editor2,editor3,editor4,editor5;
     ConnectionDetector cd;
-    ProgressDialog pdialog;
+    ProgressDialog pdialog,pDialog;
     public static final String LOGIN_NAME = "LoginFile";
     private static final String PREFS_NAME = "NewHomeActivity";
-    protected DrawerLayout drawerLayout;
+    private CoordinatorLayout coordinatorLayout;
     Context context=NewHomeActivity.this;
 
     public static final String KEY_DEVICENAME = "device_name";
@@ -89,7 +97,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         setupViewPager(viewPager);
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-        CoordinatorLayout coordinatorLayout = findViewById(R.id.coordinatorLayout);
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
 //        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N_MR1) {
 //
@@ -125,6 +133,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
         cd = new ConnectionDetector(this);
         isInternetPresent = cd.isConnectingToInternet();
 
@@ -136,6 +145,9 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         ccity = prfs.getString("city1", "");
         cuserimage = prfs.getString("userimage1", "");
         playstoreversion = prfs.getString("playstoreversion1", "");
+
+        SharedPreferences prfs1 = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+        token = prfs1.getString("token", "");
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         boolean firstStart = settings.getBoolean("firstStart", true);
@@ -151,10 +163,9 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
 
         if (cid.length() != 0) {
             if (isInternetPresent) {
-                profileFunction();
-               // Toast.makeText(getApplicationContext(), "Internet Connection is Working!", Toast.LENGTH_SHORT).show();
+                getUserDetails();
             } else {
-                //Toast.makeText(getApplicationContext(), "No internet connection!", Toast.LENGTH_SHORT).show();
+
                 Snackbar snackbar = Snackbar
                         .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
                         .setAction("SETTINGS", new View.OnClickListener() {
@@ -193,134 +204,331 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         user_mobile.setText(cmobileno);
     }
 
-    @SuppressLint("HardwareIds")
     private void DeviceDetails() {
-        devicenamenew = Build.BRAND;
-        devicemodelnew = Build.MODEL;
-        deviceserialnew = Build.SERIAL;
-        Log.v("DeviceDetails : ","Working");
-        if(deviceserialnew==null || deviceserialnew.length()==0) deviceserialnew = ""+System.currentTimeMillis();
-        PackageInfo pInfonew = null;
-        try {
-            pInfonew = getPackageManager().getPackageInfo(getPackageName(), 0);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        assert pInfonew != null;
-        appversionnew = pInfonew.versionName;
-        deviceGCMServerkeynew =  PreferenceManager.getPushCatID(NewHomeActivity.this);
+        if (isInternetPresent) {
+//            pDialog = new ProgressDialog(Influencer_MyProfile.this);
+//            pDialog.setMessage("User Details Loading...");
+//            pDialog.setCancelable(false);
+//            pDialog.show();
+            devicenamenew = Build.BRAND;
+            devicemodelnew = Build.MODEL;
+            deviceserialnew = Build.SERIAL;
+            Log.v("DeviceDetails : ","Working");
+            if(deviceserialnew==null || deviceserialnew.length()==0) deviceserialnew = ""+System.currentTimeMillis();
+            PackageInfo pInfonew = null;
+            try {
+                pInfonew = getPackageManager().getPackageInfo(getPackageName(), 0);
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+            }
+            assert pInfonew != null;
+            appversionnew = pInfonew.versionName;
+            deviceGCMServerkeynew =  PreferenceManager.getPushCatID(NewHomeActivity.this);
 
-        System.out.println("Customer ID :  "+cid);
-        System.out.println("Device Name :  "+devicenamenew);
-        System.out.println("Device Model :  "+devicemodelnew);
-        System.out.println("Device Serial :  "+deviceserialnew);
-        System.out.println("App Version : "+appversionnew);
-        System.out.println("Device Service Key :  "+deviceGCMServerkeynew);
+            System.out.println("Customer ID :  "+cid);
+            System.out.println("Device Name :  "+devicenamenew);
+            System.out.println("Device Model :  "+devicemodelnew);
+            System.out.println("Device Serial :  "+deviceserialnew);
+            System.out.println("App Version : "+appversionnew);
+            System.out.println("Device Service Key :  "+deviceGCMServerkeynew);
 
-        String DEVICE_URL = getResources().getString(R.string.base_url)+getResources().getString(R.string.device_details_url);
-        Log.v("URL",DEVICE_URL);
+            String check_email = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.device_details_url);
+            StringRequest checkEmail = new StringRequest(Request.Method.POST,check_email , new Response.Listener<String>() {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, DEVICE_URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String success) {
-                String message;
-                try {
-                    org.json.JSONObject json = new org.json.JSONObject(success);
-                    success = json.getString("success");
-                    message = json.getString("message");
-                    System.out.println("success "+success);
-                    System.out.println("message "+message);
-                } catch (org.json.JSONException e) {
-                    e.printStackTrace();
+                @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
+                @Override
+                public void onResponse(String response) {
+                    Log.d(TAG, response);
+//                    hidePDialog();
+                    try {
+                        JSONObject responseObj = new JSONObject(response);
+
+                        String responstatus = responseObj.getString("success").toString();
+                        Log.d("response status : ", responstatus);
+                        String responsemessage = responseObj.getString("message").toString();
+                        Log.d("response message : ", responsemessage);
+
+                        if (responseObj.getString("token") != null && !responseObj.getString("token").isEmpty()) {
+                            token = responseObj.getString("token");
+                            Log.v("Token value :", token);
+                            SharedPreferences preferences = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editors = preferences.edit();
+                            editors.putString("token",token);
+                            editors.apply();
+
+                        } else {
+                            token = "novalue";
+                        }
+
+                    } catch(JSONException e){
+                        Log.e(TAG, "Error Value : " + e.getMessage());
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "No data from server. Please try again later.", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(NewHomeActivity.this, Influencer_Home.class);
+                                startActivity(intent);
+                            }
+                        });
+                        snackbar.setActionTextColor(Color.RED);
+                        View sbView = snackbar.getView();
+                        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.YELLOW);
+                        snackbar.show();
+                    }
                 }
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(NewHomeActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+            }, new Response.ErrorListener() {
+
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.e(TAG, "Error : " + error.getMessage());
+                    //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                    NetworkResponse networkResponse = error.networkResponse;
+                    if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {
+                        // HTTP Status Code: 401 Unauthorized
+                        Log.e(TAG, "Failure Error: " + " HTTP Status Code: 401 Unauthorized");
+                        hidePDialog();
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "Session Expired.", Snackbar.LENGTH_INDEFINITE).setAction("Login", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(NewHomeActivity.this, Influencer_Login.class);
+                                startActivity(intent);
+                            }
+                        });
+                        snackbar.setActionTextColor(Color.RED);
+                        View sbView = snackbar.getView();
+                        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.YELLOW);
+                        snackbar.show();
                     }
-                }) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<String, String>();
-                params.put(KEY_CID, cid);
-                params.put(KEY_DEVICENAME, devicenamenew);
-                params.put(KEY_DEVICEMODEL, devicemodelnew);
-                params.put(KEY_DEVICESERIAL, deviceserialnew);
-                params.put(KEY_APPVERSION, appversionnew);
-                params.put(KEY_DEVICEGCMSERVERKEY, deviceGCMServerkeynew);
-                return params;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+                }
+            }) {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> headers = new HashMap<>();
+                    // Basic Authentication
+                    //String auth = "Basic " + Base64.encodeToString(CONSUMER_KEY_AND_SECRET.getBytes(), Base64.NO_WRAP);
+                    headers.put("Authorization", "Bearer " + token);
+                    return headers;
+                }
+
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put(KEY_CID, cid);
+                    params.put(KEY_DEVICENAME, devicenamenew);
+                    params.put(KEY_DEVICEMODEL, devicemodelnew);
+                    params.put(KEY_DEVICESERIAL, deviceserialnew);
+                    params.put(KEY_APPVERSION, appversionnew);
+                    params.put(KEY_DEVICEGCMSERVERKEY, deviceGCMServerkeynew);
+                    return params;
+                }
+            };
+
+            int socketTimeout = 60000;
+            RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+            checkEmail.setRetryPolicy(policy);
+            MyApplication.getInstance().addToRequestQueue(checkEmail);
+
+        } else {
+
+            Snackbar snackbar = Snackbar.make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE).setAction("SETTINGS", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) { startActivity(new Intent(Settings.ACTION_SETTINGS)); }
+            });
+            snackbar.setActionTextColor(Color.RED);
+            View sbView = snackbar.getView();
+            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+            textView.setTextColor(Color.YELLOW);
+            snackbar.show();
+        }
+
     }
 
-    private void profileFunction() {
-        pdialog = new ProgressDialog(NewHomeActivity.this);
-        pdialog.setMessage("Loading...");
-        pdialog.setCancelable(false);
-        pdialog.show();
-        String PROFILE_URL = getResources().getString(R.string.base_url)+getResources().getString(R.string.profile_url);
-        Log.v("PROFILE_URL : ",PROFILE_URL);
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, PROFILE_URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String success) {
-                try {
-                    JSONObject json = new JSONObject(success);
-                    response = json.getString("success");
-                    message = json.getString("message");
-                    profileprogress = json.getString("profileProgress");
-                    cid = json.getString("cid");
-                    username1 = json.getString("name");
-                    emailid1 = json.getString("emailid");
-                    mobileno = json.getString("mobileno");
-                    twitterhandle = json.getString("twitter");
-                    twitter_followers = json.getString("twitterFollowers");
-                    blog = json.getString("bloglink");
-                    blogtraffic = json.getString("blogTraffic");
-                    instagram = json.getString("instagram");
-                    instagram_followers = json.getString("instaFollowers");
-                    foi = json.getString("foi");
-                    city = json.getString("city");
-                    mozrank = json.getString("mozrank");
-                    overallreach = json.getString("overallreach");
-                    overallscore = json.getString("overallscore");
-                    userimage = json.getString("userimage");
+    private void getUserDetails() {
+        if (isInternetPresent) {
+//            pDialog = new ProgressDialog(Influencer_MyProfile.this);
+//            pDialog.setMessage("User Details Loading...");
+//            pDialog.setCancelable(false);
+//            pDialog.show();
+            String check_email = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.user_details_url);
+            StringRequest checkEmail = new StringRequest(Request.Method.POST,check_email , new Response.Listener<String>() {
 
-                    Glide.with(getApplicationContext()).load(userimage)
-                            .thumbnail(0.5f)
-                            .crossFade()
-                            .diskCacheStrategy(DiskCacheStrategy.ALL)
-                            .into(user_icon);
-                    user_name.setText(username1);
-                    user_email.setText(emailid1);
-                    user_mobile.setText(mobileno);
+                @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
+                @Override
+                public void onResponse(String response) {
+                    Log.d(TAG, response);
+//                    hidePDialog();
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                 }
-                pdialog.dismiss();
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(NewHomeActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+                    try {
+                        JSONObject responseObj = new JSONObject(response);
+
+                        String responstatus = responseObj.getString("success").toString();
+                        Log.d("response status : ", responstatus);
+                        String responsemessage = responseObj.getString("message").toString();
+                        Log.d("response message : ", responsemessage);
+
+                        if (responseObj.getString("token") != null && !responseObj.getString("token").isEmpty()) {
+                            token = responseObj.getString("token");
+                            Log.v("Token value :", token);
+                            SharedPreferences preferences = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editors = preferences.edit();
+                            editors.putString("token",token);
+                            editors.apply();
+
+                        } else {
+                            token = "novalue";
+                        }
+
+                        if (responstatus.equalsIgnoreCase("true")) {
+
+                            responseObj.getJSONArray("data");
+                            JSONArray obj1 = responseObj.getJSONArray("data");
+
+                            for (int i = 0; i < obj1.length(); i++) {
+                                try {
+                                    JSONObject obj = obj1.getJSONObject(i);
+
+                                    cid = obj.getString("cid");
+                                    username1 = obj.getString("name");
+                                    emailid1 = obj.getString("email");
+                                    mobileno = obj.getString("mobile_no");
+                                    userimage = obj.getString("profile_image");
+
+                                    Log.v(" Name value :", username1);
+                                    Log.v("Email value :", emailid1);
+                                    Log.v("Mobileno value :", mobileno);
+                                    Log.v("userimage value :", userimage);
+
+                                    //set value to edittext box
+                                    Glide.with(getApplicationContext()).load(userimage)
+                                            .thumbnail(0.5f)
+                                            .crossFade()
+                                            .diskCacheStrategy(DiskCacheStrategy.ALL)
+                                            .into(user_icon);
+                                    user_name.setText(username1);
+                                    user_email.setText(emailid1);
+                                    user_mobile.setText(mobileno);
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                    MyApplication.getInstance().trackException(e);
+                                    Log.e(TAG, "Exception: " + e.getMessage());
+                                }
+                            }
+                        }else if (responstatus.equalsIgnoreCase("false")){
+                            if(responsemessage.equalsIgnoreCase("Expired token")){
+
+                                Snackbar snackbar = Snackbar.make(coordinatorLayout, "User Session Expired.", Snackbar.LENGTH_INDEFINITE).setAction("Login", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent = new Intent(NewHomeActivity.this, Influencer_Login.class);
+                                        startActivity(intent);
+                                    }
+                                });
+                                snackbar.setActionTextColor(Color.RED);
+                                View sbView = snackbar.getView();
+                                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                                textView.setTextColor(Color.YELLOW);
+                                snackbar.show();
+                            }
+                        }
+                    } catch(JSONException e){
+                        Log.e(TAG, "Error Value : " + e.getMessage());
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "No data from server. Please try again later.", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(NewHomeActivity.this, Influencer_Home.class);
+                                startActivity(intent);
+                            }
+                        });
+                        snackbar.setActionTextColor(Color.RED);
+                        View sbView = snackbar.getView();
+                        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.YELLOW);
+                        snackbar.show();
                     }
-                }) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<String, String>();
-                params.put(KEY_CID, cid);
-                return params;
-            }
-        };
+                }
+            }, new Response.ErrorListener() {
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.e(TAG, "Error : " + error.getMessage());
+                    //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                    NetworkResponse networkResponse = error.networkResponse;
+                    if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {
+                        // HTTP Status Code: 401 Unauthorized
+                        Log.e(TAG, "Failure Error: " + " HTTP Status Code: 401 Unauthorized");
+                        hidePDialog();
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "Session Expired.", Snackbar.LENGTH_INDEFINITE).setAction("Login", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(NewHomeActivity.this, Influencer_Login.class);
+                                startActivity(intent);
+                            }
+                        });
+                        snackbar.setActionTextColor(Color.RED);
+                        View sbView = snackbar.getView();
+                        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.YELLOW);
+                        snackbar.show();
+                    }
+                }
+            }) {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> headers = new HashMap<>();
+                    // Basic Authentication
+                    //String auth = "Basic " + Base64.encodeToString(CONSUMER_KEY_AND_SECRET.getBytes(), Base64.NO_WRAP);
+                    headers.put("Authorization", "Bearer " + token);
+                    return headers;
+                }
+
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("cid", cid);
+                    return params;
+                }
+            };
+
+            int socketTimeout = 60000;
+            RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+            checkEmail.setRetryPolicy(policy);
+            MyApplication.getInstance().addToRequestQueue(checkEmail);
+
+        } else {
+
+            Snackbar snackbar = Snackbar.make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE).setAction("SETTINGS", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) { startActivity(new Intent(Settings.ACTION_SETTINGS)); }
+            });
+            snackbar.setActionTextColor(Color.RED);
+            View sbView = snackbar.getView();
+            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+            textView.setTextColor(Color.YELLOW);
+            snackbar.show();
+        }
+
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        hidePDialog();
+    }
+
+    private void hidePDialog() {
+        if (pDialog != null) {
+            pDialog.dismiss();
+            pDialog = null;
+        }
+    }
+
+
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -424,7 +632,10 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         editor4 = prefernce4.edit();
         editor4.clear();
         editor4.apply();
-
+        SharedPreferences prefernce5= getSharedPreferences("TOKEN_VALUE", MODE_PRIVATE);
+        editor5= prefernce5.edit();
+        editor5.clear();
+        editor5.apply();
         Intent intent = new Intent(NewHomeActivity.this, Influencer_Home.class);
         startActivity(intent);
     }

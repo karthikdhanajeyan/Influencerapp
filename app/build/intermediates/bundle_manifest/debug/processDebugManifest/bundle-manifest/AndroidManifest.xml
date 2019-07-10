@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.socialbeat.influencer"
-    android:versionCode="32"
-    android:versionName="2.3.0" >
+    android:versionCode="33"
+    android:versionName="2.2.2" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -42,7 +42,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.socialbeat.influencer.Influencer_SplashScreenActivity"
+            android:name="com.socialbeat.influencer.Influencer_SplashScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:windowSoftInputMode="stateAlwaysHidden" >
@@ -57,18 +57,18 @@
                 android:resource="@xml/shortcuts" />
         </activity>
         <activity
-            android:name="com.socialbeat.influencer.Influencer_HomeActivity"
+            android:name="com.socialbeat.influencer.Influencer_Home"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
         </activity>
         <activity
-            android:name="com.socialbeat.influencer.Influencer_RegisterationActivity"
+            android:name="com.socialbeat.influencer.Influencer_Registeration"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
-            android:name="com.socialbeat.influencer.Influencer_LoginActivity"
+            android:name="com.socialbeat.influencer.Influencer_Login"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:windowSoftInputMode="stateAlwaysHidden" >
@@ -80,7 +80,7 @@
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
-            android:name="com.socialbeat.influencer.Influencer_PasswordActivity"
+            android:name="com.socialbeat.influencer.Influencer_Password"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:windowSoftInputMode="stateAlwaysHidden" >
@@ -173,17 +173,12 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.socialbeat.influencer.FoiActivity"
+            android:name="com.socialbeat.influencer.Influencer_FOI"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.socialbeat.influencer.SMProfile"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.socialbeat.influencer.DummyActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
@@ -208,7 +203,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.socialbeat.influencer.Influencer_NewUserProfileActivity"
+            android:name="com.socialbeat.influencer.Influencer_NewUserProfile"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
@@ -219,6 +214,11 @@
         </activity>
         <activity
             android:name="com.socialbeat.influencer.InstagramAuthentication"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.socialbeat.influencer.AnalyticsReportActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>

@@ -98,7 +98,7 @@ public class ViewConversation {
     public void setFile_location(String file_location) { this.file_location = file_location; }
 
 
-    public String gethumbnail_url() {
+    public String getThumbnail_url() {
         return thumbnail_url;
     }
 

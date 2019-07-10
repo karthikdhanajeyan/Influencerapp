@@ -80,7 +80,7 @@ public class SMDataReportActivity extends AppCompatActivity {
     private Calendar calendar;
     private int year, month, day;
     private static final int SELECT_PICTURE = 100;
-    private String imagepath=null;
+    private String imagepath=null,token;
     private String imagepathvalue=null;
     int currentapiVersion;
     private String filePath = null,egender=null,filePathengage = null,imagesize = null,filesize = null;
@@ -125,13 +125,6 @@ public class SMDataReportActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feed_item);
-
-//        ActionBar bar = getSupportActionBar();
-//        assert bar != null;
-//        //getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setTitle("Facebook Report");
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        currentapiVersion = Build.VERSION.SDK_INT;
 
         ucampid = findViewById(R.id.campid);//edtxt
         usocialmedia = findViewById(R.id.socialmediatype);//edtxt
@@ -181,12 +174,15 @@ public class SMDataReportActivity extends AppCompatActivity {
         cd = new ConnectionDetector(this);
         isInternetPresent = cd.isConnectingToInternet();
 
-        SharedPreferences prfs1 = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
-        cid = prfs1.getString("valueofcid", "");
+        SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
+        cid = prfs.getString("valueofcid", "");
         Log.v("Cid Value : ",cid);
+
+        SharedPreferences prfs1 = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+        token = prfs1.getString("token", "");
+
         if(cid.length()!=0){
             if (isInternetPresent) {
-                //MyApplication.getInstance().trackEvent("Facebook Social Media Adiing Screen", "OnClick", "Track MyProfileDummy Event");
                 //FacbookSMFunction();
             } else {
                 Snackbar snackbar = Snackbar
@@ -312,13 +308,14 @@ public class SMDataReportActivity extends AppCompatActivity {
                     ftodate = utodate.getText().toString();
                     Log.v("Start Date : ",ffromdate);
                     Log.v("End Date : ",ftodate);
-                    if ((TextUtils.isEmpty(ftodate))) {
-                        Log.v("date :","Empty");
-                    }else{
-                        Log.v("date Start Date :",ftodate);
+                    if ((TextUtils.isEmpty(ffromdate))) {
+                        Log.v("Start Date Result:","Empty");
                         flg = false;
                         ufromdate.setError("Start date range is missing");
                         return;
+                    }else{
+                        Log.v("Start Date Result:",ffromdate);
+                        Log.v("End Date Result:",ftodate);
                     }
 
                     //enddatevalidation
@@ -327,13 +324,14 @@ public class SMDataReportActivity extends AppCompatActivity {
                     Log.v("Start Date : ",ffromdate);
                     Log.v("End Date : ",ftodate);
 
-                    if ((TextUtils.isEmpty(ffromdate))) {
-                        Log.v("date :","Empty");
-                    }else{
-                        Log.v("date Start Date :",ffromdate);
+                    if ((TextUtils.isEmpty(ftodate))) {
+                        Log.v("End Date Result:","Empty");
                         flg = false;
-                            utodate.setError("End date range is missing");
-                            return;
+                        utodate.setError("End date range is missing");
+                        return;
+                    }else{
+                        Log.v("Start Date Result:",ffromdate);
+                        Log.v("End Date Result:",ftodate);
                     }
 
                     //reachtext&imagevalidation
@@ -433,20 +431,6 @@ public class SMDataReportActivity extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case android.R.id.home:
-//                // app icon in action bar clicked; goto parent activity.
-//                Intent intent = new Intent(this, SocialMediaReport.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                startActivity(intent);
-//                return true;
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -656,6 +640,7 @@ public class SMDataReportActivity extends AppCompatActivity {
             String REGISTER_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.newcamp_report_url);
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(REGISTER_URL);
+            httppost.addHeader("Authorization","Bearer " + token);
             try {
                 AndroidMultiPartEntity entity = new AndroidMultiPartEntity(new AndroidMultiPartEntity.ProgressListener() {
                     @Override
@@ -717,32 +702,54 @@ public class SMDataReportActivity extends AppCompatActivity {
         @Override
         public void onPostExecute(String success) {
             try {
-                JSONObject json = new JSONObject(success);
-                success = json.getString("success");
-                message = json.getString("message");
-                Log.v("success", success);
-                Log.v("message", message);
+
+                JSONObject responseObj = new JSONObject(success);
+                String responstatus = responseObj.getString("success").toString();
+                Log.d("response status : ", responstatus);
+                String responsemessage = responseObj.getString("message").toString();
+                Log.d("response message : ", responsemessage);
+
                 pdialog.dismiss();
 
-                if (success == "true") {
-//                    if (fileDesPath.isDirectory()) {
-//                        String[] children = fileDesPath.list();
-//                        for (int i = 0; i < children.length; i++) {
-//                            new File(fileDesPath, children[i]).delete();
-//                        }
-//                        fileDesPath.delete();
-//                    }
-                    //Toast.makeText(RegistrationActivityOne.this, message, Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(SMDataReportActivity.this, NewHomeActivity.class);
-                    Bundle bund = new Bundle();
-                    //Inserts a String value into the mapping of this Bundle
-                    bund.putString("CID",cid);
-                    //Add the bundle to the intent.
-                    intent.putExtras(bund);
-                    startActivity(intent);
-                    Toast.makeText(SMDataReportActivity.this, message, Toast.LENGTH_LONG).show();
-                } else if (success == "false") {
-                    Toast.makeText(SMDataReportActivity.this, message, Toast.LENGTH_LONG).show();
+                if (responseObj.getString("token") != null && !responseObj.getString("token").isEmpty()) {
+                    token = responseObj.getString("token");
+                    Log.v("Token value :", token);
+
+                    SharedPreferences preferences = SMDataReportActivity.this.getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editors = preferences.edit();
+                    editors.putString("token",token);
+                    editors.apply();
+                } else {
+                    token = "novalue";
+                    Log.v("Token value :",token);
+                }
+
+                if (responstatus.equalsIgnoreCase("true")) {
+                    Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("Go Back", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                    onBackPressed();
+                        }
+                    });
+                    snackbar.setActionTextColor(Color.RED);
+                    View sbView = snackbar.getView();
+                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
+
+                }else if (responstatus.equalsIgnoreCase("false")){
+                    Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(SMDataReportActivity.this, Conversations.class);
+                            startActivity(intent);
+                        }
+                    });
+                    snackbar.setActionTextColor(Color.RED);
+                    View sbView = snackbar.getView();
+                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

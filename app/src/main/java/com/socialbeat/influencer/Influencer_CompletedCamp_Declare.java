@@ -1,7 +1,7 @@
 package com.socialbeat.influencer;
 
 
-public class CompletedCamp {
+public class Influencer_CompletedCamp_Declare {
 
     private String campid;
     private String campImg;
@@ -16,7 +16,7 @@ public class CompletedCamp {
     private String date;
 
 
-    public CompletedCamp() {
+    public Influencer_CompletedCamp_Declare() {
 
         this.campid=campid;
         this.campImg=campImg;

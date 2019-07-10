@@ -109,8 +109,8 @@ public class Influencer_Livecamp_Details extends AppCompatActivity {
         SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
         SharedPreferences prfs1 = Influencer_Livecamp_Details.this.getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
-        //token = prfs1.getString("token", "");
-         token= "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzNzIwMTksIm5iZiI6MTU2MTM3MjAxOSwiZXhwIjoxNTYxOTc2ODE5LCJlbWFpbCI6ImthcnRoaWtkaGFuYWpleWFuQGdtYWlsLmNvbSIsImNpZCI6IjE2In0.GPxUs8C3880ZGA1J_gH9jxXVj4xBKCYyaIZcdj0M3W8";
+        token = prfs1.getString("token", "");
+        //token= "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzNzIwMTksIm5iZiI6MTU2MTM3MjAxOSwiZXhwIjoxNTYxOTc2ODE5LCJlbWFpbCI6ImthcnRoaWtkaGFuYWpleWFuQGdtYWlsLmNvbSIsImNpZCI6IjE2In0.GPxUs8C3880ZGA1J_gH9jxXVj4xBKCYyaIZcdj0M3W8";
         Log.v("Token Value : ",token);
 
         // Displaying all values on the screen
@@ -897,7 +897,6 @@ public class Influencer_Livecamp_Details extends AppCompatActivity {
                             }
                         });
                         alertDialog.show();
-                        finish();
 
                     } catch(JSONException e){
                         Log.e(TAG, "Error Value : " + e.getMessage());

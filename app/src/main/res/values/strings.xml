@@ -105,19 +105,7 @@
 
     <!-- API Configurations -->
     <string name="base_url">https://www.influencer.in/API/v6/</string>
-    <string name="base_url_v6">http://stage.influencer.in/API/v6/influencer/api_v6.php/</string>
-    <!--API with v6/-->
-
-    <string name="appliedlist_url">appliedList.php</string>
-    <string name="approved_camp_url">getApprovedCampaigns.php</string>
-    <string name="completed_camp_url">getCompletedCampaigns.php</string>
-    <string name="profile_url">profileview.php</string>//wanto close soon
-    <string name="device_details_url">androidRegistration1.php</string>
-    <!--<string name="live_campaign_url">getnewlivecampaign.php</string>-->
-    <!--<string name="past_campaign_url">getnewpastcampaign.php</string>-->
-    <!--<string name="notification_manager_url">notificationmanager.php</string>-->//notinuse
-    <!--<string name="apply_camp_with_quote_url">applyCampaign.php</string>-->
-    <!--<string name="apply_camp_without_quote_url">applyCampaignwithoutquote.php</string>-->
+    <string name="base_url_v6">https://www.influencer.in/API/v6/influencer/api_v6.php/</string>
 
     <!--API with v6/api_v6/-->
     <string name="check_camp_eligible_url">checkCampEligibility</string>
@@ -144,15 +132,22 @@
     <string name="sendotp_url">doSendOTP</string>
     <string name="register_newuser_url">registerNewUser</string>
     <string name="update_foi_url">updateFOI</string>
+    <string name="update_twitter_url">updateTwitterConnectionDetails</string>
 
     <string name="live_campaign_url">getLiveCampaigns</string>
     <string name="past_campaign_url">getPastCampaigns</string>
     <string name="applied_list_url">checkAppliedList</string>
     <string name="apply_camp_with_quote_url">applyCampaign</string>
     <string name="apply_camp_without_quote_url">applyCampaignWithoutQuote</string>
+    <string name="appliedlist_url">getAppliedCampaigns</string>
+    <string name="completed_camp_url">getCompletedCampaigns</string>
+    <string name="approved_camp_url">getApprovedCampaigns</string>
+    <string name="device_details_url">andriodRegistration</string>
+
+=
     <!--Twitter-->
-    <string name="com.twitter.sdk.android.CONSUMER_KEY" tools:ignore="ExtraTranslation">PZ5IoWlTiDQ7iItZWyTFSczuB</string>
-    <string name="com.twitter.sdk.android.CONSUMER_SECRET" tools:ignore="ExtraTranslation">fbjKSoudqYUJ2ZG2ENYq6fR94YtxTPAt2gzfdTB48Eagj4hARs</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY" tools:ignore="ExtraTranslation">b5itKAWxS0JN5TU0wDuDnUJlb</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET" tools:ignore="ExtraTranslation">uywxGGeLAmolo4VfQw5YTczzzE9r5TZhn11HSDJeaDW1ydU8pf</string>
     <string name="custom_log_in_with_twitter">Custom Log in with Twitter</string>
     <string name="get_profile_image">Fetch Profile Image</string>
 

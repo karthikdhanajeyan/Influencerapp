@@ -43,6 +43,7 @@ import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -64,7 +65,7 @@ public class Conversations extends AppCompatActivity {
     Summernote summernote;
     Button showtext,show_file,show_button;
     TextView contentstatus,contentshared,view_conversation,filename,campaignname;
-    String userChoosenTask,success,message,cid,fcid,campid,fcampid,campname,fsocialmedia,feditor;
+    String userChoosenTask,success,message,cid,fcid,campid,fcampid,campname,fsocialmedia,feditor,token;
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     ImageView ivImage;
     long totalSize = 0;
@@ -131,14 +132,13 @@ public class Conversations extends AppCompatActivity {
 
         summernote.setRequestCodeforFilepicker(5);
 
-//        SharedPreferences prefernce = getSharedPreferences("COMPLETE_CAMP", Context.MODE_PRIVATE);
-//        editor = prefernce.edit();
-//        editor.clear();
-//        editor.apply();
-
         SharedPreferences prefernce2 = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prefernce2.getString("valueofcid", "");
         Log.v("Cid Value : ",cid);
+
+
+        SharedPreferences prfs1 = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+        token = prfs1.getString("token", "");
 
 
         if(cid.length()!=0){
@@ -187,13 +187,6 @@ public class Conversations extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//                SharedPreferences preferences1 = getSharedPreferences("CONVERSATION_CAMP_CONTENT", Context.MODE_PRIVATE);
-//                SharedPreferences.Editor editor1 = preferences1.edit();
-//                editor1.putString("cid",cid);
-//                editor1.putString("campid",campid);
-//                System.out.println("value of conversation campid : "+campid);
-//                editor1.apply();
-
                 Fragment fragment = new ViewConversationFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("campid", campid);
@@ -205,8 +198,6 @@ public class Conversations extends AppCompatActivity {
                 fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
-
-
             }
         });
 
@@ -251,10 +242,6 @@ public class Conversations extends AppCompatActivity {
 
     //method to show file chooser
     private void showFileChooser() {
-//        Intent intent = new Intent();
-//        intent.setType("application/pdf");
-//        intent.setAction(Intent.ACTION_GET_CONTENT);
-//        startActivityForResult(Intent.createChooser(intent, "Select Pdf"), PICK_PDF_REQUEST);
 
         String[] mimeTypes =
                 {"application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .doc & .docx
@@ -290,17 +277,11 @@ public class Conversations extends AppCompatActivity {
         if (requestCode == PICK_PDF_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
             Uri selectedImageUri = data.getData();
-//            imagepath = getPath(selectedImageUri);
-//            Bitmap bitmap = BitmapFactory.decodeFile(imagepath);
-//            ivImage.setImageBitmap(bitmap);
-            //filePath = selectedImageUri.toString();
             filePath =FilePath.getPath(this, selectedImageUri);
             filename.setText("Uploading file path:" + filePath);
         }
     }
 
-//    private String getPath(Uri selectedImageUri) {
-//    }
 
     class UploadFileToServer extends AsyncTask<Void, Integer, String> {
         @Override
@@ -325,6 +306,7 @@ public class Conversations extends AppCompatActivity {
             String REGISTER_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.new_conversation_sample_url);
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(REGISTER_URL);
+            httppost.addHeader("Authorization","Bearer " + token);
             try {
                 AndroidMultiPartEntity entity = new AndroidMultiPartEntity(new AndroidMultiPartEntity.ProgressListener() {
                     @Override
@@ -346,9 +328,6 @@ public class Conversations extends AppCompatActivity {
                 entity.addPart(KEY_CID, new StringBody(cid));
                 entity.addPart(KEY_CAMPID, new StringBody(fcampid));
                 entity.addPart(KEY_EDITOR, new StringBody(feditor));
-                
-
-
                 //totalSize = entity.getContentLength();
                 httppost.setEntity(entity);
                 // Making server call
@@ -373,33 +352,55 @@ public class Conversations extends AppCompatActivity {
         @Override
         public void onPostExecute(String success) {
             try {
-                JSONObject json = new JSONObject(success);
-                success = json.getString("success");
-                message = json.getString("message");
-                Log.v("success", success);
-                Log.v("message", message);
+                JSONObject responseObj = new JSONObject(success);
+                String responstatus = responseObj.getString("success").toString();
+                Log.d("response status : ", responstatus);
+                String responsemessage = responseObj.getString("message").toString();
+                Log.d("response message : ", responsemessage);
+
                 pdialog.dismiss();
 
-                if (success == "true") {
-//                    if (fileDesPath.isDirectory()) {
-//                        String[] children = fileDesPath.list();
-//                        for (int i = 0; i < children.length; i++) {
-//                            new File(fileDesPath, children[i]).delete();
-//                        }
-//                        fileDesPath.delete();
-//                    }
-                    //Toast.makeText(RegistrationActivityOne.this, message, Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(Conversations.this, NewHomeActivity.class);
-                    Bundle bund = new Bundle();
-                    //Inserts a String value into the mapping of this Bundle
-                    bund.putString("CID",cid);
-                    //Add the bundle to the intent.
-                    intent.putExtras(bund);
-                    startActivity(intent);
-                    Toast.makeText(Conversations.this, message, Toast.LENGTH_LONG).show();
-                } else if (success == "false") {
-                    Toast.makeText(Conversations.this, message, Toast.LENGTH_LONG).show();
+                if (responseObj.getString("token") != null && !responseObj.getString("token").isEmpty()) {
+                    token = responseObj.getString("token");
+                    Log.v("Token value :", token);
+
+                    SharedPreferences preferences = Conversations.this.getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editors = preferences.edit();
+                    editors.putString("token",token);
+                    editors.apply();
+                } else {
+                    token = "novalue";
+                    Log.v("Token value :",token);
                 }
+
+                if (responstatus.equalsIgnoreCase("true")) {
+                    Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("Go Back", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            onBackPressed();
+                        }
+                    });
+                    snackbar.setActionTextColor(Color.RED);
+                    View sbView = snackbar.getView();
+                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
+
+                }else if (responstatus.equalsIgnoreCase("false")){
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(Conversations.this, Conversations.class);
+                                startActivity(intent);
+                            }
+                        });
+                        snackbar.setActionTextColor(Color.RED);
+                        View sbView = snackbar.getView();
+                        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.YELLOW);
+                        snackbar.show();
+                }
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }

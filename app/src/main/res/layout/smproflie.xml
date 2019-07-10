@@ -21,7 +21,7 @@
         android:layout_marginBottom="5dp"
         android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="Connected Socialmedia List"
+        android:text="List of Connected Socialmedia"
         android:layout_below="@+id/analyticsvalues"
         android:layout_centerHorizontal="true"
         android:textColor="@color/transperent"

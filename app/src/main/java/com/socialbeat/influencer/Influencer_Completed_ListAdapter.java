@@ -3,8 +3,6 @@ package com.socialbeat.influencer;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AlertDialog;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -13,13 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
@@ -27,10 +21,10 @@ import com.android.volley.toolbox.NetworkImageView;
 import java.util.HashMap;
 import java.util.List;
 
-public class CompCustomListAdapter extends BaseAdapter {
+public class Influencer_Completed_ListAdapter extends BaseAdapter {
 	private Activity activity;
 	private LayoutInflater inflater;
-	private List<CompletedCamp> completedCampItem;
+	private List<Influencer_CompletedCamp_Declare> completedCampItem;
 	private ImageLoader imageLoader = MyApplication.getInstance().getImageLoader();
 	private HashMap<String,String> myBrief = new HashMap<String,String>();
 	private HashMap<String,String> paymentStatus = new HashMap<String,String>();
@@ -38,7 +32,7 @@ public class CompCustomListAdapter extends BaseAdapter {
     ImageView cancel;
     TextView campbriefvalue,paymentstatus1,transactionstatus1,transactionid1,transactionamount1,transactiondate1;
 
-	CompCustomListAdapter(Activity activity, List<CompletedCamp> completedCampItem) {
+	Influencer_Completed_ListAdapter(Activity activity, List<Influencer_CompletedCamp_Declare> completedCampItem) {
 		this.activity = activity;
 		this.completedCampItem = completedCampItem;
 	}
@@ -66,7 +60,7 @@ public class CompCustomListAdapter extends BaseAdapter {
 
 		if (convertView == null) {
 
-			convertView = inflater.inflate(R.layout.completedcamplist, null);
+			convertView = inflater.inflate(R.layout.influencer_completedcamp_list, null);
 		}
 //
 		if (imageLoader == null)
@@ -86,7 +80,7 @@ public class CompCustomListAdapter extends BaseAdapter {
 		LinearLayout camp_brief = convertView.findViewById(R.id.camp_brief);
 		LinearLayout payment_details = convertView.findViewById(R.id.payment_fulldetails);
 //		// getting campaign data for the row
-		CompletedCamp cc = completedCampItem.get(position);
+		Influencer_CompletedCamp_Declare cc = completedCampItem.get(position);
 //		// thumbnail image
 		campImg.setImageUrl(cc.getCampImg(), imageLoader);
 //		//normal values

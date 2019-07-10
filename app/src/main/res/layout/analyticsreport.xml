@@ -12,22 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!--<TextView-->
-            <!--android:id="@+id/campname"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:layout_marginTop="5dp"-->
-            <!--android:layout_marginBottom="5dp"-->
-            <!--android:fontFamily="sans-serif"-->
-            <!--android:gravity="center"-->
-            <!--android:text="Campaign Name"-->
-            <!--android:layout_below="@+id/analyticsvalues"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:textColor="@color/orange"-->
-            <!--android:textSize="20sp"-->
-            <!--android:textStyle="bold" />-->
-
         <ListView
             android:id="@+id/analyticsvalues"
             android:layout_width="fill_parent"

@@ -1,6 +1,7 @@
 package com.socialbeat.influencer;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -62,14 +63,19 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.apache.http.entity.mime.content.FileBody;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -145,7 +151,6 @@ public class Influencer_MyProfile extends AppCompatActivity {
 
         SharedPreferences prfs1 = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
         token = prfs1.getString("token", "");
-        //token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjE1NDM2NjcsIm5iZiI6MTU2MTU0MzY2NywiZXhwIjoxNTYyMTQ4NDY3LCJlbWFpbCI6ImthcnRoaWtkaGFuYWpleWFuQGdtYWlsLmNvbSIsImNpZCI6IjE2In0.aIbol8nG6OLe9GpYJH65yDjdPAK-zBV0ibp33DW1gTA";
 
         pname = findViewById(R.id.nme_profile);
         pemail = findViewById(R.id.email_profile);
@@ -161,11 +166,9 @@ public class Influencer_MyProfile extends AppCompatActivity {
         StateName=new ArrayList<>();
         CityName=new ArrayList<>();
 
-
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
         cd = new ConnectionDetector(this);
         isInternetPresent = cd.isConnectingToInternet();
-
 
         if(cid.length()!=0){
             if (isInternetPresent) {
@@ -304,11 +307,11 @@ public class Influencer_MyProfile extends AppCompatActivity {
 
                     if (a == 1) {
                         Log.v("Image", "YES");
-                        //new UploadFileToServerImage().execute();
+                        new UploadFileToServerImage().execute();
                     } else {
                         Log.v("Image", "NO");
-                        //new UploadFileToServer().execute();
                         uploadUserDetails();
+
                     }
                 } else {
                     Snackbar snackbar = Snackbar
@@ -425,6 +428,8 @@ public class Influencer_MyProfile extends AppCompatActivity {
                     params.put(KEY_GENDER, egender);
                     params.put(KEY_STATE, estate);
                     params.put(KEY_CITY, ecity);
+                    //params.put(KEY_PROFILE_IMAGE, filePath);
+
                     return params;
                 }
             };
@@ -500,7 +505,7 @@ public class Influencer_MyProfile extends AppCompatActivity {
                                 textView.setTextColor(Color.YELLOW);
                                 snackbar.show();
                             }
-                          //  state_spinner.setAdapter(new ArrayAdapter<String>(Influencer_MyProfile.this, android.R.layout.simple_spinner_dropdown_item, StateName));
+                            //  state_spinner.setAdapter(new ArrayAdapter<String>(Influencer_MyProfile.this, android.R.layout.simple_spinner_dropdown_item, StateName));
                         }
 
                     } catch(JSONException e){
@@ -914,7 +919,7 @@ public class Influencer_MyProfile extends AppCompatActivity {
                                 statenme = jsonObject1.getString("state");
                                 CityName.add(cityname);
                             }
-                        city_spinner.setAdapter(new ArrayAdapter<String>(Influencer_MyProfile.this, android.R.layout.simple_spinner_dropdown_item, CityName));
+                            city_spinner.setAdapter(new ArrayAdapter<String>(Influencer_MyProfile.this, android.R.layout.simple_spinner_dropdown_item, CityName));
                         }else if (responstatus.equalsIgnoreCase("false")){
                             if(responsemessage.equalsIgnoreCase("Expired token")){
 
@@ -988,7 +993,7 @@ public class Influencer_MyProfile extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<String, String>();
-                     Log.v("StateName : ",statefinal);
+                    Log.v("StateName : ",statefinal);
                     params.put("state", statefinal);
                     return params;
                 }
@@ -1088,18 +1093,17 @@ public class Influencer_MyProfile extends AppCompatActivity {
                         Log.v("current Version", String.valueOf(currentapiVersion));
                         Log.v("Bulid Version", String.valueOf(Build.VERSION_CODES.N));
 
-                    if (currentapiVersion >= Build.VERSION_CODES.N) {
-                        // Do something for lollipop and above versions
-                        Log.v("current Version", String.valueOf(currentapiVersion));
-                        Log.v("Bulid Version", String.valueOf(Build.VERSION_CODES.N));
-                        Log.v("OS Version", "N+");
-                        startCamera();
-                    } else {
-                        Log.v("OS Version", "N-");
-                        captureImage();
+                        if (currentapiVersion >= Build.VERSION_CODES.N) {
+                            // Do something for lollipop and above versions
+                            Log.v("current Version", String.valueOf(currentapiVersion));
+                            Log.v("Bulid Version", String.valueOf(Build.VERSION_CODES.N));
+                            Log.v("OS Version", "N+");
+                            startCamera();
+                        } else {
+                            Log.v("OS Version", "N-");
+                            captureImage();
+                        }
                     }
-
-                }
                 } else if (items[item].equals("Cancel")) {
                     dialog.dismiss();
                 }
@@ -1223,45 +1227,45 @@ public class Influencer_MyProfile extends AppCompatActivity {
                 });
             }
         }else if (requestCode == CAMERA_CAPTURE_IMAGE_REQUEST_CODE) {
-                if (resultCode == RESULT_OK) {
-                    filePath = fileUri.getPath();
-                    if (filePath != null) {
-                        boolean isImage = true;
-                        BitmapFactory.Options options = new BitmapFactory.Options();
-                        options.inSampleSize = 8;
-                        Bitmap pictureBitmap = null;
-                        try {
-                            String path = Environment.getExternalStorageDirectory().toString();
-                            OutputStream fOut = null;
-                            path += "/Influencer/";
-                            fileDesPath = new File(path);
-                            if (!fileDesPath.isDirectory()) {
-                                fileDesPath.mkdir();
-                            }
-                            File file = new File(path, "profileImage" + ".jpg"); // the File to save , append increasing numeric counter to prevent files from getting overwritten.
-                            fOut = new FileOutputStream(file);
-                            pictureBitmap = BitmapFactory.decodeFile(filePath, options);
-                            pictureBitmap.compress(Bitmap.CompressFormat.JPEG, 85, fOut); // saving the Bitmap to a file compressed as a JPEG with 85% compression rate
-                            fOut.flush(); // Not really required
-                            fOut.close(); // do not forget to close the stream
-                            filePath = file.getAbsolutePath();
-                            a = 1;
-                        } catch (Exception ex) {
-                            Log.v("Exception in file get", ex.toString());
+            if (resultCode == RESULT_OK) {
+                filePath = fileUri.getPath();
+                if (filePath != null) {
+                    boolean isImage = true;
+                    BitmapFactory.Options options = new BitmapFactory.Options();
+                    options.inSampleSize = 8;
+                    Bitmap pictureBitmap = null;
+                    try {
+                        String path = Environment.getExternalStorageDirectory().toString();
+                        OutputStream fOut = null;
+                        path += "/Influencer/";
+                        fileDesPath = new File(path);
+                        if (!fileDesPath.isDirectory()) {
+                            fileDesPath.mkdir();
                         }
-                        puserimage.setImageBitmap(pictureBitmap);
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Sorry, File path is missing!", Toast.LENGTH_LONG).show();
+                        File file = new File(path, "profileImage" + ".jpg"); // the File to save , append increasing numeric counter to prevent files from getting overwritten.
+                        fOut = new FileOutputStream(file);
+                        pictureBitmap = BitmapFactory.decodeFile(filePath, options);
+                        pictureBitmap.compress(Bitmap.CompressFormat.JPEG, 85, fOut); // saving the Bitmap to a file compressed as a JPEG with 85% compression rate
+                        fOut.flush(); // Not really required
+                        fOut.close(); // do not forget to close the stream
+                        filePath = file.getAbsolutePath();
+                        a = 1;
+                    } catch (Exception ex) {
+                        Log.v("Exception in file get", ex.toString());
                     }
-                } else if (resultCode == RESULT_CANCELED) {
-                    // user cancelled Image capture
-                    Toast.makeText(getApplicationContext(), "User cancelled image capture", Toast.LENGTH_SHORT).show();
-
+                    puserimage.setImageBitmap(pictureBitmap);
                 } else {
-                    // failed to capture image
-                    Toast.makeText(getApplicationContext(), "Sorry! Failed to capture image", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Sorry, File path is missing!", Toast.LENGTH_LONG).show();
                 }
+            } else if (resultCode == RESULT_CANCELED) {
+                // user cancelled Image capture
+                Toast.makeText(getApplicationContext(), "User cancelled image capture", Toast.LENGTH_SHORT).show();
+
+            } else {
+                // failed to capture image
+                Toast.makeText(getApplicationContext(), "Sorry! Failed to capture image", Toast.LENGTH_SHORT).show();
             }
+        }
     }
     /**
      * Creating file uri to store image/video
@@ -1294,8 +1298,16 @@ public class Influencer_MyProfile extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Myprofile Screen");
+    }
 
-    class UploadFileToServer extends AsyncTask<Void, Integer, String> {
+
+    @SuppressLint("StaticFieldLeak")
+    class UploadFileToServerImage extends AsyncTask<Void, Integer, String> {
         @Override
         protected void onPreExecute() {
             // setting progress bar to zero
@@ -1316,8 +1328,11 @@ public class Influencer_MyProfile extends AppCompatActivity {
             String responseString = null;
             //String REGISTER_URL = "https://www.influencer.in/API/v6/api_v6.php/updateUserDetails";
             String REGISTER_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.update_userdetails_url);
+
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(REGISTER_URL);
+            httppost.addHeader("Authorization","Bearer " + token);
+
             try {
                 AndroidMultiPartEntity entity = new AndroidMultiPartEntity(new AndroidMultiPartEntity.ProgressListener() {
                     @Override
@@ -1326,12 +1341,18 @@ public class Influencer_MyProfile extends AppCompatActivity {
                     }
                 });
 
+
+                File sourceFile = new File(filePath);
+                System.out.println("sourceFile:" + sourceFile );
+                // Adding file data to http body
+                entity.addPart(KEY_PROFILE_IMAGE, new FileBody(sourceFile));
+                // Extra parameters if you want to pass to server
+
                 entity.addPart(KEY_CID, new StringBody(cid));
                 entity.addPart(KEY_USERNAME, new StringBody(ename));
                 entity.addPart(KEY_GENDER, new StringBody(egender));
                 entity.addPart(KEY_STATE, new StringBody(estate));
                 entity.addPart(KEY_CITY, new StringBody(ecity));
-
 
                 totalSize = entity.getContentLength();
                 httppost.setEntity(entity);
@@ -1354,144 +1375,62 @@ public class Influencer_MyProfile extends AppCompatActivity {
             return responseString;
         }
 
+
         @Override
         public void onPostExecute(String success) {
             try {
-                JSONObject json = new JSONObject(success);
-                success = json.getString("success");
-                message = json.getString("message");
-                Log.v("success", success);
-                Log.v("message", message);
+                JSONObject responseObj = new JSONObject(success);
+                String responstatus = responseObj.getString("success").toString();
+                Log.d("response status : ", responstatus);
+                String responsemessage = responseObj.getString("message").toString();
+                Log.d("response message : ", responsemessage);
+
                 pdialog.dismiss();
 
-                if (success == "true") {
+                if (responseObj.getString("token") != null && !responseObj.getString("token").isEmpty()) {
+                    token = responseObj.getString("token");
+                    Log.v("Token value :", token);
 
-                    Toast.makeText(Influencer_MyProfile.this, message, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Influencer_MyProfile.this, Influencer_UserSettings.class);
-                    Bundle bund = new Bundle();
-                    //Inserts a String value into the mapping of this Bundle
-                    bund.putString("CID",cid);
-                    //Add the bundle to the intent.
-                    intent.putExtras(bund);
-                    startActivity(intent);
-                    Toast.makeText(Influencer_MyProfile.this, message, Toast.LENGTH_SHORT).show();
-                } else if (success == "false") {
-                    Toast.makeText(Influencer_MyProfile.this, message, Toast.LENGTH_SHORT).show();
+                    SharedPreferences preferences = Influencer_MyProfile.this.getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editors = preferences.edit();
+                    editors.putString("token",token);
+                    editors.apply();
+                } else {
+                    token = "novalue";
+                    Log.v("Token value :",token);
+                }
+
+                if (responstatus.equalsIgnoreCase("true")) {
+                    Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            onBackPressed();
+                        }
+                    });
+                    snackbar.setActionTextColor(Color.RED);
+                    View sbView = snackbar.getView();
+                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
+
+                }else if (responstatus.equalsIgnoreCase("false")){
+                    Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(Influencer_MyProfile.this, Influencer_MyProfile.class);
+                            startActivity(intent);
+                        }
+                    });
+                    snackbar.setActionTextColor(Color.RED);
+                    View sbView = snackbar.getView();
+                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
     }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        // Tracking the screen view
-        MyApplication.getInstance().trackScreenView("Myprofile Screen");
-    }
-
-
-//    class UploadFileToServerImage extends AsyncTask<Void, Integer, String> {
-//        @Override
-//        protected void onPreExecute() {
-//            // setting progress bar to zero
-//            super.onPreExecute();
-//            pdialog = new ProgressDialog(Influencer_MyProfile.this);
-//            pdialog.setMessage("Loading...");
-//            pdialog.setCancelable(false);
-//            pdialog.show();
-//        }
-//
-//        @Override
-//        protected String doInBackground(Void... params) {
-//            return uploadFile();
-//        }
-//
-//        @SuppressWarnings("deprecation")
-//        private String uploadFile() {
-//            String responseString = null;
-//            //String REGISTER_URL = "https://www.influencer.in/API/v6/api_v6.php/updateUserDetails";
-//            String REGISTER_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.update_userdetails_url);
-//            HttpClient httpclient = new DefaultHttpClient();
-//            HttpPost httppost = new HttpPost(REGISTER_URL);
-//            try {
-//                AndroidMultiPartEntity entity = new AndroidMultiPartEntity(new AndroidMultiPartEntity.ProgressListener() {
-//                    @Override
-//                    public void transferred(long num) {
-//                        publishProgress((int) ((num / (float) totalSize) * 100));
-//                    }
-//                });
-//
-//
-//                File sourceFile = new File(filePath);
-//                System.out.println("sourceFile:" + sourceFile );
-//                // Adding file data to http body
-//                entity.addPart(KEY_PROFILE_IMAGE, new FileBody(sourceFile));
-//                // Extra parameters if you want to pass to server
-//
-//                entity.addPart(KEY_CID, new StringBody(cid));
-//                entity.addPart(KEY_USERNAME, new StringBody(ename));
-//                entity.addPart(KEY_GENDER, new StringBody(egender));
-//                entity.addPart(KEY_STATE, new StringBody(estate));
-//                entity.addPart(KEY_CITY, new StringBody(ecity));
-//
-//                totalSize = entity.getContentLength();
-//                httppost.setEntity(entity);
-//                // Making server call
-//                HttpResponse response = httpclient.execute(httppost);
-//                HttpEntity r_entity = response.getEntity();
-//                int statusCode = response.getStatusLine().getStatusCode();
-//                if (statusCode == 200) {
-//                    // Server response
-//                    responseString = EntityUtils.toString(r_entity);
-//                } else {
-//                    responseString = "Error occurred! Http Status Code: " + statusCode;
-//                }
-//            } catch (ClientProtocolException e) {
-//                responseString = e.toString();
-//
-//            } catch (IOException e) {
-//                responseString = e.toString();
-//            }
-//            return responseString;
-//        }
-//
-//        @Override
-//        public void onPostExecute(String success) {
-//            try {
-//                JSONObject json = new JSONObject(success);
-//                success = json.getString("success");
-//                message = json.getString("message");
-//                Log.v("success", success);
-//                Log.v("message", message);
-////                Log.v("userimage", userimage);
-//                pdialog.dismiss();
-//
-//                if (success == "true") {
-//                    if (fileDesPath.isDirectory()) {
-//                        String[] children = fileDesPath.list();
-//                        for (int i = 0; i < children.length; i++) {
-//                            new File(fileDesPath, children[i]).delete();
-//                        }
-//                        fileDesPath.delete();
-//                    }
-//                    Toast.makeText(Influencer_MyProfile.this, message, Toast.LENGTH_SHORT).show();
-//                    Intent intent = new Intent(Influencer_MyProfile.this, Influencer_UserSettings.class);
-//                    Bundle bund = new Bundle();
-//                    //Inserts a String value into the mapping of this Bundle
-//                    bund.putString("CID",cid);
-//                    //Add the bundle to the intent.
-//                    intent.putExtras(bund);
-//                    startActivity(intent);
-//                    Toast.makeText(Influencer_MyProfile.this, message, Toast.LENGTH_SHORT).show();
-//                } else if (success == "false") {
-//                    Toast.makeText(Influencer_MyProfile.this, message, Toast.LENGTH_SHORT).show();
-//                }
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
 
 }

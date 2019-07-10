@@ -171,7 +171,7 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/rounded_corner_button"
+                android:background="@color/orange"
                 android:text="Send"
                 android:ems="8"
                 android:textAlignment="center"
@@ -192,7 +192,7 @@
                 android:layout_centerHorizontal="true"
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/orange"
+                android:textColor="@color/actionbarcolour"
                 android:textStyle="bold"
                 android:textSize="25sp" />
 

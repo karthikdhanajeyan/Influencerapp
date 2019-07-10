@@ -17,13 +17,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
+import org.apache.http.HttpStatus;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,7 +45,7 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
     String cid,campid,campname,full_picture,caption,message,is_published,permalink_url,status_type,type,id,postid;
     Boolean isInternetPresent = false;
     long totalSize = 0;
-    String fid,fname,femail,fimage,fuatoken,pname,pid,fpatoken,pfcount,plink,pnlc,ptac,fpimage;
+    String fid,fname,femail,fimage,fuatoken,pname,pid,fpatoken,pfcount,plink,pnlc,ptac,fpimage,token;
 
 
     // Connection detector class
@@ -91,6 +94,9 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
 
         SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
+
+        SharedPreferences prfs1 = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+        token = prfs1.getString("token", "");
 
         SharedPreferences prefernce1 = getSharedPreferences("SM_FB_VALUE", Context.MODE_PRIVATE);
         campid = prefernce1.getString("campid", "");
@@ -179,96 +185,129 @@ public class FacebookPageSumbitActivity extends AppCompatActivity {
     }
 
     private void FacebookPage() {
+            if (isInternetPresent) {
+                pDialog = new ProgressDialog(FacebookPageSumbitActivity.this);
+                pDialog.setMessage("Loading...");
+                pDialog.setCancelable(false);
+                pDialog.show();
+                String UPLOAD_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.fbconnection_details_url);
+                StringRequest uploadurl = new StringRequest(Request.Method.POST,UPLOAD_URL , new Response.Listener<String>() {
 
-        pDialog = new ProgressDialog(FacebookPageSumbitActivity.this);
-        // Showing progress dialog before making http request
-        pDialog.setMessage("Loading...");
-        pDialog.setCancelable(false);
-        pDialog.show();
-        //url = "http://stage.influencer.in/API/v6/api_v6.php/updateFBConnectionDetails";
-        url = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.fbconnection_details_url);
-        System.out.println(url);
-        StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.d(TAG, response);
+                        hidePDialog();
+                        try {
+                            JSONObject responseObj = new JSONObject(response);
 
-            @Override
-            public void onResponse(String response) {
-                Log.d(TAG, response);
-                hidePDialog();
-                try {
-                    JSONObject responseObj = new JSONObject(response);
-                    Log.v("Response : ",response);
+                            String responstatus = responseObj.getString("success").toString();
+                            Log.d("response status : ", responstatus);
+                            String responsemessage = responseObj.getString("message").toString();
+                            Log.d("response message : ", responsemessage);
 
-                    if (response != null) {
+                            if(responstatus.equalsIgnoreCase("true")){
+                                Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent = new Intent(FacebookPageSumbitActivity.this, SocialMediaReport.class);
+                                        startActivity(intent);
+                                    }
+                                });
+                                snackbar.setActionTextColor(Color.RED);
+                                View sbView = snackbar.getView();
+                                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                                textView.setTextColor(Color.YELLOW);
+                                snackbar.show();
+                            }
 
-                        String responstatus = responseObj.getString("success");
-                        Log.d("response status : ", responstatus);
-                        String responsemessage = responseObj.getString("message");
-                        Log.d("response message : ", responsemessage);
-
-                        if (responstatus == "true") {
-                            Toast.makeText(getApplicationContext(), responsemessage, Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(FacebookPageSumbitActivity.this, SMProfile.class);
-                            startActivity(intent);
-                        }else if (responstatus == "false") {
-                            Toast.makeText(getApplicationContext(), responsemessage, Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(FacebookPageSumbitActivity.this, SocialMediaAuthentication.class);
-                            startActivity(intent);
+                        } catch(JSONException e){
+                            Log.e(TAG, "Error Value : " + e.getMessage());
+                            Snackbar snackbar = Snackbar.make(coordinatorLayout, "No data from server.Please try again later.", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(FacebookPageSumbitActivity.this, FacebookAuthentication.class);
+                                    startActivity(intent);
+                                }
+                            });
+                            snackbar.setActionTextColor(Color.RED);
+                            View sbView = snackbar.getView();
+                            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                            textView.setTextColor(Color.YELLOW);
+                            snackbar.show();
                         }
                     }
+                }, new Response.ErrorListener() {
 
-                } catch (JSONException e) {
-                    //Toast.makeText(getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
-                }
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e(TAG, "Error : " + error.getMessage());
+                        NetworkResponse networkResponse = error.networkResponse;
+                        if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {
+                            // HTTP Status Code: 401 Unauthorized
+                            Log.e(TAG, "Failure Error: " + " HTTP Status Code: 401 Unauthorized");
+                            hidePDialog();
+                            Snackbar snackbar = Snackbar.make(coordinatorLayout, "Session Expired.", Snackbar.LENGTH_INDEFINITE).setAction("Login", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(FacebookPageSumbitActivity.this, Influencer_Login.class);
+                                    startActivity(intent);
+                                }
+                            });
+                            snackbar.setActionTextColor(Color.RED);
+                            View sbView = snackbar.getView();
+                            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                            textView.setTextColor(Color.YELLOW);
+                            snackbar.show();
+                        }
+                    }
+                }) {
+                    @Override
+                    public Map<String, String> getHeaders() throws AuthFailureError {
+                        Map<String, String> headers = new HashMap<>();
+                        Log.v("Token Value : ",token);
+                        headers.put("Authorization", "Bearer " + token);
+                        return headers;
+                    }
+                    @Override
+                    protected Map<String, String> getParams() {
+                        Map<String, String> params = new HashMap<String, String>();
+                        params.put(TAG_CID, cid);
+                        params.put(TAG_FID, fid);
+                        params.put(TAG_FNAME, fname);
+                        params.put(TAG_FEMAIL, femail);
+                        params.put(TAG_FIMAGE, fimage);
+                        params.put(TAG_FUATOKEN, fuatoken);
+                        params.put(TAG_PID, pid);
+                        params.put(TAG_PNAME, pname);
+                        params.put(TAG_PFCOUNT, pfcount);
+                        params.put(TAG_PLINK, plink);
+                        params.put(TAG_FPATOKEN, fpatoken);
+                        params.put(TAG_PNLC, pnlc);
+                        params.put(TAG_PTAC, ptac);
+                        params.put(TAG_FPIMAGE, fpimage);
+                        return params;
+                    }
 
+                };
+
+                int socketTimeout = 60000;
+                RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+                uploadurl.setRetryPolicy(policy);
+                MyApplication.getInstance().addToRequestQueue(uploadurl);
+
+            } else {
+                Snackbar snackbar = Snackbar.make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE).setAction("SETTINGS", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) { startActivity(new Intent(Settings.ACTION_SETTINGS)); }
+                });
+                snackbar.setActionTextColor(Color.RED);
+                View sbView = snackbar.getView();
+                TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                textView.setTextColor(Color.YELLOW);
+                snackbar.show();
             }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e(TAG, "Error : " + error.getMessage());
-                Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        }) {
-
-            /**
-             * Passing user parameters to our server
-             * @return
-             */
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<String, String>();
-
-                params.put(TAG_CID, cid);
-                params.put(TAG_FID, fid);
-                params.put(TAG_FNAME, fname);
-                params.put(TAG_FEMAIL, femail);
-                params.put(TAG_FIMAGE, fimage);
-                params.put(TAG_FUATOKEN, fuatoken);
-                params.put(TAG_PID, pid);
-                params.put(TAG_PNAME, pname);
-                params.put(TAG_PFCOUNT, pfcount);
-                params.put(TAG_PLINK, plink);
-                params.put(TAG_FPATOKEN, fpatoken);
-                params.put(TAG_PNLC, pnlc);
-                params.put(TAG_PTAC, ptac);
-                params.put(TAG_FPIMAGE, fpimage);
-
-                return params;
-            }
-        };
-
-        int socketTimeout = 60000;
-        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
-                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-        strReq.setRetryPolicy(policy);
-
-        // Adding request to request queue
-        MyApplication.getInstance().addToRequestQueue(strReq);
-        /**
-         * Updating parsed JSON data into ListView
-         * */
-
     }
 
     @Override

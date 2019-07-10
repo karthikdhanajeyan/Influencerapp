@@ -24,6 +24,21 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="No Campaigns."
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/transperent"
+                android:gravity="center"
+                android:id="@+id/caption"
+                android:layout_marginTop="100dp"
+                android:layout_alignParentTop="true"
+                android:textSize="20sp"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true" />
+
         </android.support.v4.widget.SwipeRefreshLayout>
 
     </RelativeLayout>

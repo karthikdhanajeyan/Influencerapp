@@ -1,19 +1,12 @@
 package com.socialbeat.influencer;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -26,17 +19,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
-import java.io.InputStream;
+
 import java.util.HashMap;
 import java.util.List;
 
-public class ApproveCustomListAdapter extends BaseAdapter {
+public class Influencer_Approved_ListAdapter extends BaseAdapter {
 	private Activity activity;
 	private LayoutInflater inflater;
-	private List<ApprovedCamp> approvedCampItem;
+	private List<Influencer_ApprovedCamp_Declare> approvedCampItem;
 	private ImageLoader imageLoader = MyApplication.getInstance().getImageLoader();
 	private HashMap<String,String> myCampid = new HashMap<String,String>();
 	private HashMap<String,String> myBrief = new HashMap<String,String>();
@@ -46,7 +39,7 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 	TextView campbriefvalue;
 	FragmentManager fragmentManager;
 
-	ApproveCustomListAdapter(Activity activity, List<ApprovedCamp> approvedCampItem) {
+	Influencer_Approved_ListAdapter(Activity activity, List<Influencer_ApprovedCamp_Declare> approvedCampItem) {
 		this.activity = activity;
 		this.approvedCampItem = approvedCampItem;
 	}
@@ -74,7 +67,7 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 
 		if (convertView == null) {
 
-			convertView = inflater.inflate(R.layout.approvedcamplist, null);
+			convertView = inflater.inflate(R.layout.influencer_approvedcamp_list, null);
 		}
 
 		if (imageLoader == null)
@@ -91,7 +84,7 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 		Button analtyics_value = convertView.findViewById(R.id.analtyics_value);
 
 //		// getting campaign data for the row
-		ApprovedCamp cc = approvedCampItem.get(position);
+		Influencer_ApprovedCamp_Declare cc = approvedCampItem.get(position);
 //		// thumbnail image
 		// getting campaign data for the row
 		campImg.setImageUrl(cc.getCampImg(), imageLoader);
@@ -173,20 +166,20 @@ public class ApproveCustomListAdapter extends BaseAdapter {
 				System.out.println("value of campname Complete Approved List: "+myConversation.get(testid));
 				editor1.apply();
 
-				Fragment fragment = new AnalyticsReportFragment();
+				Intent intent = new Intent(activity, AnalyticsReportActivity.class);
 				Bundle bundle = new Bundle();
 				bundle.putString("campid", myCampid.get(testid));
 				bundle.putString("campname", myConversation.get(testid));
 				Log.v("Approve CCampid : ",myCampid.get(testid));
 				Log.v("Approve CCampname : ",myConversation.get(testid));
-				FragmentTransaction fragmentTransaction = activity.getFragmentManager().beginTransaction();
-				fragmentTransaction.replace(R.id.newframe, fragment );
-				fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-				fragmentTransaction.addToBackStack(null);
-				fragmentTransaction.commit();
+				//Add the bundle to the intent.
+				intent.putExtras(bundle);
+				activity.startActivity(intent);
 
 			}
 		});
 		return convertView;
 	}
+
+
 }

@@ -178,12 +178,6 @@
         </activity>
 
         <activity
-            android:name=".DummyActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name">
-        </activity>
-
-        <activity
             android:name=".SMDataReportActivity"
             android:screenOrientation="portrait"
             android:label="@string/app_name">
@@ -221,6 +215,12 @@
 
         <activity
             android:name=".InstagramAuthentication"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".AnalyticsReportActivity"
             android:screenOrientation="portrait"
             android:label="@string/app_name">
         </activity>

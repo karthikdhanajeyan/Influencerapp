@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
@@ -42,13 +43,18 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -65,6 +71,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -79,7 +87,7 @@ public class SMReportsUpdate extends AppCompatActivity {
     String mCurrentPhotoPath,last,location,lasted;
     Boolean isInternetPresent = false;
     ConnectionDetector cd;
-    String cid, userChoosenTask;
+    String cid, userChoosenTask,token;
     ImageView puserimage;
     RadioGroup radioGender;
     private ProgressDialog pDialog;
@@ -194,9 +202,13 @@ public class SMReportsUpdate extends AppCompatActivity {
         cd = new ConnectionDetector(this);
         isInternetPresent = cd.isConnectingToInternet();
 
-        SharedPreferences prfs1 = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
-        cid = prfs1.getString("valueofcid", "");
+        SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
+        cid = prfs.getString("valueofcid", "");
         Log.v("Cid Value : ",cid);
+
+        SharedPreferences prfs1 = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+        token = prfs1.getString("token", "");
+
         if(cid.length()!=0){
             if (isInternetPresent) {
                 SMReportUpdateFunction();
@@ -319,34 +331,38 @@ public class SMReportsUpdate extends AppCompatActivity {
                         upostlink.setError("Invaild URL format");
                         return;
                     }
-//                    //startdatevalidation
-//                    ffromdate = ufromdate.getText().toString();
-//                    ftodate = utodate.getText().toString();
-//                    Log.v("Start Date : ",ffromdate);
-//                    Log.v("End Date : ",ftodate);
-//                    if ((TextUtils.isEmpty(ftodate))) {
-//                        Log.v("date :","Empty");
-//                    }else{
-//                        Log.v("date Start Date :",ftodate);
-//                        flg = false;
-//                        ufromdate.setError("Start date range is missing");
-//                        return;
-//                    }
-//
-//                    //enddatevalidation
-//                    ffromdate = ufromdate.getText().toString();
-//                    ftodate = utodate.getText().toString();
-//                    Log.v("Start Date : ",ffromdate);
-//                    Log.v("End Date : ",ftodate);
-//
-//                    if ((TextUtils.isEmpty(ffromdate))) {
-//                        Log.v("date :","Empty");
-//                    }else{
-//                        Log.v("date Start Date :",ffromdate);
-//                        flg = false;
-//                        utodate.setError("End date range is missing");
-//                        return;
-//                    }
+
+                    //startdatevalidation
+                    ffromdate = ufromdate.getText().toString();
+                    ftodate = utodate.getText().toString();
+                    Log.v("Start Date : ",ffromdate);
+                    Log.v("End Date : ",ftodate);
+                    if ((TextUtils.isEmpty(ffromdate))) {
+                        Log.v("Start Date Result:","Empty");
+                        flg = false;
+                        ufromdate.setError("Start date range is missing");
+                        return;
+                    }else{
+                        Log.v("Start Date Result:",ffromdate);
+                        Log.v("End Date Result:",ftodate);
+                    }
+
+                    //enddatevalidation
+                    ffromdate = ufromdate.getText().toString();
+                    ftodate = utodate.getText().toString();
+                    Log.v("Start Date : ",ffromdate);
+                    Log.v("End Date : ",ftodate);
+
+                    if ((TextUtils.isEmpty(ftodate))) {
+                        Log.v("End Date Result:","Empty");
+                        flg = false;
+                        utodate.setError("End date range is missing");
+                        return;
+                    }else{
+                        Log.v("Start Date Result:",ffromdate);
+                        Log.v("End Date Result:",ftodate);
+                    }
+
 
                     //reachtext&imagevalidation
                     freach = ureach.getText().toString();
@@ -449,35 +465,44 @@ public class SMReportsUpdate extends AppCompatActivity {
 
     private void SMReportUpdateFunction() {
 
-        pDialog = new ProgressDialog(SMReportsUpdate.this);
-        // Showing progress dialog before making http request
-        pDialog.setMessage("Loading...");
-        pDialog.setCancelable(false);
-        pDialog.show();
-        //String Applied_URL = "https://www.influencer.in/API/v6/api_v6.php/getCampaignReports?reportid=" + contentid + "";
-        String Applied_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.singlecamp_report_url)+"?reportid=" + contentid + "";
-        System.out.println(Applied_URL);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, Applied_URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                // Do something with response string
-                Log.d(TAG, response.toString());
-                hidePDialog();
+        if (isInternetPresent) {
+            pDialog = new ProgressDialog(SMReportsUpdate.this);
+            pDialog.setMessage("Loading...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+            String report_list = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.singlecamp_report_url);
+            StringRequest reportListURL = new StringRequest(Request.Method.POST,report_list , new Response.Listener<String>() {
 
-                try {
-                    object = new JSONObject(response);
-                    if (response != null) {
+                @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
+                @Override
+                public void onResponse(String response) {
+                    Log.d(TAG, response);
+                    hidePDialog();
 
-                        String responstatus = object.getString("success");
-                        String responsemessage = object.getString("message");
-                        Log.d("response status : ",responstatus);
-                        Log.d("response message : ",responsemessage);
+                    try {
+                        JSONObject responseObj = new JSONObject(response);
+                        String responstatus = responseObj.getString("success").toString();
+                        Log.d("response status : ", responstatus);
+                        String responsemessage = responseObj.getString("message").toString();
+                        Log.d("response message : ", responsemessage);
 
+                        if (responseObj.getString("token") != null && !responseObj.getString("token").isEmpty()) {
+                            token = responseObj.getString("token");
+                            Log.v("Token value :", token);
 
-                        if (responstatus == "true") {
+                            SharedPreferences preferences = getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editors = preferences.edit();
+                            editors.putString("token",token);
+                            editors.apply();
 
-                            object.getJSONArray("data");
-                            JSONArray object1 = object.getJSONArray("data");
+                        } else {
+                            token = "novalue";
+                        }
+
+                        if (responstatus.equalsIgnoreCase("true")) {
+
+                            responseObj.getJSONArray("data");
+                            JSONArray object1 = responseObj.getJSONArray("data");
 
                             for (int i = 0; i < object1.length(); i++) {
                                 try {
@@ -496,8 +521,6 @@ public class SMReportsUpdate extends AppCompatActivity {
                                     smengagement = obj.getString("engagement");
                                     smengage_attach = obj.getString("engage_attach");
 
-
-
                                     usocialmedia.setText(smsocial_media);
                                     ureach.setText(smreach);
                                     uengagement.setText(smengagement);
@@ -511,54 +534,103 @@ public class SMReportsUpdate extends AppCompatActivity {
                                     Log.e(TAG, "Exception: " + e.getMessage());
                                 }
                             }
-                        } else {
+                        }else if (responstatus.equalsIgnoreCase("false")){
                             Log.d("success : ", "False");
-//                            Snackbar snackbar = Snackbar
-//                                    .make(coordinatorLayout, "No Campaigns in Applied List.", Snackbar.LENGTH_INDEFINITE)
-//                                    .setAction("Live Campaigns", new View.OnClickListener() {
-//                                        @Override
-//                                        public void onClick(View view) {
-//                                            Intent intent = new Intent(getActivity(), NewHomeActivity.class);
-//                                            startActivity(intent);
-//                                        }
-//                                    });
-//                            // Changing message text color
-//                            snackbar.setActionTextColor(Color.YELLOW);
-//                            // Changing action button text color
-//                            View sbView = snackbar.getView();
-//                            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
-//                            textView.setTextColor(Color.WHITE);
-//                            snackbar.show();
-
+                            Snackbar snackbar = Snackbar
+                                    .make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE)
+                                    .setAction("Live Campaigns", new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            Intent intent = new Intent(SMReportsUpdate.this, NewHomeActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
+                            // Changing message text color
+                            snackbar.setActionTextColor(Color.YELLOW);
+                            // Changing action button text color
+                            View sbView = snackbar.getView();
+                            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                            textView.setTextColor(Color.WHITE);
+                            snackbar.show();
                         }
-
-                    } else {
-                        Log.e("ServiceHandler", "Couldn't get any data from the url");
-                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "Could not get any data from the server", Snackbar.LENGTH_INDEFINITE);
-                        // Changing message text color
+                    } catch(JSONException e){
+                        Log.e(TAG, "Error Value : " + e.getMessage());
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "No data from server. Please try again later.", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(SMReportsUpdate.this, Influencer_Home.class);
+                                startActivity(intent);
+                            }
+                        });
                         snackbar.setActionTextColor(Color.RED);
-                        // Changing action button text color
                         View sbView = snackbar.getView();
                         TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
-                        textView.setTextColor(Color.RED);
+                        textView.setTextColor(Color.YELLOW);
                         snackbar.show();
                     }
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
                 }
+            }, new Response.ErrorListener() {
 
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // Do something when get error
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.e(TAG, "Error : " + error.getMessage());
+                    //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                    NetworkResponse networkResponse = error.networkResponse;
+                    if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {
+                        // HTTP Status Code: 401 Unauthorized
+                        Log.e(TAG, "Failure Error: " + " HTTP Status Code: 401 Unauthorized");
+                        hidePDialog();
+                        Snackbar snackbar = Snackbar.make(coordinatorLayout, "Session Expired.", Snackbar.LENGTH_INDEFINITE).setAction("Login", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(SMReportsUpdate.this, Influencer_Login.class);
+                                startActivity(intent);
+                            }
+                        });
+                        snackbar.setActionTextColor(Color.RED);
+                        View sbView = snackbar.getView();
+                        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.YELLOW);
+                        snackbar.show();
                     }
                 }
-        );
-        MyApplication.getInstance().addToRequestQueue(stringRequest);
+            }) {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> headers = new HashMap<>();
+                    // Basic Authentication
+                    //String auth = "Basic " + Base64.encodeToString(CONSUMER_KEY_AND_SECRET.getBytes(), Base64.NO_WRAP);
+                    headers.put("Authorization", "Bearer " + token);
+                    return headers;
+                }
 
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("reportid", contentid);
+                    return params;
+                }
+            };
+
+            int socketTimeout = 60000;
+            RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+            reportListURL.setRetryPolicy(policy);
+            MyApplication.getInstance().addToRequestQueue(reportListURL);
+
+        } else {
+
+            Snackbar snackbar = Snackbar.make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE).setAction("SETTINGS", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) { startActivity(new Intent(Settings.ACTION_SETTINGS)); }
+            });
+            snackbar.setActionTextColor(Color.RED);
+            View sbView = snackbar.getView();
+            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+            textView.setTextColor(Color.YELLOW);
+            snackbar.show();
+        }
     }
     @Override
     public void onDestroy() {
@@ -572,7 +644,6 @@ public class SMReportsUpdate extends AppCompatActivity {
             pDialog = null;
         }
     }
-
 
     @Override
     public void onBackPressed() {
@@ -803,6 +874,7 @@ public class SMReportsUpdate extends AppCompatActivity {
             String REGISTER_URL = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.editcamp_report_url);
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(REGISTER_URL);
+            httppost.addHeader("Authorization","Bearer " + token);
             try {
                 AndroidMultiPartEntity entity = new AndroidMultiPartEntity(new AndroidMultiPartEntity.ProgressListener() {
                     @Override
@@ -865,32 +937,53 @@ public class SMReportsUpdate extends AppCompatActivity {
         @Override
         public void onPostExecute(String success) {
             try {
-                JSONObject json = new JSONObject(success);
-                success = json.getString("success");
-                message = json.getString("message");
-                Log.v("success", success);
-                Log.v("message", message);
+                JSONObject responseObj = new JSONObject(success);
+                String responstatus = responseObj.getString("success").toString();
+                Log.d("response status : ", responstatus);
+                String responsemessage = responseObj.getString("message").toString();
+                Log.d("response message : ", responsemessage);
+
                 pdialog.dismiss();
 
-                if (success == "true") {
-//                    if (fileDesPath.isDirectory()) {
-//                        String[] children = fileDesPath.list();
-//                        for (int i = 0; i < children.length; i++) {
-//                            new File(fileDesPath, children[i]).delete();
-//                        }
-//                        fileDesPath.delete();
-//                    }
-                    //Toast.makeText(RegistrationActivityOne.this, message, Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(SMReportsUpdate.this, NewHomeActivity.class);
-                    Bundle bund = new Bundle();
-                    //Inserts a String value into the mapping of this Bundle
-                    bund.putString("CID",cid);
-                    //Add the bundle to the intent.
-                    intent.putExtras(bund);
-                    startActivity(intent);
-                    Toast.makeText(SMReportsUpdate.this, message, Toast.LENGTH_LONG).show();
-                } else if (success == "false") {
-                    Toast.makeText(SMReportsUpdate.this, message, Toast.LENGTH_LONG).show();
+                if (responseObj.getString("token") != null && !responseObj.getString("token").isEmpty()) {
+                    token = responseObj.getString("token");
+                    Log.v("Token value :", token);
+
+                    SharedPreferences preferences = SMReportsUpdate.this.getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editors = preferences.edit();
+                    editors.putString("token",token);
+                    editors.apply();
+                } else {
+                    token = "novalue";
+                    Log.v("Token value :",token);
+                }
+
+                if (responstatus.equalsIgnoreCase("true")) {
+                    Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("Go Back", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            onBackPressed();
+                        }
+                    });
+                    snackbar.setActionTextColor(Color.RED);
+                    View sbView = snackbar.getView();
+                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
+
+                }else if (responstatus.equalsIgnoreCase("false")){
+                    Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(SMReportsUpdate.this, Conversations.class);
+                            startActivity(intent);
+                        }
+                    });
+                    snackbar.setActionTextColor(Color.RED);
+                    View sbView = snackbar.getView();
+                    TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

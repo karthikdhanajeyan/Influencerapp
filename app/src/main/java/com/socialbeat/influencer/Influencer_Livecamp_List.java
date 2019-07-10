@@ -52,6 +52,7 @@ public class Influencer_Livecamp_List extends Fragment implements SwipeRefreshLa
     String cid,url,valueofcid;
     private SwipeRefreshLayout swipeRefreshLayout;
     String token;
+    TextView caption;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View v = inflater.inflate(R.layout.influencer_livecamp, container, false);
@@ -62,6 +63,8 @@ public class Influencer_Livecamp_List extends Fragment implements SwipeRefreshLa
         SharedPreferences prfs = this.getActivity().getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
         Log.v("Cid Value : ",cid);
+
+        caption = v.findViewById(R.id.caption);
 
         swipeRefreshLayout = v.findViewById(R.id.swiperefresh);
         swipeRefreshLayout.setOnRefreshListener(this);
@@ -168,7 +171,7 @@ public class Influencer_Livecamp_List extends Fragment implements SwipeRefreshLa
                         Log.d("response message : ", responsemessage);
 
                         if(responstatus.equalsIgnoreCase("true")){
-
+                            caption.setVisibility(View.INVISIBLE);
                             JSONArray jsonArray=responseObj.getJSONArray("data");
 //                            for(int i=0;i<jsonArray.length();i++){
 //                                JSONObject jsonObject1=jsonArray.getJSONObject(i);
@@ -213,6 +216,7 @@ public class Influencer_Livecamp_List extends Fragment implements SwipeRefreshLa
 
 
                         }else if(responstatus.equalsIgnoreCase("false")){
+                            caption.setVisibility(View.VISIBLE);
                             Snackbar snackbar = Snackbar.make(coordinatorLayout, "No Live Campaigns Now", Snackbar.LENGTH_INDEFINITE);
                             snackbar.setActionTextColor(Color.RED);
                             View sbView = snackbar.getView();

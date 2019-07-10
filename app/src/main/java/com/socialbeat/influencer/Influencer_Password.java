@@ -23,6 +23,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
@@ -88,6 +89,7 @@ public class Influencer_Password extends AppCompatActivity {
             public void onClick(View v) {
 //                Intent in =new Intent(Influencer_Password.this,Forgetpassword.class);
 //                startActivity(in);
+                Toast.makeText(Influencer_Password.this,"If you want Reset your password goto Influencer Website.",Toast.LENGTH_LONG).show();
             }
         });
 

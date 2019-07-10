@@ -49,7 +49,13 @@ public class SMLazyAdapter extends BaseAdapter {
 
 
         TextView name = vi.findViewById(R.id.name);
+        TextView key1_text = vi.findViewById(R.id.key1_text);
         TextView key1 = vi.findViewById(R.id.key1);
+        TextView key2_text = vi.findViewById(R.id.key2_text);
+        TextView key2 = vi.findViewById(R.id.key2);
+        TextView key3_text = vi.findViewById(R.id.key3_text);
+        TextView key3 = vi.findViewById(R.id.key3);
+
 
         ImageView profile_image= vi.findViewById(R.id.profile_image); // thumb image
         ImageView sm_image= vi.findViewById(R.id.sm_image); // thumb image
@@ -58,7 +64,20 @@ public class SMLazyAdapter extends BaseAdapter {
         pagedetails = data.get(position);
         // Setting all values in listview
         name.setText(pagedetails.get(SMProfile.TAG_UNAME));
-        key1.setText(pagedetails.get(SMProfile.TAG_FOLLOWERS));
+        if(pagedetails.get(SMProfile.TAG_KEY1)!=null) {
+            key1_text.setText(pagedetails.get(SMProfile.TAG_KEY1));
+            key1.setText(pagedetails.get(SMProfile.TAG_VALUE1));
+        }
+        if(pagedetails.get(SMProfile.TAG_KEY2)!=null) {
+            key2_text.setText(pagedetails.get(SMProfile.TAG_KEY2));
+            key2.setText(pagedetails.get(SMProfile.TAG_VALUE2));
+        }
+        if(pagedetails.get(SMProfile.TAG_KEY3)!=null) {
+            key3_text.setText(pagedetails.get(SMProfile.TAG_KEY3));
+            key3.setText(pagedetails.get(SMProfile.TAG_VALUE3));
+        }
+
+
         imageLoader.DisplayImage(pagedetails.get(SMProfile.TAG_PIMAGE), profile_image);
 
         if(pagedetails.get(SMProfile.TAG_SOCIALMEDIA).equalsIgnoreCase("Facebook")){

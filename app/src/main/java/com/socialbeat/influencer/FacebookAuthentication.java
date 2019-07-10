@@ -98,11 +98,6 @@ public class FacebookAuthentication extends AppCompatActivity {
         //loginButton.setReadPermissions("accounts");
 
         list = findViewById(R.id.pagevalues);
-
-
-
-
-
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {

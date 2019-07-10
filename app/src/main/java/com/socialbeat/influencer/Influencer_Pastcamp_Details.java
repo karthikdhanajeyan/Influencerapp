@@ -57,6 +57,7 @@ public class Influencer_Pastcamp_Details extends AppCompatActivity {
     TextView campName, campShortNote, campCat, campLongNote, campGoal, campDos, campDont, campBacklink,
             campTag, campid, campApplyTill, campRewards, campRewardType, fixedamount, cancel, campEligibility, campDeliverables;
     ImageView campImg;
+    TextView caption;
     ProgressDialog pDialog;
     String cid, cdcampImg, cdcampName, cdcampShortNote, cdcampCat, cdcampLongNote, cdcampGoal, cdcampDos, cdcampDont, cdcampBacklink, token,
             cdcampTag, cdcampid, cdcampApplyTill, cdcampRewards, cdcampRewardType, cdfixedamount, TAG, campaignid, campaignname, cdcampEligibility, cdcampDeliverables;
@@ -95,11 +96,13 @@ public class Influencer_Pastcamp_Details extends AppCompatActivity {
         cd = new ConnectionDetector(getApplicationContext());
         isInternetPresent = cd.isConnectingToInternet();
 
+        caption = findViewById(R.id.caption);
+
         SharedPreferences prfs = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
         cid = prfs.getString("valueofcid", "");
         SharedPreferences prfs1 = Influencer_Pastcamp_Details.this.getSharedPreferences("TOKEN_VALUE", Context.MODE_PRIVATE);
-        //token = prfs1.getString("token", "");
-        token= "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzNzIwMTksIm5iZiI6MTU2MTM3MjAxOSwiZXhwIjoxNTYxOTc2ODE5LCJlbWFpbCI6ImthcnRoaWtkaGFuYWpleWFuQGdtYWlsLmNvbSIsImNpZCI6IjE2In0.GPxUs8C3880ZGA1J_gH9jxXVj4xBKCYyaIZcdj0M3W8";
+        token = prfs1.getString("token", "");
+        //token= "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjEzNzIwMTksIm5iZiI6MTU2MTM3MjAxOSwiZXhwIjoxNTYxOTc2ODE5LCJlbWFpbCI6ImthcnRoaWtkaGFuYWpleWFuQGdtYWlsLmNvbSIsImNpZCI6IjE2In0.GPxUs8C3880ZGA1J_gH9jxXVj4xBKCYyaIZcdj0M3W8";
         Log.v("Token Value : ",token);
 
         // Displaying all values on the screen
@@ -252,6 +255,7 @@ public class Influencer_Pastcamp_Details extends AppCompatActivity {
 
 
                         if(responstatus.equalsIgnoreCase("true")){
+                            caption.setVisibility(View.INVISIBLE);
                             if(responsemessage.equalsIgnoreCase("Not applied")){
                                 applynow.setVisibility(View.VISIBLE);
                                 campaignclosed.setVisibility(View.INVISIBLE);
@@ -269,6 +273,7 @@ public class Influencer_Pastcamp_Details extends AppCompatActivity {
                             }
 
                         }else if(responstatus.equalsIgnoreCase("false")){
+                            caption.setVisibility(View.VISIBLE);
                             Log.v("Message : ",responsemessage);
                         }
 
