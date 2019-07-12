@@ -4,8 +4,10 @@ package com.socialbeat.influencer;
  * Created by SocialBeat on 21-08-2017.
  */
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
@@ -603,7 +605,25 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
             Intent intent = new Intent(NewHomeActivity.this, ContactUs.class);
             startActivity(intent);
         } else if (id == R.id.nav_logout) {
-           logout();
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+            alertDialog.setTitle("Logout?");
+            alertDialog.setMessage("Are you sure you want to Logout?");
+            alertDialog.setCancelable(false);
+            alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    logout();
+                }
+            });
+            alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent  = new Intent(NewHomeActivity.this, NewHomeActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                }
+            });
+            alertDialog.show();
+
        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

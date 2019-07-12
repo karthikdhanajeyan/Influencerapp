@@ -41,7 +41,6 @@ import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.socialbeat.influencer.helper.PrefManager;
 
 import org.apache.http.HttpStatus;
 import org.json.JSONException;
@@ -62,7 +61,6 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
     private Button btnRequestSms, btnVerifyOtp;
     private EditText  inputName,inputEmail,inputMobile, inputOtp;
     private ProgressBar progressBar;
-    private PrefManager pref;
     private ImageButton btnEditMobile;
     private TextView txtEditMobile,resendotp;
     private LinearLayout layoutEditMobile;
@@ -103,6 +101,14 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
         //viewPager.setCurrentItem(0);
         resendotp.setPaintFlags(resendotp.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
 
+        resendotp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputOtp.setText("");
+                SendOTP();
+            }
+        });
+
         Typeface myFont = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
         inputName.setTypeface(myFont);
         Typeface myFont1 = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
@@ -131,16 +137,7 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
         // hiding the edit mobile number
         layoutEditMobile.setVisibility(View.GONE);
 
-        pref = new PrefManager(this);
-        // Checking for user session
-        // if user is already logged in, take him to main activity
-        if (pref.isLoggedIn()) {
-            //Intent intent = new Intent(Influencer_Registeration.this, MyWallet.class);
-            //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            //intent.putExtra("alert", "open");
-            //(intent);
-            finish();
-        }
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,14 +160,6 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
             public void onPageScrollStateChanged(int state) {
             }
         });
-        /**
-         * Checking if the device is waiting for sms
-         * showing the user OTP screen
-         */
-        if (pref.isWaitingForSms()) {
-            viewPager.setCurrentItem(1);
-            layoutEditMobile.setVisibility(View.VISIBLE);
-        }
     }
 
 
@@ -201,7 +190,6 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
             case R.id.btn_edit_mobile:
                 viewPager.setCurrentItem(0);
                 layoutEditMobile.setVisibility(View.GONE);
-                pref.setIsWaitingForSms(false);
                 break;
         }
     }
@@ -323,7 +311,6 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Error : " + error.getMessage());
-                //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
                 NetworkResponse networkResponse = error.networkResponse;
                 if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {
@@ -376,6 +363,8 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
     }
 
 
+
+
     private void SendOTP() {
         if (isInternetPresent) {
             pDialog = new ProgressDialog(Influencer_Registeration.this);
@@ -403,11 +392,8 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
                     Log.v("type value :", type);
 
                     if (type.equalsIgnoreCase("success")) {
-                        // boolean flag saying device is waiting for sms
-                        pref.setIsWaitingForSms(true);
                         // moving the screen to next pager item i.e otp screen
                         viewPager.setCurrentItem(1);
-                        txtEditMobile.setText(pref.getMobileNumber());
                         layoutEditMobile.setVisibility(View.VISIBLE);
                         txtEditMobile.setText(rmobile);
                         new Handler().postDelayed(new Runnable() {
@@ -417,7 +403,7 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
                             }
                         }, 10000);
 
-                        Toast.makeText(getApplicationContext(), responsemessage, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), responsemessage, Toast.LENGTH_LONG).show();
 
                     } else {
                         Toast.makeText(getApplicationContext(), responsemessage, Toast.LENGTH_LONG).show();
@@ -448,7 +434,6 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Error : " + error.getMessage());
-                //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
                 hidePDialog();
                 Snackbar snackbar = Snackbar.make(coordinatorLayout, "No Data from Server.Please try some time later..!", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
@@ -559,6 +544,16 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
                                 Register();
                              }else if (type.equalsIgnoreCase("error")){
                                  Log.v("Result : ","Register not working");
+                                    AlertDialog alertDialog = new AlertDialog.Builder(Influencer_Registeration.this).create();
+                                    alertDialog.setMessage("Invalid OTP");
+                                    alertDialog.setCancelable(false);
+                                    alertDialog.setButton("Try Again", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                        inputOtp.setText("");
+                                        }
+                                    });
+                                    alertDialog.show();
+
                              }
                 } catch (JSONException e){
                     Log.e(TAG, "Error Value : " + e.getMessage());
@@ -582,7 +577,6 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Error: " + error.getMessage());
-                //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
                 NetworkResponse networkResponse = error.networkResponse;
                 if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {
                     // HTTP Status Code: 401 Unauthorized
@@ -668,7 +662,7 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
 
                     if (type.equalsIgnoreCase("success")) {
                         AlertDialog alertDialog = new AlertDialog.Builder(Influencer_Registeration.this).create();
-                        alertDialog.setMessage(responsemessage+". "+"Verification link has been sent to your registered email-id, kindly click on the link to complete registration");
+                        alertDialog.setMessage("New User Registered. Verification link has been sent to your registered email-id, kindly click on the link to complete registration");
                         alertDialog.setCancelable(false);
                         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
@@ -717,7 +711,6 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Error : " + error.getMessage());
-                //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
                 NetworkResponse networkResponse = error.networkResponse;
                 if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {

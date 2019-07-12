@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jul 09 17:41:28 IST 2019
+#Fri Jul 12 12:24:12 IST 2019
 17.baseType=DIRECTORY
 4.path=classes.dex
 25.base=F\:\\Influencerapp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17

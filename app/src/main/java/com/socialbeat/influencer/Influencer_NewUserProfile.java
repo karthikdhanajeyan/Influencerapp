@@ -547,7 +547,7 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
     private void testfun() {
         if(statefinal!=null && statefinal!="") {
             loadSpinnerCityData();
-            Toast.makeText(getApplicationContext(),"Condition Working",Toast.LENGTH_LONG).show();
+           // Toast.makeText(getApplicationContext(),"Condition Working",Toast.LENGTH_LONG).show();
 
         }else{
             Toast.makeText(getApplicationContext(),"No State Found",Toast.LENGTH_LONG).show();

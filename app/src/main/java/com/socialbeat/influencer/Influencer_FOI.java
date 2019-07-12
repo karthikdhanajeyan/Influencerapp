@@ -183,8 +183,8 @@ public class Influencer_FOI extends AppCompatActivity {
                 Log.v("Test","onclick working");
                 primaryfinal = primaryvalue;
                 secondaryfinal = secondaryvalue;
-                Log.v("primary Value : ", primaryfinal);
-                Log.v("Secondary Value : ", secondaryfinal);
+//                Log.v("primary Value : ", primaryfinal);
+//                Log.v("Secondary Value : ", secondaryfinal);
                 if (k > 0) {
                     primary_profile.setVisibility(View.INVISIBLE);
                     primaryfinal = primary_spinner.getItemAtPosition(primary_spinner.getSelectedItemPosition()).toString();
@@ -202,7 +202,7 @@ public class Influencer_FOI extends AppCompatActivity {
             public void onItemsSelected(List<KeyPairBoolData> items) {
 
                 secondaryfinal = secondaryvalue;
-                Log.v("Secondary Value : ", secondaryvalue);
+               // Log.v("Secondary Value : ", secondaryvalue);
                 if(l >=0) {
                     secondary_profile.setVisibility(View.INVISIBLE);
                     for (int i = 0; i < items.size(); i++) {
@@ -256,9 +256,6 @@ public class Influencer_FOI extends AppCompatActivity {
                        // Gson gson=new Gson();
                         //newDataString=gson.toJson(dString);
                     }
-
-
-
 
                     UpdateFOI();
 
