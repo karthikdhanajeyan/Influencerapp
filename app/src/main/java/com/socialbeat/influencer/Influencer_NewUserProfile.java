@@ -355,6 +355,37 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
 
                         if(responstatus.equalsIgnoreCase("true")){
                             Log.v("Test Result : ","Success");
+                            Snackbar snackbar = Snackbar.make(coordinatorLayout, "Profile update.", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(Influencer_NewUserProfile.this, NewHomeActivity.class);
+                                    startActivity(intent);
+                                }
+                            });
+                            snackbar.setActionTextColor(Color.RED);
+                            View sbView = snackbar.getView();
+                            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                            textView.setTextColor(Color.YELLOW);
+                            snackbar.show();
+
+//                            Toast.makeText(Influencer_NewUserProfile.this, "Profile Updated successfully.", Toast.LENGTH_SHORT).show();
+//                            Intent intent = new Intent(Influencer_NewUserProfile.this, NewHomeActivity.class);
+//                                    startActivity(intent);
+
+
+                        } if(responstatus.equalsIgnoreCase("false")) {
+                            Snackbar snackbar = Snackbar.make(coordinatorLayout, responsemessage, Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(Influencer_NewUserProfile.this, Influencer_NewUserProfile.class);
+                                    startActivity(intent);
+                                }
+                            });
+                            snackbar.setActionTextColor(Color.RED);
+                            View sbView = snackbar.getView();
+                            TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+                            textView.setTextColor(Color.YELLOW);
+                            snackbar.show();
                         }
 
                     } catch(JSONException e){
@@ -399,6 +430,14 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                 }
             }) {
                 @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> headers = new HashMap<>();
+                    Log.v("Token Value : ",token);
+                    headers.put("Authorization", "Bearer " + token);
+                    return headers;
+                }
+
+                @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<String, String>();
                     params.put(KEY_CID, email);
@@ -410,6 +449,8 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                     return params;
                 }
             };
+
+
 
             int socketTimeout = 60000;
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,

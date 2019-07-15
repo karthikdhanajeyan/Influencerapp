@@ -330,7 +330,6 @@ public class Influencer_Password extends AppCompatActivity {
         }
     }
 
-
     @Override
     public void onDestroy() {
         super.onDestroy();
