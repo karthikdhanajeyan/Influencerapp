@@ -652,7 +652,7 @@ public class NewHomeActivity extends AppCompatActivity implements NavigationView
         editor4 = prefernce4.edit();
         editor4.clear();
         editor4.apply();
-        SharedPreferences prefernce5= getSharedPreferences("TOKEN_VALUE", MODE_PRIVATE);
+        SharedPreferences prefernce5 = getSharedPreferences("TOKEN_VALUE", MODE_PRIVATE);
         editor5= prefernce5.edit();
         editor5.clear();
         editor5.apply();

@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#android.support.v4.content.FileProvider
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:293:9-301:20
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:302:9-310:20
 	android:grantUriPermissions
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:297:13-47
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:306:13-47
 	android:authorities
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:295:13-60
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:304:13-60
 	android:exported
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:296:13-37
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:305:13-37
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:294:13-67
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:303:13-67
 manifest
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-308:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-308:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-308:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-308:12
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-317:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-317:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-317:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-317:12
 MERGED from [com.google.android.gms:play-services-ads:17.2.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\2b0a3e002f803d725c36643cf8f4f66e\AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\6d862f0ac7d12f5931880f67ac36a626\AndroidManifest.xml:17:1-39:12
 MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\6e08d3781756ee567fa34d4bb4217713\AndroidManifest.xml:17:1-37:12
@@ -92,22 +92,22 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Social Beat\.gradl
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\5b3ca61b7ee0c2bdadca26a93efdf49a\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\112c1e66ef174ae27c4afbc2f38b8b70\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\62850695a6e0efaa5103d76226622543\AndroidManifest.xml:17:1-22:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-308:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-308:12
-INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-308:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-317:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-317:12
+INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-317:12
 	package
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:4:5-40
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-308:12
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-317:12
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-308:12
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:1-317:12
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:2:11-69
@@ -186,7 +186,7 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:20:5-22:36
 	android:name
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:21:9-47
 application
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:24:5-306:19
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:24:5-315:19
 REJECTED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\6d862f0ac7d12f5931880f67ac36a626\AndroidManifest.xml:22:5-37:19
 REJECTED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\6e08d3781756ee567fa34d4bb4217713\AndroidManifest.xml:22:5-35:19
 REJECTED from [com.facebook.android:facebook-android-sdk:4.42.0] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\cb2d0b988e988a191cc859708d76026c\AndroidManifest.xml:28:5-29:19
@@ -544,124 +544,132 @@ ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:222:9-226:20
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:225:13-45
 	android:name
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:223:13-52
-meta-data#com.google.android.gms.version
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:232:9-234:69
-	android:value
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:234:13-66
-	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:233:13-58
-meta-data#com.google.android.gms.ads.AD_MANAGER_APP
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:235:9-237:36
-	android:value
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:237:13-33
-	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:236:13-69
-meta-data#com.facebook.sdk.ApplicationId
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:238:9-240:55
-	android:value
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:240:13-52
-	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:239:13-58
-activity#com.facebook.FacebookActivity
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:242:9-245:48
+activity#com.socialbeat.influencer.GAAuthentication
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:228:9-232:20
+	android:screenOrientation
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:230:13-49
 	android:label
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:245:13-45
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:231:13-45
+	android:name
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:229:13-45
+meta-data#com.google.android.gms.version
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:241:9-243:69
+	android:value
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:243:13-66
+	android:name
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:242:13-58
+meta-data#com.google.android.gms.ads.AD_MANAGER_APP
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:244:9-246:36
+	android:value
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:246:13-33
+	android:name
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:245:13-69
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:247:9-249:55
+	android:value
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:249:13-52
+	android:name
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:248:13-58
+activity#com.facebook.FacebookActivity
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:251:9-254:48
+	android:label
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:254:13-45
 	android:configChanges
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:244:13-96
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:253:13-96
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:243:13-57
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:252:13-57
 activity#com.facebook.CustomTabMainActivity
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:246:9-257:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:255:9-266:20
 	android:exported
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:248:13-36
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:257:13-36
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:247:13-62
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:256:13-62
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/fb_login_protocol_scheme
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:249:13-256:29
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:258:13-265:29
 action#android.intent.action.VIEW
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:250:17-69
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:259:17-69
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:250:25-66
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:259:25-66
 category#android.intent.category.DEFAULT
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:252:17-76
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:261:17-76
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:252:27-73
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:261:27-73
 category#android.intent.category.BROWSABLE
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:253:17-78
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:262:17-78
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:253:27-75
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:262:27-75
 data
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:255:17-75
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:264:17-75
 	android:scheme
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:255:23-72
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:264:23-72
 receiver#com.google.android.gms.analytics.AnalyticsReceiver
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:259:9-265:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:268:9-274:20
 	android:enabled
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:261:13-35
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:270:13-35
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:260:13-78
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:269:13-78
 intent-filter#action:name:com.google.android.gms.analytics.ANALYTICS_DISPATCH
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:262:13-264:29
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:271:13-273:29
 action#com.google.android.gms.analytics.ANALYTICS_DISPATCH
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:263:17-94
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:272:17-94
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:263:25-91
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:272:25-91
 service#com.google.android.gms.analytics.AnalyticsService
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:267:9-270:40
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:276:9-279:40
 	android:enabled
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:269:13-35
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:278:13-35
 	android:exported
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:270:13-37
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:279:13-37
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:268:13-77
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:277:13-77
 receiver#com.google.android.gms.analytics.CampaignTrackingReceiver
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:272:9-278:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:281:9-287:20
 	android:exported
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:274:13-36
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:283:13-36
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:273:13-85
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:282:13-85
 intent-filter#action:name:com.android.vending.INSTALL_REFERRER
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:275:13-277:29
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:284:13-286:29
 action#com.android.vending.INSTALL_REFERRER
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:276:17-79
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:285:17-79
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:276:25-76
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:285:25-76
 service#com.google.android.gms.analytics.CampaignTrackingService
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:280:9-92
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:289:9-92
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:280:18-89
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:289:18-89
 receiver#com.socialbeat.influencer.GcmBroadcastReceiver
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:282:9-290:20
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:291:9-299:20
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:282:19-55
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:291:19-55
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+action:name:com.google.android.c2dm.intent.REGISTRATION+action:name:com.google.android.c2dm.intent.SEND+category:name:com.socialbeat.influencer
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:283:13-289:29
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:292:13-298:29
 action#com.google.android.c2dm.intent.SEND
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:284:17-78
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:293:17-78
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:284:25-75
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:293:25-75
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:285:17-81
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:294:17-81
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:285:25-78
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:294:25-78
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:286:17-86
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:295:17-86
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:286:25-83
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:295:25-83
 category#com.socialbeat.influencer
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:288:17-70
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:297:17-70
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:288:27-67
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:297:27-67
 service#com.socialbeat.influencer.GCMIntentService
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:292:9-53
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:301:9-53
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:292:18-50
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:301:18-50
 uses-library#org.apache.http.legacy
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:303:9-305:40
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:312:9-314:40
 	android:required
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:305:13-37
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:314:13-37
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:304:13-50
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:313:13-50
 uses-sdk
 INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
@@ -833,11 +841,11 @@ INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 		INJECTED from F:\Influencerapp\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:298:13-300:58
+ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:307:13-309:58
 	android:resource
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:300:17-55
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:309:17-55
 	android:name
-		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:299:17-67
+		ADDED from F:\Influencerapp\app\src\main\AndroidManifest.xml:308:17-67
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\cd43ca9b72884bee1255fc77accac107\AndroidManifest.xml:27:5-68
 MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\Social Beat\.gradle\caches\transforms-2\files-2.1\7caea0e6743ad1f00599dc848ddef466\AndroidManifest.xml:27:5-68

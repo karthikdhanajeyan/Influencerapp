@@ -2216,6 +2216,7 @@ id completeddatetext1
 id conditiontext
 id confirmation_code
 id connectfacebook
+id connectga
 id connecttwitter
 id container
 id content
