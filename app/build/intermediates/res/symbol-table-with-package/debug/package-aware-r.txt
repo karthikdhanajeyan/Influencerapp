@@ -2215,8 +2215,10 @@ id completeddatetext
 id completeddatetext1
 id conditiontext
 id confirmation_code
+id confirmpassword
 id connectfacebook
 id connectga
+id connectinstagram
 id connecttwitter
 id container
 id content
@@ -2231,7 +2233,6 @@ id coordinator
 id coordinatorLayout
 id copyright
 id cos
-id cpassword_profile
 id custom
 id customPanel
 id custom_twitter_login_button
@@ -2540,7 +2541,6 @@ id parent_matrix
 id pass_invisible
 id pass_visible
 id password
-id password_profile
 id path
 id pathRelative
 id payment_fulldetails

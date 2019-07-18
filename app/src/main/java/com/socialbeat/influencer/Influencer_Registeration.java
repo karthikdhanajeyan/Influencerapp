@@ -59,12 +59,12 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
     private Button btnRequestSms, btnVerifyOtp;
-    private EditText  inputName,inputEmail,inputMobile, inputOtp;
+    private EditText  inputName,inputEmail,inputMobile, inputOtp,inputPassword,inputconfirmPassword;
     private ProgressBar progressBar;
     private ImageButton btnEditMobile;
     private TextView txtEditMobile,resendotp;
     private LinearLayout layoutEditMobile;
-    String cid,rname,remail,rmobile,nmessage,type,message;
+    String cid,rname,remail,rmobile,nmessage,rpassword,type,message;
     TextView create,terms,login;
     boolean flg = true;
     Boolean isInternetPresent = false;
@@ -85,6 +85,8 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
         inputName = findViewById(R.id.name);
         inputEmail = findViewById(R.id.email);
         inputMobile = findViewById(R.id.mobile);
+        inputPassword = findViewById(R.id.password);
+        inputconfirmPassword = findViewById(R.id.confirmpassword);
         inputOtp = findViewById(R.id.inputOtp);
         login = findViewById(R.id.login);
         terms = findViewById(R.id.terms);
@@ -113,8 +115,12 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
         inputName.setTypeface(myFont);
         Typeface myFont1 = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
         inputEmail.setTypeface(myFont1);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
+        inputMobile.setTypeface(myFont2);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
+        inputPassword.setTypeface(myFont3);
         Typeface myFont4 = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
-        inputMobile.setTypeface(myFont4);
+        inputconfirmPassword.setTypeface(myFont4);
 
         Spanned sp = Html.fromHtml("By Signing up with us, you agree to the Influencer " +
                 "<a href=\"http://www.influencer.in/terms-and-conditions/\"> Terms &amp; Conditions.</a>");
@@ -228,10 +234,33 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
                 return;
             }
 
+            final String epassword = inputPassword.getText().toString();
+            if ((TextUtils.isEmpty(epassword))) {
+                flg = false;
+                inputPassword.setError("Password field is empty");
+                return;
+            } else if (!isValidPassword(epassword)) {
+                flg = false;
+                inputPassword.setError("Minimum required value is 6");
+                return;
+            }
+
+            final String ecpassword =inputconfirmPassword.getText().toString();
+            if ((TextUtils.isEmpty(ecpassword))) {
+                flg = false;
+                inputconfirmPassword.setError("Confirm Password field is empty");
+                return;
+            } else if(!epassword.equals(ecpassword)){
+                flg = false;
+                inputconfirmPassword.setError("Password Not matching");
+                return;
+            }
+
             if (flg) {
                 rname = inputName.getText().toString();
                 remail = inputEmail.getText().toString();
                 rmobile = inputMobile.getText().toString();
+                rpassword = inputPassword.getText().toString();
                 CheckEmailFunction();
             }
         } else {
@@ -744,6 +773,8 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
                 params.put("username", rname);
                 params.put("email", remail);
                 params.put("mobile_no", rmobile);
+                params.put("password", rpassword);
+
                 return params;
             }
         };
@@ -817,6 +848,11 @@ public class Influencer_Registeration extends AppCompatActivity implements View.
     public void onDestroy() {
         super.onDestroy();
         hidePDialog();
+    }
+
+    // validating password
+    private boolean isValidPassword(String pass) {
+        return pass != null && pass.length() >= 6;
     }
 
     private void hidePDialog() {

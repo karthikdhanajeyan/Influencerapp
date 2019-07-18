@@ -53,6 +53,20 @@ android:layout_height="match_parent">
             android:background="@color/blue"
             android:layout_marginTop="15sp"/>
 
+
+        <Button
+            android:id="@+id/connectinstagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect Instagram"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:background="@color/darkpink"
+            android:layout_below="@+id/connecttwitter"
+            android:layout_marginTop="15sp"/>
+
         <Button
         android:id="@+id/connectga"
         android:layout_width="match_parent"
@@ -61,24 +75,13 @@ android:layout_height="match_parent">
         android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_marginLeft="15sp"
+        android:visibility="invisible"
         android:layout_marginRight="15sp"
         android:background="@color/orange"
         android:layout_below="@+id/connecttwitter"
         android:layout_marginTop="15sp"/>
 
 
-        <!--<Button-->
-        <!--android:id="@+id/connectinstagram"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Connect Instagram"-->
-        <!--android:textColor="@color/white"-->
-        <!--android:textStyle="bold"-->
-        <!--android:layout_marginLeft="15sp"-->
-        <!--android:layout_marginRight="15sp"-->
-        <!--android:background="@color/darkpink"-->
-        <!--android:layout_below="@+id/connecttwitter"-->
-        <!--android:layout_marginTop="15sp"/>-->
 
         <!--<Button-->
         <!--android:id="@+id/connectblog"-->

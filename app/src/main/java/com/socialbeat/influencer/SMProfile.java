@@ -105,7 +105,7 @@ public class SMProfile extends AppCompatActivity {
     String key1_text = null,key1 = null,key2_text = null,key2 = null,key3_text = null,key3 = null;
     String value = null;
     String key = null;
-    String uname,link,profile_image,account_id,profile_id;
+    String uname,link,profile_image;
 
 
     public static final String TAG_SOCIALMEDIA = "socialmedia";
@@ -258,45 +258,30 @@ public class SMProfile extends AppCompatActivity {
 
 
                                 JSONObject userDetails= object3.getJSONObject("userDetails");
-
+                                uname= userDetails.getString("name");
+                                profile_image= userDetails.getString("profile_image");
 
                                 Log.v("Social Media : ",socialmedia);
                                 Log.v("key : ",key);
                                 Log.v("value : ",value);
+                                Log.v("name : ",uname);
+                                Log.v("profile_image : ",profile_image);
+
 
                                 // tmp hashmap for single contact
                                 HashMap<String, String> page = new HashMap<String, String>();
                                 // adding each child node to HashMap key => value
                                 page.put(TAG_SOCIALMEDIA,socialmedia);
 
-//                                if(userDetails.getString("name")!=null) {
-//                                    uname= userDetails.getString("name");
-//                                    Log.v("name : ",uname);
-//                                    page.put(TAG_UNAME,uname);
-//                                }
-//                                if(userDetails.getString("link")!=null) {
-//                                    link= userDetails.getString("link");
-//                                    Log.v("link : ",link);
-//                                    page.put(TAG_LINK,link);
-//                                }
 
-//                                if(userDetails.getString("profile_image")!=null) {
-//                                    profile_image= userDetails.getString("profile_image");
-//                                    Log.v("profile_image : ",profile_image);
-//                                    page.put(TAG_PIMAGE,profile_image);
-//                                }
-
-//                                if(userDetails.getString("account_id")!=null) {
-//                                    account_id= userDetails.getString("account_id");
-//                                    Log.v("account_id : ",account_id);
-//                                    page.put(TAG_ACCOUNTID,account_id);
-//                                }
-//
-//                                if(userDetails.getString("profile_id")!=null) {
-//                                    profile_id= userDetails.getString("profile_id");
-//                                    Log.v("profile_id : ",profile_id);
-//                                    page.put(TAG_PROFILEID,profile_id);
-//                                }
+                                if(uname!=null && uname!=null) {
+                                    Log.v("name : ",uname);
+                                    page.put(TAG_UNAME,uname);
+                                }
+                                if(profile_image!=null && profile_image!=null) {
+                                    Log.v("profile_image : ",profile_image);
+                                    page.put(TAG_PIMAGE,profile_image);
+                                }
 
                                 if(key1_text!=null && key1!=null){
                                     page.put(TAG_KEY1,key1_text);

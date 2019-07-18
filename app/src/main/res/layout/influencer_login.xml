@@ -97,13 +97,36 @@
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/rounded_corner"/>
 
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/password"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:ems="14"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/emailid"
+                    android:layout_alignLeft="@+id/emailid"
+                    android:layout_alignStart="@+id/emailid"
+                    android:layout_alignRight="@+id/emailid"
+                    android:layout_alignEnd="@+id/emailid"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/rounded_corner"/>
+
+
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/next_button"
                     android:layout_marginTop="25dp"
-                    android:layout_below="@+id/emailid"
-                    android:text="Next"
+                    android:layout_below="@+id/password"
+                    android:text="Login"
                     android:textColor="@color/white"
                     android:textSize="25sp"
                     android:textAlignment="center"
@@ -121,7 +144,7 @@
                     android:layout_height="match_parent"
                     android:layout_below="@+id/next_button"
                     android:id="@+id/relativeLayout2"
-                    android:layout_marginTop="25sp"
+                    android:layout_marginTop="20sp"
                     android:layout_marginBottom="10sp"
                     android:gravity="center"
                     android:layout_centerHorizontal="true"

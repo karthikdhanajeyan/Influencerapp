@@ -47,9 +47,9 @@ public class Influencer_Login extends AppCompatActivity {
 
     Button next;
     TextView register,terms;
-    EditText emails;
+    EditText emails,passwords;
     boolean flg = true;
-    String email,token;
+    String email,password,token;
     Boolean isInternetPresent = false;
     ConnectionDetector cd;
     private ProgressDialog pDialog;
@@ -67,6 +67,7 @@ public class Influencer_Login extends AppCompatActivity {
         register = findViewById(R.id.register);
         terms = findViewById(R.id.terms);
         emails = findViewById(R.id.emailid);
+        passwords = findViewById(R.id.password);
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
         Typeface myFont = Typeface.createFromAsset(getAssets(), "font/headfont.ttf");
@@ -108,9 +109,19 @@ public class Influencer_Login extends AppCompatActivity {
                     emails.setError("Enter Valid Email id");
                     return;
                 }
+                password = passwords.getText().toString();
+                if ((TextUtils.isEmpty(password))) {
+                    flg = false;
+                    passwords.setError("Password field is empty");
+                    return;
+                } else if (!isValidPassword(password)) {
+                    flg = false;
+                    passwords.setError("Minimum required value is 6");
+                    return;
+                }
 
                 if (flg) {
-                    EmailValidationFunction();
+                    LoginFunction();
                 } else {
                     Snackbar snackbar = Snackbar
                             .make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE)
@@ -130,19 +141,20 @@ public class Influencer_Login extends AppCompatActivity {
         });
     }
 
-    private void EmailValidationFunction() {
+    private void LoginFunction() {
         if (isInternetPresent) {
             pDialog = new ProgressDialog(Influencer_Login.this);
             pDialog.setMessage("Loading...");
             pDialog.setCancelable(false);
             pDialog.show();
-            String check_email = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.user_login_url);
-            StringRequest checkEmail = new StringRequest(Request.Method.POST,check_email , new Response.Listener<String>() {
+            String check_password = getResources().getString(R.string.base_url_v6) + getResources().getString(R.string.verifypassword_url);
+            StringRequest checkPassword = new StringRequest(Request.Method.POST,check_password , new Response.Listener<String>() {
 
                 @Override
                 public void onResponse(String response) {
                     Log.d(TAG, response);
                     hidePDialog();
+                    if (response != null && !response.isEmpty()){
                         try {
                             JSONObject responseObj = new JSONObject(response);
 
@@ -162,6 +174,7 @@ public class Influencer_Login extends AppCompatActivity {
 
                             } else {
                                 token = "novalue";
+                                Log.v("Token value :",token);
                             }
 
                             if (responstatus.equalsIgnoreCase("true")) {
@@ -171,66 +184,74 @@ public class Influencer_Login extends AppCompatActivity {
                                 status = resobj.getString("status");
                                 nextPage = resobj.getString("nextPage");
 
-
                                 Log.v(" Cid value :", cid);
                                 Log.v("status value :", status);
                                 Log.v("NextPage value :", nextPage);
 
                                 SharedPreferences preferences = getSharedPreferences("CID_VALUE", Context.MODE_PRIVATE);
                                 SharedPreferences.Editor editor = preferences.edit();
-                                editor.putString("valueofcid", cid);
+                                editor.putString("valueofcid",cid);
                                 editor.apply();
 
-                                if (status.equalsIgnoreCase("existing user")) {
-                                    if (nextPage.equalsIgnoreCase("password")) {
-                                        Log.v("Result : ", "password Activity");
-                                        Intent in = new Intent(Influencer_Login.this, Influencer_Password.class);
-                                        Bundle b = new Bundle();
-                                        b.putString("email", email);
-                                        b.putString("cid", cid);
-                                        in.putExtras(b);
+
+                                if (status.equalsIgnoreCase("social media connection incomplete")) {
+                                    if (nextPage.equalsIgnoreCase("sm")) {
+                                        Log.v("Result : ", "SM working");
+                                        Intent in =new Intent(Influencer_Login.this,SocialMediaAuthentication.class);
                                         startActivity(in);
                                     }
-                                } else if (status.equalsIgnoreCase("new user")) {
+                                } else if (status.equalsIgnoreCase("Field of interest incomplete")) {
+                                    if (nextPage.equalsIgnoreCase("foi")) {
+                                        Log.v("Result : ", "FOI working");
+                                        Intent in =new Intent(Influencer_Login.this, Influencer_FOI.class);
+                                        startActivity(in);
+                                    }
+                                } else if (status.equalsIgnoreCase("profile completed")) {
+                                    if (nextPage.equalsIgnoreCase("homepage")) {
+                                        Log.v("Result : ", "Homepage working");
+                                        Intent in =new Intent(Influencer_Login.this,NewHomeActivity.class);
+                                        startActivity(in);
+                                    }
+                                } else if (status.equalsIgnoreCase("profile incomplete")) {
                                     if (nextPage.equalsIgnoreCase("profile")) {
-                                        Log.v("Result : ", "profile Activity");
-                                        Intent in = new Intent(Influencer_Login.this, Influencer_NewUserProfile.class);
+                                        Log.v("Result : ", "profile working");
+                                        Intent in =new Intent(Influencer_Login.this, Influencer_MyProfile.class);
                                         startActivity(in);
                                     }
-                                } else if (status.equalsIgnoreCase("new user mobile and mail not validated")) {
+                                } else if (status.equalsIgnoreCase("mobile and mail not validated")) {
                                     if (nextPage.equalsIgnoreCase("verify_account")) {
                                         Log.v("Result : ", "Validation Activity");
                                         Intent in = new Intent(Influencer_Login.this, Influencer_UserValidation.class);
                                         startActivity(in);
                                     }
-                                } else if (status.equalsIgnoreCase("new user mobile not validated")) {
+                                } else if (status.equalsIgnoreCase("mobile not validated")) {
                                     if (nextPage.equalsIgnoreCase("verify_account")) {
                                         Log.v("Result : ", "Validation Activity");
                                         Intent in = new Intent(Influencer_Login.this, Influencer_UserValidation.class);
                                         startActivity(in);
                                     }
-                                } else if (status.equalsIgnoreCase("new user mail not validated")) {
+                                } else if (status.equalsIgnoreCase("mail not validated")) {
                                     if (nextPage.equalsIgnoreCase("verify_account")) {
                                         Log.v("Result : ", "Validation Activity");
                                         Intent in = new Intent(Influencer_Login.this, Influencer_UserValidation.class);
                                         startActivity(in);
                                     }
                                 }
-                            }else if(responstatus.equalsIgnoreCase("false")){
+                            }else
+                            {
                                 AlertDialog alertDialog = new AlertDialog.Builder(Influencer_Login.this).create();
-                                alertDialog.setMessage("User is not Registered.Kindly Register.");
+                                alertDialog.setMessage("Invalid Password");
                                 alertDialog.setCancelable(false);
                                 alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        Intent intent = new Intent(Influencer_Login.this, Influencer_Registeration.class);
-                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                        startActivity(intent);
+                                        emails.setText("");
+                                        passwords.setText("");
+
                                     }
                                 });
                                 alertDialog.show();
-
                             }
-                            }catch(JSONException e){
+                        } catch(JSONException e){
                             Log.e(TAG, "Error Value : " + e.getMessage());
 
                             Snackbar snackbar = Snackbar.make(coordinatorLayout, "No data from server. Please try again later.", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
@@ -246,12 +267,27 @@ public class Influencer_Login extends AppCompatActivity {
                             textView.setTextColor(Color.YELLOW);
                             snackbar.show();
                         }
+                    } else {
+                        AlertDialog alertDialog = new AlertDialog.Builder(Influencer_Login.this).create();
+                        alertDialog.setMessage("No data from server. Try again later.");
+                        alertDialog.setCancelable(false);
+                        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intent = new Intent(Influencer_Login.this, Influencer_Home.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+
+                            }
+                        });
+                        alertDialog.show();
+                    }
                 }
             }, new Response.ErrorListener() {
 
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     Log.e(TAG, "Error : " + error.getMessage());
+                    //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
                     NetworkResponse networkResponse = error.networkResponse;
                     if (networkResponse != null && networkResponse.statusCode == HttpStatus.SC_UNAUTHORIZED) {
                         // HTTP Status Code: 401 Unauthorized
@@ -270,12 +306,14 @@ public class Influencer_Login extends AppCompatActivity {
                         textView.setTextColor(Color.YELLOW);
                         snackbar.show();
                     }
-            }
+                }
             }) {
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<String, String>();
                     params.put("email", email);
+                    params.put("password",password);
+
                     return params;
                 }
             };
@@ -284,11 +322,9 @@ public class Influencer_Login extends AppCompatActivity {
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                     DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-            checkEmail.setRetryPolicy(policy);
-            MyApplication.getInstance().addToRequestQueue(checkEmail);
-
+            checkPassword.setRetryPolicy(policy);
+            MyApplication.getInstance().addToRequestQueue(checkPassword);
         } else {
-
             Snackbar snackbar = Snackbar.make(coordinatorLayout, "No internet connection!", Snackbar.LENGTH_INDEFINITE).setAction("SETTINGS", new View.OnClickListener() {
                 @Override
                 public void onClick(View view) { startActivity(new Intent(Settings.ACTION_SETTINGS)); }
@@ -341,6 +377,9 @@ public class Influencer_Login extends AppCompatActivity {
         Pattern pattern = Pattern.compile(EMAIL_PATTERN);
         Matcher matcher = pattern.matcher(emailid1);
         return matcher.matches();
+    }
+    private boolean isValidPassword(String pass) {
+        return pass != null && pass.length() >= 6;
     }
 
 }

@@ -85,10 +85,10 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
     Context context;
     private CoordinatorLayout coordinatorLayout;
     private static final String TAG = Influencer_NewUserProfile.class.getSimpleName();
-    EditText pname,ppassword,pcpassword;
+    EditText pname;
     TextView pemail,pcity,pstate,pmobileno;
     Button psave;
-    String mCurrentPhotoPath,location,password,epassword,estate,state,id,cityname=null,statenme,tier,statename=null,cityfinal=null,statefinal=null;
+    String mCurrentPhotoPath,location,estate,state,id,cityname=null,statenme,tier,statename=null,cityfinal=null,statefinal=null;
     Boolean isInternetPresent = false;
     ConnectionDetector cd;
     String cid, userChoosenTask,ecpassword;
@@ -143,8 +143,6 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
 
         pname = findViewById(R.id.nme_profile);
         pemail = findViewById(R.id.email_profile);
-        ppassword = findViewById(R.id.password_profile);
-        pcpassword = findViewById(R.id.cpassword_profile);
         pmobileno = findViewById(R.id.mobileno_profile);
         radioSexGroup= findViewById(R.id.gender_profile);
         pstate = findViewById(R.id.state_profile);
@@ -266,26 +264,7 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                         pname.setError("Name field is empty");
                         return;
                     }
-                    epassword = ppassword.getText().toString();
-                    if ((TextUtils.isEmpty(epassword))) {
-                        flg = false;
-                        ppassword.setError("Password field is empty");
-                        return;
-                    } else if (!isValidPassword(epassword)) {
-                        flg = false;
-                        ppassword.setError("Minimum required value is 6");
-                        return;
-                    }
-                    ecpassword =pcpassword.getText().toString();
-                    if ((TextUtils.isEmpty(ecpassword))) {
-                        flg = false;
-                        pcpassword.setError("Confirm Password field is empty");
-                        return;
-                    } else if(!epassword.equals(ecpassword)){
-                        flg = false;
-                        pcpassword.setError("Password Not matching");
-                        return;
-                    }
+
                     int selectedId=radioSexGroup.getCheckedRadioButtonId();
                     radioSexButton= findViewById(selectedId);
                     //Toast.makeText(Influencer_MyProfile.this,radioSexButton.getText(),Toast.LENGTH_SHORT).show();
@@ -442,7 +421,6 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
                     Map<String, String> params = new HashMap<String, String>();
                     params.put(KEY_CID, email);
                     params.put(KEY_USERNAME, ename);
-                    params.put(KEY_PASSWORD, epassword);
                     params.put(KEY_GENDER, egender);
                     params.put(KEY_STATE, estate);
                     params.put(KEY_CITY, ecity);
@@ -1323,7 +1301,6 @@ public class Influencer_NewUserProfile extends AppCompatActivity {
 
                 entity.addPart(KEY_CID, new StringBody(cid));
                 entity.addPart(KEY_USERNAME, new StringBody(ename));
-                entity.addPart(KEY_PASSWORD, new StringBody(epassword));
                 entity.addPart(KEY_GENDER, new StringBody(egender));
                 entity.addPart(KEY_STATE, new StringBody(estate));
                 entity.addPart(KEY_CITY, new StringBody(ecity));

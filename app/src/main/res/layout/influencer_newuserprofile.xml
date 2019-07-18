@@ -94,38 +94,6 @@
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/rounded_corner_new"/>
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="New Password"
-                android:ems="16"
-                android:gravity="left"
-                android:singleLine="true"
-                android:paddingLeft="15dp"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:id="@+id/password_profile"
-                android:layout_below="@+id/mobileno_profile"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/rounded_corner_new"/>
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Confirm New Password"
-                android:ems="16"
-                android:gravity="left"
-                android:singleLine="true"
-                android:paddingLeft="15dp"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:id="@+id/cpassword_profile"
-                android:layout_below="@+id/password_profile"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/rounded_corner_new"/>
-
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -134,7 +102,7 @@
                 android:id="@+id/gender_profile"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_below="@+id/cpassword_profile"
+                android:layout_below="@+id/mobileno_profile"
                 android:layout_alignLeft="@+id/mobileno_profile"
                 android:layout_alignRight="@+id/mobileno_profile">
 

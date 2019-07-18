@@ -52,6 +52,14 @@ public class SocialMediaAuthentication extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        connectinstagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(getApplicationContext(),"Please check our website to connect your Social Media Authentication",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(SocialMediaAuthentication.this, InstagramAuthentication.class);
+                startActivity(intent);
+            }
+        });
         connectga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,14 +70,7 @@ public class SocialMediaAuthentication extends AppCompatActivity {
                 startActivity(browserIntent);
             }
         });
-//        connectinstagram.setOnClickListener(new View.On  ClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //Toast.makeText(getApplicationContext(),"Please check our website to connect your Social Media Authentication",Toast.LENGTH_LONG).show();
-//                Intent intent = new Intent(SocialMediaAuthentication.this, InstagramAuthentication.class);
-//                startActivity(intent);
-//            }
-//        });
+
 //        connectblog.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
