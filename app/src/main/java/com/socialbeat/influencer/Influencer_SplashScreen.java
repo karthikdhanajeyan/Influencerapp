@@ -14,7 +14,7 @@ public class Influencer_SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.influencer_splash);
+        setContentView(R.layout.influencer_splashscreen);
 
         int SPLASH_TIME_OUT = 3000;
 
